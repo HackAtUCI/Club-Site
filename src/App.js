@@ -1,0 +1,31 @@
+import React from "react";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import history from "./history";
+import "./App.scss";
+
+import { AppNavbar } from "./app/containers";
+import { Footer } from "./app/containers";
+
+import { Sponsorship, Events, About, Home, NotFound } from "app/views";
+
+function App() {
+  return (
+    <div className="App">
+      <Router history={history}>
+        <div>
+          <AppNavbar />
+          <Footer />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/events" component={Events} />
+            <Route exact path="/sponsors" component={Sponsorship} />
+            <Route component={NotFound} />
+          </Switch>
+        </div>
+      </Router>
+    </div>
+  );
+}
+
+export default App;
