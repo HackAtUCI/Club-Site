@@ -6,7 +6,7 @@ import "./App.scss";
 import { AppNavbar } from "./app/containers";
 import { Footer } from "./app/containers";
 
-import { Sponsorship, Events, About, Home, NotFound } from "app/views";
+import { Sponsorship, Events, About, Home, NotFound } from "./app/views";
 
 function App() {
   return (
