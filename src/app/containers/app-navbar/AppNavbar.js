@@ -8,20 +8,20 @@ import "./app-navbar.scss";
 
 export default function AppNavbar() {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar className="nav-color" bg="dark" variant="dark">
       <Navbar.Brand href="#home">Hack at UCI</Navbar.Brand>
-      <Nav className="mr-auto">
+      <Nav className="ml-auto">
         <Nav.Link>
-          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
         </Nav.Link>
         <Nav.Link>
           <Link to="/events">Events</Link>
         </Nav.Link>
         <Nav.Link>
-          <Link to="/sponsors">Sponsorship</Link>
+          <Link to="/sponsor">Sponsor</Link>
         </Nav.Link>
         <Nav.Link>
-          <Link to="/about">About Us</Link>
+          <Link to="/contact">Contact</Link>
         </Nav.Link>
       </Nav>
     </Navbar>
