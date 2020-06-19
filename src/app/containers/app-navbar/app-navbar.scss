@@ -1,7 +1,7 @@
 @import "src/globals/hack-variables.scss";
 
 .nav-color {
-  background-color: $ember-blue!important;
+  background-color: $darkest-blue!important;
 }
 
 a {
@@ -15,3 +15,7 @@ a:hover {
   background: slategray;
 }
 
+.nav-logo {
+  max-width: 85px;
+  padding: 0 5px;
+}

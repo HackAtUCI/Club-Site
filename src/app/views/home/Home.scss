@@ -1,32 +1,64 @@
 @import "src/globals/hack-variables.scss";
 
-.Home .container p,
-.Home .container h1,
-.Home .container a {
-  text-align: left;
-}
-
-.Home .container a {
-  color: $ember-red;
-}
-
 .home-header {
-  background-color: $ember-blue;
+  background-color: $darkest-blue;
   color: white;
+  min-height: 45vh;
 }
 
 .home-header-font {
-  font-size: 60px;
-  margin: 0.2em 0;
+  font-family:  sans-serif;
+  font-size: 7rem;
+  margin: 0.1em 0;
+}
+
+
+.home-involved-button-div {
+  text-align: center;
 }
 
 .involved-button {
   border-color: transparent;
-  border-radius: 26px;
-  font-size: 18px;
-  background-color: $ember-red;
+  border-radius: 30px;
+  font-size: 28px;
+  padding: 10px 25px;
+  background-color: $red;
+  max-width: 10em;
 }
 
-.involved-button:hover {
-  background-color: $ember-maroon;
+.home-arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+
+  border-top: 10px solid $red;
+}
+
+.home-about {
+  margin-top: 180px;
+}
+
+.home-contanier h1 {
+  font-size: 42px;
+  margin: 10rem 0 0 0;
+}
+
+.home-contanier p {
+  font-size: 26px;
+  margin: 0;
+}
+
+.home-contanier a {
+  font-size: 26px;
+  margin: 0;
+  color: $red !important;
+}
+
+.home-sponsors {
+  margin-bottom: 180px;
+}
+
+.container {
+  max-width: 1400px;
 }
