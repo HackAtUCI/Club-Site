@@ -9,7 +9,7 @@ import "./app-navbar.scss";
 export default function AppNavbar() {
   return (
     <Navbar className="nav-color" bg="dark" variant="dark">
-      <Navbar.Brand href="#home">Hack at UCI</Navbar.Brand>
+      <Navbar.Brand href="/">Hack at UCI</Navbar.Brand>
       <Nav className="ml-auto">
         <Nav.Link>
           <Link to="/about">About</Link>
