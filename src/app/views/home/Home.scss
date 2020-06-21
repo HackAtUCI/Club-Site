@@ -46,6 +46,7 @@ html {
   font-size: 28px;
   padding: 10px 25px;
   background-color: $red;
+  color: white;
   max-width: 10em;
   position: relative;
   z-index: 10;
@@ -122,8 +123,36 @@ html {
 .home-newsletter-container {
   max-width: 1450px;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 55% 5% 40%;
   font-size: 23px;
+}
+
+.home-newsletter-left {
+  grid-column: 1;
+}
+
+.home-newsletter-container form {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.home-newsletter-container h1 {
+  margin: 0;
+}
+
+.home-mailchimp-info {
+  font-size: 22px;
+  color: #a9a9a9;
+  max-width: 460px
+}
+
+.home-newsletter-info {
+  font-size: 25px;
+}
+
+form input {
+  width: 100%;
+  font-size: 40px;
 }
 
 @media screen and (max-width: 1200px) {

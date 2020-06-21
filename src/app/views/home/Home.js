@@ -10,7 +10,8 @@ import HackNights from "../../../assets/hacknights.jpg";
 import Workshops from "../../../assets/workshops.jpg";
 
 function Home(props) {
-  return (
+  // noinspection HtmlUnknownAnchorTarget
+    return (
     <div className="Home" style={props.style}>
         <div className="jumbotron jumbotron-fluid home-header">
             <div className="home-header-usb" ><img src={HeaderMicroUSB} alt="micro_usb_coord"/></div>
@@ -84,21 +85,25 @@ function Home(props) {
 
             <div id="home-newsletter" className="jumbotron jumbotron-fluid home-newsletter">
                 <div className="container text-left home-newsletter-container">
-                    <h1><b>Subscribe to our newsletter!</b></h1>
-                    <p> </p>
-                    <p>Get Involved! By filling your information and clicking "Subscribe", Hack at UCI will send you
-                    emails about the club's updates and events. </p>
+                    <h1 className="home-newsletter-left"><b>Subscribe to our newsletter!</b></h1>
+                    <div className="home-newsletter-left">
+                        <p className="home-newsletter-info">Get Involved! By filling your information and clicking "Subscribe", Hack at UCI will send you
+                        emails about the club's updates and events. </p>
+                        <p className="home-mailchimp-info">Some text that we have to put here about Mailchimp's terms of service or something like that.</p>
+                    </div>
                     <form>
-                        <label>Email Address</label>
-                        <input type="text"/>
-                        <label>First Name</label>
-                        <input type="text"/>
-                        <label>First Name</label>
-                        <input type="text"/>
-                        <label>Graduating Year</label>
-                        <input type="text"/>
+                        <label>Email Address</label> <br/>
+                        <input type="text"/> <br/>
+                        <label>First Name</label> <br/>
+                        <input type="text"/> <br/>
+                        <label>First Name</label> <br/>
+                        <input type="text"/> <br/>
+                        <label>Graduating Year</label> <br/>
+                        <input type="text"/> <br/> <br/>
+                        <div className="d-flex text-left">
+                            <div className="involved-button"><b>Subscribe</b></div>
+                        </div>
                     </form>
-                    <p>Some text that we have to put here about Mailchimp's terms of service or something like that</p>
                 </div>
             </div>
         </div>
