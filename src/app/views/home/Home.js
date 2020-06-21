@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Home.scss";
 import HeaderMicroUSB from "../../../assets/micro_usb_cord_kat.png";
 import HeaderCoord from "../../../assets/cord_1_kat.png";
+import HeaderAnt from "../../../assets/ant_kat.png"
 import HackUCI from "../../../assets/hackuci.png";
 import ZotHacks from "../../../assets/zothacks.png";
 import HackNights from "../../../assets/hacknights.jpg";
@@ -16,6 +17,11 @@ function Home(props) {
         <div className="jumbotron jumbotron-fluid home-header">
             <div className="home-header-usb" ><img src={HeaderMicroUSB} alt="micro_usb_coord"/></div>
             <div className="home-header-coord"><img src={HeaderCoord} alt="usb-coord"/></div>
+            <div className="home-header-ants">
+                <img src={HeaderAnt} alt="ant"/>
+                <img src={HeaderAnt} alt="ant"/>
+                <img src={HeaderAnt} alt="ant"/>
+            </div>
             <h1 className="home-header-font"><b>Hack at UCI</b></h1>
             <div className="d-flex justify-content-center">
                 <div className="involved-button"><b><a href="#home-newsletter">Get Involved</a></b></div>

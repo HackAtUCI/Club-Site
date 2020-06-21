@@ -4,11 +4,37 @@ html {
   scroll-behavior: smooth;
 }
 
+.home-header-ants img:nth-child(1),
+.home-header-ants img:nth-child(2),
+.home-header-ants img:nth-child(3), {
+  position: absolute;
+  z-index: 1;
+}
+
+.home-header-ants img:nth-child(1) {
+  top: 350px;
+  left: 50px;
+  transform: rotate(300deg) scale(0.35);
+}
+
+.home-header-ants img:nth-child(2) {
+  top: 300px;
+  left: -10px;
+  transform: rotate(305deg) scale(0.35);
+}
+
+.home-header-ants img:nth-child(3) {
+  top: 250px;
+  left: -70px;
+  transform: rotate(300deg) scale(0.35);
+}
+
 .home-header-usb {
   transform: scale(.95);
   position: absolute;
   left: -350px;
   top: -50px;
+  z-index: 3
 }
 
 .home-header-coord {
@@ -157,6 +183,9 @@ form input {
 
 @media screen and (max-width: 1200px) {
   .home-header-usb {
+    display: none;
+  }
+  .home-header-ants {
     display: none;
   }
 }
