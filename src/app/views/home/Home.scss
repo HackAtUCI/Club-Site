@@ -1,17 +1,40 @@
 @import "src/globals/hack-variables.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+.home-header-usb {
+  transform: scale(.95);
+  position: absolute;
+  left: -350px;
+  top: -50px;
+}
+
+.home-header-coord {
+  position: absolute;
+  right: -360px;
+  top: 300px;
+  transform: rotateX(180deg) rotate(15deg);
+}
+
 .home-header {
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
   background-color: $darkest-blue;
   color: white;
-  min-height: 45vh;
+  min-height: 28rem;
+  z-index: 3;
 }
 
 .home-header-font {
   font-family:  sans-serif;
   font-size: 7rem;
   margin: 0.1em 0;
+  position: relative;
+  z-index: 10;
 }
-
 
 .home-involved-button-div {
   text-align: center;
@@ -24,6 +47,8 @@
   padding: 10px 25px;
   background-color: $red;
   max-width: 10em;
+  position: relative;
+  z-index: 10;
 }
 
 .home-arrow-down {
@@ -35,24 +60,42 @@
   border-top: 10px solid $red;
 }
 
-.home-about {
-  margin-top: 180px;
-}
-
-.home-contanier h1 {
+.home-container h1 {
   font-size: 42px;
-  margin: 10rem 0 0 0;
+  padding: 10rem 0 0 0;
 }
 
-.home-contanier p {
+.home-container p {
   font-size: 26px;
   margin: 0;
 }
 
-.home-contanier a {
+.home-container a {
   font-size: 26px;
   margin: 0;
   color: $red !important;
+}
+
+.card-body {
+  margin: 0 !important;
+  padding: 0;
+  color: white;
+  background-color: $darkest-blue;
+}
+
+.card {
+  box-shadow: 0 3px 8px #aaaaaa;
+}
+
+.card-title {
+  padding: 20px 20px 0 20px;
+  font-size: 28px;
+  margin: 0;
+}
+
+.card-text {
+  font-size: 20px;
+  padding: 0 20px 55px 20px;
 }
 
 .home-sponsors {
@@ -60,5 +103,39 @@
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1700px;
+}
+
+.home-container {
+  max-width: 1450px;
+}
+
+.card-container {
+  padding-top: 60px;
+}
+
+.home-newsletter {
+  background-color: #f3f3f3;
+  margin: 0
+}
+
+.home-newsletter-container {
+  max-width: 1450px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  font-size: 23px;
+}
+
+@media screen and (max-width: 1200px) {
+  .home-header-usb {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .home-header-font {
+    font-family:  sans-serif;
+    font-size: 3rem;
+    margin: 0.1em 0;
+  }
 }
