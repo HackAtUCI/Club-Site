@@ -10,6 +10,10 @@
   max-width: 1450px;
 }
 
+.sponsor-header-font {
+  font-size: 33px;
+}
+
 .sponsor-header {
   position: relative;
   overflow-y: hidden;
@@ -18,10 +22,6 @@
   color: white;
   min-height: 28rem;
   z-index: 3;
-}
-
-.sponsor-header-font {
-  font-size: 33px;
 }
 
 .sponsor-content {
@@ -37,7 +37,7 @@
   text-align: left;
   grid-column: 1;
   margin-top: 80px;
-  font-size: 72px;
+  font-size: 65px;
   color: #5a73cc;
 }
 
@@ -104,9 +104,24 @@
   margin: 20px;
 }
 
+@media screen and (max-width: 1200px) {
+  .sponsor-content {
+    display: block;
+  }
+  .sponsor-content-heading {
+    font-size: 65px;
+  }
+  .sponsor-content-anecdote {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .sponsor-header-font {
-    font-size: 26px;
+    font-size: 24px;
+  }
+  .sponsor-content-heading {
+    font-size: 24px;
   }
   .sponsor-content {
     display: block;
