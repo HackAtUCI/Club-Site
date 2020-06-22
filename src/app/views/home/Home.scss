@@ -78,6 +78,10 @@ html {
   z-index: 10;
 }
 
+.involved-button a {
+  color: white;
+}
+
 .home-arrow-down {
   width: 0;
   height: 0;
@@ -196,7 +200,7 @@ html {
 
 @media screen and (max-width: 760px) {
   .home-header-font {
-    font-family:  sans-serif;
+    font-family: sans-serif;
     font-size: 3rem;
     margin: 0.1em 0;
   }

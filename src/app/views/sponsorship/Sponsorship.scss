@@ -1,5 +1,9 @@
 @import "src/globals/hack-variables.scss";
 
+.Sponsorship {
+  font-family: sans-serif;
+}
+
 .sponsor-header-container {
   position: relative;
   top: 30px;
@@ -18,4 +22,100 @@
 
 .sponsor-header-font {
   font-size: 33px;
+}
+
+.sponsor-content {
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.sponsor-container {
+  max-width: 1450px;
+}
+
+.sponsor-content-heading {
+  text-align: left;
+  grid-column: 1;
+  margin-top: 80px;
+  font-size: 72px;
+  color: #5a73cc;
+}
+
+.sponsor-hackuci {
+  grid-column: 1;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.sponsor-hackuci a {
+  position: relative;
+  top: -20px;
+  font-size: 24px;
+  grid-column: 1;
+}
+
+.sponsor-hackuci-stats {
+  grid-column: 1;
+}
+
+.sponsor-hackuci-stats img {
+  width: 100%;
+  height: 100%;
+}
+
+.sponsor-hackuci p {
+  margin: 0;
+}
+
+.sponsor-content-anecdote p {
+  margin: 0;
+}
+
+.sponsor-content-anecdote {
+  grid-column: 2;
+  border-radius: 30px;
+  padding: 30px;
+  background-color: $light-blue;
+  margin-bottom: 30px;
+  text-align: left;
+  font-size: 24px;
+}
+
+.sponsor-previous {
+  margin-top: 150px;
+  font-size: 36px;
+}
+
+.sponsor-list {
+  margin-bottom: 160px;
+}
+
+.sponsor-list img {
+  max-height: 120px;
+  max-width: 300px;
+  margin: 20px;
+}
+
+.sponsor-list-item {
+  display: inline-block;
+  height: 120px;
+  width: 300px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .sponsor-header-font {
+    font-size: 26px;
+  }
+  .sponsor-content {
+    display: block;
+  }
+  .sponsor-content-heading {
+    font-size: 42px;
+    margin: 150px 20px 0 20px;
+  }
+  .sponsor-hackuci a {
+    margin: 0 20px;
+}
 }
