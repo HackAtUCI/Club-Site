@@ -1,0 +1,21 @@
+@import "src/globals/hack-variables.scss";
+
+.sponsor-header-container {
+  position: relative;
+  top: 30px;
+  max-width: 1450px;
+}
+
+.sponsor-header {
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: $darkest-blue;
+  color: white;
+  min-height: 28rem;
+  z-index: 3;
+}
+
+.sponsor-header-font {
+  font-size: 33px;
+}

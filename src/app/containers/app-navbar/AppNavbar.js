@@ -19,7 +19,7 @@ export default function AppNavbar() {
           <Link to="/events">Events</Link>
         </Nav.Link>
         <Nav.Link>
-          <Link to="/sponsor">Sponsor</Link>
+          <Link to="/sponsors">Sponsor</Link>
         </Nav.Link>
         <Nav.Link>
           <Link to="/contact">Contact</Link>

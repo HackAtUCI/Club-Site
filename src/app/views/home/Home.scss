@@ -129,7 +129,7 @@ html {
   margin-bottom: 180px;
 }
 
-.container {
+.card-container {
   max-width: 1700px;
 }
 
@@ -176,9 +176,13 @@ html {
   font-size: 25px;
 }
 
-form input {
+.newsletter-form label {
+  margin: 0;
+}
+
+.newsletter-form .form-control {
   width: 100%;
-  font-size: 40px;
+  font-size: 24px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -196,4 +200,37 @@ form input {
     font-size: 3rem;
     margin: 0.1em 0;
   }
+
+  .home-newsletter-container {
+    display: block;
+    font-size: 23px;
+  }
 }
+
+// Bootstrap 4 breakpoints & gutter
+$grid-breakpoints: (
+      xs: 0,
+      sm: 576px,
+      md: 768px,
+      lg: 992px,
+      xl: 1200px
+) !default;
+
+$grid-gutter-width: 30px !default;
+
+// number of cards per line for each breakpoint
+$cards-per-line: (
+      xs: 1,
+      sm: 2,
+      md: 2,
+      lg: 4,
+      xl: 4
+);
+
+@each $name, $breakpoint in $grid-breakpoints {
+  @media (min-width: $breakpoint) {
+    .card-deck .card {
+      flex: 0 0 calc(#{100/map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
+    }
+  }
+};
