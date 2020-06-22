@@ -35,6 +35,31 @@ function Sponsorship(props) {
             <div className="sponsor-hackuci">
                 <p><a href="https://wwww.hackuci.com">www.hackuci.com</a></p>
             </div>
+            <div className="sponsor-stats sponsor-hackuci-stats">
+                {/*Statistics go here*/}
+            </div>
+            <div className="sponsor-stats sponsor-hackuci-stats">
+                <div className="sponsor-stat">
+                    <p>35%</p>
+                    <label>Female</label>
+                </div>
+                <div className="sponsor-stat">
+                    <p>92%</p>
+                    <label>Submitted a Project</label>
+                </div>
+                <div className="sponsor-stat">
+                    <p>46%</p>
+                    <label>First Time Hackers</label>
+                </div>
+                <div className="sponsor-stat">
+                    <p>17</p>
+                    <label>Majors</label>
+                </div>
+                <div className="sponsor-stat">
+                    <p>15</p>
+                    <label>Colleges</label>
+                </div>
+            </div>
             <div className="sponsor-content-anecdote">
                 <p>"I really enjoyed the experience of working on a coding project with other people that wanted to
                     achieve the same goal! Though I was focused on coding the whole time, the environment itself was
@@ -54,7 +79,32 @@ function Sponsorship(props) {
             <div className="sponsor-hackuci">
                 <p><a href="https://wwww.zothacks.com">www.zothacks.com</a></p>
             </div>
-            <div className="sponsor-content-anecdote">
+            <div className="sponsor-zothacks-stats">
+                {/*Statistics go here*/}
+            </div>
+            <div className="sponsor-stats sponsor-zothacks-stats">
+                <div className="sponsor-stat">
+                    <p>32%</p>
+                    <label>Female</label>
+                </div>
+                <div className="sponsor-stat">
+                    <p>90%</p>
+                    <label>Submitted a Project</label>
+                </div>
+                <div className="sponsor-stat">
+                    <p>92%</p>
+                    <label>Would Attend Another Hackathon</label>
+                </div>
+                <div className="sponsor-stat">
+                    <p>78%</p>
+                    <label>First Time Hackers</label>
+                </div>
+                <div className="sponsor-stat">
+                    <p>10</p>
+                    <label>Majors</label>
+                </div>
+            </div>
+            <div className="sponsor-content-anecdote sponsor-zothack-anecdote">
                 <p> "ZotHacks wac my very first hackathon, and I really liked how the event leaned towards beginners.
                     I loved how helpful and enthusiastic my mentor was in guiding our group and the collaborative and
                     encouraging environment the other hackers and mentors helped create."</p>

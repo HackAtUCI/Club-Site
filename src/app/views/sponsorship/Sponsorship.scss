@@ -55,6 +55,27 @@
   grid-column: 1;
 }
 
+.sponsor-stats {
+  display: inline-block;
+}
+
+.sponsor-stat {
+  display: inline-block;
+  margin: 20px 50px;
+}
+
+.sponsor-stat p {
+  font-size: 80px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.sponsor-stat label {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+}
+
 .sponsor-hackuci-stats {
   grid-column: 1;
 }
@@ -85,6 +106,14 @@
 .sponsor-previous {
   margin-top: 150px;
   font-size: 36px;
+}
+
+.sponsor-zothacks-stats {
+  grid-column: 1/ span2;
+}
+
+.sponsor-zothack-anecdote {
+  grid-row: 6;
 }
 
 .sponsor-list {
@@ -132,5 +161,14 @@
   }
   .sponsor-hackuci a {
     margin: 0 20px;
-}
+  }
+  .sponsor-stat {
+    margin: 5px 12px;
+  }
+  .sponsor-stat p {
+    font-size: 40px;
+  }
+  .sponsor-stat label {
+    font-size: 16px;
+  }
 }
