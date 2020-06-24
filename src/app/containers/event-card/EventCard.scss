@@ -1,0 +1,48 @@
+@import "globals/hack-variables.scss";
+
+.eventcard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.8s;
+  border-radius: 10px;
+  margin: 10px;
+  width: 400px;
+  height: 400px;
+  background-color: $darkest-blue;
+  color: white;
+  display: inline-block;
+  
+}
+
+.eventcard:hover {
+  background-color: $red;
+}
+
+.parent-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 7fr 6fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 400px;
+  height: 400px;
+  }
+  
+  .top-part { grid-area: 1 / 1 / 2 / 2; }
+  .top-part-img { 
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+  }
+  .bottom-part { grid-area: 2 / 1 / 3 / 2; }
+
+  .top-text {
+    padding-top: 8px;
+    text-align: left;
+    padding-left: 18px;
+  }
+
+  .bottom-text {
+    padding-top: 8px;
+    text-align: left;
+    padding-left: 18px;
+  }
