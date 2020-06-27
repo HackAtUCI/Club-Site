@@ -11,89 +11,6 @@ import HackNights from "../../../assets/previews/hacknights.jpg";
 import Workshops from "../../../assets/previews/workshops.jpg";
 
 class Home extends Component {
-    state = {
-        email : '',
-        firstName : '',
-        lastName : '',
-        gradYear : '',
-    };
-
-    handleReset() {
-        this.setState( {
-            email : '',
-            firstName : '',
-            lastName : '',
-            gradYear : '',
-        })
-    };
-
-    handleEmailChange = event => {
-        this.setState({
-            email: event.target.value
-        })
-    };
-
-    handleFirstNameChange = event => {
-        this.setState({
-            firstName: event.target.value
-        })
-    };
-
-    handleLastNameChange = event => {
-        this.setState({
-            lastName: event.target.value
-        })
-    };
-
-    handleYearChange = event => {
-        this.setState({
-            gradYear: event.target.value
-        })
-    };
-
-    handleSubmit = event => {
-        event.preventDefault();
-
-        let userData = {
-            email : this.state.email,
-            firstName : this.state.firstName,
-            lastName : this.state.lastName,
-            gradYear : this.state.gradYear,
-        };
-
-        console.log(userData['gradYear'].length);
-
-        // Form Validation
-        let passAll = true;
-
-        if (userData['email'] === "") {
-            passAll = false;
-        }
-        else if (!userData['email'].includes("."))  {
-            passAll = false;
-        }
-        if (userData['firstName'] === "") {
-            passAll = false;
-        }
-        if (userData['lastName'] === "") {
-            passAll = false;
-        }
-        if (userData['gradYear'] === "") {
-            passAll = false;
-        }
-
-        if (passAll) {
-            // send axios request
-            document.getElementById("userEmail").className = "form-control is-valid";
-            document.getElementById("userFName").className = "form-control is-valid";
-            document.getElementById("userLName").className = "form-control is-valid";
-            document.getElementById("userYear").className = "form-control is-valid";
-            this.handleReset();
-        }
-        else {
-            console.log("ERROR: invalid form input")
-        }
-    };
     render() {
         // noinspection HtmlUnknownAnchorTarget
         return (
@@ -181,17 +98,17 @@ class Home extends Component {
                                     emails about the club's updates and events. </p>
                                 <p className="home-mailchimp-info">Some text that we have to put here about Mailchimp's terms of service or something like that.</p>
                             </div>
-                            <form className="newsletter-form" onSubmit={this.handleSubmit}>
-                                <label>Email Address</label>
-                                <input id="userEmail" type="email" className="form-control" onChange={this.handleEmailChange}/> <br/>
+                            <form className="newsletter-form" action="https://uci.us13.list-manage.com/subscribe/post?u=5976872928cd5681fbaca89f6&amp;id=93333e11eb" method="post" name="mc-embedded-subscribe-form" target="_blank" noValidate>
+                                <label>Email Address <span className="asterisk">*</span> </label>
+                                <input id="userEmail" type="email" className="form-control" name="EMAIL"/> <br/>
                                 <label>First Name</label>
-                                <input id="userFName" type="text" className="form-control" onChange={this.handleFirstNameChange}/> <br/>
+                                <input id="userFName" type="text" className="form-control" name="FNAME"/> <br/>
                                 <label>First Name</label>
-                                <input id="userLName" type="text" className="form-control" onChange={this.handleLastNameChange}/> <br/>
+                                <input id="userLName" type="text" className="form-control" name="LNAME"/> <br/>
                                 <label>Graduating Year</label>
-                                <input id="userYear" type="text" maxLength="4" className="form-control" onChange={this.handleYearChange}/> <br/>
+                                <input id="userYear" type="text" maxLength="4" className="form-control" name="MMERGE4"/> <br/>
                                 <div className="d-flex text-left">
-                                    <button className="involved-button"><b>Subscribe</b></button>
+                                    <button className="involved-button" name="subscribe"><b>Subscribe</b></button>
                                 </div>
                             </form>
                         </div>

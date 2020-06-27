@@ -18,6 +18,8 @@ import TexasInstrument from "../../../assets/sponsors/texas-instrument.png";
 import Twilio from "../../../assets/sponsors/twilio-logo-red.png";
 import UCIBren from "../../../assets/sponsors/ucibren.png";
 import Vincit from "../../../assets/sponsors/vincit.png";
+import HackStatHard from "../../../assets/hackStatPicture.png";
+import ZotStatHard from "../../../assets/zotStatPicture.png";
 
 function Sponsorship(props) {
   return (
@@ -33,10 +35,11 @@ function Sponsorship(props) {
         <div className="container sponsor-content sponsor-container">
             <div className="sponsor-content-heading"><b>HACKUCI PROFILE</b></div>
             <div className="sponsor-hackuci">
-                <p><a href="https://wwww.hackuci.com">www.hackuci.com</a></p>
-            </div>
-            <div className="sponsor-stats sponsor-hackuci-stats">
-                {/*Statistics go here*/}
+                <p className="sponsor-stat-left"><a href="https://www.hackuci.com">www.hackuci.com</a></p>
+                <div className="sponsor-stat-graph"><img className="sponsor-stat-img" src={HackStatHard} alt="hack-stat"/></div>
+                {/*<label className="sponsor-stat-left sponsor-stat-hack-number sponsor-hack-label">500+</label>*/}
+                {/*<label className="sponsor-stat-left sponsor-stat-hack-label sponsor-hack-label">Attendees</label>*/}
+                {/*<div className="sponsor-stat-left sponsor-hack-graph"><img className="sponsor-stat-img" src={HackStat} alt="hack-stat"/></div>*/}
             </div>
             <div className="sponsor-stats sponsor-hackuci-stats">
                 <div className="sponsor-stat">
@@ -60,7 +63,7 @@ function Sponsorship(props) {
                     <label>Colleges</label>
                 </div>
             </div>
-            <div className="sponsor-content-anecdote">
+            <div className="sponsor-content-anecdote" id="Bianca">
                 <p>"I really enjoyed the experience of working on a coding project with other people that wanted to
                     achieve the same goal! Though I was focused on coding the whole time, the environment itself was
                     actually very peaceful and friendly so I felt at ease. I really appreciated that there were so many
@@ -68,7 +71,7 @@ function Sponsorship(props) {
                     tournament."</p>
                 <div className="text-right"><b> - Bianca, Hacker</b></div>
             </div>
-            <div className="sponsor-content-anecdote">
+            <div className="sponsor-content-anecdote" id="Lizzie">
                 <p> "Honestly, this was the best hackathon I've been to in a while.
                     HackUCI had a great community, was well-run, and we saw good hacks, as well as built some connections
                     with students for the future. I felt connected to more hackers than usual even though
@@ -77,10 +80,9 @@ function Sponsorship(props) {
             </div>
             <div className="sponsor-content-heading"><b>ZOTHACKS PROFILE</b></div>
             <div className="sponsor-hackuci">
-                <p><a href="https://wwww.zothacks.com">www.zothacks.com</a></p>
-            </div>
-            <div className="sponsor-zothacks-stats">
-                {/*Statistics go here*/}
+                <p className="sponsor-stat-left"><a href="https://www.zothacks.com">www.zothacks.com</a></p>
+                <div className="sponsor-stat-graph"><img className="sponsor-stat-img" src={ZotStatHard} alt="zot-stat"/></div>
+                {/*<div className="sponsor-stat-left sponsor-hack-graph"><img className="sponsor-stat-img" src={ZotStat} alt="zot-stat"/></div>*/}
             </div>
             <div className="sponsor-stats sponsor-zothacks-stats">
                 <div className="sponsor-stat">
