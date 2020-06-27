@@ -37,9 +37,6 @@ function Sponsorship(props) {
             <div className="sponsor-hackuci">
                 <p className="sponsor-stat-left"><a href="https://www.hackuci.com">www.hackuci.com</a></p>
                 <div className="sponsor-stat-graph"><img className="sponsor-stat-img" src={HackStatHard} alt="hack-stat"/></div>
-                {/*<label className="sponsor-stat-left sponsor-stat-hack-number sponsor-hack-label">500+</label>*/}
-                {/*<label className="sponsor-stat-left sponsor-stat-hack-label sponsor-hack-label">Attendees</label>*/}
-                {/*<div className="sponsor-stat-left sponsor-hack-graph"><img className="sponsor-stat-img" src={HackStat} alt="hack-stat"/></div>*/}
             </div>
             <div className="sponsor-stats sponsor-hackuci-stats">
                 <div className="sponsor-stat">
@@ -82,7 +79,6 @@ function Sponsorship(props) {
             <div className="sponsor-hackuci">
                 <p className="sponsor-stat-left"><a href="https://www.zothacks.com">www.zothacks.com</a></p>
                 <div className="sponsor-stat-graph"><img className="sponsor-stat-img" src={ZotStatHard} alt="zot-stat"/></div>
-                {/*<div className="sponsor-stat-left sponsor-hack-graph"><img className="sponsor-stat-img" src={ZotStat} alt="zot-stat"/></div>*/}
             </div>
             <div className="sponsor-stats sponsor-zothacks-stats">
                 <div className="sponsor-stat">
