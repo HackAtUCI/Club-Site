@@ -9,6 +9,7 @@ import HackUCI from "../../../assets/previews/hackuci.png";
 import ZotHacks from "../../../assets/previews/zothacks.png";
 import HackNights from "../../../assets/previews/hacknights.jpg";
 import Workshops from "../../../assets/previews/workshops.jpg";
+import Newsletter from "../../components/newsletter/Newsletter";
 
 function Home(props) {
     // noinspection HtmlUnknownAnchorTarget
@@ -89,29 +90,7 @@ function Home(props) {
                     <p><b><Link to="/sponsors">View Sponsorship Information ></Link></b></p>
                 </div>
 
-                <div id="home-newsletter" className="jumbotron jumbotron-fluid home-newsletter">
-                    <div className="container text-left home-newsletter-container">
-                        <h1 className="home-newsletter-left"><b>Subscribe to our newsletter!</b></h1>
-                        <div className="home-newsletter-left">
-                            <p className="home-newsletter-info">Get Involved! By filling your information and clicking "Subscribe", Hack at UCI will send you
-                                emails about the club's updates and events. </p>
-                            <p className="home-mailchimp-info">Some text that we have to put here about Mailchimp's terms of service or something like that.</p>
-                        </div>
-                        <form className="newsletter-form" action="https://uci.us13.list-manage.com/subscribe/post?u=5976872928cd5681fbaca89f6&amp;id=93333e11eb" method="post" name="mc-embedded-subscribe-form" target="_blank" noValidate>
-                            <label>Email Address <span className="asterisk">*</span> </label>
-                            <input id="userEmail" type="email" className="form-control" name="EMAIL"/> <br/>
-                            <label>First Name</label>
-                            <input id="userFName" type="text" className="form-control" name="FNAME"/> <br/>
-                            <label>First Name</label>
-                            <input id="userLName" type="text" className="form-control" name="LNAME"/> <br/>
-                            <label>Graduating Year</label>
-                            <input id="userYear" type="text" maxLength="4" className="form-control" name="MMERGE4"/> <br/>
-                            <div className="d-flex text-left">
-                                <button className="involved-button" name="subscribe"><b>Subscribe</b></button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <Newsletter/>
             </div>
         </div>
     );
