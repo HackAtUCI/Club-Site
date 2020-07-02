@@ -25,7 +25,7 @@ function Home(props) {
                 </div>
                 <h1 className="home-header-font"><b>Hack at UCI</b></h1>
                 <div className="d-flex justify-content-center">
-                    <div className="involved-button"><b><a href="#home-newsletter">Get Involved</a></b></div>
+                    <div className="involved-button"><b><a href="#newsletter">Get Involved</a></b></div>
                 </div>
                 <div className="d-flex justify-content-center">
                     <div className="home-arrow-down"> </div>
@@ -83,6 +83,7 @@ function Home(props) {
                         </div>
                     </div>
                 </div>
+
                 <div className="container text-left home-sponsors home-container">
                     <h1><b>Sponsors</b></h1>
                     <p>Gummi bears gingerbread danish donut danish jelly jelly beans liquorice chocolate chips. Topping poweder
@@ -91,6 +92,7 @@ function Home(props) {
                 </div>
 
                 <Newsletter/>
+
             </div>
         </div>
     );
