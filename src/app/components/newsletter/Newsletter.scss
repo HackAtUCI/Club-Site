@@ -1,0 +1,43 @@
+.newsletter {
+  background-color: #f3f3f3;
+  margin: 0
+}
+
+.newsletter-container {
+  max-width: 1450px;
+  display: grid;
+  grid-template-columns: 55% 5% 40%;
+  font-size: 23px;
+}
+
+.newsletter-left {
+  grid-column: 1;
+}
+
+.newsletter-container form {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.newsletter-container h1 {
+  margin: 0;
+}
+
+.newsletter-mailchimp-info {
+  font-size: 22px;
+  color: #a9a9a9;
+  max-width: 460px
+}
+
+.newsletter-info {
+  font-size: 25px;
+}
+
+.newsletter-form label {
+  margin: 0;
+}
+
+.newsletter-form .form-control {
+  width: 100%;
+  font-size: 24px;
+}
