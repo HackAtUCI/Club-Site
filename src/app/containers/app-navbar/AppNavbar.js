@@ -13,7 +13,6 @@ export default function AppNavbar() {
 
   useEffect(() => {
     setcurrentPath(location.pathname);
-    console.log(location.pathname);
   }, [location]);
 
   return (
