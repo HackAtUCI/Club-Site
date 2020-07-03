@@ -87,9 +87,9 @@ function EventCard(props) {
           isOpen={modalIsOpen}
           onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
+          className="modal-styling"
+          >
+
           <div className="header-line">
             <span className="popup-title"> <b>{props.title}</b></span>
             <button onClick={closeModal} className="close-button"> X </button>
@@ -110,9 +110,12 @@ function EventCard(props) {
             </div>
           </h4>
           <button className='popup-button'> <a href={props.link} target="_blank"> <h5>Facebook Event</h5> </a> </button>
-          <p>
+          <div className='desc-text-wrapper'>
+          <p className='desc-text'>
             {props.description}
           </p>
+          </div>
+
         </Modal>
     </div>
     

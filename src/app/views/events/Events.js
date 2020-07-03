@@ -13,6 +13,7 @@ function Events() {
 
 
 useEffect(() => {
+  console.log('use effect ran');
   axios
     .get('https://graph.facebook.com/v7.0/me',{
         params: {
@@ -50,7 +51,7 @@ function upcomingEventsRender() {
   if (upcomingEvents.length === 0 ) {
     if (isLoading) {
       return (
-        <div className="no-text">
+        <div className="no-events">
         <BeatLoader
         size={15}
         color={"#233b92"}
@@ -76,7 +77,7 @@ function pastEventsRender() {
   if (pastEvents.length === 0) {
     if (isLoading) {
       return (
-        <div className="no-text">
+        <div className="no-events">
         <BeatLoader
         size={15}
         color={"#233b92"}
@@ -98,18 +99,26 @@ function pastEventsRender() {
 }  
   
   return (
-    <div className="events">
-      <div className="upcoming-events">
-      <h2 className="title-events"> <b> Upcoming Events </b> </h2>
-        <h4> Click on a upcoming event to view its description. </h4>
-        {upcomingEventsRender()}
+    <div className='events-wrapper'>
+      <div className='events-description-wrapper'>
+        <div className='events-description'> 
+          <p>We aim to celebrate UC Irvine's spirit of innovation by organizing ZotHacks, a beginner-friendly hackathon, and HackUCI, Orange County's largest hackathon. Futhermore, our organization regualrly hosts technical and professional development workshops that teach students industry relevant skills.</p>
+        </div>
       </div>
-      <div className="past-events">
-        <h2 className="title-events"> <b> Past Events </b> </h2>
-        <h4> Click on a past event to view its description. </h4>
-        {pastEventsRender()}
-      </div>
+      <div className="events">
+        <div className="upcoming-events">
+        <h2 className="title-events"> <b> Upcoming Events </b> </h2>
+          <h4> Click on a upcoming event to view its description. </h4>
+          {upcomingEventsRender()}
+        </div>
+        <div className="past-events">
+          <h2 className="title-events"> <b> Past Events </b> </h2>
+          <h4> Click on a past event to view its description. </h4>
+          {pastEventsRender()}
+        </div>
+        </div>
     </div>
+
   );
 }
 
