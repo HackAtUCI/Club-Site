@@ -7,6 +7,9 @@ import { AppNavbar } from "./app/containers";
 import { Footer } from "./app/containers";
 
 import { Sponsorship, Events, About, Home, NotFound } from "app/views";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "jquery/dist/jquery.min.js";
+import "bootstrap/dist/js/bootstrap.min.js";
 
 function App() {
   return (
