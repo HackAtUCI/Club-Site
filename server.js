@@ -12,7 +12,6 @@ app.get("/", function (req, res) {
 });
 
 app.get("/api/fbgraph", function (req, res) {
-  console.log("got request");
   try {
     axios
       .get("https://graph.facebook.com/v7.0/me", {
