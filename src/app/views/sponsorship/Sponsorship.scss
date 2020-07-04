@@ -1,0 +1,200 @@
+@import "src/globals/hack-variables.scss";
+
+.Sponsorship {
+  font-family: sans-serif;
+}
+
+.sponsor-header-container {
+  position: relative;
+  top: 30px;
+  max-width: 1450px;
+}
+
+.sponsor-header-font {
+  font-size: 33px;
+}
+
+.sponsor-header {
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: $darkest-blue;
+  color: white;
+  min-height: 28rem;
+  z-index: 3;
+}
+
+.sponsor-content {
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.sponsor-container {
+  max-width: 1450px;
+}
+
+.sponsor-content-heading {
+  text-align: left;
+  grid-column: 1;
+  margin-top: 80px;
+  font-size: 65px;
+  color: #5a73cc;
+}
+
+.sponsor-hackuci {
+  grid-column: 1;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.sponsor-hackuci a {
+  position: relative;
+  top: -15px;
+  font-size: 24px;
+  grid-column: 1;
+}
+
+.sponsor-stat-span {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.sponsor-hack-graph {
+  padding-top: 30px;
+}
+
+.sponsor-stat-img {
+  width: 100%;
+  height: 100%;
+}
+
+.sponsor-stats {
+  display: inline-block;
+}
+
+.sponsor-stat {
+  display: inline-block;
+  margin: 20px 50px;
+}
+
+.sponsor-stat p {
+  font-size: 80px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.sponsor-stat label {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.sponsor-hackuci-stats {
+  grid-column: 1;
+}
+
+.sponsor-hackuci p {
+  margin: 0;
+}
+
+.sponsor-stat-hack-number {
+  padding-top: 110px;
+  padding-left: 10px;
+  text-align: center;
+  font-size: 120px;
+}
+
+.sponsor-stat-hack-label {
+  padding-top: 230px;
+  text-align: center;
+  font-size: 60px;
+}
+
+.sponsor-content-anecdote p {
+  margin: 0;
+}
+
+.sponsor-content-anecdote {
+  grid-column: 2;
+  border-radius: 30px;
+  padding: 30px;
+  background-color: $light-blue;
+  margin-bottom: 30px;
+  text-align: left;
+  font-size: 24px;
+}
+
+#Bianca {
+  grid-row: 2;
+}
+.sponsor-previous {
+  margin-top: 150px;
+  font-size: 36px;
+}
+
+.sponsor-zothacks-stats,
+.sponsor-stat-graph {
+  grid-column: 1/ span2;
+}
+
+.sponsor-zothack-anecdote {
+  grid-row: 5;
+}
+
+.sponsor-list {
+  margin-bottom: 160px;
+}
+
+.sponsor-list img {
+  max-height: 120px;
+  max-width: 300px;
+  margin: 20px;
+}
+
+.sponsor-list-item {
+  display: inline-block;
+  height: 120px;
+  width: 300px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .sponsor-content {
+    display: block;
+  }
+  .sponsor-content-heading {
+    font-size: 65px;
+  }
+  .sponsor-content-anecdote {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sponsor-header-font {
+    font-size: 24px;
+  }
+  .sponsor-content-heading {
+    font-size: 24px;
+  }
+  .sponsor-content {
+    display: block;
+  }
+  .sponsor-content-heading {
+    font-size: 42px;
+    margin: 150px 20px 0 20px;
+  }
+  .sponsor-hackuci a {
+    margin: 0 20px;
+  }
+  .sponsor-stat {
+    margin: 5px 12px;
+  }
+  .sponsor-stat p {
+    font-size: 40px;
+  }
+  .sponsor-stat label {
+    font-size: 16px;
+  }
+}
