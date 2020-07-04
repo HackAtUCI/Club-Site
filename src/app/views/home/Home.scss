@@ -6,7 +6,7 @@ html {
 
 .home-header-ants img:nth-child(1),
 .home-header-ants img:nth-child(2),
-.home-header-ants img:nth-child(3), {
+.home-header-ants img:nth-child(3) {
   position: absolute;
   z-index: 1;
 }
@@ -30,11 +30,11 @@ html {
 }
 
 .home-header-usb {
-  transform: scale(.95);
+  transform: scale(0.95);
   position: absolute;
   left: -350px;
   top: -50px;
-  z-index: 3
+  z-index: 3;
 }
 
 .home-header-cord {
@@ -48,14 +48,14 @@ html {
   position: relative;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-color: $darkest-blue;
+  background-color: $darkest-blue !important;
   color: white;
   min-height: 28rem;
   z-index: 3;
 }
 
 .home-header-font {
-  font-family:  sans-serif;
+  font-family: sans-serif;
   font-size: 7rem;
   margin: 0.1em 0;
   position: relative;
@@ -169,28 +169,29 @@ html {
 
 // Bootstrap 4 breakpoints & gutter
 $grid-breakpoints: (
-      xs: 0,
-      sm: 576px,
-      md: 768px,
-      lg: 992px,
-      xl: 1200px
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
 ) !default;
 
 $grid-gutter-width: 30px !default;
 
 // number of cards per line for each breakpoint
 $cards-per-line: (
-      xs: 1,
-      sm: 2,
-      md: 2,
-      lg: 4,
-      xl: 4
+  xs: 1,
+  sm: 2,
+  md: 2,
+  lg: 4,
+  xl: 4,
 );
 
 @each $name, $breakpoint in $grid-breakpoints {
   @media (min-width: $breakpoint) {
     .card-deck .card {
-      flex: 0 0 calc(#{100/map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
+      flex: 0 0
+        calc(#{100 / map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
     }
   }
-};
+}
