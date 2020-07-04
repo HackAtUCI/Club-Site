@@ -12,7 +12,6 @@ function Events() {
 
   useEffect(() => {
     axios.get("/api/fbgraph").then((response) => {
-      console.log(response);
       let data = response.data.events.data;
       let x = new Date(); // current time
       let splicer = data.length;
