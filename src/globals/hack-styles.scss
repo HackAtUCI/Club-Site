@@ -60,12 +60,13 @@
   margin: auto;
 
   .global-description-font {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
     text-align: left;
     font-family: sans-serif;
-    top: 7vmin;
     font-weight: bold;
     font-size: 1.8rem;
-    position: relative;
     z-index: 10;
   }
 }
