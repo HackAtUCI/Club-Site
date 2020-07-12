@@ -1,4 +1,5 @@
 @import "src/globals/hack-variables.scss";
+@import "src/globals/hack-styles.scss";
 
 html {
   scroll-behavior: smooth;
@@ -44,13 +45,10 @@ html {
   transform: rotateX(180deg) rotate(15deg);
 }
 
-.home-header {
+.global-header {
   position: relative;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-color: $darkest-blue !important;
-  color: white;
-  min-height: 28rem;
   z-index: 3;
 }
 

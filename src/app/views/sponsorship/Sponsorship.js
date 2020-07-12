@@ -24,11 +24,11 @@ import ZotStatHard from "../../../assets/zotStatPicture.png";
 function Sponsorship(props) {
   return (
     <div className="Sponsorship" style={props.style}>
-        <div className="jumbotron jumbotron-fluid sponsor-header">
+        <div className="jumbotron jumbotron-fluid global-header">
             <div className="home-header-cord"><img src={HeaderCord} alt="usb-cord"/></div>
-            <div className="container sponsor-header-container text-left">
-                <p className="sponsor-header-font"><b>Gummi bears gingerbread danish donut danish jelly jelly beans liquorice chocolate chips. Topping poweder
-                    desert oat cake. Chocolate jujubles pudding toffee candy canes. Chocolate bar candy cake icing.</b></p>
+            <div className="container global-description-container">
+                <p className="global-description-font">Gummi bears gingerbread danish donut danish jelly jelly beans liquorice chocolate chips. Topping poweder
+                    desert oat cake. Chocolate jujubles pudding toffee candy canes. Chocolate bar candy cake icing.</p>
             </div>
         </div>
 
