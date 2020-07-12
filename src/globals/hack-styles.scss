@@ -52,19 +52,20 @@
 .global-header {
   background-color: $darkest-blue !important;
   color: white;
-  min-height: 28rem;
+  min-height: 50vh;
 }
 
 .global-description-container {
+  position: relative;
   margin: auto;
 
   .global-description-font {
     text-align: left;
     font-family: sans-serif;
+    top: 7vmin;
+    font-weight: bold;
     font-size: 1.8rem;
-    margin: 0.1em 0;
     position: relative;
     z-index: 10;
-    margin-top: 40px;
   }
 }
