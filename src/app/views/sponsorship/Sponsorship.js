@@ -18,8 +18,8 @@ import TexasInstrument from "../../../assets/sponsors/texas-instrument.png";
 import Twilio from "../../../assets/sponsors/twilio-logo-red.png";
 import UCIBren from "../../../assets/sponsors/ucibren.png";
 import Vincit from "../../../assets/sponsors/vincit.png";
-import HackStatHard from "../../../assets/hackStatPicture.png";
-import ZotStatHard from "../../../assets/zotStatPicture.png";
+import HackStatHard from "../../../assets/hackuci_years_text.png";
+import ZotStatHard from "../../../assets/zothacks_years_text.png";
 
 function Sponsorship(props) {
   return (
