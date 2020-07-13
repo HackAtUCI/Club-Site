@@ -32,7 +32,7 @@ function Sponsorship(props) {
             </div>
         </div>
 
-        <div className="container sponsor-content sponsor-container">
+        <div className="container sponsor-content">
             <div className="sponsor-content-heading"><b>HACKUCI PROFILE</b></div>
             <div className="sponsor-hackuci">
                 <p className="sponsor-stat-left"><a href="https://www.hackuci.com">www.hackuci.com</a></p>
