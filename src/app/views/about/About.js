@@ -9,17 +9,17 @@ import HeaderAnt from "../../../assets/ant_kat.png";
 function About(props) {
   return (
     <div className="about">
-      <div className="jumbotron jumbotron-fluid home-header">
+      <div className="jumbotron jumbotron-fluid global-header">
         <div className="home-header-cord">
           <img src={HeaderCord} alt="usb-cord" />
         </div>
-        <div className="home-header-ants">
+          <div className="home-header-ants">
           <img src={HeaderAnt} alt="ant" />
           <img src={HeaderAnt} alt="ant" />
           <img src={HeaderAnt} alt="ant" />
         </div>
-        <div className="description-container container">
-          <p className="about-description-font">
+        <div className="global-description-container container">
+          <p className="global-description-font">
             Hack at UCI is an organization that promotes developer culture by
             encouraging people to think creatively, develop technology boldly,
             and pursue the leading edge of technical innovation.

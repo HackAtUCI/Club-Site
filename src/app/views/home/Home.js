@@ -15,7 +15,7 @@ function Home(props) {
     // noinspection HtmlUnknownAnchorTarget
     return (
         <div className="Home" style={props.style}>
-            <div className="jumbotron jumbotron-fluid home-header">
+            <div className="jumbotron jumbotron-fluid global-header">
                 <div className="home-header-usb" ><img src={HeaderMicroUSB} alt="micro_usb_cord"/></div>
                 <div className="home-header-cord"><img src={HeaderCord} alt="usb-cord"/></div>
                 <div className="home-header-ants">

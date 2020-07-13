@@ -1,4 +1,5 @@
 @import "src/globals/hack-variables.scss";
+@import "src/globals/hack-styles.scss";
 
 html {
   scroll-behavior: smooth;
@@ -44,13 +45,10 @@ html {
   transform: rotateX(180deg) rotate(15deg);
 }
 
-.home-header {
+.global-header {
   position: relative;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-color: $darkest-blue !important;
-  color: white;
-  min-height: 28rem;
   z-index: 3;
 }
 
@@ -134,12 +132,12 @@ html {
 }
 
 .card-container {
-  max-width: 1700px;
+  max-width: 1450px !important;
 }
 
-.home-container {
-  max-width: 1450px;
-}
+//.home-container {
+//  max-width: 1450px;
+//}
 
 .card-container {
   padding-top: 60px;
@@ -189,7 +187,7 @@ $cards-per-line: (
 
 @each $name, $breakpoint in $grid-breakpoints {
   @media (min-width: $breakpoint) {
-    .card-deck .card {
+    .card-container .card-deck .card {
       flex: 0 0
         calc(#{100 / map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
     }

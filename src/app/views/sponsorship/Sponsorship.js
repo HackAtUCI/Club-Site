@@ -18,21 +18,21 @@ import TexasInstrument from "../../../assets/sponsors/texas-instrument.png";
 import Twilio from "../../../assets/sponsors/twilio-logo-red.png";
 import UCIBren from "../../../assets/sponsors/ucibren.png";
 import Vincit from "../../../assets/sponsors/vincit.png";
-import HackStatHard from "../../../assets/hackStatPicture.png";
-import ZotStatHard from "../../../assets/zotStatPicture.png";
+import HackStatHard from "../../../assets/hackuci_years_text.png";
+import ZotStatHard from "../../../assets/zothacks_years_text.png";
 
 function Sponsorship(props) {
   return (
     <div className="Sponsorship" style={props.style}>
-        <div className="jumbotron jumbotron-fluid sponsor-header">
+        <div className="jumbotron jumbotron-fluid global-header">
             <div className="home-header-cord"><img src={HeaderCord} alt="usb-cord"/></div>
-            <div className="container sponsor-header-container text-left">
-                <p className="sponsor-header-font"><b>Gummi bears gingerbread danish donut danish jelly jelly beans liquorice chocolate chips. Topping poweder
-                    desert oat cake. Chocolate jujubles pudding toffee candy canes. Chocolate bar candy cake icing.</b></p>
+            <div className="container global-description-container">
+                <p className="global-description-font">Gummi bears gingerbread danish donut danish jelly jelly beans liquorice chocolate chips. Topping poweder
+                    desert oat cake. Chocolate jujubles pudding toffee candy canes. Chocolate bar candy cake icing.</p>
             </div>
         </div>
 
-        <div className="container sponsor-content sponsor-container">
+        <div className="container sponsor-content">
             <div className="sponsor-content-heading"><b>HACKUCI PROFILE</b></div>
             <div className="sponsor-hackuci">
                 <p className="sponsor-stat-left"><a href="https://www.hackuci.com">www.hackuci.com</a></p>

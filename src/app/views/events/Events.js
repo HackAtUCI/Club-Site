@@ -94,9 +94,9 @@ function Events() {
 
   return (
     <div className='events-wrapper'>
-      <div className='events-description-wrapper'>
-        <div className='events-description'>
-          <p>
+      <div className='jumbotron jumbotron-fluid global-header'>
+        <div className='container global-description-container'>
+          <p className='global-description-font'>
             We aim to celebrate UC Irvine's spirit of innovation by organizing
             ZotHacks, a beginner-friendly hackathon, and HackUCI, Orange
             County's largest hackathon. Futhermore, our organization regualrly
