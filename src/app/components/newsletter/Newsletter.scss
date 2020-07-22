@@ -4,10 +4,13 @@
 }
 
 .newsletter-container {
-  max-width: 1450px;
   display: grid;
   grid-template-columns: 55% 5% 40%;
   font-size: 23px;
+}
+
+.jumbotron {
+  margin-bottom: 0 !important;
 }
 
 .newsletter-left {
@@ -40,4 +43,11 @@
 .newsletter-form .form-control {
   width: 100%;
   font-size: 24px;
+}
+
+@media screen and (max-width: 760px) {
+  .newsletter-container {
+    display: block;
+    font-size: 23px;
+  }
 }
