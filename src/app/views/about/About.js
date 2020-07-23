@@ -13,7 +13,8 @@ function About(props) {
         <div className="home-header-cord">
           <img src={HeaderCord} alt="usb-cord" />
         </div>
-          <div className="home-header-ants">
+        <div className="home-header-ants">
+          <img src={HeaderAnt} alt="ant" />
           <img src={HeaderAnt} alt="ant" />
           <img src={HeaderAnt} alt="ant" />
           <img src={HeaderAnt} alt="ant" />

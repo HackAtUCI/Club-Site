@@ -4,13 +4,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.global-header {
-  position: relative;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  z-index: 3;
-}
-
 @media screen and (max-width: 1200px) {
   .home-header-usb {
     display: none;
