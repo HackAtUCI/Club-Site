@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import BeatLoader from "react-spinners/BeatLoader";
 import { EventCard } from "../../containers";
+import HeaderCord from "../../../assets/cord_1_kat.png";
 
 import "./Events.scss";
 
@@ -39,13 +40,13 @@ function Events() {
   function upcomingEventsRender() {
     if (isLoading) {
       return (
-        <div className='no-events'>
+        <div className="no-events">
           <BeatLoader size={15} color={"#233b92"} />
         </div>
       );
     } else {
       return upcomingEvents.length == 0 ? (
-        <h1 className='no-events'> No upcoming events! Stay tuned.</h1>
+        <h1 className="no-events"> No upcoming events! Stay tuned.</h1>
       ) : (
         upcomingEvents.map((event) => (
           <EventCard
@@ -67,13 +68,13 @@ function Events() {
   function pastEventsRender() {
     if (isLoading) {
       return (
-        <div className='no-events'>
+        <div className="no-events">
           <BeatLoader size={15} color={"#233b92"} />
         </div>
       );
     } else {
       return pastEvents.length == 0 ? (
-        <h1 className='no-events'> No past events! </h1>
+        <h1 className="no-events"> No past events! </h1>
       ) : (
         pastEvents.map((event) => (
           <EventCard
@@ -93,10 +94,13 @@ function Events() {
   }
 
   return (
-    <div className='events-wrapper'>
-      <div className='jumbotron jumbotron-fluid global-header'>
-        <div className='container global-description-container'>
-          <p className='global-description-font'>
+    <div className="events-wrapper">
+      <div className="jumbotron jumbotron-fluid global-header">
+        <div className="home-header-cord">
+          <img src={HeaderCord} alt="usb-cord" />
+        </div>
+        <div className="container global-description-container">
+          <p className="global-description-font">
             We aim to celebrate UC Irvine's spirit of innovation by organizing
             ZotHacks, a beginner-friendly hackathon, and HackUCI, Orange
             County's largest hackathon. Futhermore, our organization regualrly
@@ -105,17 +109,17 @@ function Events() {
           </p>
         </div>
       </div>
-      <div className='events'>
-        <div className='upcoming-events'>
-          <h2 className='title-events'>
+      <div className="events">
+        <div className="upcoming-events">
+          <h2 className="title-events">
             {" "}
             <b> Upcoming Events </b>{" "}
           </h2>
           <h4> Click on a upcoming event to view its description. </h4>
           {upcomingEventsRender()}
         </div>
-        <div className='past-events'>
-          <h2 className='title-events'>
+        <div className="past-events">
+          <h2 className="title-events">
             {" "}
             <b> Past Events </b>{" "}
           </h2>
