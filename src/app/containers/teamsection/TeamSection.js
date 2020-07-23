@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import TeamCard from "../../containers/teamcard/TeamCard.js";
 import TeamInfo from "../../../assets/team/team.json";
 
@@ -12,7 +12,7 @@ function TeamSection(props) {
       </h1>
       <div className="team-grid">
         {TeamInfo[props.section] &&
-          TeamInfo[props.section].map(function (item, i) {
+          TeamInfo[props.section].map(function(item, i) {
             return (
               <TeamCard
                 firstName={item["first_name"]}
