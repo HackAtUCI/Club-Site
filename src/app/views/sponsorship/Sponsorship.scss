@@ -14,13 +14,6 @@
   font-size: 33px;
 }
 
-.global-header {
-  position: relative;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  z-index: 3;
-}
-
 .sponsor-content {
   display: grid;
   grid-template-columns: 55% 45%;
@@ -127,7 +120,7 @@
 
 .sponsor-zothacks-stats,
 .sponsor-stat-graph {
-  grid-column: 1/ span2;
+  grid-column: 1 / span2;
 }
 
 .sponsor-zothack-anecdote {

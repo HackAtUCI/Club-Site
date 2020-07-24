@@ -17,6 +17,7 @@ function About(props) {
           <img src={HeaderAnt} alt="ant" />
           <img src={HeaderAnt} alt="ant" />
           <img src={HeaderAnt} alt="ant" />
+          <img src={HeaderAnt} alt="ant" />
         </div>
         <div className="global-description-container container">
           <p className="global-description-font">
