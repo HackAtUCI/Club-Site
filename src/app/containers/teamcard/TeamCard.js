@@ -14,9 +14,9 @@ function TeamCard(props) {
   return (
     <div className="teamcard" style={props.style}>
       <div className="images-container">
-        <img className="profpic" src={image ? image : test} />
+        <img alt="profile" className="profpic" src={image ? image : test} />
         <a href={props.linkedinUrl}>
-          <img className="linkedinLogo" src={linkedinLogo} />
+          <img alt="linkedin" className="linkedinLogo" src={linkedinLogo} />
         </a>
       </div>
       <b>
