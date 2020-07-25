@@ -7,49 +7,48 @@ html {
 
 .home-header-ants img:nth-child(1),
 .home-header-ants img:nth-child(2),
-.home-header-ants img:nth-child(3) {
+.home-header-ants img:nth-child(3),
+.home-header-ants img:nth-child(4) {
   position: absolute;
-  z-index: 1;
+  z-index: -1;
 }
 
 .home-header-ants img:nth-child(1) {
-  top: 350px;
-  left: 50px;
-  transform: rotate(300deg) scale(0.35);
+  top: 268px;
+  left: 120px;
+  transform: rotate(315deg) scale(0.3);
 }
 
 .home-header-ants img:nth-child(2) {
-  top: 300px;
-  left: -10px;
-  transform: rotate(305deg) scale(0.35);
+  top: 250px;
+  left: 60px;
+  transform: rotate(275deg) scale(0.3);
 }
 
 .home-header-ants img:nth-child(3) {
-  top: 250px;
-  left: -70px;
-  transform: rotate(300deg) scale(0.35);
+  top: 238px;
+  left: 0px;
+  transform: rotate(290deg) scale(0.3);
+}
+
+.home-header-ants img:nth-child(4) {
+  top: 203px;
+  left: -45px;
+  transform: rotate(320deg) scale(0.3);
 }
 
 .home-header-usb {
-  transform: scale(0.95);
+  transform: scale(0.65);
   position: absolute;
-  left: -350px;
-  top: -50px;
-  z-index: 3;
+  left: -400px;
+  top: -165px;
 }
 
 .home-header-cord {
   position: absolute;
-  right: -360px;
-  top: 300px;
-  transform: rotateX(180deg) rotate(15deg);
-}
-
-.global-header {
-  position: relative;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  z-index: 3;
+  left: 280px;
+  top: 200px;
+  transform: scale(0.75) rotateX(180deg) rotate(15deg);
 }
 
 .home-header-font {

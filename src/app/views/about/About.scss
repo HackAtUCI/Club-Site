@@ -4,35 +4,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.global-header {
-  position: relative;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  z-index: 3;
-}
-
-@media screen and (max-width: 1200px) {
-  .home-header-usb {
-    display: none;
-  }
-  .home-header-ants {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  .home-header-font {
-    font-family: sans-serif;
-    font-size: 3rem;
-    margin: 0.1em 0;
-  }
-
-  .home-newsletter-container {
-    display: block;
-    font-size: 23px;
-  }
-}
-
 .about {
   .about-content {
     margin: auto;
@@ -40,7 +11,7 @@ html {
     .about-description {
       margin-top: 100px;
       p {
-        font-size: 20px;
+        font-size: 26px;
         text-align: left;
       }
     }

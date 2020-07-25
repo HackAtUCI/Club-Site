@@ -6,11 +6,9 @@
   background-color: $white;
   color: black;
   font-family: $hackUCIFont;
-  overflow-y: auto;
+  overflow: hidden;
 
   h3 {
     font-size: 40px;
   }
 }
-
-
