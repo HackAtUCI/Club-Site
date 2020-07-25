@@ -20,6 +20,8 @@ import UCIBren from "../../../assets/sponsors/ucibren.png";
 import Vincit from "../../../assets/sponsors/vincit.png";
 import HackStatHard from "../../../assets/hackuci_years_text.png";
 import ZotStatHard from "../../../assets/zothacks_years_text.png";
+import HackUCIButton from "../../../assets/hackuci_button.png"
+import ZotHacksButton from "../../../assets/zothacks_button.png"
 
 function Sponsorship(props) {
   return (
@@ -35,8 +37,12 @@ function Sponsorship(props) {
         <div className="container sponsor-content">
             <div className="sponsor-content-heading"><b>HACKUCI PROFILE</b></div>
             <div className="sponsor-hackuci">
-                <p className="sponsor-stat-left"><a href="https://www.hackuci.com">www.hackuci.com</a></p>
-                <div className="sponsor-stat-graph"><img className="sponsor-stat-img" src={HackStatHard} alt="hack-stat"/></div>
+                <a href="https://www.hackuci.com">
+                    <img src={HackUCIButton} alt="hackUCI-button"/>
+                </a>
+            </div>
+            <div className="sponsor-stat-graph">
+                <img className="sponsor-stat-img" src={HackStatHard} alt="hack-stat"/>
             </div>
             <div className="sponsor-stats sponsor-hackuci-stats">
                 <div className="sponsor-stat">
@@ -77,9 +83,11 @@ function Sponsorship(props) {
             </div>
             <div className="sponsor-content-heading"><b>ZOTHACKS PROFILE</b></div>
             <div className="sponsor-hackuci">
-                <p className="sponsor-stat-left"><a href="https://www.zothacks.com">www.zothacks.com</a></p>
-                <div className="sponsor-stat-graph"><img className="sponsor-stat-img" src={ZotStatHard} alt="zot-stat"/></div>
+                <a href="https://www.zothacks.com">
+                    <img src={ZotHacksButton} alt="Zothacks-button"/>
+                </a>
             </div>
+            <div className="sponsor-stat-graph"><img className="sponsor-stat-img" src={ZotStatHard} alt="zot-stat"/></div>
             <div className="sponsor-stats sponsor-zothacks-stats">
                 <div className="sponsor-stat">
                     <p>32%</p>
@@ -102,7 +110,7 @@ function Sponsorship(props) {
                     <label>Majors</label>
                 </div>
             </div>
-            <div className="sponsor-content-anecdote sponsor-zothack-anecdote">
+            <div className="sponsor-content-anecdote sponsor-zothack-anecdote" id="Cher">
                 <p> "ZotHacks wac my very first hackathon, and I really liked how the event leaned towards beginners.
                     I loved how helpful and enthusiastic my mentor was in guiding our group and the collaborative and
                     encouraging environment the other hackers and mentors helped create."</p>

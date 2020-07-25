@@ -28,23 +28,24 @@
 
 .sponsor-content-heading {
   text-align: left;
-  grid-column: 1;
+  grid-column: 1 /span2;
   margin-top: 80px;
-  font-size: 65px;
+  font-size: 70px;
   color: #5a73cc;
 }
 
 .sponsor-hackuci {
   grid-column: 1;
   text-align: left;
-  display: grid;
-  grid-template-columns: 50% 50%;
+}
+
+.sponsor-hackuci img {
+  width: 230px;
 }
 
 .sponsor-hackuci a {
   position: relative;
   top: -15px;
-  font-size: 24px;
   grid-column: 1;
 }
 
@@ -67,11 +68,11 @@
 
 .sponsor-stat {
   display: inline-block;
-  margin: 20px 40px;
+  margin: 10px 20px;
 }
 
 .sponsor-stat p {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: normal;
   margin: 0;
 }
@@ -84,6 +85,7 @@
 
 .sponsor-hackuci-stats {
   grid-column: 1;
+  grid-row: 4;
 }
 
 .sponsor-hackuci p {
@@ -114,24 +116,34 @@
   background-color: $light-blue;
   margin-bottom: 30px;
   text-align: left;
-  font-size: 24px;
+  font-size: 16px;
 }
 
 #Bianca {
-  grid-row: 2;
+  height: 230px;
+  grid-row: 3;
 }
+
+#Lizzie {
+  height: 190px;
+}
+
+#Cher {
+  height: 200px;
+  grid-row: 7;
+}
+
 .sponsor-previous {
   margin-top: 150px;
   font-size: 36px;
 }
 
-.sponsor-zothacks-stats,
-.sponsor-stat-graph {
-  grid-column: 1/ span2;
+.sponsor-zothacks-stats {
+  grid-column: 1 /span2;
 }
 
-.sponsor-zothack-anecdote {
-  grid-row: 5;
+.sponsor-stat-graph {
+  grid-column: 1;
 }
 
 .sponsor-list {
@@ -151,9 +163,6 @@
   margin: 20px;
 }
 
-#Lizzie {
-  height: 380px;
-}
 
 @media screen and (max-width: 1200px) {
   .sponsor-content {
@@ -165,9 +174,16 @@
   .sponsor-content-anecdote {
     font-size: 20px;
   }
+  .sponsor-content-anecdote {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 800px) {
+  .sponsor-hackuci img {
+    padding-top: 10px;
+    width: 200px;
+  }
   .sponsor-header-font {
     font-size: 24px;
   }
@@ -192,5 +208,8 @@
   }
   .sponsor-stat label {
     font-size: 16px;
+  }
+  .sponsor-content-anecdote {
+    font-size: 15px;
   }
 }
