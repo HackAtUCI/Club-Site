@@ -72,7 +72,7 @@ function Home(props) {
           </p>
           <p>
             <b>
-              <Link to="/event">View Upcoming Events ></Link>
+              <Link to="/events">View Upcoming Events ></Link>
             </b>
           </p>
         </div>

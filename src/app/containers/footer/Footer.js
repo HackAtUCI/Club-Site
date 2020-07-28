@@ -20,8 +20,8 @@ function Footer(props) {
         </div>
         <ul className="footer-ul">
             <li><Link to="/about">About</Link></li>
-            <li><Link to="/event">Events</Link></li>
-            <li><Link to="/sponsor">Sponsor</Link></li>
+            <li><Link to="/events">Events</Link></li>
+            <li><Link to="/sponsors">Sponsor</Link></li>
             <li><Link to="/contact">Contact</Link></li>
         </ul>
     </div>
