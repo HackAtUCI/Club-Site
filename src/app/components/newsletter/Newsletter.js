@@ -16,7 +16,7 @@ function Newsletter(props) {
                     <input id="userEmail" type="email" className="form-control" name="EMAIL"/> <br/>
                     <label>First Name</label>
                     <input id="userFName" type="text" className="form-control" name="FNAME"/> <br/>
-                    <label>First Name</label>
+                    <label>Last Name</label>
                     <input id="userLName" type="text" className="form-control" name="LNAME"/> <br/>
                     <label>Graduating Year</label>
                     <input id="userYear" type="text" maxLength="4" className="form-control" name="MMERGE4"/> <br/>
