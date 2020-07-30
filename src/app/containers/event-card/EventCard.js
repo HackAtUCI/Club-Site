@@ -42,6 +42,7 @@ function EventCard(props) {
       );
     }
   }
+
   return (
     <div className='eventcard'>
       <div className='parent-wrapper-event-card' onClick={openModal}>
@@ -86,7 +87,7 @@ function EventCard(props) {
         </h4>
         <button className='popup-button-event-card'>
           {" "}
-          <a href={props.link} target='_blank'>
+          <a href={props.link} target='_blank' rel='noopener noreferrer'>
             {" "}
             <h5>Facebook Event</h5>{" "}
           </a>{" "}
