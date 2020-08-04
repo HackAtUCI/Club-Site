@@ -1,0 +1,13 @@
+@import "globals/hack-variables.scss";
+
+.homecard {
+    border-radius: 5px;
+    box-shadow: 5px 5px 8px #272727;
+    width: 400px;
+    height: 500px;
+    margin: 30px;
+    background-color: $darkest-blue;
+    color: white;
+    display: inline-block;
+    transition: 0.3s;
+  }

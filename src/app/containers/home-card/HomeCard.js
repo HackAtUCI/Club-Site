@@ -8,7 +8,7 @@ function HomeCard(props) {
 
   
   return (
-    <div className='eventcard'>
+    <div className='homecard'>
       <div className='parent-wrapper-event-card'>
         <div className='top-part-event-card'>
           <img
