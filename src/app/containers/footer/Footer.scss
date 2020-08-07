@@ -37,7 +37,7 @@
 
 .footer-elements {
   position: absolute;
-  right: 25vw;
+  right: 50%;
 }
 
 .footer-ul {
@@ -55,7 +55,8 @@
   }
   .footer-elements {
     transform: scale(0.75);
-    right: 10px;
+    right: unset;
+    left: 30px;
   }
   .footer-ul {
     transform: scale(0.75);

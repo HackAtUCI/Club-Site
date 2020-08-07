@@ -9,7 +9,7 @@ import "./Footer.scss";
 function Footer(props) {
   return (
     <div className="footer" style={props.style}>
-        <div className="footer-elements container">
+        <div className="footer-elements">
             <p>Contact Us</p>
             <a id="HackUCI-Email" href="mailto:hackuci@gmail.com">HackUCI@gmail.com</a>
             <div>
