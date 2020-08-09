@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import Moment from "react-moment";
+import Linkify from "react-linkify";
 
 import "./EventCard.scss";
 
@@ -18,6 +19,19 @@ function EventCard(props) {
 
   function closeModal() {
     setModalIsOpen(false);
+  }
+
+  function getCardType() {
+    let x = new Date();
+    let y = new Date(props.date);
+    let z = x.getTime() - y.getTime();
+    if (z > 0) {
+      return 'past-eventcard'
+    }
+    else {
+      return 'eventcard'
+    }
+
   }
 
   function renderBotText() {
@@ -44,7 +58,7 @@ function EventCard(props) {
   }
 
   return (
-    <div className='eventcard'>
+    <div className={getCardType()}>
       <div className='parent-wrapper-event-card' onClick={openModal}>
         <div className='top-part-event-card'>
           <img
@@ -66,34 +80,43 @@ function EventCard(props) {
         onRequestClose={closeModal}
         className='modal-styling-event-card'
       >
-        <div className='header-line-event-card'>
-          <span className='popup-title'>
+        <div className='modal-top-part'>
+          <div className='header-line-event-card'>
+            <span className='popup-title-event-card'>
+              {" "}
+              <b>{props.title}</b>
+            </span>
+            <button onClick={closeModal} className='close-button-event-card'>
+              {" "}
+              X{" "}
+            </button>
+          </div>
+          <p className='modal-subtext-date'>
+            <div>
+              <Moment format='MMM D, YYYY'>{props.date}</Moment>
+              <span> · </span>
+              <Moment format='h:mma'>{props.date}</Moment>
+              <span> - </span>
+              <Moment format='h:mma'>{props.end_date}</Moment>
+            </div>
+          </p>
+          <button className='popup-button-event-card'>
             {" "}
-            <b>{props.title}</b>
-          </span>
-          <button onClick={closeModal} className='close-button-event-card'>
-            {" "}
-            X{" "}
+            <a
+              href={props.link}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='popup-button-event-card-link'
+            >
+              {" "}
+              <h5>View on Facebook</h5>{" "}
+            </a>{" "}
           </button>
         </div>
-        <h4>
-          <div>
-            <Moment format='MMM D, YYYY'>{props.date}</Moment>
-            <span> · </span>
-            <Moment format='h:mma'>{props.date}</Moment>
-            <span> - </span>
-            <Moment format='h:mma'>{props.end_date}</Moment>
-          </div>
-        </h4>
-        <button className='popup-button-event-card'>
-          {" "}
-          <a href={props.link} target='_blank' rel='noopener noreferrer'>
-            {" "}
-            <h5>Facebook Event</h5>{" "}
-          </a>{" "}
-        </button>
         <div className='desc-text-wrapper-event-card'>
-          <p className='desc-text-event-card'>{props.description}</p>
+          <p className='desc-text-event-card'>
+            <Linkify>{props.description}</Linkify>
+          </p>
         </div>
       </Modal>
     </div>

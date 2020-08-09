@@ -12,6 +12,18 @@
   transition: 0.3s;
 }
 
+.past-eventcard {
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px #272727;
+  width: 400px;
+  height: 400px;
+  margin: 30px;
+  background-color: $darkest-blue;
+  color: white;
+  display: inline-block;
+  transition: 0.3s;
+}
+
 .eventcard:hover {
   background-color: $red;
 }
@@ -44,18 +56,23 @@
 }
 
 .popup-button-event-card {
-  background-color: #ff6969;
-  border-radius: 20px;
+  background-color: #e85454;
+  border-radius: 25px;
   border: 1px solid #ff6969;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   padding-top: 5px;
+  height: 45px;
 }
 .popup-button-event-card:hover {
-  background-color: #e85454;
+  background-color: #ff6969;
+}
+
+.popup-button-event-card-link {
+ color: white; 
 }
 
 .header-line-event-card {
@@ -65,6 +82,10 @@
 .close-button-event-card {
   float: right;
   border: 0px;
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  margin-left: -30px;
 }
 
 .popup-title-event-card {
@@ -89,7 +110,27 @@
 }
 
 .desc-text-wrapper-event-card {
+  margin-top: 30px;
   overflow: auto;
+  height: 400px;
+}
+
+.modal-subtext-date {
+  font-size: 22px;
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+.modal-top-part { 
+box-shadow: 0 1px 10px -2px black;
 }
 
 @media (orientation: portrait) {
@@ -98,7 +139,6 @@
   }
 
   .desc-text-event-card {
-    font-size: 0.72rem;
     text-align: left;
     overflow: auto;
   }

@@ -8,20 +8,24 @@ function HomeCard(props) {
 
   
   return (
-    <div className='homecard'>
-      <div className='parent-wrapper-event-card'>
-        <div className='top-part-event-card'>
+    <div className='home-card'>
+      <div className='parent-wrapper-home-card'>
+        <div className='top-part-home-card'>
           <img
-            className='top-part-event-card-img'
+            className='top-part-home-card-img'
             src={props.image}
             alt='event'
           />
         </div>
-        <div className='bottom-part-event-card'>
-          <h2 className='top-text-event-card'>
-            <b>{props.title}</b>
+        <div className='bottom-part-home-card'>
+          <h2 className='top-text-home-card'>
+            <b>
+              {props.title}
+              </b>
           </h2>
-          <h4 className='bottom-text-event-card'>{props.description}</h4>
+          <h4 className='bottom-text-home-card'>
+            {props.description}
+            </h4>
         </div>
       </div>
     </div>
