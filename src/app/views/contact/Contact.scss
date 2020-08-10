@@ -1,0 +1,21 @@
+@import "src/globals/hack-variables.scss";
+
+.contact-body #sm-title {
+  font-weight: bold;
+  font-size: 44px;
+  margin: 10rem 0 5rem 0;
+}
+
+.contact-icon label {
+  font-size: 28px;
+  color: $red;
+}
+
+.contact-icon img{
+  height: 6rem;
+  margin: 0 10rem;
+}
+
+.contact-icon {
+  margin-bottom: 10rem;
+}

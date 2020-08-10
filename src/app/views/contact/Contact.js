@@ -1,9 +1,12 @@
 import React from "react";
+import "./Contact.scss";
+
 import HeaderCord from "../../../assets/cord_1_kat.png";
 import Newsletter from "../../components/newsletter/Newsletter";
-import FacebookIcon from "../../../assets/FacebookIcon.png";
-import InstagramIcon from "../../../assets/InstagramIcon.png";
-import LinkedInIcon from "../../../assets/LinkedInIcon.png";
+import FacebookIcon from "../../../assets/FacebookIconPink.png";
+import InstagramIcon from "../../../assets/InstagramIconPink.png";
+import LinkedInIcon from "../../../assets/LinkedInLogoPink.png";
+
 
 function Contact(props) {
     return (
@@ -21,13 +24,22 @@ function Contact(props) {
                     </p>
                 </div>
             </div>
-            <div className="align-content-center">
-                <b>Social Media</b>
-                <ul>
-                    <li>Facebook<img src={FacebookIcon}/></li>
-                    <li>Instagram<img src={InstagramIcon}/></li>
-                    <li>LinkedIn<img src={LinkedInIcon}/></li>
-                </ul>
+            <div className="contact-body align-content-center">
+                <label id="sm-title">Social Media</label>
+                <div>
+                    <div className="contact-icon d-inline-block">
+                        <label>Facebook</label>
+                        <div><a href=""><img src={FacebookIcon}/></a></div>
+                    </div>
+                    <div className="contact-icon d-inline-block">
+                        <label>Instagram</label>
+                        <div><img src={InstagramIcon}/></div>
+                    </div>
+                    <div className="contact-icon d-inline-block">
+                        <label>LinkedIn</label>
+                        <div><img src={LinkedInIcon}/></div>
+                    </div>
+                </div>
             </div>
             <Newsletter/>
         </div>
