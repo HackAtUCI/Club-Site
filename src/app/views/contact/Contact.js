@@ -28,16 +28,28 @@ function Contact(props) {
                 <label id="sm-title">Social Media</label>
                 <div>
                     <div className="contact-icon d-inline-block">
-                        <label>Facebook</label>
-                        <div><a href=""><img src={FacebookIcon}/></a></div>
+                        <a href="https://www.facebook.com/UCI.Hack/">Facebook</a>
+                        <div className="contact-icon-image">
+                            <a href="https://www.facebook.com/UCI.Hack/">
+                                <img src={FacebookIcon}/>
+                            </a>
+                        </div>
                     </div>
                     <div className="contact-icon d-inline-block">
-                        <label>Instagram</label>
-                        <div><img src={InstagramIcon}/></div>
+                        <a href="https://www.instagram.com/hackatuci/">Instagram</a>
+                        <div className="contact-icon-image">
+                            <a href="https://www.instagram.com/hackatuci/">
+                                <img src={InstagramIcon}/>
+                            </a>
+                        </div>
                     </div>
                     <div className="contact-icon d-inline-block">
-                        <label>LinkedIn</label>
-                        <div><img src={LinkedInIcon}/></div>
+                        <a href="https://www.linkedin.com/company/hackuci">LinkedIn</a>
+                        <div className="contact-icon-image">
+                            <a href="https://www.linkedin.com/company/hackuci">
+                                <img src={LinkedInIcon}/>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
