@@ -26,7 +26,7 @@
 }
 
 .footer {
-  padding-top: 20px;
+  padding-top: 40px;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -38,7 +38,7 @@
 .footer-elements {
   position: absolute;
   right: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(50%, 0%);
 }
 
 .footer-ul {
@@ -46,7 +46,7 @@
   text-align: right;
   grid-column: 2;
   list-style: none;
-  right: 21vw;
+  right: 13vw;
   font-size: 22px;
 }
 
