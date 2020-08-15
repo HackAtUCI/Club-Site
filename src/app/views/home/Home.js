@@ -72,7 +72,7 @@ function Home(props) {
           </p>
           <p>
             <b>
-              <Link to="/event">View Upcoming Events ></Link>
+              <Link to="/events">View Upcoming Events ></Link>
             </b>
           </p>
         </div>
@@ -81,7 +81,7 @@ function Home(props) {
           <div className="card-deck">
             <div className="card">
               <div className="card-body text-left">
-                <img src={HackUCI} alt="HackUCI" className="card-img-top" />
+                <img className="card-img-top"  src={HackUCI} alt="HackUCI"/>
                 <p className="card-title">
                   <b>HackUCI</b>
                 </p>
