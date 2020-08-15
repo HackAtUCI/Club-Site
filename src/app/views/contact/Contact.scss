@@ -1,0 +1,62 @@
+@import "src/globals/hack-variables.scss";
+
+.Contact a {
+  color: $red;
+  &:hover {
+    color: $red
+  }
+}
+
+.contact-body #sm-title {
+  font-weight: bold;
+  font-size: 44px;
+  margin: 10rem 0 5rem 0;
+}
+
+.contact-icon a {
+  font-size: 28px;
+}
+
+.contact-icon img{
+  height: 6rem;
+  width: 6rem;
+}
+
+.contact-icon .contact-icon-image {
+  margin: 0 10rem;
+}
+
+.contact-icon {
+  margin-bottom: 15rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-icon .contact-icon-image {
+    margin: 0 5rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .contact-body #sm-title {
+    font-weight: bold;
+    font-size: 28px;
+    margin: 5rem 0 2rem 0;
+  }
+
+  .contact-icon a {
+    font-size: 1rem;
+  }
+
+  .contact-icon img{
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .contact-icon .contact-icon-image {
+    margin: 0 1.3rem;
+  }
+
+  .contact-icon {
+    margin-bottom: 8rem;
+  }
+}
