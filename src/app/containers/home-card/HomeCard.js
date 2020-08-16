@@ -2,11 +2,7 @@ import React from "react";
 
 import "./HomeCard.scss";
 
-
-
 function HomeCard(props) {
-
-  
   return (
     <div className='home-card'>
       <div className='parent-wrapper-home-card'>
@@ -19,13 +15,9 @@ function HomeCard(props) {
         </div>
         <div className='bottom-part-home-card'>
           <h2 className='top-text-home-card'>
-            <b>
-              {props.title}
-              </b>
+            <b>{props.title}</b>
           </h2>
-          <h4 className='bottom-text-home-card'>
-            {props.description}
-            </h4>
+          <h4 className='bottom-text-home-card'>{props.description}</h4>
         </div>
       </div>
     </div>

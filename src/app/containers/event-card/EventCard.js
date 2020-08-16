@@ -22,23 +22,21 @@ function EventCard(props) {
   }
 
   function getCardType() {
-    let x = new Date();
-    let y = new Date(props.date);
-    let z = x.getTime() - y.getTime();
-    if (z > 0) {
-      return 'past-eventcard'
+    let currentDate = new Date();
+    let eventDate = new Date(props.date);
+    let timeInterval = currentDate.getTime() - eventDate.getTime();
+    if (timeInterval > 0) {
+      return "past-eventcard";
+    } else {
+      return "eventcard";
     }
-    else {
-      return 'eventcard'
-    }
-
   }
 
   function renderBotText() {
-    let x = new Date();
-    let y = new Date(props.date);
-    let z = x.getTime() - y.getTime();
-    if (z > 0) {
+    let currentDate = new Date();
+    let eventDate = new Date(props.date);
+    let timeInterval = currentDate.getTime() - eventDate.getTime();
+    if (timeInterval > 0) {
       return (
         <div>
           <Moment format='MMM D, YYYY'>{props.date}</Moment>
@@ -82,13 +80,9 @@ function EventCard(props) {
       >
         <div className='modal-top-part'>
           <div className='header-line-event-card'>
-            <span className='popup-title-event-card'>
-              {" "}
-              <b>{props.title}</b>
-            </span>
+            <span className='popup-title-event-card'>{props.title}</span>
             <button onClick={closeModal} className='close-button-event-card'>
-              {" "}
-              X{" "}
+              X
             </button>
           </div>
           <p className='modal-subtext-date'>
@@ -101,16 +95,14 @@ function EventCard(props) {
             </div>
           </p>
           <button className='popup-button-event-card'>
-            {" "}
             <a
               href={props.link}
               target='_blank'
               rel='noopener noreferrer'
               className='popup-button-event-card-link'
             >
-              {" "}
-              <h5>View on Facebook</h5>{" "}
-            </a>{" "}
+              <h4>View on Facebook</h4>
+            </a>
           </button>
         </div>
         <div className='desc-text-wrapper-event-card'>
