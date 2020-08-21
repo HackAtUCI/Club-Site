@@ -21,9 +21,11 @@ function About(props) {
         </div>
         <div className="global-description-container container">
           <p className="global-description-font">
-            Hack at UCI is an organization that promotes developer culture by
-            encouraging people to think creatively, develop technology boldly,
-            and pursue the leading edge of technical innovation.
+            Hack at UCI is a student-run organization established to provide
+            students with a platform to learn, grow, and develop technology of
+            the future. Established in 2013, our mission is to promote, educate,
+            and enhance the community around us by giving students the platform
+            to learn and create technology.
           </p>
         </div>
       </div>
@@ -31,13 +33,10 @@ function About(props) {
       <div className="about-content">
         <div className="container about-description">
           <p>
-            There might be some text here explaining Hack at UCI’s mission
-            statement, or maybe some general information about the different
-            teams we have (Corporate, Marketing, Logistics, Graphics, Tech). I’m
-            not sure. But I’m just going to put this placeholder text here so
-            that I have a better idea of what things might look like lol. I’m
-            also not too sure how we should organize our members. By team? Or
-            maybe just put the directors near the top?
+            Hack at UCI strives to provide students with a platform to learn,
+            grow, and develop technology of the future. With every event Hack at
+            UCI puts on, there is an outstanding team behind it composed of
+            three hardworking departments: Corporate, Marketing, and Logistics.
           </p>
         </div>
         <div className="container about-teams">

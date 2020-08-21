@@ -49,13 +49,15 @@ function Home(props) {
             <b>About Us</b>
           </h1>
           <p>
-            Hack at UCI is an organization that promotes developer culture by
-            encouraging people to think creatively, develop technology boldy,
-            and pursue the leading edge of technical innovation.
+            Hack at UCI is a student-run organization established to provide
+            students with a platform to learn, grow, and develop technology of
+            the future. Established in 2013, our mission is to promote, educate,
+            and enhance the community around us by giving students the platform
+            to learn and create technology.
           </p>
           <p>
             <b>
-              <Link to="/about">Read More About Us ></Link>
+              <Link to="/about">Read More About Us {">"}</Link>
             </b>
           </p>
         </div>
@@ -72,7 +74,7 @@ function Home(props) {
           </p>
           <p>
             <b>
-              <Link to="/events">View Upcoming Events ></Link>
+              <Link to="/events">View Upcoming Events {">"}</Link>
             </b>
           </p>
         </div>
@@ -81,14 +83,15 @@ function Home(props) {
           <div className="card-deck">
             <div className="card">
               <div className="card-body text-left">
-                <img className="card-img-top"  src={HackUCI} alt="HackUCI"/>
+                <img className="card-img-top" src={HackUCI} alt="HackUCI" />
                 <p className="card-title">
                   <b>HackUCI</b>
                 </p>
                 <p className="card-text">
-                  This is a short description of the event. There will be a
-                  character limit to this description so that all event cards
-                  have a consistent size. This card can fit a few sentences.
+                  HackUCI is the largest collegiate hackathon in Orange County.
+                  Each year, we bring like minded individuals of different
+                  backgrounds and skill sets together to create something in 36
+                  hours.
                 </p>
               </div>
             </div>
@@ -99,9 +102,10 @@ function Home(props) {
                   <b>ZotHacks</b>
                 </p>
                 <p className="card-text">
-                  This is a short description of the event. There will be a
-                  character limit to this description so that all event cards
-                  have a consistent size. This card can fit a few sentences.
+                  ZotHacks is a beginner-friendly hackathon where students with
+                  minimal computer science experience will learn new skills,
+                  take part in a community of creative people, and build
+                  projects.
                 </p>
               </div>
             </div>
@@ -116,9 +120,10 @@ function Home(props) {
                   <b>HackNights</b>
                 </p>
                 <p className="card-text">
-                  This is a short description of the event. There will be a
-                  character limit to this description so that all event cards
-                  have a consistent size. This card can fit a few sentences.
+                  HackNights is a hackathon-style event where you are welcome to
+                  come work on personal projects and team up with others.
+                  HackNights is a great opportunity to explore interests and
+                  meet new people.
                 </p>
               </div>
             </div>
@@ -129,9 +134,10 @@ function Home(props) {
                   <b>Workshops</b>
                 </p>
                 <p className="card-text">
-                  This is a short description of the event. There will be a
-                  character limit to this description so that all event cards
-                  have a consistent size. This card can fit a few sentences.
+                  Hack hosts several workshops each quarter which exposes
+                  attendees to numerous technologies, frameworks, and
+                  professional opportunities that will prepare them for their
+                  future careers.
                 </p>
               </div>
             </div>
@@ -143,14 +149,14 @@ function Home(props) {
             <b>Sponsors</b>
           </h1>
           <p>
-            Gummi bears gingerbread danish donut danish jelly jelly beans
-            liquorice chocolate chips. Topping poweder desert oat cake.
-            Chocolate jujubles pudding toffee candy canes. Chocolate bar candy
-            cake icing.
+            Hack at UCI’s hackathons and events wouldn’t be possible without the
+            aid from our amazing sponsors that have helped us over the years.
+            Each donation goes right back into creating an outstanding
+            experience for everyone who attends.
           </p>
           <p>
             <b>
-              <Link to="/sponsors">View Sponsorship Information ></Link>
+              <Link to="/sponsors">View Sponsorship Information {">"}</Link>
             </b>
           </p>
         </div>
