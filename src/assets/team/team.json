@@ -1,6 +1,5 @@
 {
-  "Logistics": [
-    {
+  "Logistics": [{
       "first_name": "Ameya",
       "last_name": "Mandalik",
       "position": "Logistic Director",
@@ -33,14 +32,14 @@
       "last_name": "Jogminas",
       "position": "Logistics Organizer",
       "linkedin": "https://www.linkedin.com/in/tristan-jogminas/",
-      "image": ""
+      "image": "./logistics/tristan.jpg"
     },
     {
       "first_name": "Rieko",
       "last_name": "Konisho",
       "position": "Logistics Organizer",
       "linkedin": "www.linkedin.com/in/rieko-konishi",
-      "image": ""
+      "image": "./logistics/rieko.jpg"
     },
     {
       "first_name": "Ellise",
@@ -54,11 +53,10 @@
       "last_name": "Carnaroli",
       "position": "Logistics Organizer",
       "linkedin": "https://www.linkedin.com/in/ChaseCarnaroli/",
-      "image": ""
+      "image": "./logistics/chase.jpg"
     }
   ],
-  "Marketing": [
-    {
+  "Marketing": [{
       "first_name": "Riley",
       "last_name": "Champion",
       "position": "Marketing Director",
@@ -77,7 +75,7 @@
       "last_name": "Yue",
       "position": "Marketing Organizer",
       "linkedin": "",
-      "image": ""
+      "image": "./marketing/sylvester.jpg"
     },
     {
       "first_name": "Hannah",
@@ -91,7 +89,7 @@
       "last_name": "Au",
       "position": "Marketing Organizer",
       "linkedin": "https://www.linkedin.com/in/tylerau/",
-      "image": ""
+      "image": "./marketing/tyler.jpg"
     },
     {
       "first_name": "Maya",
@@ -119,21 +117,21 @@
       "last_name": "Fang",
       "position": "Tech Organizer",
       "linkedin": "https://www.linkedin.com/in/kevin-f-039b61115/",
-      "image": "./marketing/kevin.jpg"
+      "image": "./marketing/kevin.png"
     },
     {
       "first_name": "Abhi",
       "last_name": "Tumu",
       "position": "Tech Organizer",
       "linkedin": "https://www.linkedin.com/in/abhinav-tumu-863635170/",
-      "image": ""
+      "image": "./marketing/abhi.png"
     },
     {
       "first_name": "Nathan",
       "last_name": "Tang",
       "position": "Tech Organizer",
       "linkedin": "https://www.linkedin.com/in/nathanwtang",
-      "image": ""
+      "image": "./marketing/nathan.png"
     },
     {
       "first_name": "Kathleen",
@@ -154,16 +152,15 @@
       "last_name": "Hartanto",
       "position": "Graphics Organizer",
       "linkedin": "https://www.linkedin.com/in/ryan-hartanto-b49072171/",
-      "image": ""
+      "image": "./marketing/ryan.jpg"
     }
   ],
-  "Corporate": [
-    {
+  "Corporate": [{
       "first_name": "Areeta",
       "last_name": "Wong",
       "position": "Corporate Director",
       "linkedin": "https://www.linkedin.com/in/areetaw/",
-      "image": "./corporate/areeta.jpg"
+      "image": "./corporate/areeta.png"
     },
     {
       "first_name": "Christian",
@@ -171,13 +168,6 @@
       "position": "Corporate Organizer",
       "linkedin": "https://www.linkedin.com/in/christian-chun-57a88313a/",
       "image": "./corporate/christian.jpg"
-    },
-    {
-      "first_name": "Brandon",
-      "last_name": "Khong",
-      "position": "Corporate Organizer",
-      "linkedin": "",
-      "image": "./corporate/brandon.jpg"
     },
     {
       "first_name": "Lauren",
@@ -198,25 +188,24 @@
       "last_name": "Wang",
       "position": "Corporate Organizer",
       "linkedin": "https://www.linkedin.com/in/mingjia-wang/",
-      "image": ""
+      "image": "./corporate/mingjia.jpg"
     },
     {
       "first_name": "Crystal",
       "last_name": "Lee",
       "position": "Corporate Organizer",
       "linkedin": "https://www.linkedin.com/in/crystalleesf/",
-      "image": ""
+      "image": "./corporate/crystal.png"
     },
     {
       "first_name": "Sarang",
       "last_name": "Vadali",
       "position": "Corporate Organizer",
       "linkedin": "",
-      "image": ""
+      "image": "./corporate/sarang.jpg"
     }
   ],
-  "Alumni": [
-    {
+  "Alumni": [{
       "first_name": "Anuj",
       "last_name": "Shah",
       "position": "Alumni Mentor",
