@@ -87,16 +87,15 @@
 }
 
 .close-button-event-card {
-  float: right;
   border: 0px;
   background-color: transparent;
   color: white;
   font-size: 30px;
-  margin-left: -30px;
+  position: absolute;
+  margin-left: 20vw;
 }
 
 .popup-title-event-card {
-  margin-top: 10px;
   font-size: 2.5rem;
   font-weight: 600;
 }
@@ -112,6 +111,15 @@
   margin-right: 20vw;
   padding: 10px;
   margin-top: 10vh;
+
+  ::-webkit-scrollbar {
+    width: 18px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+  }
 }
 .desc-text-event-card {
   font-size: 1.75rem;
@@ -130,17 +138,9 @@
   font-size: 22px;
 }
 
-::-webkit-scrollbar {
-  width: 18px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: white;
-  border-radius: 10px;
-}
-
 .modal-top-part {
   box-shadow: 0 1px 10px -2px black;
+  padding-top:20px;
 }
 
 @media (orientation: portrait) {
