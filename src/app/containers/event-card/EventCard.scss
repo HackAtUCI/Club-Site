@@ -1,11 +1,8 @@
 @import "globals/hack-variables.scss";
 
 .eventcard {
-  border-radius: 5px;
-  box-shadow: 5px 5px 8px #272727;
   width: 400px;
   height: 400px;
-  margin: 30px;
   background-color: $darkest-blue;
   color: white;
   display: inline-block;
@@ -13,11 +10,8 @@
 }
 
 .past-eventcard {
-  border-radius: 5px;
-  box-shadow: 5px 5px 8px #272727;
   width: 400px;
   height: 400px;
-  margin: 30px;
   background-color: $darkest-blue;
   color: white;
   display: inline-block;
@@ -97,7 +91,7 @@
 
 .popup-title-event-card {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .modal-styling-event-card {
@@ -124,6 +118,7 @@
 .desc-text-event-card {
   font-size: 1.75rem;
   text-align: left;
+  overflow-x: hidden;
 }
 
 .desc-text-wrapper-event-card {
@@ -139,13 +134,14 @@
 }
 
 .modal-top-part {
-  box-shadow: 0 1px 10px -2px black;
-  padding-top:20px;
+  box-shadow: 0px 16px 10px -15px #111;
+  padding-top: 20px;
+  width: 100%;
 }
 
 @media (orientation: portrait) {
   .popup-title-event-card {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .desc-text-event-card {
@@ -163,7 +159,10 @@
     margin-left: 10vw;
     margin-right: 10vw;
     padding: 10px;
-    margin-top: 10vh;
+    margin-top: 0vh;
+    height:800px;
+    margin-bottom: 5vh;
+
   }
   .eventcard {
     border-radius: 5px;
@@ -175,6 +174,16 @@
     display: inline-block;
     transition: 0.3s;
   }
+
+  .past-eventcard {
+    width: 300px;
+    height: 300px;
+    background-color: $darkest-blue;
+    color: white;
+    display: inline-block;
+    transition: 0.3s;
+  }
+
   .parent-wrapper-event-card {
     display: grid;
     grid-template-columns: 1fr;

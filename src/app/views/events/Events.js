@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import BeatLoader from "react-spinners/BeatLoader";
-import { EventCard } from "../../containers";
+import { Card, EventCard } from "../../containers";
 import HeaderCord from "../../../assets/cord_1_kat.png";
 
 import "./Events.scss";
@@ -52,16 +52,18 @@ function Events() {
         <h1 className='no-events'> No upcoming events! Stay tuned.</h1>
       ) : (
         upcomingEvents.map((event) => (
-          <EventCard
-            title={event.name}
-            date={event.start_time}
-            end_date={event.end_time}
-            link={"https://www.facebook.com/events/" + event.id}
-            description={event.description}
-            image={event.cover.source}
-            time={event.pastOrFuture}
-            key={event.id}
-          />
+          <Card>
+            <EventCard
+              title={event.name}
+              date={event.start_time}
+              end_date={event.end_time}
+              link={"https://www.facebook.com/events/" + event.id}
+              description={event.description}
+              image={event.cover.source}
+              time={event.pastOrFuture}
+              key={event.id}
+            />
+          </Card>
         ))
       );
     }
@@ -79,16 +81,18 @@ function Events() {
         <h1 className='no-events'> No past events! </h1>
       ) : (
         pastEvents.map((event) => (
-          <EventCard
-            title={event.name}
-            date={event.start_time}
-            end_date={event.end_time}
-            link={"https://www.facebook.com/events/" + event.id}
-            description={event.description}
-            image={event.cover.source}
-            time={event.pastOrFuture}
-            key={event.id}
-          />
+          <Card>
+            <EventCard
+              title={event.name}
+              date={event.start_time}
+              end_date={event.end_time}
+              link={"https://www.facebook.com/events/" + event.id}
+              description={event.description}
+              image={event.cover.source}
+              time={event.pastOrFuture}
+              key={event.id}
+            />
+          </Card>
         ))
       );
     }

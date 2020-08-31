@@ -1,9 +1,8 @@
 @import "globals/hack-variables.scss";
 
-.card {
-  background-color: $white;
-
-  & > div {
-    margin: $medium-spacing;
-  }
+.card-box-shadow {
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px #272727;
+  margin: 30px;
 }

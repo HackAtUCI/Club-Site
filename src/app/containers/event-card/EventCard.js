@@ -81,9 +81,6 @@ function EventCard(props) {
         <div className='modal-top-part'>
           <div className='header-line-event-card'>
             <span className='popup-title-event-card'>{props.title}</span>
-            <button onClick={closeModal} className='close-button-event-card'>
-              X
-            </button>
           </div>
           <p className='modal-subtext-date'>
             <div>

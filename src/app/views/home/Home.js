@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { HomeCard } from "../../containers";
+import { Card, HomeCard } from "../../containers";
 
 import "./Home.scss";
 import HeaderMicroUSB from "../../../assets/micro_usb_cord_kat.png";
@@ -80,34 +80,42 @@ function Home(props) {
 
         <div className='container card-container'>
           <div className='card-deck'>
-            <HomeCard
-              image={HackUCI}
-              title='HackUCI'
-              description='This is a short description of the event. There will be a
+            <Card>
+              <HomeCard
+                image={HackUCI}
+                title='HackUCI'
+                description='This is a short description of the event. There will be a
                   character limit to this description so that all event cards
                   have a consistent size. This card can fit a few sentences.'
-            />
-            <HomeCard
-              image={ZotHacks}
-              title='ZotHacks'
-              description='This is a short description of the event. There will be a
+              />
+            </Card>
+            <Card>
+              <HomeCard
+                image={ZotHacks}
+                title='ZotHacks'
+                description='This is a short description of the event. There will be a
                   character limit to this description so that all event cards
                   have a consistent size. This card can fit a few sentences.'
-            />
-            <HomeCard
-              image={HackNights}
-              title='HackNights'
-              description='This is a short description of the event. There will be a
+              />
+            </Card>
+            <Card>
+              <HomeCard
+                image={HackNights}
+                title='HackNights'
+                description='This is a short description of the event. There will be a
                   character limit to this description so that all event cards
                   have a consistent size. This card can fit a few sentences.'
-            />
-            <HomeCard
-              image={Workshops}
-              title='Workshops'
-              description='This is a short description of the event. There will be a
+              />
+            </Card>
+            <Card>
+              <HomeCard
+                image={Workshops}
+                title='Workshops'
+                description='This is a short description of the event. There will be a
                   character limit to this description so that all event cards
                   have a consistent size. This card can fit a few sentences.'
-            />
+              />
+            </Card>
           </div>
         </div>
 
