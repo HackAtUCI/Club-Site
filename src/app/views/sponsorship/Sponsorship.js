@@ -33,7 +33,7 @@ function Sponsorship(props) {
         <div className="container global-description-container">
           <p className="global-description-font">
             Hack at UCI’s hackathons and events wouldn’t be possible without the
-            aid from our amazing sponsors that have helped us over the years..
+            aid from our amazing sponsors that have helped us over the years.
             Each donation goes right back into creating an outstanding
             experience for everyone who attends.
           </p>

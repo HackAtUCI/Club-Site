@@ -45,7 +45,7 @@ function Events() {
         </div>
       );
     } else {
-      return upcomingEvents.length == 0 ? (
+      return upcomingEvents.length === 0 ? (
         <h1 className="no-events"> No upcoming events! Stay tuned.</h1>
       ) : (
         upcomingEvents.map((event) => (
@@ -55,7 +55,6 @@ function Events() {
             end_date={event.end_time}
             link={"https://www.facebook.com/events/" + event.id}
             description={event.description}
-            image={event.cover.source}
             image={event.cover.source}
             time={event.pastOrFuture}
             key={event.id}
@@ -73,7 +72,7 @@ function Events() {
         </div>
       );
     } else {
-      return pastEvents.length == 0 ? (
+      return pastEvents.length === 0 ? (
         <h1 className="no-events"> No past events! </h1>
       ) : (
         pastEvents.map((event) => (
@@ -83,7 +82,6 @@ function Events() {
             end_date={event.end_time}
             link={"https://www.facebook.com/events/" + event.id}
             description={event.description}
-            image={event.cover.source}
             image={event.cover.source}
             time={event.pastOrFuture}
             key={event.id}

@@ -3,7 +3,7 @@
       "first_name": "Ameya",
       "last_name": "Mandalik",
       "position": "Logistic Director",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/ameya-mandalik/",
       "image": "./logistics/ameya.jpg"
     },
     {
@@ -24,7 +24,7 @@
       "first_name": "Sahil",
       "last_name": "Railkar",
       "position": "Logistics Organizer",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/sahilrailkar/",
       "image": "./logistics/sahil.jpg"
     },
     {
@@ -46,7 +46,7 @@
       "last_name": "Limjoco",
       "position": "Logistics Organizer",
       "linkedin": "https://www.linkedin.com/in/ell-ml/",
-      "image": ""
+      "image": "./logistics/ellise.jpg"
     },
     {
       "first_name": "Chase",
@@ -60,21 +60,21 @@
       "first_name": "Riley",
       "last_name": "Champion",
       "position": "Marketing Director",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/rileychampion/",
       "image": "./marketing/riley.jpg"
     },
     {
       "first_name": "Karen",
       "last_name": "Vu",
       "position": "Marketing Organizer",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/karen-vu/",
       "image": "./marketing/karen.jpg"
     },
     {
       "first_name": "Sylvester",
       "last_name": "Yue",
       "position": "Marketing Organizer",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/sylvester-yue/",
       "image": "./marketing/sylvester.jpg"
     },
     {
@@ -82,7 +82,7 @@
       "last_name": "Limary",
       "position": "Marketing Organizer",
       "linkedin": "https://www.linkedin.com/in/hannah-limary/",
-      "image": ""
+      "image": "./marketing/hannah.jpg"
     },
     {
       "first_name": "Tyler",
@@ -96,21 +96,14 @@
       "last_name": "Schwartz",
       "position": "Marketing Organizer",
       "linkedin": "https://www.linkedin.com/in/maya-schwarz/",
-      "image": ""
-    },
-    {
-      "first_name": "Tiffany",
-      "last_name": "Liang",
-      "position": "Marketing Organizer",
-      "linkedin": "",
-      "image": "./marketing/tiffany.jpg"
+      "image": "./marketing/maya.jpg"
     },
     {
       "first_name": "Lasse",
       "last_name": "Nordahl",
       "position": "Tech Organizer",
       "linkedin": "https://www.linkedin.com/in/lassenordahl/",
-      "image": "./marketing/lasse.jpg"
+      "image": "./marketing/lasse.png"
     },
     {
       "first_name": "Kevin",
@@ -144,7 +137,7 @@
       "first_name": "Noreen",
       "last_name": "Delossantos",
       "position": "Graphics Organizer",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/noreen-delossantos-a57b871aa/",
       "image": "./marketing/noreen.jpg"
     },
     {
@@ -153,6 +146,13 @@
       "position": "Graphics Organizer",
       "linkedin": "https://www.linkedin.com/in/ryan-hartanto-b49072171/",
       "image": "./marketing/ryan.jpg"
+    },
+    {
+      "first_name": "Tiffany",
+      "last_name": "Liang",
+      "position": "Marketing Organizer",
+      "linkedin": "https://www.linkedin.com/in/tiffany-liang-b11604193/",
+      "image": ""
     }
   ],
   "Corporate": [{
@@ -174,14 +174,14 @@
       "last_name": "Yoo",
       "position": "Corporate Organizer",
       "linkedin": "http://www.linkedin.com/in/laurenyoo620",
-      "image": ""
+      "image": "./corporate/lauren.jpg"
     },
     {
       "first_name": "Kingsley",
       "last_name": "Szeto",
       "position": "Corporate Organizer",
       "linkedin": "https://www.linkedin.com/in/kingsley-szeto/",
-      "image": ""
+      "image": "./corporate/kingsley.jpg"
     },
     {
       "first_name": "Mingjia",
@@ -201,79 +201,79 @@
       "first_name": "Sarang",
       "last_name": "Vadali",
       "position": "Corporate Organizer",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/sarang-vadali-277339177/",
       "image": "./corporate/sarang.jpg"
     }
   ],
   "Alumni": [{
-      "first_name": "Anuj",
-      "last_name": "Shah",
-      "position": "Alumni Mentor",
-      "linkedin": "",
-      "image": ""
-    },
-    {
       "first_name": "Tedrick",
       "last_name": "Wong",
       "position": "Alumni Mentor",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/tedrick-wong/",
       "image": "./corporate/tedrick.jpg"
     },
     {
       "first_name": "Sean",
       "last_name": "Victory",
       "position": "Alumni Mentor",
-      "linkedin": "",
-      "image": ""
+      "linkedin": "https://www.linkedin.com/in/seanvictory/",
+      "image": "./corporate/sean.jpg"
     },
     {
       "first_name": "Jeremy",
       "last_name": "Yang",
       "position": "Alumni Mentor",
-      "linkedin": "",
-      "image": ""
+      "linkedin": "https://www.linkedin.com/in/jeremyyang920/",
+      "image": "./logistics/jeremy.jpg"
     },
     {
       "first_name": "Jean-Paul (JP)",
       "last_name": "Nguyen",
       "position": "Alumni Mentor",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/jeanpaul-nguyen/",
       "image": "./logistics/jp.jpg"
     },
     {
       "first_name": "Kamesh",
       "last_name": "Vedula",
       "position": "Alumni Mentor",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/kvedula1998/",
       "image": "./logistics/kamesh.jpg"
     },
     {
       "first_name": "Wesley",
       "last_name": "Tseng",
       "position": "Alumni Mentor",
-      "linkedin": "",
-      "image": ""
+      "linkedin": "https://www.linkedin.com/in/wbtseng/",
+      "image": "./marketing/wesley.jpg"
     },
     {
       "first_name": "Wei-Wern (Vivienne)",
       "last_name": "Ooi",
       "position": "Alumni Mentor",
-      "linkedin": "",
-      "image": ""
+      "linkedin": "https://www.linkedin.com/in/wei-wern/",
+      "image": "./marketing/vivienne.jpg"
     },
     {
       "first_name": "Ryan",
       "last_name": "Luu",
       "position": "Alumni Mentor",
-      "linkedin": "",
-      "image": ""
+      "linkedin": "https://www.linkedin.com/in/ryan-luu1/",
+      "image": "./marketing/ryan_luu.jpg"
     },
     {
       "first_name": "Ting Ting",
       "last_name": "Huang",
       "position": "Alumni Mentor",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/tingthuang/",
       "image": "./marketing/tingting.jpg"
+    },
+    {
+      "first_name": "Anuj",
+      "last_name": "Shah",
+      "position": "Alumni Mentor",
+      "linkedin": "https://www.linkedin.com/in/anujshah/",
+      "image": ""
     }
   ]
 }
