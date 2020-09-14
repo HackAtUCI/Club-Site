@@ -1,6 +1,6 @@
 import React from "react";
 import "./TeamCard.scss";
-import test from "../../../assets/linkedin-logo.png";
+import blank from "../../../assets/team/blank.png";
 import linkedinLogo from "../../../assets/linkedin-logo.png";
 
 function TeamCard(props) {
@@ -14,7 +14,7 @@ function TeamCard(props) {
   return (
     <div className="teamcard" style={props.style}>
       <div className="images-container">
-        <img alt="profile" className="profpic" src={image ? image : test} />
+        <img alt="profile" className="profpic" src={image ? image : blank} />
         <a href={props.linkedinUrl}>
           <img alt="linkedin" className="linkedinLogo" src={linkedinLogo} />
         </a>
