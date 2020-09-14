@@ -1,5 +1,6 @@
 {
-  "Logistics": [{
+  "Logistics": [
+    {
       "first_name": "Ameya",
       "last_name": "Mandalik",
       "position": "Logistic Director",
@@ -38,7 +39,7 @@
       "first_name": "Rieko",
       "last_name": "Konisho",
       "position": "Logistics Organizer",
-      "linkedin": "www.linkedin.com/in/rieko-konishi",
+      "linkedin": "https://www.linkedin.com/in/rieko-konishi",
       "image": "./logistics/rieko.jpg"
     },
     {
@@ -56,7 +57,8 @@
       "image": "./logistics/chase.jpg"
     }
   ],
-  "Marketing": [{
+  "Marketing": [
+    {
       "first_name": "Riley",
       "last_name": "Champion",
       "position": "Marketing Director",
@@ -155,7 +157,8 @@
       "image": ""
     }
   ],
-  "Corporate": [{
+  "Corporate": [
+    {
       "first_name": "Areeta",
       "last_name": "Wong",
       "position": "Corporate Director",
@@ -205,7 +208,8 @@
       "image": "./corporate/sarang.jpg"
     }
   ],
-  "Alumni": [{
+  "Alumni": [
+    {
       "first_name": "Tedrick",
       "last_name": "Wong",
       "position": "Alumni Mentor",
