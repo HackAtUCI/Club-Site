@@ -101,7 +101,9 @@
   padding: 0px;
   margin-top: 10vh;
   height: 80vh;
-  z-index: 11;
+  position: relative;
+  z-index: 20;
+
 
   ::-webkit-scrollbar {
     width: 18px;
@@ -140,6 +142,8 @@
   padding-top: 20px;
   width: 100%;
   position: relative;
+  z-index: 20;
+
 
   .close-button-event-card {
     border: 0px;
