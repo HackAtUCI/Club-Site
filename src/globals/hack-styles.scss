@@ -57,7 +57,7 @@
   background-color: $darkest-blue !important;
   color: white;
   height: 21.5rem;
-  z-index: 3;
+
   overflow-y: hidden;
   overflow-x: hidden;
   position: relative;
@@ -75,7 +75,7 @@
     font-family: sans-serif;
     font-weight: bold;
     font-size: 1.6rem;
-    z-index: 10;
+
   }
   @media screen and (max-width: 760px) {
     .global-description-font {
@@ -86,7 +86,6 @@
       font-family: sans-serif;
       font-weight: bold;
       font-size: 1.3rem;
-      z-index: 10;
     }
   }
 }
