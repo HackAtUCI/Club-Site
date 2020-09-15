@@ -50,9 +50,11 @@ function Home(props) {
             <b>About Us</b>
           </h1>
           <p>
-            Hack at UCI is an organization that promotes developer culture by
-            encouraging people to think creatively, develop technology boldy,
-            and pursue the leading edge of technical innovation.
+            Hack at UCI is a student-run organization established to provide
+            students with a platform to learn, grow, and develop technology of
+            the future. Established in 2013, our mission is to promote, educate,
+            and enhance the community around us by giving students the platform
+            to learn and create technology.
           </p>
           <p>
             <b>
@@ -124,10 +126,10 @@ function Home(props) {
             <b>Sponsors</b>
           </h1>
           <p>
-            Gummi bears gingerbread danish donut danish jelly jelly beans
-            liquorice chocolate chips. Topping poweder desert oat cake.
-            Chocolate jujubles pudding toffee candy canes. Chocolate bar candy
-            cake icing.
+            Hack at UCI’s hackathons and events wouldn’t be possible without the
+            aid from our amazing sponsors that have helped us over the years.
+            Each donation goes right back into creating an outstanding
+            experience for everyone who attends.
           </p>
           <p>
             <b>

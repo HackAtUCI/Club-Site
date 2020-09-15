@@ -1,6 +1,10 @@
 // Helper CSS classes for use around the app
 @import "src/globals/hack-variables.scss";
 
+#root {
+  background-color: $darkest-blue;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
