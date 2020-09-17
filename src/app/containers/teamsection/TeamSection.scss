@@ -1,0 +1,17 @@
+.team-title {
+  margin-top: 20px;
+  text-align: left;
+  color: #233b92;
+}
+
+.team-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media screen and (max-width: 760px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}

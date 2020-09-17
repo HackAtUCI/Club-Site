@@ -1,0 +1,23 @@
+@import "src/globals/hack-variables.scss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.about {
+  .about-content {
+    margin: auto;
+
+    .about-description {
+      margin-top: 100px;
+      p {
+        font-size: 26px;
+        text-align: left;
+      }
+    }
+
+    .about-teams {
+      margin-top: 100px;
+    }
+  }
+}

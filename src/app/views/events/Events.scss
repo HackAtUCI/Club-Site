@@ -1,0 +1,57 @@
+@import "globals/hack-variables.scss";
+
+.events {
+  display: inline-block;
+  max-width: 1400px;
+}
+
+.title-events {
+  margin-top: 15px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.no-events {
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.events-description-wrapper {
+  background-color: $ember-blue;
+  color: white;
+  width: 100%;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+
+.events-description {
+  max-width: 1400px;
+  text-align: left;
+  margin-left: 200px;
+  font-size: 35px;
+  line-height: 2;
+}
+
+@media (orientation: portrait) {
+  .events {
+    display: inline;
+    max-width: 1400px;
+  }
+
+  .events-description-wrapper {
+    background-color: $ember-blue;
+    color: white;
+    width: 100%;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    margin-bottom: 100px;
+  }
+  .events-description {
+    max-width: 1400px;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 20px;
+    line-height: 2;
+  }
+}

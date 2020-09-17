@@ -1,11 +1,39 @@
-@import "globals/hack-variables.scss";
+@import "src/globals/hack-variables.scss";
 
-a {
-  text-decoration: none;
-  color: #fff;
+.ml-auto {
+  margin-right: 30px;
 }
 
-a:hover {
+.nav-color {
+  background-color: $darkest-blue !important;
+  height: 80px;
+}
+
+.nav-color:not(.collapsing):not(.show) {
+  height: auto !important;
+}
+
+.nav-link a {
+  text-decoration: none;
   color: #fff;
-  background: slategray;
+  margin: 10px;
+  font-size: 20px;
+
+  &.selected {
+    color: $ember-orange;
+    border-bottom: 2px solid $ember-orange;
+    &:hover {
+      color: $ember-orange;
+    }
+  }
+}
+
+.nav-link a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-logo {
+  max-width: 85px;
+  padding: 0 5px;
 }

@@ -1,4 +1,9 @@
 // Helper CSS classes for use around the app
+@import "src/globals/hack-variables.scss";
+
+#root {
+  background-color: $darkest-blue;
+}
 
 .flex-center {
   display: flex;
@@ -30,7 +35,7 @@
   flex-direction: column;
 }
 
-.box-shadow { 
+.box-shadow {
   box-shadow: 3px 10px 18px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,4 +51,41 @@
 .fill-view {
   width: 100vw;
   height: 100vh;
+}
+
+.global-header {
+  background-color: $darkest-blue !important;
+  color: white;
+  height: 21.5rem;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.global-description-container {
+  position: relative;
+  margin: auto;
+
+  .global-description-font {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    text-align: left;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+
+  }
+  @media screen and (max-width: 760px) {
+    .global-description-font {
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      text-align: left;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+  }
 }
