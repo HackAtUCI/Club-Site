@@ -16,7 +16,7 @@ function Newsletter(props) {
           <p className="newsletter-info">
             Get Involved! By filling your information and clicking "Subscribe",
             Hack at UCI will send you emails about the club's updates and
-            events.{" "}
+            events.
           </p>
           <p className="newsletter-mailchimp-info">
             Mailchimp collects the following information for our sponsors and to
@@ -29,42 +29,47 @@ function Newsletter(props) {
           method="post"
           name="mc-embedded-subscribe-form"
           target="_blank"
-          noValidate
         >
           <label>
-            Email Address <span className="asterisk">*</span>{" "}
+            Email Address <span className="asterisk">*</span>
           </label>
           <input
             id="userEmail"
             type="email"
             className="form-control"
             name="EMAIL"
-          />{" "}
+          />
           <br />
-          <label>First Name</label>
+          <label>
+            First Name <span className="asterisk">*</span>
+          </label>
           <input
             id="userFName"
             type="text"
             className="form-control"
             name="FNAME"
-          />{" "}
+          />
           <br />
-          <label>Last Name</label>
+          <label>
+            Last Name <span className="asterisk">*</span>
+          </label>
           <input
             id="userLName"
             type="text"
             className="form-control"
             name="LNAME"
-          />{" "}
+          />
           <br />
-          <label>Graduating Year</label>
+          <label>
+            Graduating Year <span className="asterisk">*</span>
+          </label>
           <input
             id="userYear"
             type="text"
             maxLength="4"
             className="form-control"
             name="MMERGE4"
-          />{" "}
+          />
           <br />
           <div className="d-flex text-left">
             <button className="involved-button" name="subscribe">
