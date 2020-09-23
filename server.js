@@ -87,13 +87,30 @@ var handleFind = (res) => (err, result) => {
   res.status(status).json(data)
 }
 
+var handleUpdate = (res) => (err, result) => {
+  var data = {
+    message: 'Unable to update'
+  };
+  var status = 400
+
+  if (result && result.nModified > 0 && !err) {
+    data = {
+      result: result,
+      message: 'Updated successfully'
+    };
+    status = 200
+  }
+
+  res.status(status).json(data);
+}
+
 var handleDelete = (res) => (err, result) => {
   var data = data = {
     message: 'Unable to delete'
   };
   var status = 400;
 
-  if (result && result.deleteCount > 0 && !err) {
+  if (result && result.deletedCount > 0 && !err) {
     data = {
       result: result,
       message: 'Deleted successfully'
@@ -136,7 +153,10 @@ app.post("/api/discord/invites", authCheck, jsonParser, function (req, res) {
 
   req.body.invites.forEach(invite => {
     try {
-      var newInvite = new DiscordInvite(invite);
+      var newInvite = new DiscordInvite({
+        ...invite,
+        inviteUsed: false
+      });
     } catch (err) {
       res.json(err);
       return err;
@@ -145,6 +165,13 @@ app.post("/api/discord/invites", authCheck, jsonParser, function (req, res) {
   });
 });
 
+app.patch("/api/discord/invites", authCheck, jsonParser, function (req, res) {
+  DiscordInvite.updateMany({
+    inviteUrl: {
+      $in: req.query.inviteUrls
+    }
+  }, req.body, handleUpdate(res));
+});
 
 app.get("/api/discord/invites", authCheck, function (req, res) {
   DiscordInvite.find(

@@ -30,6 +30,14 @@ var discordInviteSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    role: {
+        type: String,
+        required: true
+    },
+    inviteUsed: {
+        type: Boolean,
+        required: true
+    },
     inviteUrl: {
         type: String,
         required: true,
