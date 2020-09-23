@@ -22,9 +22,8 @@ mongoose.connect(process.env.DB_URI, {
 
 app.use((req, res, next) => {
   if (process.env.NODE_ENV === 'prod') {
-    if (req.headers.host === 'hack-club-site-production.herokuapp.com') {
+    if (req.headers.host === 'hack-club-site-production.herokuapp.com')
       return res.redirect(301, 'https://hack.ics.uci.edu' + req.path);
-    }
     if (req.headers['x-forwarded-proto'] !== 'https')
       return res.redirect('https://' + req.headers.host + req.url + req.path);
     else
