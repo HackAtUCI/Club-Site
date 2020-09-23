@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import Alert from "react-bootstrap/Alert";
 import "./Newsletter.scss";
 
 function Newsletter(props) {
+  const [formType, setFormType] = useState("Newsletter");
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertSuccess, setAlertSuccess] = useState(false);
+
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [graduationYear, setGraduationYear] = useState("");
+
+  function submitDiscordSignUp(e) {
+    e.preventDefault();
+    axios
+      .post("/api/discord/signups", {
+        email,
+        firstName,
+        lastName,
+      })
+      .then((response) => {
+        setAlertSuccess(true);
+        setShowAlert(true);
+      })
+      .catch((err) => {
+        setAlertSuccess(false);
+        setShowAlert(true);
+      });
+  }
+
   return (
     <div
       id="newsletter"
@@ -10,13 +39,14 @@ function Newsletter(props) {
     >
       <div className="container text-left newsletter-container">
         <h1 className="newsletter-left">
-          <b>Subscribe to our newsletter!</b>
+          <b>Join our Discord and newsletter!</b>
         </h1>
         <div className="newsletter-left">
           <p className="newsletter-info">
-            Get Involved! By filling your information and clicking "Subscribe",
-            Hack at UCI will send you emails about the club's updates and
-            events.
+            Get Involved! First, fill in your information. By clicking "Join
+            Discord", Hack at UCI will email you an invite link to our discord
+            server. By clicking "Subscribe", Hack at UCI will send you emails
+            about the club's updates and events.
           </p>
           <p className="newsletter-mailchimp-info">
             Mailchimp collects the following information for our sponsors and to
@@ -25,10 +55,17 @@ function Newsletter(props) {
         </div>
         <form
           className="newsletter-form"
-          action="https://uci.us13.list-manage.com/subscribe/post?u=5976872928cd5681fbaca89f6&amp;id=93333e11eb"
-          method="post"
-          name="mc-embedded-subscribe-form"
-          target="_blank"
+          action={
+            formType === "Newsletter"
+              ? "https://uci.us13.list-manage.com/subscribe/post?u=5976872928cd5681fbaca89f6&amp;id=93333e11eb"
+              : undefined
+          }
+          method={formType === "Newsletter" ? "post" : undefined}
+          name={
+            formType === "Newsletter" ? "mc-embedded-subscribe-form" : undefined
+          }
+          target={formType === "Newsletter" ? "_blank" : undefined}
+          onSubmit={formType === "Discord" ? submitDiscordSignUp : undefined}
         >
           <label>
             Email Address <span className="asterisk">*</span>
@@ -38,6 +75,9 @@ function Newsletter(props) {
             type="email"
             className="form-control"
             name="EMAIL"
+            required
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
           />
           <br />
           <label>
@@ -48,6 +88,9 @@ function Newsletter(props) {
             type="text"
             className="form-control"
             name="FNAME"
+            required
+            value={firstName}
+            onChange={(event) => setFirstName(event.target.value)}
           />
           <br />
           <label>
@@ -58,6 +101,9 @@ function Newsletter(props) {
             type="text"
             className="form-control"
             name="LNAME"
+            required
+            value={lastName}
+            onChange={(event) => setLastName(event.target.value)}
           />
           <br />
           <label>
@@ -69,12 +115,57 @@ function Newsletter(props) {
             maxLength="4"
             className="form-control"
             name="MMERGE4"
+            required
+            value={graduationYear}
+            onChange={(event) => setGraduationYear(event.target.value)}
           />
           <br />
           <div className="d-flex text-left">
-            <button className="involved-button" name="subscribe">
+            <button
+              className="involved-button"
+              style={{ marginRight: 10, backgroundColor: "#7289da" }}
+              name="discord"
+              onClick={() => setFormType("Discord")}
+            >
+              <b>Join Discord</b>
+            </button>
+            <button
+              className="involved-button"
+              name="subscribe"
+              onClick={() => setFormType("Newsletter")}
+            >
               <b>Subscribe</b>
             </button>
+          </div>
+          <br />
+          <div className="d-flex text-left">
+            <Alert
+              show={showAlert}
+              variant={alertSuccess ? "success" : "danger"}
+            >
+              {alertSuccess && (
+                <React.Fragment>
+                  <Alert.Heading>Successfully Submitted!</Alert.Heading>
+                  <p>
+                    Your request to join our discord server has been queued! You
+                    should receive an invite link at the email provided above
+                    within 5 minutes.
+                  </p>
+                </React.Fragment>
+              )}
+              {!alertSuccess && (
+                <React.Fragment>
+                  <Alert.Heading>Submission Error!</Alert.Heading>
+                  <p>
+                    Your request to join our discord server has not been queued!
+                    You may have already submitted a request under this email.
+                    If you do not receive an invite email in 20 minutes, please
+                    contact us at{" "}
+                    <a href="mailto:hackuci@gmail.com">hack@uci.edu</a>.
+                  </p>
+                </React.Fragment>
+              )}
+            </Alert>
           </div>
         </form>
       </div>

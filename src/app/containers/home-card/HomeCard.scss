@@ -1,20 +1,20 @@
 @import "globals/hack-variables.scss";
 
 $card-width: 300px;
-$card-height: 415px;
+$card-height: 430px;
 
 .home-card {
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px #272727;
-    width: $card-width;
-    height: $card-height;
-    background-color: $darkest-blue;
-    color: white;
-    display: inline-block;
-    transition: 0.3s;
-  }
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #272727;
+  width: $card-width;
+  height: $card-height;
+  background-color: $darkest-blue;
+  color: white;
+  display: inline-block;
+  transition: 0.3s;
+}
 
-  
+
 .parent-wrapper-home-card {
   display: grid;
   grid-template-columns: 1fr;
@@ -41,7 +41,7 @@ $card-height: 415px;
   text-align: left;
   padding-left: 18px;
   float: bottom;
-  font-size:20px;
+  font-size: 20px;
 }
 
 .top-text-home-card {
