@@ -23,9 +23,9 @@ mongoose.connect(process.env.DB_URI, {
 app.use((req, res, next) => {
   if (process.env.NODE_ENV === 'prod') {
     if (req.headers.host === 'hack-club-site-production.herokuapp.com')
-      return res.redirect(301, 'https://hack.ics.uci.edu' + req.path);
+      return res.redirect(301, 'https://hack.ics.uci.edu' + req.url);
     if (req.headers['x-forwarded-proto'] !== 'https')
-      return res.redirect('https://' + req.headers.host + req.url + req.path);
+      return res.redirect('https://' + req.headers.host + req.url);
     else
       return next();
   } else
@@ -158,7 +158,7 @@ app.delete("/api/discord/signups", authCheck, function (req, res) {
 app.post("/api/discord/invites", authCheck, jsonParser, function (req, res) {
 
   if (req.body.invites === undefined || req.body.invites <= 0) {
-    res.json({
+    res.status(400).json({
       message: "No invites provided"
     });
   }
