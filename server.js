@@ -7,7 +7,6 @@ const path = require("path");
 require("dotenv").config();
 
 const { DiscordSignup, DiscordInvite } = require("./models.js");
-
 const jsonParser = bodyParser.json();
 const app = express();
 
