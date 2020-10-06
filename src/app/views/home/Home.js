@@ -45,7 +45,7 @@ function Home(props) {
       </div>
 
       <div className="home-content">
-        <div className="container text-left home-about home-container">
+        <div className="text-left home-about home-container">
           <h1>
             <b>About Us</b>
           </h1>
@@ -62,7 +62,7 @@ function Home(props) {
             </b>
           </p>
         </div>
-        <div className="container text-left home-container">
+        <div className="text-left home-container">
           <h1>
             <b>Our Events</b>
           </h1>
@@ -121,7 +121,7 @@ function Home(props) {
           </div>
         </div>
 
-        <div className="container text-left home-sponsors home-container">
+        <div className="text-left home-sponsors home-container">
           <h1>
             <b>Sponsors</b>
           </h1>

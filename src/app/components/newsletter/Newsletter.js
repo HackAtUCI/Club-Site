@@ -37,7 +37,7 @@ function Newsletter(props) {
       className="jumbotron jumbotron-fluid newsletter"
       style={props.style}
     >
-      <div className="container text-left newsletter-container">
+      <div className="text-left newsletter-container">
         <h1 className="newsletter-left">
           <b>Join our Discord and newsletter!</b>
         </h1>
@@ -122,15 +122,14 @@ function Newsletter(props) {
           <br />
           <div className="d-flex text-left">
             <button
-              className="involved-button"
-              style={{ marginRight: 10, backgroundColor: "#7289da" }}
+              className="discord-button"
               name="discord"
               onClick={() => setFormType("Discord")}
             >
               <b>Join Discord</b>
             </button>
             <button
-              className="involved-button"
+              className="newsletter-button"
               name="subscribe"
               onClick={() => setFormType("Newsletter")}
             >
