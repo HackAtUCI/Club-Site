@@ -21,7 +21,7 @@
 
 .sponsor-content-heading {
   text-align: left;
-  grid-column: 1 /span2;
+  grid-column: 1 / span2;
   margin-top: 80px;
   font-size: 70px;
   color: #5a73cc;
@@ -110,6 +110,7 @@
   margin-bottom: 30px;
   text-align: left;
   font-size: 16px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 #Bianca {
@@ -132,7 +133,7 @@
 }
 
 .sponsor-zothacks-stats {
-  grid-column: 1 /span2;
+  grid-column: 1 / span2;
 }
 
 .sponsor-stat-graph {

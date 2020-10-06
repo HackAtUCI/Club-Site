@@ -88,6 +88,11 @@ html {
   border-top: 10px solid $red;
 }
 
+.home-container {
+  width: 80vw;
+  margin: auto;
+}
+
 .home-container h1 {
   font-size: 42px;
   padding: 10rem 0 0 0;
@@ -112,7 +117,7 @@ html {
 }
 
 .card {
-  box-shadow: 0 3px 8px #aaaaaa;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .card-title {
@@ -186,5 +191,3 @@ $cards-per-line: (
   lg: 4,
   xl: 4,
 );
-
-
