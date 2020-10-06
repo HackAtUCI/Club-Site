@@ -4,8 +4,8 @@ $card-width: 300px;
 $card-height: 430px;
 
 .home-card {
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px #272727;
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: $card-width;
   height: $card-height;
   background-color: $darkest-blue;
@@ -13,7 +13,6 @@ $card-height: 430px;
   display: inline-block;
   transition: 0.3s;
 }
-
 
 .parent-wrapper-home-card {
   display: grid;
@@ -28,13 +27,11 @@ $card-height: 430px;
   height: $card-width * 0.58;
 }
 
-
 .top-part-home-card-img {
   width: $card-width;
   height: $card-width * 0.58;
   border-radius: 5px;
 }
-
 
 .bottom-text-home-card {
   padding-top: 8px;
@@ -50,7 +47,6 @@ $card-height: 430px;
   padding-left: 15px;
   font-size: 30px;
 }
-
 
 .bottom-text-home-card {
   padding-top: 8px;

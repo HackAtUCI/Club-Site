@@ -1,6 +1,7 @@
 @import "globals/hack-variables.scss";
 
 .eventcard {
+  border-radius: 5px 5px 0px 0px;
   width: 400px;
   height: 400px;
   background-color: $darkest-blue;
@@ -104,7 +105,6 @@
   position: relative;
   z-index: 20;
 
-
   ::-webkit-scrollbar {
     width: 18px;
   }
@@ -112,17 +112,14 @@
   ::-webkit-scrollbar-thumb {
     background: white;
     border-radius: 10px;
-    
   }
 }
 .desc-text-event-card {
-
   font-size: 1.75rem;
   text-align: left;
   overflow-x: hidden;
   white-space: pre-wrap;
   overflow-wrap: break-word;
-
 }
 
 .desc-text-wrapper-event-card {
@@ -133,7 +130,6 @@
   margin-bottom: 20px;
 
   p {
-    
     font-size: 22px;
   }
 }
@@ -143,12 +139,12 @@
 }
 
 .modal-top-part {
+  border-radius: 10px 10px 0px 0px;
   box-shadow: 0px 1px 6px 0px #222;
   padding-top: 20px;
   width: 100%;
   position: relative;
   z-index: 20;
-
 
   .close-button-event-card {
     border: 0px;
@@ -184,12 +180,11 @@
     margin-top: 10vh;
     height: 80vh;
     margin-bottom: 5vh;
-
   }
 
   .eventcard {
-    border-radius: 5px;
-    box-shadow: 5px 5px 8px #272727;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     width: 300px;
     height: 300px;
     background-color: $darkest-blue;
