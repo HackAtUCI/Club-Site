@@ -16,7 +16,7 @@ function Newsletter(props) {
   function submitDiscordSignUp(e) {
     e.preventDefault();
     axios
-      .post("/api/discord/signups", {
+      .post("api/discord/signups", {
         email,
         firstName,
         lastName,
@@ -56,16 +56,12 @@ function Newsletter(props) {
         <form
           className="newsletter-form"
           action={
-            formType === "Newsletter"
-              ? "https://uci.us13.list-manage.com/subscribe/post?u=5976872928cd5681fbaca89f6&amp;id=93333e11eb"
-              : undefined
+            "https://uci.us13.list-manage.com/subscribe/post?u=5976872928cd5681fbaca89f6&amp;id=93333e11eb"
           }
-          method={formType === "Newsletter" ? "post" : undefined}
-          name={
-            formType === "Newsletter" ? "mc-embedded-subscribe-form" : undefined
-          }
-          target={formType === "Newsletter" ? "_blank" : undefined}
-          onSubmit={formType === "Discord" ? submitDiscordSignUp : undefined}
+          method={"post"}
+          name={"mc-embedded-subscribe-form"}
+          target={"_blank"}
+          onSubmit={submitDiscordSignUp}
         >
           <label>
             Email Address <span className="asterisk">*</span>
@@ -122,13 +118,6 @@ function Newsletter(props) {
           <br />
           <div className="d-flex text-left">
             <button
-              className="discord-button"
-              name="discord"
-              onClick={() => setFormType("Discord")}
-            >
-              <b>Join Discord</b>
-            </button>
-            <button
               className="newsletter-button"
               name="subscribe"
               onClick={() => setFormType("Newsletter")}
@@ -146,9 +135,8 @@ function Newsletter(props) {
                 <React.Fragment>
                   <Alert.Heading>Successfully Submitted!</Alert.Heading>
                   <p>
-                    Your request to join our discord server has been queued! You
-                    should receive an invite link at the email provided above
-                    within 5 minutes.
+                    You receive an invite link for our Discord server at the
+                    email provided above within 5 minutes.
                   </p>
                 </React.Fragment>
               )}
@@ -156,10 +144,9 @@ function Newsletter(props) {
                 <React.Fragment>
                   <Alert.Heading>Submission Error!</Alert.Heading>
                   <p>
-                    Your request to join our discord server has not been queued!
-                    You may have already submitted a request under this email.
-                    If you do not receive an invite email in 20 minutes, please
-                    contact us at{" "}
+                    Your request to subscribe has not been queued! You may have
+                    already submitted a request under this email. If you do not
+                    receive an invite email in 20 minutes, please contact us at{" "}
                     <a href="mailto:hackuci@gmail.com">hack@uci.edu</a>.
                   </p>
                 </React.Fragment>
