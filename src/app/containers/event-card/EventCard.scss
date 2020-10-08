@@ -11,6 +11,7 @@
 }
 
 .past-eventcard {
+  border-radius: 5px 5px 0px 0px;
   width: 400px;
   height: 400px;
   background-color: $darkest-blue;
@@ -194,6 +195,7 @@
   }
 
   .past-eventcard {
+    border-radius: 5px 5px 0px 0px;
     width: 300px;
     height: 300px;
     background-color: $darkest-blue;
