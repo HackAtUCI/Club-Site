@@ -64,7 +64,7 @@ function Events() {
               key={event.id}
             />
           </Card>
-        ))
+        )).reverse()
       );
     }
   }
