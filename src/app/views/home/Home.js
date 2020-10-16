@@ -58,7 +58,7 @@ function Home(props) {
           </p>
           <p>
             <b>
-              <Link to="/about">Read More About Us ></Link>
+              <Link to="/about">Read More About Us &gt;</Link>
             </b>
           </p>
         </div>
@@ -75,7 +75,7 @@ function Home(props) {
           </p>
           <p>
             <b>
-              <Link to="/events">View Upcoming Events ></Link>
+              <Link to="/events">View Upcoming Events &gt;</Link>
             </b>
           </p>
         </div>
@@ -133,7 +133,7 @@ function Home(props) {
           </p>
           <p>
             <b>
-              <Link to="/sponsors">View Sponsorship Information ></Link>
+              <Link to="/sponsors">View Sponsorship Information &gt;</Link>
             </b>
           </p>
         </div>

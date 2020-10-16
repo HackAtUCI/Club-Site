@@ -31,7 +31,7 @@ function Contact(props) {
             <a href="https://www.facebook.com/UCI.Hack/">Facebook</a>
             <div className="contact-icon-image">
               <a href="https://www.facebook.com/UCI.Hack/">
-                <img src={FacebookIcon} />
+                <img src={FacebookIcon} alt="Facebook Icon"/>
               </a>
             </div>
           </div>
@@ -39,7 +39,7 @@ function Contact(props) {
             <a href="https://www.instagram.com/hackatuci/">Instagram</a>
             <div className="contact-icon-image">
               <a href="https://www.instagram.com/hackatuci/">
-                <img src={InstagramIcon} />
+                <img src={InstagramIcon} alt="Instagram Icon"/>
               </a>
             </div>
           </div>
@@ -47,7 +47,7 @@ function Contact(props) {
             <a href="https://www.linkedin.com/company/hackuci">LinkedIn</a>
             <div className="contact-icon-image">
               <a href="https://www.linkedin.com/company/hackuci">
-                <img src={LinkedInIcon} />
+                <img src={LinkedInIcon} alt="LinkedIn Icon"/>
               </a>
             </div>
           </div>
