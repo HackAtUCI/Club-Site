@@ -4,7 +4,7 @@ import Alert from "react-bootstrap/Alert";
 import "./Newsletter.scss";
 
 function Newsletter(props) {
-  const [formType, setFormType] = useState("Newsletter");
+  const [setFormType] = useState("Newsletter");
   const [showAlert, setShowAlert] = useState(false);
   const [alertSuccess, setAlertSuccess] = useState(false);
 
