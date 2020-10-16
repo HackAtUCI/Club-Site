@@ -43,10 +43,9 @@ function Newsletter(props) {
         </h1>
         <div className="newsletter-left">
           <p className="newsletter-info">
-            Get Involved! First, fill in your information. By clicking "Join
-            Discord", Hack at UCI will email you an invite link to our discord
-            server. By clicking "Subscribe", Hack at UCI will send you emails
-            about the club's updates and events.
+            Get Involved! Just fill in your information and click "Sign Up". 
+            Hack at UCI will email you an invite link to our discord server
+            and subscribe you to our newsletter for the club's updates and events.
           </p>
           <p className="newsletter-mailchimp-info">
             Mailchimp collects the following information for our sponsors and to
@@ -122,7 +121,7 @@ function Newsletter(props) {
               name="subscribe"
               onClick={() => setFormType("Newsletter")}
             >
-              <b>Subscribe</b>
+              <b>Sign Up</b>
             </button>
           </div>
           <br />
@@ -135,7 +134,7 @@ function Newsletter(props) {
                 <React.Fragment>
                   <Alert.Heading>Successfully Submitted!</Alert.Heading>
                   <p>
-                    You receive an invite link for our Discord server at the
+                    You'll receive an invite link for our Discord server at the
                     email provided above within 5 minutes.
                   </p>
                 </React.Fragment>
