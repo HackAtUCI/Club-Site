@@ -38,10 +38,8 @@ function Newsletter(props) {
       style={props.style}
     >
       <div className="text-left newsletter-container">
-        <h1 className="newsletter-left">
-          <b>Join our Discord and newsletter!</b>
-        </h1>
         <div className="newsletter-left">
+          <h1><b>Join our Discord and newsletter!</b></h1>
           <p className="newsletter-info">
             Get Involved! Just fill in your information and click "Sign Up". 
             Hack at UCI will email you an invite link to our discord server
