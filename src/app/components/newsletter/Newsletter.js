@@ -13,7 +13,6 @@ function Newsletter(props) {
   const [graduationYear, setGraduationYear] = useState("");
 
   function submitDiscordSignUp(e) {
-    e.preventDefault();
     axios
       .post("api/discord/signups", {
         email,
@@ -38,11 +37,13 @@ function Newsletter(props) {
     >
       <div className="text-left newsletter-container">
         <div className="newsletter-left">
-          <h1><b>Join our Discord and newsletter!</b></h1>
+          <h1>
+            <b>Join our Discord and newsletter!</b>
+          </h1>
           <p className="newsletter-info">
-            Get Involved! Just fill in your information and click "Sign Up". 
-            Hack at UCI will email you an invite link to our discord server
-            and subscribe you to our newsletter for the club's updates and events.
+            Get Involved! Just fill in your information and click "Sign Up".
+            Hack at UCI will email you an invite link to our discord server and
+            subscribe you to our newsletter for the club's updates and events.
           </p>
           <p className="newsletter-mailchimp-info">
             Mailchimp collects the following information for our sponsors and to
@@ -113,10 +114,7 @@ function Newsletter(props) {
           />
           <br />
           <div className="d-flex text-left">
-            <button
-              className="newsletter-button"
-              name="subscribe"
-            >
+            <button className="newsletter-button" name="subscribe">
               <b>Sign Up</b>
             </button>
           </div>
