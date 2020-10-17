@@ -4,7 +4,6 @@ import Alert from "react-bootstrap/Alert";
 import "./Newsletter.scss";
 
 function Newsletter(props) {
-  const [setFormType] = useState("Newsletter");
   const [showAlert, setShowAlert] = useState(false);
   const [alertSuccess, setAlertSuccess] = useState(false);
 
@@ -117,7 +116,6 @@ function Newsletter(props) {
             <button
               className="newsletter-button"
               name="subscribe"
-              onClick={() => setFormType("Newsletter")}
             >
               <b>Sign Up</b>
             </button>
