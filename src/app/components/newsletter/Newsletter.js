@@ -35,7 +35,10 @@ function Newsletter(props) {
       className="jumbotron jumbotron-fluid newsletter"
       style={props.style}
     >
-      <div className="text-left newsletter-container">
+      <div 
+        id="discord"
+        className="text-left newsletter-container"
+      >
         <div className="newsletter-left">
           <h1>
             <b>Join our Discord and newsletter!</b>
