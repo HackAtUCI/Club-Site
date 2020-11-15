@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import FacebookIcon from "../../../assets/FacebookIcon.png"
 import InstagramIcon from "../../../assets/InstagramIcon.png"
 import LinkedInIcon from "../../../assets/LinkedInIcon.png"
+import YouTubeIcon from "../../../assets/YouTubeIcon.png"
 
 import "./Footer.scss";
 
@@ -16,6 +17,7 @@ function Footer(props) {
                 <a href="https://www.facebook.com/UCI.Hack/"><img src={FacebookIcon} alt="Facebook"/></a>
                 <a href="https://www.instagram.com/hackatuci/"><img src={InstagramIcon} alt="Instagram"/></a>
                 <a href="https://www.linkedin.com/company/hackuci"><img src={LinkedInIcon} alt="LinkedIn"/></a>
+                <a href="https://www.youtube.com/channel/UCeQbk4CMo3mxPHMtY80PtFQ"><img src={YouTubeIcon} alt="YouTube"/></a>
             </div>
         </div>
         <ul className="footer-ul">
