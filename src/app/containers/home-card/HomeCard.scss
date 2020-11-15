@@ -1,10 +1,10 @@
 @import "globals/hack-variables.scss";
 
 $card-width: 300px;
-$card-height: 430px;
+$card-height: 460px;
 
 .home-card {
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: $card-width;
   height: $card-height;
@@ -30,13 +30,12 @@ $card-height: 430px;
 .top-part-home-card-img {
   width: $card-width;
   height: $card-width * 0.58;
-  border-radius: 5px;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .bottom-text-home-card {
-  padding-top: 8px;
+  padding: 8px 18px 0px 18px;
   text-align: left;
-  padding-left: 18px;
   float: bottom;
   font-size: 20px;
 }
