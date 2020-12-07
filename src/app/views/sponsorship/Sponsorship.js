@@ -109,7 +109,7 @@ function Sponsorship(props) {
           <b>ZOTHACKS PROFILE</b>
         </div>
         <div className="sponsor-hackuci">
-          <a href="https://www.zothacks.com">
+          <a href="https://zothacks.com/#/">
             <img src={ZotHacksButton} alt="Zothacks-button" />
           </a>
         </div>
@@ -118,7 +118,7 @@ function Sponsorship(props) {
         </div>
         <div className="sponsor-stats sponsor-zothacks-stats">
           <div className="sponsor-stat">
-            <p>32%</p>
+            <p>58%</p>
             <label>Female</label>
           </div>
           <div className="sponsor-stat">
