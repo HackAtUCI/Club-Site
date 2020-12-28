@@ -12,7 +12,7 @@ function Footer(props) {
     <div className="footer" style={props.style}>
         <div className="footer-elements">
             <p>Contact Us</p>
-            <a id="HackUCI-Email" href="mailto:hackuci@gmail.com">HackUCI@gmail.com</a>
+            <a id="HackUCI-Email" href="mailto:hack@uci.edu">hack@uci.edu</a>
             <div>
                 <a href="https://www.facebook.com/UCI.Hack/"><img src={FacebookIcon} alt="Facebook"/></a>
                 <a href="https://www.instagram.com/hackatuci/"><img src={InstagramIcon} alt="Instagram"/></a>
