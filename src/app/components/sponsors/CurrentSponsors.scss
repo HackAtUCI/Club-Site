@@ -1,0 +1,21 @@
+.sponsor-current {
+  margin-top: 150px;
+  font-size: 36px;
+}
+
+.sponsor-list {
+  margin-bottom: 160px;
+
+  .sponsor-list-item {
+    display: inline-block;
+    height: 120px;
+    width: 300px;
+    margin: 20px;
+
+    img {
+      max-height: 120px;
+      max-width: 300px;
+      margin: 20px;
+    }
+  }
+}

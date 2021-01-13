@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { CurrentSponsors } from "app/components";
 import { Card, HomeCard } from "../../containers";
 
 import "./Home.scss";
@@ -137,6 +138,8 @@ function Home(props) {
             </b>
           </p>
         </div>
+
+        <CurrentSponsors />
 
         <Newsletter />
       </div>

@@ -1,23 +1,10 @@
 import React from "react";
 
 import "./Sponsorship.scss";
+
+import { CurrentSponsors } from "app/components";
+
 import HeaderCord from "../../../assets/cord_1_kat.png";
-import EightyFiveDegrees from "../../../assets/sponsors/85c.png";
-import OneFiveOneSeven from "../../../assets/sponsors/1517.png";
-import Ardent from "../../../assets/sponsors/ardent.png";
-import Balsamiq from "../../../assets/sponsors/balsamiq.png";
-import Bentley from "../../../assets/sponsors/bentley.png";
-import Discord from "../../../assets/sponsors/discord.png";
-import Edwards from "../../../assets/sponsors/edwards.png";
-import Glidewell from "../../../assets/sponsors/glidewell.png";
-import Insomnia from "../../../assets/sponsors/insomnia_cookies.png";
-import Microsoft from "../../../assets/sponsors/microsoft.png";
-import Sketch from "../../../assets/sponsors/sketch.png";
-import TeaRiot from "../../../assets/sponsors/tea-riot.png";
-import TexasInstrument from "../../../assets/sponsors/texas-instrument.png";
-import Twilio from "../../../assets/sponsors/twilio-logo-red.png";
-import UCIBren from "../../../assets/sponsors/ucibren.png";
-import Vincit from "../../../assets/sponsors/vincit.png";
 import HackStatHard from "../../../assets/hackuci_years_text.png";
 import ZotStatHard from "../../../assets/zothacks_years_text.png";
 import HackUCIButton from "../../../assets/hackuci_button.png";
@@ -155,60 +142,7 @@ function Sponsorship(props) {
           </div>
         </div>
       </div>
-
-      <div className="container d-flex justify-content-center sponsor-previous">
-        <b>Previous Sponsors</b>
-      </div>
-      <div className="sponsor-list">
-        <div className="sponsor-list-item">
-          <img src={UCIBren} alt="UCIBren" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={Bentley} alt="Bently" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={Twilio} alt="Twilio" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={TexasInstrument} alt="TexasInstrument" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={Glidewell} alt="Glidewell" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={Vincit} alt="Vincit" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={Ardent} alt="Ardent" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={Edwards} alt="Edwards" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={Balsamiq} alt="Balsamiq" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={OneFiveOneSeven} alt="OneFiveOneSeven" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={TeaRiot} alt="TeaRiot" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={Microsoft} alt="Microsoft" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={Insomnia} alt="Insomnia" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={Sketch} alt="Sketch" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={Discord} alt="Discord" />
-        </div>
-        <div className="sponsor-list-item">
-          <img src={EightyFiveDegrees} alt="EightyFiveDegrees" />
-        </div>
-      </div>
+      <CurrentSponsors />
     </div>
   );
 }
