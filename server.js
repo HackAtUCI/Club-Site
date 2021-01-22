@@ -5,6 +5,7 @@ const logger = require("express-logger");
 const mongoose = require("mongoose");
 const path = require("path");
 require("dotenv").config();
+const hackuciData = require("./hackuci-data.json")
 
 const { DiscordSignup, DiscordInvite } = require("./models.js");
 const jsonParser = bodyParser.json();
@@ -41,6 +42,9 @@ app.get("/api/fbgraph", function (req, res) {
       },
     })
     .then((response) => {
+      var apiData = response.data.events.data;
+      var combinedData = hackuciData.events.data.concat(apiData);
+      response.data.events.data = combinedData;
       res.json(response.data);
     })
     .catch(function (err) {
