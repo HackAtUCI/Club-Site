@@ -3,11 +3,13 @@ import React from "react";
 import "./CurrentSponsors.scss";
 
 import bentley from "assets/sponsors/bentley.png";
+import northrop from "assets/sponsors/northrop.png";
 import mobilityware from "assets/sponsors/mobilityware-logo.png";
-import gcp from "assets/sponsors/google-cloud-logo.png";
 import crowdstrike from "assets/sponsors/crowdstrike.png";
 import wayup from "assets/sponsors/wayup.png";
 import linode from "assets/sponsors/linode.png";
+import postman from "assets/sponsors/postman-logo.svg";
+import gcp from "assets/sponsors/google-cloud-logo.png";
 
 // Clubs
 import codepath from "assets/sponsors/codepath.png";
@@ -24,14 +26,14 @@ const sponsors = [
     url: "https://www.bentley.com/en",
   },
   {
+    name: "Northrop Grumman",
+    src: northrop,
+    url: "https://www.northropgrumman.com/",
+  },
+  {
     name: "MobilityWare",
     src: mobilityware,
     url: "https://www.mobilityware.com/",
-  },
-  {
-    name: "Google Cloud Platform",
-    src: gcp,
-    url: "https://cloud.google.com/",
   },
   {
     name: "CrowdStrike",
@@ -53,11 +55,16 @@ const sponsors = [
     src: codepath,
     url: "https://codepath.org/",
   },
-  //   {
-  //     name: "Postman",
-  //     src: postman,
-  //     url: "https://www.postman.com/",
-  //   },
+  {
+    name: "Postman",
+    src: postman,
+    url: "https://www.postman.com/",
+  },
+  {
+    name: "Google Cloud Platform",
+    src: gcp,
+    url: "https://cloud.google.com/",
+  },
 
   //   {
   //     name: "WICS",
