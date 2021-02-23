@@ -5,6 +5,7 @@ import "./CurrentSponsors.scss";
 import bentley from "assets/sponsors/bentley.png";
 import northrop from "assets/sponsors/northrop.png";
 import mobilityware from "assets/sponsors/mobilityware-logo.png";
+import corsair from "assets/sponsors/corsair.png";
 import crowdstrike from "assets/sponsors/crowdstrike.png";
 import wayup from "assets/sponsors/wayup.png";
 import linode from "assets/sponsors/linode.png";
@@ -34,6 +35,11 @@ const sponsors = [
     name: "MobilityWare",
     src: mobilityware,
     url: "https://www.mobilityware.com/",
+  },
+  {
+    name: "Corsair",
+    src: corsair,
+    url: "https://www.corsair.com/",
   },
   {
     name: "CrowdStrike",
