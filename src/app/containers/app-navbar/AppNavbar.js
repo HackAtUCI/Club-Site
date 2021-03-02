@@ -49,6 +49,14 @@ export default function AppNavbar() {
           </Nav.Link>
           <Nav.Link>
             <Link
+                to="/recruit"
+                className={currentPath.includes("recruit") && "selected"}
+            >
+              Recruiting
+            </Link>
+          </Nav.Link>
+          <Nav.Link>
+            <Link
               to="/contact"
               className={currentPath.includes("contact") && "selected"}
             >
