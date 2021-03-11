@@ -45,7 +45,31 @@ app.get("/api/fbgraph", function (req, res) {
       //var apiData = response.data.events.data;
       //var combinedData = hackuciData.events.data.concat(apiData);
       //response.data.events.data = combinedData;
-      res.json(response.data);
+      axios
+      .get("https://graph.facebook.com/v7.0/me", {
+        params: {
+          fields: "events{description,end_time,name,start_time,cover}",
+          access_token: process.env.FB_PAGE_TOKEN_HACKUCI,
+        },
+      })
+      .then((response_two) => {
+        // combining the events array from each API response
+        var combinedData = response.data.events.data.concat(response_two.data.events.data);
+
+        // sorts the data from both api responses by the start date of each event
+        combinedData.sort(function(a,b){
+          // Turn your strings into dates, and then subtract them
+          // to get a value that is either negative, positive, or zero.
+          return new Date(b.start_time) - new Date(a.start_time);
+        });
+
+        response.data.events.data = combinedData;
+        res.json(response.data);
+      })
+      .catch(function (err) {
+        console.error(err.message);
+        res.status(500).send("Server Error");
+      });
     })
     .catch(function (err) {
       console.error(err.message);
