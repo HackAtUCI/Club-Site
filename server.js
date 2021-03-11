@@ -42,9 +42,6 @@ app.get("/api/fbgraph", function (req, res) {
       },
     })
     .then((response) => {
-      //var apiData = response.data.events.data;
-      //var combinedData = hackuciData.events.data.concat(apiData);
-      //response.data.events.data = combinedData;
       axios
       .get("https://graph.facebook.com/v7.0/me", {
         params: {
