@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
+import getSheetsData from "app/services/google-sheets-handler";
 import TeamSection from "../../containers/teamsection/TeamSection.js";
 
 import "./About.scss";
@@ -7,6 +8,18 @@ import HeaderCord from "../../../assets/cord_1_kat.png";
 import HeaderAnt from "../../../assets/ant_kat.png";
 
 function About(props) {
+  const [teamMembers, setTeamMembers] = useState({});
+
+  useEffect(() => {
+    getSheetsData("members")
+      .then((data) => {
+        setTeamMembers(data);
+      })
+      .catch((err) => {
+        console.log("could not acquire team members:", err);
+      });
+  }, []);
+
   return (
     <div className="about">
       <div className="jumbotron jumbotron-fluid global-header">
@@ -40,13 +53,10 @@ function About(props) {
           </p>
         </div>
         <div className="container about-teams">
-          <h1>
-            <b>Our Teams</b>
-          </h1>
-          <TeamSection section="Corporate" />
-          <TeamSection section="Marketing" />
-          <TeamSection section="Logistics" />
-          <TeamSection section="Alumni" />
+          <h2>Our Teams</h2>
+          {Object.entries(teamMembers).map(([team, members]) => (
+            <TeamSection key={team} team={team} members={members} />
+          ))}
         </div>
       </div>
     </div>
