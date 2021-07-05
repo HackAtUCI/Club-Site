@@ -10,9 +10,8 @@ function TeamSection({ team, members }) {
       <div className="team-grid">
         {members.map((member) => (
           <TeamCard
-            key={member.firstName + " " + member.lastName}
-            firstName={member.firstName}
-            lastName={member.lastName}
+            key={member.name}
+            name={member.name}
             position={member.position}
             image={member.image}
             linkedInUrl={member.linkedInUrl}
