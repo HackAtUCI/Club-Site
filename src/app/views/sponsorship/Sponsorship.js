@@ -18,21 +18,16 @@ function Sponsorship(props) {
           <img src={HeaderCord} alt="usb-cord" />
         </div>
         <div className="container global-description-container">
-          <p className="global-description-font">
-            Hack at UCI’s hackathons and events wouldn’t be possible without the
-            aid from our amazing sponsors that have helped us over the years.
-            Each donation goes right back into creating an outstanding
-            experience for everyone who attends.
-          </p>
+          <h1 class="home-header-font">Sponsor Information</h1>
         </div>
       </div>
 
       <div className="container sponsor-content">
-        <div className="sponsor-content-heading">
+        <div className="sponsor-content-heading flex-center">
           <b>HACKUCI PROFILE</b>
         </div>
         <div className="sponsor-hackuci">
-          <a href="https://www.hackuci.com">
+          <a href="https://www.hackuci.com" class="flex-center">
             <img src={HackUCIButton} alt="hackUCI-button" />
           </a>
         </div>
@@ -131,7 +126,7 @@ function Sponsorship(props) {
         >
           <p>
             {" "}
-            "ZotHacks wac my very first hackathon, and I really liked how the
+            "ZotHacks was my very first hackathon, and I really liked how the
             event leaned towards beginners. I loved how helpful and enthusiastic
             my mentor was in guiding our group and the collaborative and
             encouraging environment the other hackers and mentors helped
