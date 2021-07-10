@@ -14,22 +14,19 @@
   font-size: 33px;
 }
 
-.sponsor-content {
-  display: grid;
-  grid-template-columns: 45% 10% 45%;
-}
+// .zothacks-container {
+//   background-color: $dark-gray;
+// }
 
 .sponsor-content-heading {
   text-align: left;
-  grid-column: 1 / span2;
   margin-top: 80px;
   font-size: 70px;
-  color: #5a73cc;
+  color: $black;
 }
 
 .sponsor-hackuci {
-  grid-column: 1;
-  text-align: left;
+  margin: 50px 0 50px 0;
 }
 
 .sponsor-hackuci img {
@@ -42,26 +39,23 @@
   grid-column: 1;
 }
 
-.sponsor-stat-span {
-  grid-row: 1;
-  grid-column: 1;
-}
-
 .sponsor-hack-graph {
   padding-top: 30px;
 }
 
 .sponsor-stat-img {
-  width: 100%;
+  width: 60%;
+  margin: 20px;
 }
 
 .sponsor-stats {
   display: inline-block;
+  margin: 100px 0;
 }
 
 .sponsor-stat {
   display: inline-block;
-  margin: 10px 20px;
+  margin: 10px 50px;
 }
 
 .sponsor-stat p {
@@ -77,8 +71,8 @@
 }
 
 .sponsor-hackuci-stats {
-  grid-column: 1;
-  grid-row: 4;
+  // grid-column: 1;
+  // grid-row: 4;
 }
 
 .sponsor-hackuci p {
@@ -105,11 +99,11 @@
 .sponsor-content-anecdote {
   grid-column: 3;
   border-radius: 10px;
-  padding: 30px;
+  padding: 35px 35px 20px 35px;
   background-color: $light-grey;
   margin-bottom: 30px;
   text-align: left;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 #Bianca {
@@ -131,12 +125,8 @@
   font-size: 36px;
 }
 
-.sponsor-zothacks-stats {
-  grid-column: 1 / span2;
-}
-
 .sponsor-stat-graph {
-  grid-column: 1;
+  // grid-column: 2;
 }
 
 .sponsor-list {

@@ -24,10 +24,10 @@ function Sponsorship(props) {
 
       <div className="container sponsor-content">
         <div className="sponsor-content-heading flex-center">
-          <b>HACKUCI PROFILE</b>
+          <b>HackUCI Profile</b>
         </div>
-        <div className="sponsor-hackuci">
-          <a href="https://www.hackuci.com" class="flex-center">
+        <div className="sponsor-hackuci flex-center">
+          <a href="https://www.hackuci.com">
             <img src={HackUCIButton} alt="hackUCI-button" />
           </a>
         </div>
@@ -87,53 +87,56 @@ function Sponsorship(props) {
             <b>- Lizzie, Twilio</b>
           </div>
         </div>
-        <div className="sponsor-content-heading">
-          <b>ZOTHACKS PROFILE</b>
-        </div>
-        <div className="sponsor-hackuci">
-          <a href="https://zothacks.com/#/">
-            <img src={ZotHacksButton} alt="Zothacks-button" />
-          </a>
-        </div>
-        <div className="sponsor-stat-graph">
-          <img className="sponsor-stat-img" src={ZotStatHard} alt="zot-stat" />
-        </div>
-        <div className="sponsor-stats sponsor-zothacks-stats">
-          <div className="sponsor-stat">
-            <p>58%</p>
-            <label>Female</label>
+        
+        <div>
+          <div className="sponsor-content-heading flex-center">
+            <b>Zothacks Profile</b>
           </div>
-          <div className="sponsor-stat">
-            <p>90%</p>
-            <label>Submitted a Project</label>
+          <div className="sponsor-hackuci">
+            <a href="https://zothacks.com/#/">
+              <img src={ZotHacksButton} alt="Zothacks-button" />
+            </a>
           </div>
-          <div className="sponsor-stat">
-            <p>92%</p>
-            <label>Would Attend Another Hackathon</label>
+          <div className="sponsor-stat-graph">
+            <img className="sponsor-stat-img" src={ZotStatHard} alt="zot-stat" />
           </div>
-          <div className="sponsor-stat">
-            <p>78%</p>
-            <label>First Time Hackers</label>
+          <div className="sponsor-stats sponsor-stats">
+            <div className="sponsor-stat">
+              <p>58%</p>
+              <label>Female</label>
+            </div>
+            <div className="sponsor-stat">
+              <p>90%</p>
+              <label>Submitted a Project</label>
+            </div>
+            <div className="sponsor-stat">
+              <p>92%</p>
+              <label>Would Attend Another Hackathon</label>
+            </div>
+            <div className="sponsor-stat">
+              <p>78%</p>
+              <label>First Time Hackers</label>
+            </div>
+            <div className="sponsor-stat">
+              <p>10</p>
+              <label>Majors</label>
+            </div>
           </div>
-          <div className="sponsor-stat">
-            <p>10</p>
-            <label>Majors</label>
-          </div>
-        </div>
-        <div
-          className="sponsor-content-anecdote sponsor-zothack-anecdote"
-          id="Cher"
-        >
-          <p>
-            {" "}
-            "ZotHacks was my very first hackathon, and I really liked how the
-            event leaned towards beginners. I loved how helpful and enthusiastic
-            my mentor was in guiding our group and the collaborative and
-            encouraging environment the other hackers and mentors helped
-            create."
-          </p>
-          <div className="text-right">
-            <b>- Cher, Hacker</b>
+          <div
+            className="sponsor-content-anecdote sponsor-zothack-anecdote"
+            id="Cher"
+          >
+            <p>
+              {" "}
+              "ZotHacks was my very first hackathon, and I really liked how the
+              event leaned towards beginners. I loved how helpful and enthusiastic
+              my mentor was in guiding our group and the collaborative and
+              encouraging environment the other hackers and mentors helped
+              create."
+            </p>
+            <div className="text-right">
+              <b>- Cher, Hacker</b>
+            </div>
           </div>
         </div>
       </div>
