@@ -31,7 +31,7 @@ function Sponsorship(props) {
             <img src={HackUCIButton} alt="hackUCI-button" />
           </a>
         </div>
-        <div className="sponsor-stat-graph">
+        <div>
           <img
             className="sponsor-stat-img"
             src={HackStatHard}
@@ -97,7 +97,7 @@ function Sponsorship(props) {
               <img src={ZotHacksButton} alt="Zothacks-button" />
             </a>
           </div>
-          <div className="sponsor-stat-graph">
+          <div>
             <img className="sponsor-stat-img" src={ZotStatHard} alt="zot-stat" />
           </div>
           <div className="sponsor-stats sponsor-stats">
