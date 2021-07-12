@@ -1,19 +1,18 @@
-@import "globals/hack-variables.scss";
+@import 'globals/hack-variables.scss';
 
 .events {
   display: inline-block;
-  max-width: 1400px;
+  width: 100%;
 }
 
 .title-events {
-  margin-top: 15px;
+  color: #2b2b2b;
   font-size: 2.5rem;
   text-align: center;
 }
 
 .no-events {
   margin-top: 30px;
-  margin-bottom: 80px;
 }
 
 .events-description-wrapper {
@@ -26,11 +25,21 @@
 }
 
 .events-description {
-  max-width: 1400px;
   text-align: left;
   margin-left: 200px;
   font-size: 35px;
   line-height: 2;
+}
+
+.upcoming-events {
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+
+.past-events {
+  background-color: #f4f5f8;
+  padding-top: 180px;
+  padding-bottom: 180px;
 }
 
 @media (orientation: portrait) {
