@@ -90,7 +90,7 @@ function Sponsorship(props) {
         
         <div>
           <div className="sponsor-content-heading flex-center">
-            <b>Zothacks Profile</b>
+            <b>ZotHacks Profile</b>
           </div>
           <div className="sponsor-hackuci">
             <a href="https://zothacks.com/#/">

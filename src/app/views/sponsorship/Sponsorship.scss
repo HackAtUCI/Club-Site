@@ -14,10 +14,6 @@
   font-size: 33px;
 }
 
-// .zothacks-container {
-//   background-color: $dark-gray;
-// }
-
 .sponsor-content-heading {
   text-align: left;
   margin-top: 80px;
@@ -26,7 +22,7 @@
 }
 
 .sponsor-hackuci {
-  margin: 50px 0 50px 0;
+  margin: 40px 0 40px 0;
 }
 
 .sponsor-hackuci img {
@@ -35,8 +31,6 @@
 
 .sponsor-hackuci a {
   position: relative;
-  top: -15px;
-  grid-column: 1;
 }
 
 .sponsor-hack-graph {
@@ -68,11 +62,6 @@
   font-size: 20px;
   font-weight: normal;
   margin: 0;
-}
-
-.sponsor-hackuci-stats {
-  // grid-column: 1;
-  // grid-row: 4;
 }
 
 .sponsor-hackuci p {
@@ -177,6 +166,7 @@
     display: block;
   }
   .sponsor-content-heading {
+    text-align: center;
     font-size: 42px;
     margin: 150px 20px 0 20px;
   }

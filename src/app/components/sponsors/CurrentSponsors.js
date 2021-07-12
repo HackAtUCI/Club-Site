@@ -103,7 +103,7 @@ function CurrentSponsors(props) {
   return (
     <React.Fragment>
       <div className="container d-flex justify-content-center sponsor-current">
-        <b>Current Sponsors</b>
+        <b>Our Past Sponsors</b>
       </div>
       <div className="sponsor-list">
         {sponsors.map((sponsor) => (
