@@ -50,6 +50,8 @@
 .sponsor-stat {
   display: inline-block;
   margin: 10px 50px;
+  max-width: 140px;
+  vertical-align: text-top;
 }
 
 .sponsor-stat p {
@@ -138,6 +140,7 @@
   }
   .sponsor-content-heading {
     font-size: 65px;
+    margin-top: 40px;
   }
   .sponsor-content-anecdote {
     font-size: 20px;
@@ -155,22 +158,28 @@
   .sponsor-header-font {
     font-size: 24px;
   }
-  .sponsor-content-heading {
-    font-size: 24px;
-  }
+
   .sponsor-content {
     display: block;
   }
   .sponsor-content-heading {
+    font-size: 24px;
     text-align: center;
     font-size: 42px;
-    margin: 150px 20px 0 20px;
+    margin: 100px 20px 0 20px;
   }
   .sponsor-hackuci a {
     margin: 0 20px;
   }
+  .sponsor-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+  }
   .sponsor-stat {
-    margin: 5px 12px;
+    margin: 10px 12px;
   }
   .sponsor-stat p {
     font-size: 40px;

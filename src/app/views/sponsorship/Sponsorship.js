@@ -100,7 +100,7 @@ function Sponsorship(props) {
           <div>
             <img className="sponsor-stat-img" src={ZotStatHard} alt="zot-stat" />
           </div>
-          <div className="sponsor-stats sponsor-stats">
+          <div className="sponsor-stats">
             <div className="sponsor-stat">
               <p>58%</p>
               <label>Female</label>
@@ -115,7 +115,7 @@ function Sponsorship(props) {
             </div>
             <div className="sponsor-stat">
               <p>78%</p>
-              <label>First Time Hackers</label>
+              <label>First-Time Hackers</label>
             </div>
             <div className="sponsor-stat">
               <p>10</p>
