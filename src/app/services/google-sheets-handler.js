@@ -7,8 +7,11 @@ const FORMAT = "output=tsv";
 
 const dataURL = FEED_URL + SPREADSHEET_KEY + "/" + QUERY + "?" + FORMAT;
 
+// with the current public implementation, the entire sheet must be fetched
+// the page specifies the row of data to select
 const getSheetsData = (page) => {
   const request = axios.get(dataURL).then((response) => {
+    // find the line of data matching the desired page
     for (const line of response.data.split("\n")) {
       const [key, value] = line.split("\t");
       if (key === page) {
