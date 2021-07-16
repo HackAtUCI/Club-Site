@@ -27,9 +27,9 @@ function Sponsorship(props) {
           <b>HackUCI Profile</b>
         </div>
         <div className="sponsor-hackuci flex-center">
-          <a href="https://www.hackuci.com">
-            <img src={HackUCIButton} alt="hackUCI-button" />
-          </a>
+          <form action="https://hackuci.com">
+              <input type="submit" value="hackuci.com" />
+          </form>
         </div>
         <div>
           <img
@@ -93,9 +93,9 @@ function Sponsorship(props) {
             <b>ZotHacks Profile</b>
           </div>
           <div className="sponsor-hackuci">
-            <a href="https://zothacks.com/#/">
-              <img src={ZotHacksButton} alt="Zothacks-button" />
-            </a>
+            <form action="https://zothacks.com">
+                <input type="submit" class="zothacks-btn" value="zothacks.com" />
+            </form>
           </div>
           <div>
             <img className="sponsor-stat-img" src={ZotStatHard} alt="zot-stat" />

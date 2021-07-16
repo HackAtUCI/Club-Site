@@ -25,12 +25,28 @@
   margin: 40px 0 40px 0;
 }
 
-.sponsor-hackuci img {
-  width: 230px;
+.sponsor-hackuci input {
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  background: linear-gradient(90deg, #FF928B 0%, #8494DA 100%);
+  transition: 300ms;
+  opacity: 100%;
+  &:hover {
+    opacity: 85%;
+  }
 }
 
 .sponsor-hackuci a {
   position: relative;
+}
+
+.zothacks-btn {
+  background: linear-gradient(90deg, #2F9C95 0%, #ADD8AB 100%) !important;
 }
 
 .sponsor-hack-graph {
@@ -151,10 +167,12 @@
 }
 
 @media screen and (max-width: 800px) {
-  .sponsor-hackuci img {
-    padding-top: 10px;
-    width: 200px;
+  .sponsor-hackuci input {
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 10px 24px;
   }
+
   .sponsor-header-font {
     font-size: 24px;
   }
