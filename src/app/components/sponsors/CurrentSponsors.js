@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react';
 
-import "./CurrentSponsors.scss";
+import './CurrentSponsors.scss';
 
-import bentley from "assets/sponsors/bentley.png";
-import northrop from "assets/sponsors/northrop.png";
-import mobilityware from "assets/sponsors/mobilityware-logo.png";
-import corsair from "assets/sponsors/corsair.png";
-import crowdstrike from "assets/sponsors/crowdstrike.png";
-import wayup from "assets/sponsors/wayup.png";
-import linode from "assets/sponsors/linode.png";
-import postman from "assets/sponsors/postman-logo.svg";
-import gcp from "assets/sponsors/google-cloud-logo.png";
+import bentley from 'assets/sponsors/bentley.png';
+import northrop from 'assets/sponsors/northrop.png';
+import mobilityware from 'assets/sponsors/mobilityware-logo.png';
+import corsair from 'assets/sponsors/corsair.png';
+import crowdstrike from 'assets/sponsors/crowdstrike.png';
+import wayup from 'assets/sponsors/wayup.png';
+import linode from 'assets/sponsors/linode.png';
+import postman from 'assets/sponsors/postman-logo.svg';
+import gcp from 'assets/sponsors/google-cloud-logo.png';
 
 // Clubs
-import codepath from "assets/sponsors/codepath.png";
+import codepath from 'assets/sponsors/codepath.png';
 // import wics from "assets/sponsors/wics-website-logo.png";
 // import aiuci from "assets/sponsors/ai-at-uci.png";
 // import vgdc from "assets/sponsors/vgdc-logo.png";
@@ -22,54 +22,54 @@ import codepath from "assets/sponsors/codepath.png";
 
 const sponsors = [
   {
-    name: "Bentley Systems",
+    name: 'Bentley Systems',
     src: bentley,
-    url: "https://www.bentley.com/en",
+    url: 'https://www.bentley.com/en',
   },
   {
-    name: "Northrop Grumman",
+    name: 'Northrop Grumman',
     src: northrop,
-    url: "https://www.northropgrumman.com/",
+    url: 'https://www.northropgrumman.com/',
   },
   {
-    name: "MobilityWare",
+    name: 'MobilityWare',
     src: mobilityware,
-    url: "https://www.mobilityware.com/",
+    url: 'https://www.mobilityware.com/',
   },
   {
-    name: "Corsair",
+    name: 'Corsair',
     src: corsair,
-    url: "https://www.corsair.com/",
+    url: 'https://www.corsair.com/',
   },
   {
-    name: "CrowdStrike",
+    name: 'CrowdStrike',
     src: crowdstrike,
-    url: "https://www.crowdstrike.com/",
+    url: 'https://www.crowdstrike.com/',
   },
   {
-    name: "WayUp",
+    name: 'WayUp',
     src: wayup,
-    url: "https://www.wayup.com/",
+    url: 'https://www.wayup.com/',
   },
   {
-    name: "linode",
+    name: 'linode',
     src: linode,
-    url: "https://www.linode.com/",
+    url: 'https://www.linode.com/',
   },
   {
-    name: "CodePath",
+    name: 'CodePath',
     src: codepath,
-    url: "https://codepath.org/",
+    url: 'https://codepath.org/',
   },
   {
-    name: "Postman",
+    name: 'Postman',
     src: postman,
-    url: "https://www.postman.com/",
+    url: 'https://www.postman.com/',
   },
   {
-    name: "Google Cloud Platform",
+    name: 'Google Cloud Platform',
     src: gcp,
-    url: "https://cloud.google.com/",
+    url: 'https://cloud.google.com/',
   },
 
   //   {
@@ -107,8 +107,8 @@ function CurrentSponsors(props) {
       </div>
       <div className="sponsor-list">
         {sponsors.map((sponsor) => (
-          <div className="sponsor-list-item">
-            <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+          <div className='sponsor-list-item'>
+            <a href={sponsor.url} target='_blank' rel='noopener noreferrer'>
               <img src={sponsor.src} alt={sponsor.name} />
             </a>
           </div>
