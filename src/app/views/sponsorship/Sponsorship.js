@@ -9,6 +9,7 @@ import HackStatHard from "../../../assets/hackuci_years_text.png";
 import ZotStatHard from "../../../assets/zothacks_years_text.png";
 import HackUCIButton from "../../../assets/hackuci_button.png";
 import ZotHacksButton from "../../../assets/zothacks_button.png";
+import People from "../../../assets/People.svg";
 
 function Sponsorship(props) {
   return (
@@ -18,30 +19,22 @@ function Sponsorship(props) {
           <img src={HeaderCord} alt="usb-cord" />
         </div>
         <div className="container global-description-container">
-          <p className="global-description-font">
-            Hack at UCI’s hackathons and events wouldn’t be possible without the
-            aid from our amazing sponsors that have helped us over the years.
-            Each donation goes right back into creating an outstanding
-            experience for everyone who attends.
-          </p>
+          <h1 class="home-header-font">Sponsor Information</h1>
         </div>
       </div>
 
       <div className="container sponsor-content">
-        <div className="sponsor-content-heading">
-          <b>HACKUCI PROFILE</b>
+        <div className="sponsor-content-heading flex-center">
+          <b>HackUCI Profile</b>
         </div>
-        <div className="sponsor-hackuci">
-          <a href="https://www.hackuci.com">
-            <img src={HackUCIButton} alt="hackUCI-button" />
-          </a>
+        <div className="sponsor-hackuci flex-center">
+          <form action="https://hackuci.com">
+              <input type="submit" value="hackuci.com" />
+          </form>
         </div>
-        <div className="sponsor-stat-graph">
-          <img
-            className="sponsor-stat-img"
-            src={HackStatHard}
-            alt="hack-stat"
-          />
+        <div className="sponsor-attendees">
+          <img src={People} alt="people"/>
+          <span>500+ Attendees</span>
         </div>
         <div className="sponsor-stats sponsor-hackuci-stats">
           <div className="sponsor-stat">
@@ -92,53 +85,57 @@ function Sponsorship(props) {
             <b>- Lizzie, Twilio</b>
           </div>
         </div>
-        <div className="sponsor-content-heading">
-          <b>ZOTHACKS PROFILE</b>
-        </div>
-        <div className="sponsor-hackuci">
-          <a href="https://zothacks.com/#/">
-            <img src={ZotHacksButton} alt="Zothacks-button" />
-          </a>
-        </div>
-        <div className="sponsor-stat-graph">
-          <img className="sponsor-stat-img" src={ZotStatHard} alt="zot-stat" />
-        </div>
-        <div className="sponsor-stats sponsor-zothacks-stats">
-          <div className="sponsor-stat">
-            <p>58%</p>
-            <label>Female</label>
+        
+        <div>
+          <div className="sponsor-content-heading flex-center">
+            <b>ZotHacks Profile</b>
           </div>
-          <div className="sponsor-stat">
-            <p>90%</p>
-            <label>Submitted a Project</label>
+          <div className="sponsor-hackuci">
+            <form action="https://zothacks.com">
+                <input type="submit" class="zothacks-btn" value="zothacks.com" />
+            </form>
           </div>
-          <div className="sponsor-stat">
-            <p>92%</p>
-            <label>Would Attend Another Hackathon</label>
+          <div className="sponsor-attendees">
+            <img src={People} alt="people"/>
+            <span>60+ Attendees</span>
           </div>
-          <div className="sponsor-stat">
-            <p>78%</p>
-            <label>First Time Hackers</label>
+          <div className="sponsor-stats">
+            <div className="sponsor-stat">
+              <p>58%</p>
+              <label>Female</label>
+            </div>
+            <div className="sponsor-stat">
+              <p>90%</p>
+              <label>Submitted a Project</label>
+            </div>
+            <div className="sponsor-stat">
+              <p>92%</p>
+              <label>Would Attend Another Hackathon</label>
+            </div>
+            <div className="sponsor-stat">
+              <p>78%</p>
+              <label>First-Time Hackers</label>
+            </div>
+            <div className="sponsor-stat">
+              <p>10</p>
+              <label>Majors</label>
+            </div>
           </div>
-          <div className="sponsor-stat">
-            <p>10</p>
-            <label>Majors</label>
-          </div>
-        </div>
-        <div
-          className="sponsor-content-anecdote sponsor-zothack-anecdote"
-          id="Cher"
-        >
-          <p>
-            {" "}
-            "ZotHacks wac my very first hackathon, and I really liked how the
-            event leaned towards beginners. I loved how helpful and enthusiastic
-            my mentor was in guiding our group and the collaborative and
-            encouraging environment the other hackers and mentors helped
-            create."
-          </p>
-          <div className="text-right">
-            <b>- Cher, Hacker</b>
+          <div
+            className="sponsor-content-anecdote sponsor-zothack-anecdote"
+            id="Cher"
+          >
+            <p>
+              {" "}
+              "ZotHacks was my very first hackathon, and I really liked how the
+              event leaned towards beginners. I loved how helpful and enthusiastic
+              my mentor was in guiding our group and the collaborative and
+              encouraging environment the other hackers and mentors helped
+              create."
+            </p>
+            <div className="text-right">
+              <b>- Cher, Hacker</b>
+            </div>
           </div>
         </div>
       </div>

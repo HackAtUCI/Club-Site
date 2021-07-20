@@ -102,7 +102,10 @@ const sponsors = [
 function CurrentSponsors(props) {
   return (
     <React.Fragment>
-      <div className='sponsor-list'>
+      <div className="container d-flex justify-content-center sponsor-current">
+        <b>Our Past Sponsors</b>
+      </div>
+      <div className="sponsor-list">
         {sponsors.map((sponsor) => (
           <div className='sponsor-list-item'>
             <a href={sponsor.url} target='_blank' rel='noopener noreferrer'>
