@@ -3,10 +3,11 @@ import "./Contact.scss";
 
 import { Header } from "../../containers";
 import Newsletter from "../../components/newsletter/Newsletter";
-import FacebookIcon from "../../../assets/FacebookIconPink.png";
-import InstagramIcon from "../../../assets/InstagramIconPink.png";
-import LinkedInIcon from "../../../assets/LinkedInLogoPink.png";
-import YouTubeIcon from "../../../assets/YouTubeIconPink.png"
+import MailIcon from "../../../assets/icons/mail_icon.svg";
+import FacebookIcon from "../../../assets/icons/facebook_icon.svg";
+import InstagramIcon from "../../../assets/icons/instagram_icon.svg";
+import LinkedInIcon from "../../../assets/icons/linkedin_icon.svg";
+import YouTubeIcon from "../../../assets/icons/youtube_icon.svg";
 
 function Contact(props) {
   return (
@@ -14,8 +15,16 @@ function Contact(props) {
       <Header title="Contact Us"/>
 
       <div className="contact-body align-content-center">
-        <label id="sm-title">Social Media</label>
+        <label id="sm-title"> </label>
         <div className="contact-icons-container">
+          <div className="contact-icon d-inline-block">
+            <a href="https://www.facebook.com/UCI.Hack/">Email</a>
+            <div className="contact-icon-image">
+              <a href="mailto:hack@uci.edu">
+                <img src={MailIcon} alt="Mail Icon"/>
+              </a>
+            </div>
+          </div>
           <div className="contact-icon d-inline-block">
             <a href="https://www.facebook.com/UCI.Hack/">Facebook</a>
             <div className="contact-icon-image">
