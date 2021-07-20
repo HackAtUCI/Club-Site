@@ -9,6 +9,7 @@ import HackStatHard from "../../../assets/hackuci_years_text.png";
 import ZotStatHard from "../../../assets/zothacks_years_text.png";
 import HackUCIButton from "../../../assets/hackuci_button.png";
 import ZotHacksButton from "../../../assets/zothacks_button.png";
+import People from "../../../assets/People.svg";
 
 function Sponsorship(props) {
   return (
@@ -31,12 +32,9 @@ function Sponsorship(props) {
               <input type="submit" value="hackuci.com" />
           </form>
         </div>
-        <div>
-          <img
-            className="sponsor-stat-img"
-            src={HackStatHard}
-            alt="hack-stat"
-          />
+        <div className="sponsor-attendees">
+          <img src={People} alt="people"/>
+          <span>500+ Attendees</span>
         </div>
         <div className="sponsor-stats sponsor-hackuci-stats">
           <div className="sponsor-stat">
@@ -97,8 +95,9 @@ function Sponsorship(props) {
                 <input type="submit" class="zothacks-btn" value="zothacks.com" />
             </form>
           </div>
-          <div>
-            <img className="sponsor-stat-img" src={ZotStatHard} alt="zot-stat" />
+          <div className="sponsor-attendees">
+            <img src={People} alt="people"/>
+            <span>60+ Attendees</span>
           </div>
           <div className="sponsor-stats">
             <div className="sponsor-stat">

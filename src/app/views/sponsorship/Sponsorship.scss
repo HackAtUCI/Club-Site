@@ -22,7 +22,7 @@
 }
 
 .sponsor-hackuci {
-  margin: 40px 0 40px 0;
+  margin: 0px 0 40px 0;
 }
 
 .sponsor-hackuci input {
@@ -35,7 +35,7 @@
   text-align: center;
   background: linear-gradient(90deg, #FF928B 0%, #8494DA 100%);
   transition: 300ms;
-  opacity: 100%;
+  opacity: 1;
   &:hover {
     opacity: 85%;
   }
@@ -43,6 +43,16 @@
 
 .sponsor-hackuci a {
   position: relative;
+}
+
+.sponsor-attendees {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  & span {
+    font-size: 48px;
+    padding-left: 10px;
+  }
 }
 
 .zothacks-btn {
@@ -167,10 +177,29 @@
 }
 
 @media screen and (max-width: 800px) {
+  .sponsor-content-heading b {
+    font-size: 36px;
+  }
+
   .sponsor-hackuci input {
     font-size: 16px;
     border-radius: 30px;
     padding: 10px 24px;
+  }
+
+  .sponsor-attendees {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    & img {
+      width: 75px;
+    }
+    & span {
+      font-size: 20px;
+      padding-left: 10px;
+    }
   }
 
   .sponsor-header-font {
