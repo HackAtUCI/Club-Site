@@ -1,7 +1,7 @@
 import React from "react";
 import "./Contact.scss";
 
-import HeaderCord from "../../../assets/cord_1_kat.png";
+import { Header } from "../../containers";
 import Newsletter from "../../components/newsletter/Newsletter";
 import FacebookIcon from "../../../assets/FacebookIconPink.png";
 import InstagramIcon from "../../../assets/InstagramIconPink.png";
@@ -11,20 +11,8 @@ import YouTubeIcon from "../../../assets/YouTubeIconPink.png"
 function Contact(props) {
   return (
     <div className="Contact" style={props.style}>
-      <div className="jumbotron jumbotron-fluid global-header">
-        <div className="home-header-cord">
-          <img src={HeaderCord} alt="usb-cord" />
-        </div>
-        <div className="global-description-container container">
-          <p className="global-description-font">
-            Wondering where to get more information about Hack at UCI? Follow us
-            on Facebook, Instagram and LinkedIn to be up to date on all events,
-            workshops and hackathons. You can also reach out to us over email at{" "}
-            <a href="mailto:hackuci@gmail.com">hack@uci.edu</a>.
-            <br />
-          </p>
-        </div>
-      </div>
+      <Header title="Contact Us"/>
+
       <div className="contact-body align-content-center">
         <label id="sm-title">Social Media</label>
         <div className="contact-icons-container">

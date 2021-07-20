@@ -3,25 +3,14 @@ import React from "react";
 import "./Sponsorship.scss";
 
 import { CurrentSponsors } from "app/components";
+import { Header } from "../../containers";
 
-import HeaderCord from "../../../assets/cord_1_kat.png";
-import HackStatHard from "../../../assets/hackuci_years_text.png";
-import ZotStatHard from "../../../assets/zothacks_years_text.png";
-import HackUCIButton from "../../../assets/hackuci_button.png";
-import ZotHacksButton from "../../../assets/zothacks_button.png";
 import People from "../../../assets/People.svg";
 
 function Sponsorship(props) {
   return (
     <div className="Sponsorship" style={props.style}>
-      <div className="jumbotron jumbotron-fluid global-header">
-        <div className="home-header-cord">
-          <img src={HeaderCord} alt="usb-cord" />
-        </div>
-        <div className="container global-description-container">
-          <h1 class="home-header-font">Sponsor Information</h1>
-        </div>
-      </div>
+      <Header title="Sponsor Information"/>
 
       <div className="container sponsor-content">
         <div className="sponsor-content-heading flex-center">
