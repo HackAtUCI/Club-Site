@@ -6,7 +6,7 @@ import "./App.scss";
 import { AppNavbar } from "./app/containers";
 import { Footer } from "./app/containers";
 
-import { Sponsorship, Events, About, Home, NotFound, Contact } from "app/views";
+import { Sponsorship, Events, About, Home, NotFound, Contact, SponsorshipDeck } from "app/views";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "jquery/dist/jquery.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -27,6 +27,7 @@ function App() {
               window.location.href = 'https://www.hackuci.com/recruit';
               return null;
             }}/>
+            <Route exact path="/sponsorship-deck" component={SponsorshipDeck}/>
             <Route component={NotFound} />
           </Switch>
           <Footer />

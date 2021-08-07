@@ -1,3 +1,4 @@
+export { default as SponsorshipDeck } from "./sponsorship-deck/SponsorshipDeck";
 export { default as Sponsorship } from "./sponsorship/Sponsorship";
 export { default as Events } from "./events/Events";
 export { default as About } from "./about/About";
