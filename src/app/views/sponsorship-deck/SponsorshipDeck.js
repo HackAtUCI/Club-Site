@@ -1,5 +1,8 @@
 import React from "react";
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import { Document, Page, pdfjs } from "react-pdf";
+import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
+
+pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
 
 function SponsorshipDeck(props) {
     return (
