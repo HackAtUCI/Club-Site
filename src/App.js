@@ -27,6 +27,10 @@ function App() {
               window.location.href = 'https://www.hackuci.com/recruit';
               return null;
             }}/>
+            <Route exact path="/sponsorship-deck" component={() => {
+              window.location.href = 'Hack%20at%20UCI%20Sponsorship%20Deck%202021-2022.pdf';
+              return null;
+            }}/>
             <Route component={NotFound} />
           </Switch>
           <Footer />
