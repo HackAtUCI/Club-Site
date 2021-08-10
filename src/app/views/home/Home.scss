@@ -1,5 +1,5 @@
-@import "src/globals/hack-variables.scss";
-@import "src/globals/hack-styles.scss";
+@import 'src/globals/hack-variables.scss';
+@import 'src/globals/hack-styles.scss';
 
 html {
   scroll-behavior: smooth;
@@ -52,7 +52,7 @@ html {
 }
 
 .home-header-font {
-  font-family: sans-serif;
+  font-family: $hackUCIFont;
   font-size: 7rem;
   margin: 0.1em 0;
   position: relative;
@@ -77,6 +77,10 @@ html {
 
 .involved-button a {
   color: white;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .home-arrow-down {
@@ -91,22 +95,38 @@ html {
 .home-container {
   width: 80vw;
   margin: auto;
+  text-align: center;
+}
+
+.home-about {
+  padding-bottom: 180px;
+}
+
+.gray-background {
+  background: #f4f5f8;
+  padding-bottom: 180px;
 }
 
 .home-container h1 {
   font-size: 42px;
   padding: 10rem 0 0 0;
+  text-align: center;
 }
 
 .home-container p {
   font-size: 26px;
   margin: 0;
+  text-align: center;
+  text-align: center;
+  padding-top: 15px;
 }
 
 .home-container a {
   font-size: 26px;
   margin: 0;
-  color: $red !important;
+  color: $darkest-blue !important;
+  text-align: center;
+  padding-top: 15px;
 }
 
 .card-body {
@@ -138,10 +158,6 @@ html {
   justify-content: center;
 }
 
-.home-sponsors {
-  margin-bottom: 180px;
-}
-
 .card-container {
   max-width: 1450px !important;
 }
@@ -161,7 +177,7 @@ html {
 
 @media screen and (max-width: 760px) {
   .home-header-font {
-    font-family: sans-serif;
+    font-family: $hackUCIFont;
     font-size: 3rem;
     margin: 0.1em 0;
   }

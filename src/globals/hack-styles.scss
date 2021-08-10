@@ -54,7 +54,7 @@
 }
 
 .global-header {
-  background-color: $darkest-blue !important;
+  background: linear-gradient(90deg, #1C3385 0%, #118AFB 100%);
   color: white;
   height: 21.5rem;
 
@@ -72,7 +72,7 @@
     top: 50%;
     bottom: 50%;
     text-align: left;
-    font-family: sans-serif;
+    font-family: $hackUCIFont;
     font-weight: bold;
     font-size: 1.6rem;
 
@@ -83,7 +83,7 @@
       top: 50%;
       bottom: 50%;
       text-align: left;
-      font-family: sans-serif;
+      font-family: $hackUCIFont;
       font-weight: bold;
       font-size: 1.3rem;
     }

@@ -1,11 +1,11 @@
-import React from "react";
-import Modal from "react-modal";
-import Moment from "react-moment";
-import Linkify from "react-linkify";
+import React from 'react';
+import Modal from 'react-modal';
+import Moment from 'react-moment';
+import Linkify from 'react-linkify';
 
-import "./EventCard.scss";
+import './EventCard.scss';
 
-Modal.setAppElement(document.getElementById("root"));
+Modal.setAppElement(document.getElementById('root'));
 
 function EventCard(props) {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
@@ -26,9 +26,9 @@ function EventCard(props) {
     let eventDate = new Date(props.date);
     let timeInterval = currentDate.getTime() - eventDate.getTime();
     if (timeInterval > 0) {
-      return "past-eventcard";
+      return 'eventcard';
     } else {
-      return "eventcard";
+      return 'eventcard';
     }
   }
 
@@ -80,7 +80,7 @@ function EventCard(props) {
       >
         <div className='modal-top-part'>
           <button onClick={closeModal} className='close-button-event-card'>
-            X
+            Close
           </button>
           <div className='header-line-event-card'>
             <span className='popup-title-event-card'>{props.title}</span>
@@ -101,7 +101,7 @@ function EventCard(props) {
               rel='noopener noreferrer'
               className='popup-button-event-card-link'
             >
-              <h4>View on Facebook</h4>
+              <span>View on Facebook</span>
             </a>
           </button>
         </div>

@@ -1,0 +1,30 @@
+@import 'src/globals/hack-variables.scss';
+@import 'src/globals/hack-styles.scss';
+
+.header-image {
+  position: absolute;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  & img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+.header-font {
+  font-family: $hackUCIFont;
+  font-size: 72px;
+  margin: 0.1em 0;
+  position: relative;
+  z-index: 10;
+}
+
+@media screen and (max-width: 760px) {
+  .header-image {
+    left: -1000px;
+  }
+}

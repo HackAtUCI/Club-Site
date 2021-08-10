@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import getSheetsData from "app/services/google-sheets-handler";
 
-import "./CurrentSponsors.scss";
+import './CurrentSponsors.scss';
 
 function CurrentSponsors(props) {
   const [sponsors, setSponsors] = useState([]);
@@ -15,7 +15,7 @@ function CurrentSponsors(props) {
   return (
     <React.Fragment>
       <div className="container d-flex justify-content-center sponsor-current">
-        <b>Current Sponsors</b>
+        <b>Our Past Sponsors</b>
       </div>
       <div className="sponsor-list">
         {sponsors.map((sponsor) => (

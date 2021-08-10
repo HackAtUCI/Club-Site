@@ -4,8 +4,7 @@ import getSheetsData from "app/services/google-sheets-handler";
 import TeamSection from "../../containers/teamsection/TeamSection.js";
 
 import "./About.scss";
-import HeaderCord from "../../../assets/cord_1_kat.png";
-import HeaderAnt from "../../../assets/ant_kat.png";
+import { Header } from "../../containers";
 
 function About(props) {
   const [teamMembers, setTeamMembers] = useState({});
@@ -22,26 +21,7 @@ function About(props) {
 
   return (
     <div className="about">
-      <div className="jumbotron jumbotron-fluid global-header">
-        <div className="home-header-cord">
-          <img src={HeaderCord} alt="usb-cord" />
-        </div>
-        <div className="home-header-ants">
-          <img src={HeaderAnt} alt="ant" />
-          <img src={HeaderAnt} alt="ant" />
-          <img src={HeaderAnt} alt="ant" />
-          <img src={HeaderAnt} alt="ant" />
-        </div>
-        <div className="global-description-container container">
-          <p className="global-description-font">
-            Hack at UCI is a student-run organization established to provide
-            students with a platform to learn, grow, and develop technology of
-            the future. Established in 2013, our mission is to promote, educate,
-            and enhance the community around us by giving students the platform
-            to learn and create technology.
-          </p>
-        </div>
-      </div>
+      <Header title="About Us"/>
 
       <div className="about-content">
         <div className="container about-description">

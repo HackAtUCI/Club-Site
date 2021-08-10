@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import BeatLoader from "react-spinners/BeatLoader";
-import { Card, EventCard } from "../../containers";
-import HeaderCord from "../../../assets/cord_1_kat.png";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import BeatLoader from 'react-spinners/BeatLoader';
+import {Card, EventCard, Header} from '../../containers';
 
-import "./Events.scss";
+import './Events.scss';
 
 function Events() {
   const [pastEvents, setPastEvents] = useState([]);
@@ -13,7 +12,7 @@ function Events() {
 
   // API call to receive event data
   useEffect(() => {
-    axios.get("/api/fbgraph").then((response) => {
+    axios.get('/api/fbgraph').then((response) => {
       let data = response.data.events.data;
       let currentDate = new Date();
       let splicer = data.length;
@@ -44,27 +43,29 @@ function Events() {
     if (isLoading) {
       return (
         <div className='no-events'>
-          <BeatLoader size={15} color={"#233b92"} />
+          <BeatLoader size={15} color={'#233b92'} />
         </div>
       );
     } else {
       return upcomingEvents.length === 0 ? (
         <h1 className='no-events'> No upcoming events! Stay tuned.</h1>
       ) : (
-        upcomingEvents.map((event) => (
-          <Card>
-            <EventCard
-              title={event.name}
-              date={event.start_time}
-              end_date={event.end_time}
-              link={"https://www.facebook.com/events/" + event.id}
-              description={event.description}
-              image={event.cover.source}
-              time={event.pastOrFuture}
-              key={event.id}
-            />
-          </Card>
-        )).reverse()
+        upcomingEvents
+          .map((event) => (
+            <Card>
+              <EventCard
+                title={event.name}
+                date={event.start_time}
+                end_date={event.end_time}
+                link={'https://www.facebook.com/events/' + event.id}
+                description={event.description}
+                image={event.cover.source}
+                time={event.pastOrFuture}
+                key={event.id}
+              />
+            </Card>
+          ))
+          .reverse()
       );
     }
   }
@@ -73,7 +74,7 @@ function Events() {
     if (isLoading) {
       return (
         <div className='no-events'>
-          <BeatLoader size={15} color={"#233b92"} />
+          <BeatLoader size={15} color={'#233b92'} />
         </div>
       );
     } else {
@@ -86,7 +87,7 @@ function Events() {
               title={event.name}
               date={event.start_time}
               end_date={event.end_time}
-              link={"https://www.facebook.com/events/" + event.id}
+              link={'https://www.facebook.com/events/' + event.id}
               description={event.description}
               image={event.cover.source}
               time={event.pastOrFuture}
@@ -100,33 +101,18 @@ function Events() {
 
   return (
     <div className='events-wrapper'>
-      <div className='jumbotron jumbotron-fluid global-header'>
-        <div className='home-header-cord'>
-          <img src={HeaderCord} alt='usb-cord' />
-        </div>
-        <div className='container global-description-container'>
-          <p className='global-description-font'>
-            We aim to celebrate UC Irvine's spirit of innovation by organizing
-            ZotHacks, a beginner-friendly hackathon, and HackUCI, Orange
-            County's largest hackathon. Futhermore, our organization regualrly
-            hosts technical and professional development workshops that teach
-            students industry relevant skills.
-          </p>
-        </div>
-      </div>
+      <Header title="Our Events"/>
       <div className='events'>
         <div className='upcoming-events'>
           <h2 className='title-events'>
             <b> Upcoming Events </b>
           </h2>
-          <h4> Click on a upcoming event to view its description. </h4>
           {upcomingEventsRender()}
         </div>
         <div className='past-events'>
           <h2 className='title-events'>
             <b> Past Events </b>
           </h2>
-          <h4> Click on a past event to view its description. </h4>
           {pastEventsRender()}
         </div>
       </div>
