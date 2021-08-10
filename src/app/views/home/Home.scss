@@ -77,6 +77,10 @@ html {
 
 .involved-button a {
   color: white;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .home-arrow-down {

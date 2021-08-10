@@ -1,33 +1,30 @@
 import React from "react";
 import "./Contact.scss";
 
-import HeaderCord from "../../../assets/cord_1_kat.png";
+import { Header } from "../../containers";
 import Newsletter from "../../components/newsletter/Newsletter";
-import FacebookIcon from "../../../assets/FacebookIconPink.png";
-import InstagramIcon from "../../../assets/InstagramIconPink.png";
-import LinkedInIcon from "../../../assets/LinkedInLogoPink.png";
-import YouTubeIcon from "../../../assets/YouTubeIconPink.png"
+import MailIcon from "../../../assets/icons/mail_icon.svg";
+import FacebookIcon from "../../../assets/icons/facebook_icon.svg";
+import InstagramIcon from "../../../assets/icons/instagram_icon.svg";
+import LinkedInIcon from "../../../assets/icons/linkedin_icon.svg";
+import YouTubeIcon from "../../../assets/icons/youtube_icon.svg";
 
 function Contact(props) {
   return (
     <div className="Contact" style={props.style}>
-      <div className="jumbotron jumbotron-fluid global-header">
-        <div className="home-header-cord">
-          <img src={HeaderCord} alt="usb-cord" />
-        </div>
-        <div className="global-description-container container">
-          <p className="global-description-font">
-            Wondering where to get more information about Hack at UCI? Follow us
-            on Facebook, Instagram and LinkedIn to be up to date on all events,
-            workshops and hackathons. You can also reach out to us over email at{" "}
-            <a href="mailto:hackuci@gmail.com">hack@uci.edu</a>.
-            <br />
-          </p>
-        </div>
-      </div>
+      <Header title="Contact Us"/>
+
       <div className="contact-body align-content-center">
-        <label id="sm-title">Social Media</label>
+        <label id="sm-title"> </label>
         <div className="contact-icons-container">
+          <div className="contact-icon d-inline-block">
+            <a href="https://www.facebook.com/UCI.Hack/">Email</a>
+            <div className="contact-icon-image">
+              <a href="mailto:hack@uci.edu">
+                <img src={MailIcon} alt="Mail Icon"/>
+              </a>
+            </div>
+          </div>
           <div className="contact-icon d-inline-block">
             <a href="https://www.facebook.com/UCI.Hack/">Facebook</a>
             <div className="contact-icon-image">

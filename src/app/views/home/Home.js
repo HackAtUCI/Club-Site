@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CurrentSponsors } from 'app/components';
-import { Card, HomeCard } from '../../containers';
+import { Card, HomeCard, Header } from '../../containers';
 
 import './Home.scss';
-import HeaderMicroUSB from '../../../assets/micro_usb_cord_kat.png';
-import HeaderCord from '../../../assets/cord_1_kat.png';
-import HeaderAnt from '../../../assets/ant_kat.png';
 import HackUCI from '../../../assets/previews/hackuci.jpg';
 import ZotHacks from '../../../assets/previews/zothacks.jpg';
 import HackNights from '../../../assets/previews/hacknights.jpg';
@@ -17,33 +14,7 @@ function Home(props) {
   // noinspection HtmlUnknownAnchorTarget
   return (
     <div className='Home' style={props.style}>
-      <div className='jumbotron jumbotron-fluid global-header'>
-        <div className='home-header-usb'>
-          <img src={HeaderMicroUSB} alt='micro_usb_cord' />
-        </div>
-        <div className='home-header-cord'>
-          <img src={HeaderCord} alt='usb-cord' />
-        </div>
-        <div className='home-header-ants'>
-          <img src={HeaderAnt} alt='ant' />
-          <img src={HeaderAnt} alt='ant' />
-          <img src={HeaderAnt} alt='ant' />
-          <img src={HeaderAnt} alt='ant' />
-        </div>
-        <h1 className='home-header-font'>
-          <b>Hack at UCI</b>
-        </h1>
-        <div className='d-flex justify-content-center'>
-          <div className='involved-button'>
-            <b>
-              <a href='#newsletter'>Get Involved</a>
-            </b>
-          </div>
-        </div>
-        <div className='d-flex justify-content-center'>
-          <div className='home-arrow-down'> </div>
-        </div>
-      </div>
+      <Header type="home"/>
 
       <div className='home-content'>
         <div className='text-left home-about home-container'>

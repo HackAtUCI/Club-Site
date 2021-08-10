@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BeatLoader from 'react-spinners/BeatLoader';
-import { Card, EventCard } from '../../containers';
-import HeaderCord from '../../../assets/cord_1_kat.png';
+import {Card, EventCard, Header} from '../../containers';
 
 import './Events.scss';
 
@@ -102,20 +101,7 @@ function Events() {
 
   return (
     <div className='events-wrapper'>
-      <div className='jumbotron jumbotron-fluid global-header'>
-        <div className='home-header-cord'>
-          <img src={HeaderCord} alt='usb-cord' />
-        </div>
-        <div className='container global-description-container'>
-          <p className='global-description-font'>
-            We aim to celebrate UC Irvine's spirit of innovation by organizing
-            ZotHacks, a beginner-friendly hackathon, and HackUCI, Orange
-            County's largest hackathon. Futhermore, our organization regualrly
-            hosts technical and professional development workshops that teach
-            students industry relevant skills.
-          </p>
-        </div>
-      </div>
+      <Header title="Our Events"/>
       <div className='events'>
         <div className='upcoming-events'>
           <h2 className='title-events'>
