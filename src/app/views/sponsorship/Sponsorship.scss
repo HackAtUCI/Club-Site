@@ -1,9 +1,5 @@
 @import "src/globals/hack-variables.scss";
 
-.Sponsorship {
-  font-family: $hackUCIFont;
-}
-
 .sponsor-header-container {
   position: relative;
   top: 30px;
@@ -15,10 +11,7 @@
 }
 
 .sponsor-content-heading {
-  text-align: left;
   margin-top: 80px;
-  font-size: 70px;
-  color: $black;
 }
 
 .sponsor-hackuci {
@@ -26,7 +19,7 @@
 }
 
 .sponsor-hackuci input {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 20px;
   border: none;
   border-radius: 30px;
@@ -82,13 +75,11 @@
 
 .sponsor-stat p {
   font-size: 60px;
-  font-weight: normal;
   margin: 0;
 }
 
 .sponsor-stat label {
   font-size: 20px;
-  font-weight: normal;
   margin: 0;
 }
 
@@ -177,10 +168,6 @@
 }
 
 @media screen and (max-width: 800px) {
-  .sponsor-content-heading b {
-    font-size: 36px;
-  }
-
   .sponsor-hackuci input {
     font-size: 16px;
     border-radius: 30px;
@@ -210,8 +197,6 @@
     display: block;
   }
   .sponsor-content-heading {
-    font-size: 24px;
-    text-align: center;
     font-size: 42px;
     margin: 100px 20px 0 20px;
   }

@@ -48,7 +48,7 @@ function Events() {
       );
     } else {
       return upcomingEvents.length === 0 ? (
-        <h1 className='no-events'> No upcoming events! Stay tuned.</h1>
+        <h2 className="no-events">No upcoming events! Stay tuned.</h2>
       ) : (
         upcomingEvents
           .map((event) => (
@@ -57,7 +57,7 @@ function Events() {
                 title={event.name}
                 date={event.start_time}
                 end_date={event.end_time}
-                link={'https://www.facebook.com/events/' + event.id}
+                link={"https://www.facebook.com/events/" + event.id}
                 description={event.description}
                 image={event.cover.source}
                 time={event.pastOrFuture}
@@ -79,7 +79,7 @@ function Events() {
       );
     } else {
       return pastEvents.length === 0 ? (
-        <h1 className='no-events'> No past events! </h1>
+        <h2 className="no-events">No past events!</h2>
       ) : (
         pastEvents.map((event) => (
           <Card>
@@ -87,7 +87,7 @@ function Events() {
               title={event.name}
               date={event.start_time}
               end_date={event.end_time}
-              link={'https://www.facebook.com/events/' + event.id}
+              link={"https://www.facebook.com/events/" + event.id}
               description={event.description}
               image={event.cover.source}
               time={event.pastOrFuture}
@@ -104,15 +104,11 @@ function Events() {
       <Header title="Our Events"/>
       <div className='events'>
         <div className='upcoming-events'>
-          <h2 className='title-events'>
-            <b> Upcoming Events </b>
-          </h2>
+          <h2 className='title-events'>Upcoming Events</h2>
           {upcomingEventsRender()}
         </div>
         <div className='past-events'>
-          <h2 className='title-events'>
-            <b> Past Events </b>
-          </h2>
+          <h2 className='title-events'>Past Events</h2>
           {pastEventsRender()}
         </div>
       </div>

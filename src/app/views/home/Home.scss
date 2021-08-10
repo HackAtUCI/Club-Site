@@ -52,7 +52,6 @@ html {
 }
 
 .home-header-font {
-  font-family: $hackUCIFont;
   font-size: 7rem;
   margin: 0.1em 0;
   position: relative;
@@ -66,7 +65,8 @@ html {
 .involved-button {
   border-color: transparent;
   border-radius: 30px;
-  font-size: 28px;
+  font-size: 24px;
+  font-weight: 600;
   padding: 10px 25px;
   background-color: $red;
   color: white;
@@ -96,27 +96,16 @@ html {
   width: 80vw;
   margin: auto;
   text-align: center;
-}
-
-.home-about {
-  padding-bottom: 180px;
+  padding: 11.25rem 0;
 }
 
 .gray-background {
   background: #f4f5f8;
-  padding-bottom: 180px;
-}
-
-.home-container h1 {
-  font-size: 42px;
-  padding: 10rem 0 0 0;
-  text-align: center;
 }
 
 .home-container p {
   font-size: 26px;
   margin: 0;
-  text-align: center;
   text-align: center;
   padding-top: 15px;
 }
@@ -163,7 +152,7 @@ html {
 }
 
 .card-container {
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -177,7 +166,6 @@ html {
 
 @media screen and (max-width: 760px) {
   .home-header-font {
-    font-family: $hackUCIFont;
     font-size: 3rem;
     margin: 0.1em 0;
   }
