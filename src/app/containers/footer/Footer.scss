@@ -15,3 +15,22 @@
   justify-items: center;
   align-items: center;
 }
+
+@media screen and (max-width: 760px) {
+  .footer {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, #1C3385 0%, #118AFB 100%);
+    color: white;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    padding: 0 28px;
+    justify-content: space-between;
+  }
+
+  .footer img {
+    width: 20px;
+    margin: 0
+  }
+}

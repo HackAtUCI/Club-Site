@@ -59,7 +59,7 @@ function Home(props) {
                 <HomeCard
                   image={HackUCI}
                   title='HackUCI'
-                  description='HackUCI is the largest collegiate hackathon in Orange County. 
+                  descrip tion='HackUCI is the largest collegiate hackathon in Orange County.
                   Each year, we bring like minded individuals of different backgrounds and 
                   skill sets together to create something in 36 hours.'
                 />
