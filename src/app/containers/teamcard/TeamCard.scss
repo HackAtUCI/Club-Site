@@ -1,6 +1,6 @@
 @import "src/globals/hack-variables.scss";
 
-.teamcard {
+.team-card {
   height: 300px;
   width: 200px;
   text-align: left;
@@ -8,6 +8,7 @@
 
   .images-container {
     position: relative;
+    margin-bottom: 0.5rem;
 
     .profpic {
       height: 200px;
@@ -29,7 +30,7 @@
   }
 }
 @media screen and (max-width: 760px) {
-  .teamcard {
+  .team-card {
     height: 220px;
     width: 110px;
 
