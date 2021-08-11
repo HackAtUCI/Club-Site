@@ -1,13 +1,14 @@
 import React from "react";
 import "./Contact.scss";
 
-import { Header } from "../../containers";
-import Newsletter from "../../components/newsletter/Newsletter";
-import MailIcon from "../../../assets/icons/mail_icon.svg";
-import FacebookIcon from "../../../assets/icons/facebook_icon.svg";
-import InstagramIcon from "../../../assets/icons/instagram_icon.svg";
-import LinkedInIcon from "../../../assets/icons/linkedin_icon.svg";
-import YouTubeIcon from "../../../assets/icons/youtube_icon.svg";
+import { Newsletter } from "app/components";
+import { Header } from "app/containers";
+
+import MailIcon from "assets/icons/mail_icon.svg";
+import FacebookIcon from "assets/icons/facebook_icon.svg";
+import InstagramIcon from "assets/icons/instagram_icon.svg";
+import LinkedInIcon from "assets/icons/linkedin_icon.svg";
+import YouTubeIcon from "assets/icons/youtube_icon.svg";
 
 function Contact(props) {
   return (

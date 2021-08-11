@@ -1,7 +1,8 @@
 import React from "react";
 
+import HeaderImage from "assets/hackshapes_header.svg";
+
 import "./Header.scss";
-import HeaderImage from "../../../assets/hackshapes_header.svg";
 
 function Header(props) {
     if (props.type === "home") {

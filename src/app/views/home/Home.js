@@ -1,14 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CurrentSponsors } from 'app/components';
-import { Card, HomeCard, Header } from '../../containers';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import './Home.scss';
-import HackUCI from '../../../assets/previews/hackuci.jpg';
-import ZotHacks from '../../../assets/previews/zothacks.jpg';
-import HackNights from '../../../assets/previews/hacknights.jpg';
-import Workshops from '../../../assets/previews/workshops.jpg';
-import Newsletter from '../../components/newsletter/Newsletter';
+import { CurrentSponsors, Newsletter } from "app/components";
+import { Card, HomeCard, Header } from "app/containers";
+
+import HackUCI from "assets/previews/hackuci.jpg";
+import ZotHacks from "assets/previews/zothacks.jpg";
+import HackNights from "assets/previews/hacknights.jpg";
+import Workshops from "assets/previews/workshops.jpg";
+
+import "./Home.scss";
 
 function Home(props) {
   // noinspection HtmlUnknownAnchorTarget
