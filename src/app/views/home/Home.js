@@ -12,7 +12,6 @@ import Workshops from "assets/previews/workshops.jpg";
 import "./Home.scss";
 
 function Home(props) {
-  // noinspection HtmlUnknownAnchorTarget
   return (
     <div className='Home' style={props.style}>
       <Header type="home"/>

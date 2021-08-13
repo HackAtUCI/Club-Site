@@ -1,65 +1,7 @@
 @import 'src/globals/hack-variables.scss';
-@import 'src/globals/hack-styles.scss';
 
 html {
   scroll-behavior: smooth;
-}
-
-.home-header-ants img:nth-child(1),
-.home-header-ants img:nth-child(2),
-.home-header-ants img:nth-child(3),
-.home-header-ants img:nth-child(4) {
-  position: absolute;
-  z-index: 1;
-}
-
-.home-header-ants img:nth-child(1) {
-  top: 268px;
-  left: 120px;
-  transform: rotate(315deg) scale(0.3);
-}
-
-.home-header-ants img:nth-child(2) {
-  top: 250px;
-  left: 60px;
-  transform: rotate(275deg) scale(0.3);
-}
-
-.home-header-ants img:nth-child(3) {
-  top: 238px;
-  left: 0px;
-  transform: rotate(290deg) scale(0.3);
-}
-
-.home-header-ants img:nth-child(4) {
-  top: 203px;
-  left: -45px;
-  transform: rotate(320deg) scale(0.3);
-}
-
-.home-header-usb {
-  transform: scale(0.65);
-  position: absolute;
-  left: -400px;
-  top: -165px;
-}
-
-.home-header-cord {
-  position: absolute;
-  left: 280px;
-  top: 200px;
-  transform: scale(0.75) rotateX(180deg) rotate(15deg);
-}
-
-.home-header-font {
-  font-size: 7rem;
-  margin: 0.1em 0;
-  position: relative;
-  z-index: 10;
-}
-
-.home-involved-button-div {
-  text-align: center;
 }
 
 .involved-button {
@@ -81,15 +23,6 @@ html {
     color: white;
     text-decoration: none;
   }
-}
-
-.home-arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-
-  border-top: 10px solid $red;
 }
 
 .home-container {
@@ -153,27 +86,6 @@ html {
 
 .card-container {
   padding-top: 30px;
-}
-
-@media screen and (max-width: 1200px) {
-  .home-header-usb {
-    display: none;
-  }
-  .home-header-ants {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  .home-header-font {
-    font-size: 3rem;
-    margin: 0.1em 0;
-  }
-
-  .home-newsletter-container {
-    display: block;
-    font-size: 23px;
-  }
 }
 
 // Bootstrap 4 breakpoints & gutter

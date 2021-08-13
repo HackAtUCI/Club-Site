@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
-import history from "./history";
 
 import { AppNavbar, Footer } from "app/containers";
 import { Sponsorship, Events, About, Home, NotFound, Contact } from "app/views";
@@ -8,13 +7,11 @@ import { Sponsorship, Events, About, Home, NotFound, Contact } from "app/views";
 import "./App.scss";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "jquery/dist/jquery.min.js";
-import "bootstrap/dist/js/bootstrap.min.js";
 
 function App() {
   return (
     <div className="App">
-      <Router history={history}>
+      <Router>
         <div>
           <AppNavbar />
           <Switch>
