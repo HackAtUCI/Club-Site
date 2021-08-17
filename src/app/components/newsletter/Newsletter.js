@@ -35,14 +35,9 @@ function Newsletter(props) {
       className="jumbotron jumbotron-fluid newsletter"
       style={props.style}
     >
-      <div 
-        id="discord"
-        className="text-left newsletter-container"
-      >
+      <div id="discord" className="text-left newsletter-container">
         <div className="newsletter-left">
-          <h1>
-            <b>Join our Discord and newsletter!</b>
-          </h1>
+          <h2>Join our Discord and newsletter!</h2>
           <p className="newsletter-info">
             Get Involved! Just fill in your information and click "Sign Up".
             Hack at UCI will email you an invite link to our discord server and
@@ -118,7 +113,7 @@ function Newsletter(props) {
           <br />
           <div className="d-flex text-left">
             <button className="newsletter-button" name="subscribe">
-              <b>Sign Up</b>
+              Sign Up
             </button>
           </div>
           <br />
