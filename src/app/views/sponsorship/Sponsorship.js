@@ -3,9 +3,8 @@ import React from "react";
 import "./Sponsorship.scss";
 
 import { CurrentSponsors } from "app/components";
-import { Header } from "../../containers";
-
-import People from "../../../assets/People.svg";
+import { Header } from "app/containers";
+import People from "assets/People.svg";
 
 function Sponsorship(props) {
   return (

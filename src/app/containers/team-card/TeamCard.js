@@ -1,7 +1,9 @@
 import React from "react";
+
+import linkedinLogo from "assets/linkedin-logo.png";
+import blank from "assets/team/blank.png";
+
 import "./TeamCard.scss";
-import blank from "../../../assets/team/blank.png";
-import linkedinLogo from "../../../assets/linkedin-logo.png";
 
 function TeamCard({ name, position, image, linkedInUrl }) {
   return (
