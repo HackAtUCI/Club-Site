@@ -104,13 +104,16 @@ function Events() {
     <div className='events-wrapper'>
       <Header title="Our Events"/>
       <div className='events'>
-        <div className='upcoming-events'>
+        <section className="container upcoming-events">
           <h2 className='title-events'>Upcoming Events</h2>
           {upcomingEventsRender()}
-        </div>
-        <div className='past-events'>
-          <h2 className='title-events'>Past Events</h2>
-          {pastEventsRender()}
+        </section>
+
+        <div className="bg-gray">
+          <section className="container past-events">
+            <h2 className="title-events">Past Events</h2>
+            {pastEventsRender()}
+          </section>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ function Sponsorship(props) {
       <Header title="Sponsor Information"/>
 
       <div className="container sponsor-content">
-        <h2 className="sponsor-content-heading">HackUCI Profile</h2>
+        <h2>HackUCI Profile</h2>
         <div className="sponsor-hackuci flex-center">
           <form action="https://hackuci.com">
               <input type="submit" value="hackuci.com" />
@@ -123,7 +123,9 @@ function Sponsorship(props) {
           </div>
         </div>
       </div>
-      <CurrentSponsors />
+      <section className="container">
+        <CurrentSponsors />
+      </section>
     </div>
   );
 }

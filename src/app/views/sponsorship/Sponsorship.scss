@@ -1,19 +1,5 @@
 @import "src/globals/hack-variables.scss";
 
-.sponsor-header-container {
-  position: relative;
-  top: 30px;
-  max-width: 1450px;
-}
-
-.sponsor-header-font {
-  font-size: 33px;
-}
-
-.sponsor-content-heading {
-  margin-top: 80px;
-}
-
 .sponsor-hackuci {
   margin: 0px 0 40px 0;
 }
@@ -155,10 +141,6 @@
   .sponsor-content {
     display: block;
   }
-  .sponsor-content-heading {
-    font-size: 65px;
-    margin-top: 40px;
-  }
   .sponsor-content-anecdote {
     font-size: 20px;
   }
@@ -189,16 +171,8 @@
     }
   }
 
-  .sponsor-header-font {
-    font-size: 24px;
-  }
-
   .sponsor-content {
     display: block;
-  }
-  .sponsor-content-heading {
-    font-size: 42px;
-    margin: 100px 20px 0 20px;
   }
   .sponsor-hackuci a {
     margin: 0 20px;
