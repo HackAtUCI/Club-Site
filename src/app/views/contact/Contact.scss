@@ -7,45 +7,34 @@
   }
 }
 
-.contact-body #sm-title {
-  font-size: 44px;
-  margin: 10rem 0 5rem 0;
-}
-
-.contact-icons-container {
+.contact-icons {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
 }
 
-.contact-icon a {
-  font-size: 28px;
+.contact-icon {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8rem;
+
+  .contact-label {
+    margin-bottom: 1.5rem;
+  }
 }
 
-.contact-icon img{
+.contact-icon img {
   height: 6rem;
   width: 6rem;
 }
 
-.contact-icon {
-  margin-bottom: 15rem;
-}
-
-@media screen and (max-width: 760px) {
-  .contact-body #sm-title {
-    font-size: 28px;
-    margin: 5rem 0 2rem 0;
+@media (min-width: 768px) {
+  .contact-icons {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .contact-icon {
-    margin-bottom: 8rem;
-  }
-
-  .contact-icons-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    margin: 0 0.65rem;
   }
 }
