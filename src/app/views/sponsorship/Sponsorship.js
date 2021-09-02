@@ -124,6 +124,7 @@ function Sponsorship(props) {
         </div>
       </div>
       <section className="container">
+        <h2>Our Past Sponsors</h2>
         <CurrentSponsors />
       </section>
     </div>
