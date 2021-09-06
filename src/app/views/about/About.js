@@ -6,7 +6,7 @@ import getSheetsData from "app/services/google-sheets-handler";
 import TeamSection from "./TeamSection";
 import "./About.scss";
 
-function About(props) {
+function About() {
   const [teamMembers, setTeamMembers] = useState({});
 
   useEffect(() => {
@@ -21,7 +21,7 @@ function About(props) {
 
   return (
     <div className="about">
-      <Header title="About Us"/>
+      <Header title="About Us" />
 
       <div className="about-content">
         <div className="container about-description">

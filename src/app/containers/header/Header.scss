@@ -1,27 +1,24 @@
 @import 'src/globals/hack-variables.scss';
 
+.global-header {
+  background: linear-gradient(90deg, #1C3385 0%, #118AFB 100%);
+  color: white;
+  height: 20rem;
+}
+
 .header-image {
-  position: absolute;
-  top: 50px;
+  height: 100%;
+  background-image: url('~assets/hackshapes_header.png');
+  background-repeat: no-repeat;
+  background-size: 1920px auto;
+  // keep laptop near center of header
+  background-position: calc(50% - 400px + min(400px, 25vw)) 100%;
+}
+
+.header-overlay {
+  height: 90%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  & img {
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
-  }
-}
-
-.main-heading {
-  margin: 0.1em 0;
-  position: relative;
-  z-index: 10;
-}
-
-@media screen and (max-width: 760px) {
-  .header-image {
-    left: -1000px;
-  }
+  justify-content: center;
 }

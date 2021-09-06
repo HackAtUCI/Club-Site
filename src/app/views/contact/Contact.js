@@ -13,7 +13,7 @@ import YouTubeIcon from "assets/icons/youtube_icon.svg";
 function Contact(props) {
   return (
     <div className="Contact" style={props.style}>
-      <Header title="Contact Us"/>
+      <Header title="Contact Us" />
 
       <div className="contact-body align-content-center">
         <label id="sm-title"> </label>
