@@ -17,7 +17,7 @@ function Home(props) {
       <Header type="home"/>
 
       <div className="home-content">
-        <div className="home-about home-container">
+        <section className="container home-about">
           <h2>About Us</h2>
           <p>
             Hack at UCI is a student-run organization established to provide
@@ -29,9 +29,9 @@ function Home(props) {
           <p>
             <Link to="/about">Read More About Us &gt;</Link>
           </p>
-        </div>
-        <div className="gray-background">
-          <div className="home-container">
+        </section>
+        <div className="bg-gray">
+          <section className="container home-events">
             <h2>Our Events</h2>
             <p>
               We aim to celebrate UC Irvine's spirit of innovation by organizing
@@ -44,7 +44,7 @@ function Home(props) {
               <Link to="/events">View Upcoming Events &gt;</Link>
             </p>
 
-            <div className='container card-container'>
+            <div className='card-container'>
               <div className='card-deck'>
                 <Card>
                   <HomeCard
@@ -84,10 +84,10 @@ function Home(props) {
                 </Card>
               </div>
             </div>
-          </div>
+          </section>
         </div>
 
-        <div className="home-sponsors home-container">
+        <section className="container home-sponsors">
           <h2>Thank you to Our Sponsors</h2>
           <p>
             Hack at UCI’s hackathons and events wouldn’t be possible without the
@@ -99,10 +99,10 @@ function Home(props) {
             <Link to="/sponsors">View Sponsorship Information &gt;</Link>
           </p>
           <CurrentSponsors />
-        </div>
-
-        <Newsletter />
+        </section>
       </div>
+
+      <Newsletter />
     </div>
   );
 }

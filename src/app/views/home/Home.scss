@@ -25,30 +25,13 @@ html {
   }
 }
 
-.home-container {
-  width: 80vw;
-  margin: auto;
-  text-align: center;
-  padding: 11.25rem 0;
-}
-
-.gray-background {
-  background: #f4f5f8;
-}
-
-.home-container p {
-  font-size: 26px;
-  margin: 0;
-  text-align: center;
-  padding-top: 15px;
-}
-
-.home-container a {
-  font-size: 26px;
-  margin: 0;
-  color: $darkest-blue !important;
-  text-align: center;
-  padding-top: 15px;
+.home-content {
+  p {
+    font-size: 26px;
+  }
+  a {
+    color: $darkest-blue !important;
+  }
 }
 
 .card-body {
