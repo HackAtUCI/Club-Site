@@ -26,7 +26,7 @@ function About(props) {
 
       <div className="about-content">
         <div className="container about-description">
-          <h1 className="mission-statement">Our Mission Statement</h1>
+          <h2 className="mission-statement">Our Mission Statement</h2>
           <p>Promote, educate, and enhance the community around us by giving students the platform to learn and create technology.</p>
         </div>
         <div className="team-photo">
@@ -34,7 +34,7 @@ function About(props) {
         </div>
         <div className="gray-background">
           <div className="container about-description">
-            <h1>Meet the Team</h1>
+            <h2>Meet the Team</h2>
             <p>
               We strive to provide students with a platform to learn, grow, and develop technology of the future.
               With every event Hack at UCI puts on, there is an outstanding team behind it composed of four hardworking
