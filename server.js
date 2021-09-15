@@ -1,13 +1,13 @@
-const axios = require("axios");
-const bodyParser = require("body-parser");
-const express = require("express");
-const logger = require("express-logger");
-const mongoose = require("mongoose");
-const path = require("path");
-require("dotenv").config();
-const hackuciData = require("./hackuci-data.json")
+const axios = require('axios');
+const bodyParser = require('body-parser');
+const express = require('express');
+const logger = require('express-logger');
+const mongoose = require('mongoose');
+const path = require('path');
+require('dotenv').config();
+const hackuciData = require('./hackuci-data.json');
 
-const { DiscordSignup, DiscordInvite } = require("./models.js");
+const { DiscordSignup, DiscordInvite } = require('./models.js');
 const jsonParser = bodyParser.json();
 const app = express();
 
@@ -17,39 +17,62 @@ mongoose.connect(process.env.DB_URI, {
   useUnifiedTopology: true,
 });
 
-app.use(logger({ path: __dirname + "/logs/logs.txt" }));
+app.use(logger({ path: __dirname + '/logs/logs.txt' }));
 
 app.use((req, res, next) => {
-  if (process.env.NODE_ENV === "prod") {
-    if (req.headers.host === "hack-club-site-production.herokuapp.com")
-      return res.redirect(301, "https://hack.ics.uci.edu" + req.url);
-    if (req.headers["x-forwarded-proto"] !== "https")
-      return res.redirect("https://" + req.headers.host + req.url);
+  if (process.env.NODE_ENV === 'prod') {
+    if (req.headers.host === 'hack-club-site-production.herokuapp.com')
+      return res.redirect(301, 'https://hack.ics.uci.edu' + req.url);
+    if (req.headers['x-forwarded-proto'] !== 'https')
+      return res.redirect('https://' + req.headers.host + req.url);
     else return next();
   } else return next();
 });
 
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, 'build')));
 
 /* ------ Facebook Endpoints  ------ */
 
-app.get("/api/fbgraph", function (req, res) {
+app.get('/api/fbgraph', function (req, res) {
   axios
-    .get("https://graph.facebook.com/v7.0/me", {
+    .get('https://graph.facebook.com/v7.0/me', {
       params: {
-        fields: "events{description,end_time,name,start_time,cover}",
+        fields: 'events{description,end_time,name,start_time,cover}',
         access_token: process.env.FB_PAGE_TOKEN,
       },
     })
     .then((response) => {
-      var apiData = response.data.events.data;
-      var combinedData = hackuciData.events.data.concat(apiData);
-      response.data.events.data = combinedData;
-      res.json(response.data);
+      axios
+        .get('https://graph.facebook.com/v7.0/me', {
+          params: {
+            fields: 'events{description,end_time,name,start_time,cover}',
+            access_token: process.env.FB_PAGE_TOKEN_HACKUCI,
+          },
+        })
+        .then((response_two) => {
+          // combining the events array from each API response
+          var combinedData = response.data.events.data.concat(
+            response_two.data.events.data
+          );
+
+          // sorts the data from both api responses by the start date of each event
+          combinedData.sort(function (a, b) {
+            // Turn your strings into dates, and then subtract them
+            // to get a value that is either negative, positive, or zero.
+            return new Date(b.start_time) - new Date(a.start_time);
+          });
+
+          response.data.events.data = combinedData;
+          res.json(response.data);
+        })
+        .catch(function (err) {
+          console.error(err.message);
+          res.status(500).send('Server Error');
+        });
     })
     .catch(function (err) {
       console.error(err.message);
-      res.status(500).send("Server Error");
+      res.status(500).send('Server Error');
     });
 });
 
@@ -60,21 +83,21 @@ var authCheck = (req, res, next) => {
     next();
   } else {
     res.status(403).json({
-      message: "Access denied",
+      message: 'Access denied',
     });
   }
 };
 
 var handleInsert = (res) => (err, result) => {
   var data = {
-    message: "Unable to insert",
+    message: 'Unable to insert',
   };
   var status = 400;
 
   if (result && !err) {
     data = {
       result: result,
-      message: "Inserted successfully",
+      message: 'Inserted successfully',
     };
     status = 200;
   }
@@ -84,14 +107,14 @@ var handleInsert = (res) => (err, result) => {
 
 var handleFind = (res) => (err, result) => {
   var data = {
-    message: "Something went wrong",
+    message: 'Something went wrong',
   };
   var status = 500;
 
   if (result && !err) {
     data = {
       result: result,
-      message: "Found successfully",
+      message: 'Found successfully',
     };
     status = 200;
   }
@@ -101,14 +124,14 @@ var handleFind = (res) => (err, result) => {
 
 var handleUpdate = (res) => (err, result) => {
   var data = {
-    message: "Unable to update",
+    message: 'Unable to update',
   };
   var status = 400;
 
   if (result && result.nModified > 0 && !err) {
     data = {
       result: result,
-      message: "Updated successfully",
+      message: 'Updated successfully',
     };
     status = 200;
   }
@@ -118,14 +141,14 @@ var handleUpdate = (res) => (err, result) => {
 
 var handleDelete = (res) => (err, result) => {
   var data = (data = {
-    message: "Unable to delete",
+    message: 'Unable to delete',
   });
   var status = 400;
 
   if (result && result.deletedCount > 0 && !err) {
     data = {
       result: result,
-      message: "Deleted successfully",
+      message: 'Deleted successfully',
     };
     status = 200;
   }
@@ -133,7 +156,7 @@ var handleDelete = (res) => (err, result) => {
   res.status(status).json(data);
 };
 
-app.post("/api/discord/signups", jsonParser, function (req, res) {
+app.post('/api/discord/signups', jsonParser, function (req, res) {
   try {
     var newSignup = new DiscordSignup(req.body);
   } catch (err) {
@@ -143,11 +166,11 @@ app.post("/api/discord/signups", jsonParser, function (req, res) {
   newSignup.save(handleInsert(res));
 });
 
-app.get("/api/discord/signups", authCheck, function (req, res) {
+app.get('/api/discord/signups', authCheck, function (req, res) {
   DiscordSignup.find(handleFind(res));
 });
 
-app.delete("/api/discord/signups", authCheck, function (req, res) {
+app.delete('/api/discord/signups', authCheck, function (req, res) {
   DiscordSignup.deleteMany(
     {
       email: {
@@ -158,10 +181,10 @@ app.delete("/api/discord/signups", authCheck, function (req, res) {
   );
 });
 
-app.post("/api/discord/invites", authCheck, jsonParser, function (req, res) {
+app.post('/api/discord/invites', authCheck, jsonParser, function (req, res) {
   if (req.body.invites === undefined || req.body.invites <= 0) {
     res.status(400).json({
-      message: "No invites provided",
+      message: 'No invites provided',
     });
   }
 
@@ -179,7 +202,7 @@ app.post("/api/discord/invites", authCheck, jsonParser, function (req, res) {
   });
 });
 
-app.patch("/api/discord/invites", authCheck, jsonParser, function (req, res) {
+app.patch('/api/discord/invites', authCheck, jsonParser, function (req, res) {
   DiscordInvite.updateMany(
     {
       inviteUrl: {
@@ -191,7 +214,7 @@ app.patch("/api/discord/invites", authCheck, jsonParser, function (req, res) {
   );
 });
 
-app.get("/api/discord/invites", authCheck, function (req, res) {
+app.get('/api/discord/invites', authCheck, function (req, res) {
   DiscordInvite.find(
     req.query.inviteUrls
       ? {
@@ -204,7 +227,7 @@ app.get("/api/discord/invites", authCheck, function (req, res) {
   );
 });
 
-app.delete("/api/discord/invites", authCheck, function (req, res) {
+app.delete('/api/discord/invites', authCheck, function (req, res) {
   DiscordInvite.deleteMany(
     {
       inviteUrl: {
@@ -217,8 +240,8 @@ app.delete("/api/discord/invites", authCheck, function (req, res) {
 
 /* ------ React Build Endpoints ------ */
 
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.listen(process.env.PORT || 8080);

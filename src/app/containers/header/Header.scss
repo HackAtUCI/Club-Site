@@ -1,0 +1,27 @@
+@import 'src/globals/hack-variables.scss';
+
+.header-image {
+  position: absolute;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  & img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+.main-heading {
+  margin: 0.1em 0;
+  position: relative;
+  z-index: 10;
+}
+
+@media screen and (max-width: 760px) {
+  .header-image {
+    left: -1000px;
+  }
+}

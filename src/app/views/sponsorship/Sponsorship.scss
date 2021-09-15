@@ -1,50 +1,41 @@
 @import "src/globals/hack-variables.scss";
 
-.Sponsorship {
-  font-family: sans-serif;
-}
-
-.sponsor-header-container {
-  position: relative;
-  top: 30px;
-  max-width: 1450px;
-}
-
-.sponsor-header-font {
-  font-size: 33px;
-}
-
-.sponsor-content {
-  display: grid;
-  grid-template-columns: 45% 10% 45%;
-}
-
-.sponsor-content-heading {
-  text-align: left;
-  grid-column: 1 / span2;
-  margin-top: 80px;
-  font-size: 70px;
-  color: #5a73cc;
-}
-
 .sponsor-hackuci {
-  grid-column: 1;
-  text-align: left;
+  margin: 0px 0 40px 0;
 }
 
-.sponsor-hackuci img {
-  width: 230px;
+.sponsor-hackuci input {
+  font-weight: 600;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  background: linear-gradient(90deg, #FF928B 0%, #8494DA 100%);
+  transition: 300ms;
+  opacity: 1;
+  &:hover {
+    opacity: 85%;
+  }
 }
 
 .sponsor-hackuci a {
   position: relative;
-  top: -15px;
-  grid-column: 1;
 }
 
-.sponsor-stat-span {
-  grid-row: 1;
-  grid-column: 1;
+.sponsor-attendees {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  & span {
+    font-size: 48px;
+    padding-left: 10px;
+  }
+}
+
+.zothacks-btn {
+  background: linear-gradient(90deg, #2F9C95 0%, #ADD8AB 100%) !important;
 }
 
 .sponsor-hack-graph {
@@ -52,33 +43,30 @@
 }
 
 .sponsor-stat-img {
-  width: 100%;
+  width: 60%;
+  margin: 20px;
 }
 
 .sponsor-stats {
   display: inline-block;
+  margin: 100px 0;
 }
 
 .sponsor-stat {
   display: inline-block;
-  margin: 10px 20px;
+  margin: 10px 50px;
+  max-width: 140px;
+  vertical-align: text-top;
 }
 
 .sponsor-stat p {
   font-size: 60px;
-  font-weight: normal;
   margin: 0;
 }
 
 .sponsor-stat label {
   font-size: 20px;
-  font-weight: normal;
   margin: 0;
-}
-
-.sponsor-hackuci-stats {
-  grid-column: 1;
-  grid-row: 4;
 }
 
 .sponsor-hackuci p {
@@ -104,13 +92,12 @@
 
 .sponsor-content-anecdote {
   grid-column: 3;
-  border-radius: 30px;
-  padding: 30px;
-  background-color: $light-blue;
+  border-radius: 10px;
+  padding: 35px 35px 20px 35px;
+  background-color: $light-grey;
   margin-bottom: 30px;
   text-align: left;
-  font-size: 16px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-size: 20px;
 }
 
 #Bianca {
@@ -132,38 +119,10 @@
   font-size: 36px;
 }
 
-.sponsor-zothacks-stats {
-  grid-column: 1 / span2;
-}
-
-.sponsor-stat-graph {
-  grid-column: 1;
-}
-
-.sponsor-list {
-  margin-bottom: 160px;
-}
-
-.sponsor-list img {
-  max-height: 120px;
-  max-width: 300px;
-  margin: 20px;
-}
-
-.sponsor-list-item {
-  display: inline-block;
-  height: 120px;
-  width: 300px;
-  margin: 20px;
-}
-
 //commit update
 @media screen and (max-width: 1200px) {
   .sponsor-content {
     display: block;
-  }
-  .sponsor-content-heading {
-    font-size: 65px;
   }
   .sponsor-content-anecdote {
     font-size: 20px;
@@ -174,28 +133,42 @@
 }
 
 @media screen and (max-width: 800px) {
-  .sponsor-hackuci img {
-    padding-top: 10px;
-    width: 200px;
+  .sponsor-hackuci input {
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 10px 24px;
   }
-  .sponsor-header-font {
-    font-size: 24px;
+
+  .sponsor-attendees {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    & img {
+      width: 75px;
+    }
+    & span {
+      font-size: 20px;
+      padding-left: 10px;
+    }
   }
-  .sponsor-content-heading {
-    font-size: 24px;
-  }
+
   .sponsor-content {
     display: block;
-  }
-  .sponsor-content-heading {
-    font-size: 42px;
-    margin: 150px 20px 0 20px;
   }
   .sponsor-hackuci a {
     margin: 0 20px;
   }
+  .sponsor-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+  }
   .sponsor-stat {
-    margin: 5px 12px;
+    margin: 10px 12px;
   }
   .sponsor-stat p {
     font-size: 40px;

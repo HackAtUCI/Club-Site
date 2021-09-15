@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import HackLogo from "../../../assets/2018-09-15-Logo-transparent.png";
+import HackLogo from "../../../assets/hack-logo.png";
 
 import { Link, useLocation } from "react-router-dom";
 
@@ -47,6 +47,14 @@ export default function AppNavbar() {
               Sponsor
             </Link>
           </Nav.Link>
+          {/*<Nav.Link>*/}
+          {/*  <Link*/}
+          {/*      to="/recruit"*/}
+          {/*      className={currentPath.includes("recruit") && "selected"}*/}
+          {/*  >*/}
+          {/*    Recruiting*/}
+          {/*  </Link>*/}
+          {/*</Nav.Link>*/}
           <Nav.Link>
             <Link
               to="/contact"

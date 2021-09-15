@@ -1,4 +1,4 @@
-@import "src/globals/hack-styles.scss";
+@import "src/globals/hack-variables.scss";
 
 .newsletter {
   background-color: #f3f3f3;
@@ -52,6 +52,7 @@
   border-color: transparent;
   border-radius: 30px;
   font-size: 28px;
+  font-weight: 600;
   padding: 10px 25px;
   background-color: $red;
   color: white;

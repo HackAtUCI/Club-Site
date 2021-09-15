@@ -1,20 +1,17 @@
 import React from "react";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
-import history from "./history";
+
+import { AppNavbar, Footer } from "app/containers";
+import { Sponsorship, Events, About, Home, NotFound, Contact } from "app/views";
+
 import "./App.scss";
 
-import { AppNavbar } from "./app/containers";
-import { Footer } from "./app/containers";
-
-import { Sponsorship, Events, About, Home, NotFound, Contact } from "app/views";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "jquery/dist/jquery.min.js";
-import "bootstrap/dist/js/bootstrap.min.js";
 
 function App() {
   return (
     <div className="App">
-      <Router history={history}>
+      <Router>
         <div>
           <AppNavbar />
           <Switch>
@@ -23,6 +20,14 @@ function App() {
             <Route exact path="/events" component={Events} />
             <Route exact path="/sponsors" component={Sponsorship} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/recruit" component={() => {
+              window.location.href = 'https://www.hackuci.com/recruit';
+              return null;
+            }}/>
+            <Route exact path="/sponsorship-deck" component={() => {
+              window.location.href = 'Hack%20at%20UCI%20Sponsorship%20Deck%202021-2022.pdf';
+              return null;
+            }}/>
             <Route component={NotFound} />
           </Switch>
           <Footer />
