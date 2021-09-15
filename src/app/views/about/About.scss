@@ -18,6 +18,10 @@ html {
   }
 }
 
+.gray-background {
+  background-color: #f4f5f8;
+}
+
 .half-gray-background {
   position: relative;
   height: 200px;
@@ -44,12 +48,11 @@ html {
       }
       p {
         font-size: 20px;
-        margin-bottom: 180px;
       }
     }
 
     .about-teams {
-      margin-top: 100px;
+      padding-top: 0;
     }
   }
 }
