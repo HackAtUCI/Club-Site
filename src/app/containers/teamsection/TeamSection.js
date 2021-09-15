@@ -6,7 +6,7 @@ import "./TeamSection.scss";
 function TeamSection({ team, members }) {
   return (
     <section>
-      <h3 className="team-title">{team}</h3>
+      <h2 className="team-title">{team}</h2>
       <div className="team-grid">
         {members.map((member) => (
           <TeamCard
