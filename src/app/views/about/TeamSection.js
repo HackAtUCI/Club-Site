@@ -1,5 +1,6 @@
 import React from "react";
-import TeamCard from "../../containers/teamcard/TeamCard.js";
+
+import { TeamCard } from "app/containers";
 
 import "./TeamSection.scss";
 

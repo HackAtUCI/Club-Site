@@ -1,72 +1,14 @@
 @import 'src/globals/hack-variables.scss';
-@import 'src/globals/hack-styles.scss';
 
 html {
   scroll-behavior: smooth;
 }
 
-.home-header-ants img:nth-child(1),
-.home-header-ants img:nth-child(2),
-.home-header-ants img:nth-child(3),
-.home-header-ants img:nth-child(4) {
-  position: absolute;
-  z-index: 1;
-}
-
-.home-header-ants img:nth-child(1) {
-  top: 268px;
-  left: 120px;
-  transform: rotate(315deg) scale(0.3);
-}
-
-.home-header-ants img:nth-child(2) {
-  top: 250px;
-  left: 60px;
-  transform: rotate(275deg) scale(0.3);
-}
-
-.home-header-ants img:nth-child(3) {
-  top: 238px;
-  left: 0px;
-  transform: rotate(290deg) scale(0.3);
-}
-
-.home-header-ants img:nth-child(4) {
-  top: 203px;
-  left: -45px;
-  transform: rotate(320deg) scale(0.3);
-}
-
-.home-header-usb {
-  transform: scale(0.65);
-  position: absolute;
-  left: -400px;
-  top: -165px;
-}
-
-.home-header-cord {
-  position: absolute;
-  left: 280px;
-  top: 200px;
-  transform: scale(0.75) rotateX(180deg) rotate(15deg);
-}
-
-.home-header-font {
-  font-family: $hackUCIFont;
-  font-size: 7rem;
-  margin: 0.1em 0;
-  position: relative;
-  z-index: 10;
-}
-
-.home-involved-button-div {
-  text-align: center;
-}
-
 .involved-button {
   border-color: transparent;
   border-radius: 30px;
-  font-size: 28px;
+  font-size: 24px;
+  font-weight: 600;
   padding: 10px 25px;
   background-color: $red;
   color: white;
@@ -83,50 +25,13 @@ html {
   }
 }
 
-.home-arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-
-  border-top: 10px solid $red;
-}
-
-.home-container {
-  width: 80vw;
-  margin: auto;
-  text-align: center;
-}
-
-.home-about {
-  padding-bottom: 180px;
-}
-
-.gray-background {
-  background: #f4f5f8;
-  padding-bottom: 180px;
-}
-
-.home-container h1 {
-  font-size: 42px;
-  padding: 10rem 0 0 0;
-  text-align: center;
-}
-
-.home-container p {
-  font-size: 26px;
-  margin: 0;
-  text-align: center;
-  text-align: center;
-  padding-top: 15px;
-}
-
-.home-container a {
-  font-size: 26px;
-  margin: 0;
-  color: $darkest-blue !important;
-  text-align: center;
-  padding-top: 15px;
+.home-content {
+  p {
+    font-size: 26px;
+  }
+  a {
+    color: $darkest-blue !important;
+  }
 }
 
 .card-body {
@@ -163,29 +68,7 @@ html {
 }
 
 .card-container {
-  padding-top: 60px;
-}
-
-@media screen and (max-width: 1200px) {
-  .home-header-usb {
-    display: none;
-  }
-  .home-header-ants {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  .home-header-font {
-    font-family: $hackUCIFont;
-    font-size: 3rem;
-    margin: 0.1em 0;
-  }
-
-  .home-newsletter-container {
-    display: block;
-    font-size: 23px;
-  }
+  padding-top: 30px;
 }
 
 // Bootstrap 4 breakpoints & gutter

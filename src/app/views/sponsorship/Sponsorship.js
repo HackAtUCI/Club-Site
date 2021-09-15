@@ -3,9 +3,8 @@ import React from "react";
 import "./Sponsorship.scss";
 
 import { CurrentSponsors } from "app/components";
-import { Header } from "../../containers";
-
-import People from "../../../assets/People.svg";
+import { Header } from "app/containers";
+import People from "assets/People.svg";
 
 function Sponsorship(props) {
   return (
@@ -13,9 +12,7 @@ function Sponsorship(props) {
       <Header title="Sponsor Information"/>
 
       <div className="container sponsor-content">
-        <div className="sponsor-content-heading flex-center">
-          <b>HackUCI Profile</b>
-        </div>
+        <h2>HackUCI Profile</h2>
         <div className="sponsor-hackuci flex-center">
           <form action="https://hackuci.com">
               <input type="submit" value="hackuci.com" />
@@ -74,11 +71,9 @@ function Sponsorship(props) {
             <b>- Lizzie, Twilio</b>
           </div>
         </div>
-        
+
         <div>
-          <div className="sponsor-content-heading flex-center">
-            <b>ZotHacks Profile</b>
-          </div>
+          <h2 className="sponsor-content-heading">ZotHacks Profile</h2>
           <div className="sponsor-hackuci">
             <form action="https://zothacks.com">
                 <input type="submit" class="zothacks-btn" value="zothacks.com" />
@@ -128,7 +123,10 @@ function Sponsorship(props) {
           </div>
         </div>
       </div>
-      <CurrentSponsors />
+      <section className="container">
+        <h2>Our Past Sponsors</h2>
+        <CurrentSponsors />
+      </section>
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BeatLoader from 'react-spinners/BeatLoader';
-import {Card, EventCard, Header} from '../../containers';
+
+import { Card, EventCard, Header } from "app/containers";
 
 import './Events.scss';
 
@@ -48,7 +49,7 @@ function Events() {
       );
     } else {
       return upcomingEvents.length === 0 ? (
-        <h1 className='no-events'> No upcoming events! Stay tuned.</h1>
+        <h2 className="no-events">No upcoming events! Stay tuned.</h2>
       ) : (
         upcomingEvents
           .map((event) => (
@@ -57,7 +58,7 @@ function Events() {
                 title={event.name}
                 date={event.start_time}
                 end_date={event.end_time}
-                link={'https://www.facebook.com/events/' + event.id}
+                link={"https://www.facebook.com/events/" + event.id}
                 description={event.description}
                 image={event.cover.source}
                 time={event.pastOrFuture}
@@ -79,7 +80,7 @@ function Events() {
       );
     } else {
       return pastEvents.length === 0 ? (
-        <h1 className='no-events'> No past events! </h1>
+        <h2 className="no-events">No past events!</h2>
       ) : (
         pastEvents.map((event) => (
           <Card>
@@ -87,7 +88,7 @@ function Events() {
               title={event.name}
               date={event.start_time}
               end_date={event.end_time}
-              link={'https://www.facebook.com/events/' + event.id}
+              link={"https://www.facebook.com/events/" + event.id}
               description={event.description}
               image={event.cover.source}
               time={event.pastOrFuture}
@@ -103,17 +104,16 @@ function Events() {
     <div className='events-wrapper'>
       <Header title="Our Events"/>
       <div className='events'>
-        <div className='upcoming-events'>
-          <h2 className='title-events'>
-            <b> Upcoming Events </b>
-          </h2>
+        <section className="container upcoming-events">
+          <h2 className='title-events'>Upcoming Events</h2>
           {upcomingEventsRender()}
-        </div>
-        <div className='past-events'>
-          <h2 className='title-events'>
-            <b> Past Events </b>
-          </h2>
-          {pastEventsRender()}
+        </section>
+
+        <div className="bg-gray">
+          <section className="container past-events">
+            <h2 className="title-events">Past Events</h2>
+            {pastEventsRender()}
+          </section>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 @import 'src/globals/hack-variables.scss';
-@import 'src/globals/hack-styles.scss';
 
 .header-image {
   position: absolute;
@@ -15,9 +14,7 @@
   }
 }
 
-.header-font {
-  font-family: $hackUCIFont;
-  font-size: 72px;
+.main-heading {
   margin: 0.1em 0;
   position: relative;
   z-index: 10;

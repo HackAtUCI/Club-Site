@@ -1,65 +1,59 @@
 import React from "react";
 import "./Contact.scss";
 
-import { Header } from "../../containers";
-import Newsletter from "../../components/newsletter/Newsletter";
-import MailIcon from "../../../assets/icons/mail_icon.svg";
-import FacebookIcon from "../../../assets/icons/facebook_icon.svg";
-import InstagramIcon from "../../../assets/icons/instagram_icon.svg";
-import LinkedInIcon from "../../../assets/icons/linkedin_icon.svg";
-import YouTubeIcon from "../../../assets/icons/youtube_icon.svg";
+import { Newsletter } from "app/components";
+import { Header } from "app/containers";
+
+import MailIcon from "assets/icons/mail_icon.svg";
+import FacebookIcon from "assets/icons/facebook_icon.svg";
+import InstagramIcon from "assets/icons/instagram_icon.svg";
+import LinkedInIcon from "assets/icons/linkedin_icon.svg";
+import YouTubeIcon from "assets/icons/youtube_icon.svg";
 
 function Contact(props) {
   return (
     <div className="Contact" style={props.style}>
       <Header title="Contact Us"/>
 
-      <div className="contact-body align-content-center">
-        <label id="sm-title"> </label>
-        <div className="contact-icons-container">
-          <div className="contact-icon d-inline-block">
-            <a href="https://www.facebook.com/UCI.Hack/">Email</a>
-            <div className="contact-icon-image">
-              <a href="mailto:hack@uci.edu">
-                <img src={MailIcon} alt="Mail Icon"/>
-              </a>
-            </div>
-          </div>
-          <div className="contact-icon d-inline-block">
-            <a href="https://www.facebook.com/UCI.Hack/">Facebook</a>
-            <div className="contact-icon-image">
-              <a href="https://www.facebook.com/UCI.Hack/">
-                <img src={FacebookIcon} alt="Facebook Icon"/>
-              </a>
-            </div>
-          </div>
-          <div className="contact-icon d-inline-block">
-            <a href="https://www.instagram.com/hackatuci/">Instagram</a>
-            <div className="contact-icon-image">
-              <a href="https://www.instagram.com/hackatuci/">
-                <img src={InstagramIcon} alt="Instagram Icon"/>
-              </a>
-            </div>
-          </div>
-          <div className="contact-icon d-inline-block">
-            <a href="https://www.linkedin.com/company/hackuci">LinkedIn</a>
-            <div className="contact-icon-image">
-              <a href="https://www.linkedin.com/company/hackuci">
-                <img src={LinkedInIcon} alt="LinkedIn Icon"/>
-              </a>
-            </div>
-          </div>
-          <div className="contact-icon d-inline-block">
-            <a href="https://www.youtube.com/channel/UCeQbk4CMo3mxPHMtY80PtFQ">YouTube</a>
-            <div className="contact-icon-image">
-              <a href="https://www.youtube.com/channel/UCeQbk4CMo3mxPHMtY80PtFQ">
-                <img src={YouTubeIcon} alt="YouTube Icon"/>
-              </a>
-            </div>
-          </div>
-        </div>
+      <div className="container contact-icons">
+        <ContactIcon
+          title="Email"
+          link="mailto:hack@uci.edu"
+          image={MailIcon}
+        />
+        <ContactIcon
+          title="Facebook"
+          link="https://www.facebook.com/UCI.Hack/"
+          image={FacebookIcon}
+        />
+        <ContactIcon
+          title="Instagram"
+          link="https://www.instagram.com/hackatuci/"
+          image={InstagramIcon}
+        />
+        <ContactIcon
+          title="LinkedIn"
+          link="https://www.linkedin.com/company/hackuci"
+          image={LinkedInIcon}
+        />
+        <ContactIcon
+          title="YouTube"
+          link="https://www.youtube.com/channel/UCeQbk4CMo3mxPHMtY80PtFQ"
+          image={YouTubeIcon}
+        />
       </div>
       <Newsletter />
+    </div>
+  );
+}
+
+function ContactIcon({ title, link, image }) {
+  return (
+    <div className="contact-icon">
+      <a href={link}>
+        <div className="contact-label">{title}</div>
+        <img src={image} alt="" />
+      </a>
     </div>
   );
 }

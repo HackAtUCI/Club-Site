@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
+import { Header } from "app/containers";
 import getSheetsData from "app/services/google-sheets-handler";
-import TeamSection from "../../containers/teamsection/TeamSection.js";
 import TeamPhoto from "../../../assets/team/hack_group_photo.svg";
 
+import TeamSection from "./TeamSection";
 import "./About.scss";
-import { Header } from "../../containers";
 
 function About(props) {
   const [teamMembers, setTeamMembers] = useState({});
