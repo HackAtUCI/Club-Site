@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 
-import HackLogo from "assets/hack-logo.png";
+import HackLogo from "assets/hack-at-uci-logo.svg";
 
 import "./app-navbar.scss";
 

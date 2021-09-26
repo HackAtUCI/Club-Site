@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./Footer.scss";
-import HackIcon from "assets/hack-logo.png";
+import HackIcon from "assets/hack-at-uci-logo.svg";
 import MailIcon from "assets/icons/mail_icon.svg";
 import FacebookIcon from "assets/icons/facebook_icon.svg";
 import InstagramIcon from "assets/icons/instagram_icon.svg";
