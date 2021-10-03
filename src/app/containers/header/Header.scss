@@ -1,7 +1,7 @@
 @import 'src/globals/hack-variables.scss';
 
 .global-header {
-  background: linear-gradient(90deg, #1C3385 0%, #118AFB 100%);
+  background: $blue-gradient;
   color: white;
   height: 20rem;
 }
