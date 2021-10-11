@@ -102,7 +102,7 @@ function Events() {
 
   return (
     <div className='events-wrapper'>
-      <Header title="Our Events"/>
+      <Header title="Our Events" />
       <div className='events'>
         <section className="container upcoming-events">
           <h2 className='title-events'>Upcoming Events</h2>

@@ -11,10 +11,14 @@ import Workshops from "assets/previews/workshops.jpg";
 
 import "./Home.scss";
 
-function Home(props) {
+function Home() {
   return (
-    <div className='Home' style={props.style}>
-      <Header type="home"/>
+    <div className="Home">
+      <Header title="Hack at UCI">
+        <a className="involved-button" href="#newsletter">
+          Get Involved
+        </a>
+      </Header>
 
       <div className="home-content">
         <section className="container home-about">

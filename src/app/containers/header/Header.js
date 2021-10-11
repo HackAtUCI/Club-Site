@@ -1,38 +1,18 @@
 import React from "react";
 
-import HeaderImage from "assets/hackshapes_header.svg";
-
 import "./Header.scss";
 
-function Header(props) {
-    if (props.type === "home") {
-        return (
-            <div className='jumbotron jumbotron-fluid global-header'>
-                <h1 className='main-heading'>
-                    Hack at UCI
-                </h1>
-                <div className='d-flex justify-content-center'>
-                    <div className='involved-button'>
-                        <a href='#newsletter'>Get Involved</a>
-                    </div>
-                </div>
-                <div className="header-image">
-                    <img src={HeaderImage} alt="header"/>
-                </div>
-            </div>
-        )
-    } else {
-        return (
-            <div className='jumbotron jumbotron-fluid global-header'>
-                <h1 className='main-heading'>
-                    {props.title}
-                </h1>
-                <div className="header-image">
-                    <img src={HeaderImage} alt="header"/>
-                </div>
-            </div>
-        )
-    }
+function Header({ title, children }) {
+  return (
+    <header className="global-header">
+      <div className="header-image">
+        <div className="header-overlay">
+          <h1>{title}</h1>
+          {children}
+        </div>
+      </div>
+    </header>
+  );
 }
 
 export default Header;

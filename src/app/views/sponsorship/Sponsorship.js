@@ -9,7 +9,7 @@ import People from "assets/People.svg";
 function Sponsorship(props) {
   return (
     <div className="Sponsorship" style={props.style}>
-      <Header title="Sponsor Information"/>
+      <Header title="Sponsor Information" />
 
       <div className="container sponsor-content">
         <h2>HackUCI Profile</h2>
