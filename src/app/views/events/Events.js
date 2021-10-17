@@ -3,7 +3,7 @@ import axios from 'axios';
 import BeatLoader from 'react-spinners/BeatLoader';
 import { Card, EventCard } from '../../containers';
 import HeaderCord from '../../../assets/cord_1_kat.png';
-
+import calendar from '../../../assets/calendar-alt-regular.svg';
 import './Events.scss';
 
 function Events() {
@@ -34,7 +34,8 @@ function Events() {
         }
       }
       // set state to upcoming and past events depending on calculated cutoff
-      setUpcomingEvents(data.slice(0, todayCutOff));
+      // setUpcomingEvents(data.slice(0, todayCutOff));
+      setUpcomingEvents([]);
       setPastEvents(data.slice(todayCutOff, splicer));
       setIsLoading(false);
     });
@@ -49,7 +50,10 @@ function Events() {
       );
     } else {
       return upcomingEvents.length === 0 ? (
-        <h1 className='no-events'> No upcoming events! Stay tuned.</h1>
+        <div className='no-events'>
+          <img className='calendar-icon' src={calendar} />
+          <h1> No upcoming events! Stay tuned.</h1>
+        </div>
       ) : (
         upcomingEvents
           .map((event) => (
