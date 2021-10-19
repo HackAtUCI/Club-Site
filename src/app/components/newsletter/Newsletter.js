@@ -145,6 +145,15 @@ function Newsletter(props) {
             ensure all newsletters are sent to the appropriate person.
           </p>
         </div>
+        <div id="mentors" className="card">
+          <h2 style={{paddingBottom: '1em'}}>Become a mentor!</h2>
+          <p>Apply to be a part of a large group of mentors who will be able to provide support to hackers at Hack events including ZotHacks, Hack workshops, HackUCI, and HackNights!</p>
+          <div className="justify-content-center">
+            <a href="https://airtable.com/shrbPw3zLgnVZkMkA">
+              <button className="mentorship-button">Mentorship Application</button>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
