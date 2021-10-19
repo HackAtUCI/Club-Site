@@ -43,8 +43,8 @@
   padding-top: 8px;
   text-align: left;
   padding-left: 18px;
-  font-weight: 2500;
-  font-size: 24px;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .bottom-text-event-card {
@@ -52,6 +52,7 @@
   text-align: left;
   padding-left: 18px;
   float: bottom;
+  font-weight: normal;
   font-size: 16px;
 }
 
@@ -204,8 +205,6 @@
   }
 
   .eventcard {
-    border-radius: 5px 5px 0px 0px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     width: 300px;
     height: 300px;
     display: inline-block;
@@ -213,7 +212,6 @@
   }
 
   .past-eventcard {
-    border-radius: 5px 5px 0px 0px;
     width: 300px;
     height: 300px;
     display: inline-block;
