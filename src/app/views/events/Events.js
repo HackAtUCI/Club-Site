@@ -34,8 +34,7 @@ function Events() {
         }
       }
       // set state to upcoming and past events depending on calculated cutoff
-      // setUpcomingEvents(data.slice(0, todayCutOff));
-      setUpcomingEvents([]);
+      setUpcomingEvents(data.slice(0, todayCutOff));
       setPastEvents(data.slice(todayCutOff, splicer));
       setIsLoading(false);
     });
@@ -45,32 +44,47 @@ function Events() {
     if (isLoading) {
       return (
         <div className='no-events'>
+          <h2 className='title-events'>
+            <b> Upcoming Events </b>
+          </h2>
           <BeatLoader size={15} color={'#233b92'} />
         </div>
       );
     } else {
       return upcomingEvents.length === 0 ? (
-        <div className='no-events'>
-          <img className='calendar-icon' src={calendar} />
-          <h1> No upcoming events! Stay tuned.</h1>
+        <div className='upcoming-events'>
+          <div className='no-events'>
+            <img className='calendar-icon' src={calendar} />
+            <h2 className='title-events'>
+              <b> No Upcoming Events </b>
+            </h2>
+            <span className='stay-tuned-text'>
+              Stay tuned for upcoming events!
+            </span>
+          </div>
         </div>
       ) : (
-        upcomingEvents
-          .map((event) => (
-            <Card>
-              <EventCard
-                title={event.name}
-                date={event.start_time}
-                end_date={event.end_time}
-                link={'https://www.facebook.com/events/' + event.id}
-                description={event.description}
-                image={event.cover.source}
-                time={event.pastOrFuture}
-                key={event.id}
-              />
-            </Card>
-          ))
-          .reverse()
+        <div className='upcoming-events'>
+          <h2 className='title-events'>
+            <b> Upcoming Events </b>
+          </h2>
+          {upcomingEvents
+            .map((event) => (
+              <Card>
+                <EventCard
+                  title={event.name}
+                  date={event.start_time}
+                  end_date={event.end_time}
+                  link={'https://www.facebook.com/events/' + event.id}
+                  description={event.description}
+                  image={event.cover.source}
+                  time={event.pastOrFuture}
+                  key={event.id}
+                />
+              </Card>
+            ))
+            .reverse()}
+        </div>
       );
     }
   }
@@ -121,12 +135,8 @@ function Events() {
         </div>
       </div>
       <div className='events'>
-        <div className='upcoming-events'>
-          <h2 className='title-events'>
-            <b> Upcoming Events </b>
-          </h2>
-          {upcomingEventsRender()}
-        </div>
+        {upcomingEventsRender()}
+
         <div className='past-events'>
           <h2 className='title-events'>
             <b> Past Events </b>

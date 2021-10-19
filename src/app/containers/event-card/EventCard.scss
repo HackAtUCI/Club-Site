@@ -1,7 +1,7 @@
 @import 'globals/hack-variables.scss';
 
 .eventcard {
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 10px;
   width: 480px;
   height: 406px;
   background-color: white;
@@ -11,7 +11,7 @@
 }
 
 .past-eventcard {
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 10px;
   width: 480px;
   height: 406px;
   background-color: white;
@@ -33,8 +33,10 @@
 }
 
 .top-part-event-card-img {
-  width: 480px;
   height: 270px;
+  width: 480px;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .top-text-event-card {
