@@ -10,9 +10,13 @@ function HomeCard(props) {
           <img
             className='top-part-home-card-img'
             src={props.image}
-            alt='event'
+            alt={props.title}
           />
         </div>
+      </div>
+      <div className='hover-text'>
+        <h1>{props.title}</h1>
+        <span>{props.description}</span>
       </div>
     </div>
   );
