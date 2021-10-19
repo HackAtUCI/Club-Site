@@ -93,15 +93,15 @@
 }
 
 .popup-title-event-card {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .modal-styling-event-card {
-  box-shadow: 0px 1px 6px 0px #222;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
   left: auto;
   right: auto;
-  background-color: white;
+  background-color: rgb(245, 245, 245);
   color: black;
   border-radius: 10px;
   text-align: center;
@@ -109,7 +109,7 @@
   margin-right: 20vw;
   padding: 0px;
   margin-top: 10vh;
-  height: 80vh;
+  height: 70vh;
   position: relative;
   z-index: 20;
 
@@ -153,29 +153,33 @@
   width: 100%;
   position: relative;
   z-index: 20;
+}
 
-  .close-button-event-card {
-    border: 0px;
-    background-color: white;
-    border: 1px solid #2b2b2b;
-    border-radius: 4px;
-    color: black;
-    font-size: 30px;
-    position: absolute;
-    right: 1vh;
-    top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.modal-bottom-part {
+  border-top: 1px solid #cccccc;
+  border-radius: 10px 10px 0px 0px;
+}
+.close-button-event-card {
+  border: 0px;
+  background-color: white;
+  border: 1px solid #2b2b2b;
+  border-radius: 4px;
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  padding-left: 20px;
+  padding-right: 20px;
+  bottom: 15px;
+  right: 15px;
+}
 
-  .close-button-event-card:hover {
-    background-color: rgb(224, 224, 224);
-  }
+.close-button-event-card:hover {
+  background-color: rgb(224, 224, 224);
 }
 
 @media (orientation: portrait) {
   .popup-title-event-card {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 
   .desc-text-event-card {
@@ -192,18 +196,19 @@
     margin-right: 10vw;
     padding: 0px;
     margin-top: 10vh;
-    height: 80vh;
+    height: 70vh;
     margin-bottom: 5vh;
   }
 
-  .modal-top-part {
-    .close-button-event-card {
-      font-size: 15px;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
+  .desc-text-wrapper-event-card {
+    height: 30vh;
   }
 
+  .close-button-event-card {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .eventcard {
     width: 300px;
     height: 300px;
