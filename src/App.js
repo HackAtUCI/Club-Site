@@ -20,6 +20,9 @@ function App() {
             <Route exact path="/events" component={Events} />
             <Route exact path="/sponsors" component={Sponsorship} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/mentor" component={() => {
+              window.location.href = "hack.ics.uci.edu/#mentors"
+            }}/>
             <Route exact path="/recruit" component={() => {
               window.location.href = 'https://www.hackuci.com/recruit';
               return null;
