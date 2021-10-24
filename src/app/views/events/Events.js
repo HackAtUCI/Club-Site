@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BeatLoader from 'react-spinners/BeatLoader';
-import { Card, EventCard } from '../../containers';
+import { Header, Card, EventCard } from '../../containers';
 import calendar from '../../../assets/calendar-alt-regular.svg';
 
 import './Events.scss';
