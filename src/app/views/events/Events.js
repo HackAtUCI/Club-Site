@@ -4,6 +4,7 @@ import BeatLoader from 'react-spinners/BeatLoader';
 import { Card, EventCard } from '../../containers';
 import HeaderCord from '../../../assets/cord_1_kat.png';
 import calendar from '../../../assets/calendar-alt-regular.svg';
+
 import './Events.scss';
 
 function Events() {
@@ -98,7 +99,7 @@ function Events() {
       );
     } else {
       return pastEvents.length === 0 ? (
-        <h1 className='no-events'> No past events! </h1>
+        <h2 className="no-events">No past events!</h2>
       ) : (
         pastEvents.map((event) => (
           <Card>
@@ -106,7 +107,7 @@ function Events() {
               title={event.name}
               date={event.start_time}
               end_date={event.end_time}
-              link={'https://www.facebook.com/events/' + event.id}
+              link={"https://www.facebook.com/events/" + event.id}
               description={event.description}
               image={event.cover.source}
               time={event.pastOrFuture}
@@ -120,20 +121,7 @@ function Events() {
 
   return (
     <div className='events-wrapper'>
-      <div className='jumbotron jumbotron-fluid global-header'>
-        <div className='home-header-cord'>
-          <img src={HeaderCord} alt='usb-cord' />
-        </div>
-        <div className='container global-description-container'>
-          <p className='global-description-font'>
-            We aim to celebrate UC Irvine's spirit of innovation by organizing
-            ZotHacks, a beginner-friendly hackathon, and HackUCI, Orange
-            County's largest hackathon. Futhermore, our organization regualrly
-            hosts technical and professional development workshops that teach
-            students industry relevant skills.
-          </p>
-        </div>
-      </div>
+      <Header title="Our Events" />
       <div className='events'>
         {upcomingEventsRender()}
 

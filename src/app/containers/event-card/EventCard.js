@@ -66,9 +66,7 @@ function EventCard(props) {
           />
         </div>
         <div className='bottom-part-event-card'>
-          <h2 className='top-text-event-card'>
-            <b>{props.title}</b>
-          </h2>
+          <h3 className='top-text-event-card'>{props.title}</h3>
           <h4 className='bottom-text-event-card'>{renderBotText()}</h4>
         </div>
       </div>
