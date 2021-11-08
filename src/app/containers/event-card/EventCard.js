@@ -66,8 +66,8 @@ function EventCard(props) {
           />
         </div>
         <div className='bottom-part-event-card'>
-          <h3 className='top-text-event-card'>{props.title}</h3>
-          <h4 className='bottom-text-event-card'>{renderBotText()}</h4>
+          <h5 className='top-text-event-card'>{props.title}</h5>
+          <h6 className='bottom-text-event-card'>{renderBotText()}</h6>
         </div>
       </div>
       <Modal

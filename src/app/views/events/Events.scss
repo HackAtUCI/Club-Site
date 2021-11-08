@@ -5,9 +5,20 @@
   width: 100%;
 }
 
+.upcoming-events {
+  padding-bottom: 180px;
+}
+
+.past-events {
+  padding-bottom: 20px;
+  background-color: $light-grey;
+}
+
 .title-events {
   font-size: 2.5rem;
   text-align: center;
+  padding-top: 150px;
+  padding-bottom: 30px;
 }
 
 .no-events {
