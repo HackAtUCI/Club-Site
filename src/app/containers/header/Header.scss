@@ -22,3 +22,11 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (orientation: portrait) {
+  .header-overlay {
+    h1 {
+      font-size: 3rem !important;
+    }
+  }
+}
