@@ -44,9 +44,7 @@ function Events() {
     if (isLoading) {
       return (
         <div className='no-events'>
-          <h2 className='title-events'>
-            <b> Upcoming Events </b>
-          </h2>
+          <h2 className='title-events'>Upcoming Events</h2>
           <BeatLoader size={15} color={'#233b92'} />
         </div>
       );
@@ -55,9 +53,7 @@ function Events() {
         <div className='upcoming-events'>
           <div className='no-events'>
             <img className='calendar-icon' src={calendar} />
-            <h2 className='title-events'>
-              <b> No Upcoming Events </b>
-            </h2>
+            <h2 className='title-events'>No Upcoming Events</h2>
             <span className='stay-tuned-text'>
               Stay tuned for upcoming events!
             </span>
@@ -65,9 +61,7 @@ function Events() {
         </div>
       ) : (
         <div className='upcoming-events'>
-          <h2 className='title-events'>
-            <b> Upcoming Events </b>
-          </h2>
+          <h2 className='title-events'>Upcoming Events</h2>
           {upcomingEvents
             .map((event) => (
               <Card>
@@ -98,7 +92,7 @@ function Events() {
       );
     } else {
       return pastEvents.length === 0 ? (
-        <h2 className="no-events">No past events!</h2>
+        <h2 className='no-events'>No past events!</h2>
       ) : (
         pastEvents.map((event) => (
           <Card>
@@ -106,7 +100,7 @@ function Events() {
               title={event.name}
               date={event.start_time}
               end_date={event.end_time}
-              link={"https://www.facebook.com/events/" + event.id}
+              link={'https://www.facebook.com/events/' + event.id}
               description={event.description}
               image={event.cover.source}
               time={event.pastOrFuture}
@@ -120,14 +114,12 @@ function Events() {
 
   return (
     <div className='events-wrapper'>
-      <Header title="Our Events" />
+      <Header title='Our Events' />
       <div className='events'>
         {upcomingEventsRender()}
 
         <div className='past-events'>
-          <h2 className='title-events'>
-            <b> Past Events </b>
-          </h2>
+          <h2 className='title-events'>Past Events</h2>
           {pastEventsRender()}
         </div>
       </div>
