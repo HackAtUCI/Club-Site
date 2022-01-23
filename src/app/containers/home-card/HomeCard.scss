@@ -24,6 +24,7 @@ $card-height: 270px;
 }
 
 .hover-text {
+  display: none;
   grid-area: 1 / 1;
   z-index: 1;
   width: $card-width;
@@ -35,7 +36,7 @@ $card-height: 270px;
 
 .home-card:hover {
   .parent-wrapper-home-card {
-    opacity: 25%;
+    // opacity: 25%;
   }
   .hover-text {
     z-index: 3;
