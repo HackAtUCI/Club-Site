@@ -1,0 +1,25 @@
+@import 'src/globals/hack-variables.scss';
+
+html {
+    scroll-behavior: smooth;
+}
+
+.adjective-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 4%;
+}
+
+.adjective-card {
+    img {
+        height: 20%;
+    }
+    p {
+        text-align: center;
+    }
+}
+
+.committee-section {
+    background-color: $light-grey;
+    // display: flex;
+}

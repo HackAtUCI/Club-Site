@@ -1,0 +1,42 @@
+@import 'src/globals/hack-variables.scss';
+
+p {
+    margin: 0 auto;
+    width: 50%;
+}
+
+ul {
+    text-align: left;
+    margin: 0 auto;
+    width: 50%;
+
+}
+
+section {
+    display: inline-block;
+}
+
+.apply-committee-btn {
+    margin: 1% 0;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    background: #FF6969;
+    color: white;
+}
+
+.dropdown-btn {
+    margin: 1% auto;
+    padding: 20px 40px;
+    border: none;
+    background: white;
+    width: 60%;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.chevron {
+    width: 20px;
+    color: white;
+    float: right;
+}
