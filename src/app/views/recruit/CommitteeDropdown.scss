@@ -40,3 +40,11 @@ section {
     color: white;
     float: right;
 }
+
+.description-section {
+    text-align: left;
+}
+
+@media (max-width: 1000px) {
+    .dropdown-btn { width: 90% }
+}

@@ -20,7 +20,7 @@ function Recruit(props) {
         </div>
 
         <div>
-            <section className="container adjective-grid">
+            <section className="adjective-grid">
                 <div className="adjective-card">
                     <img src={LightbulbIcon} alt="lightbulb" />
                     <h3>Learn</h3>

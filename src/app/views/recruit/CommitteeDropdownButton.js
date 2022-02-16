@@ -22,10 +22,14 @@ function CommitteeDropdownButton({committeeName, aboutText, keyQuals, prefQuals=
             <Collapse in={open} className="dropdown-section">
                 <div id="collapse-text">
                     <div className="description-section">
-                        <b>About</b>
-                        <p>{aboutText}</p>
+                        
+                        <p>
+                            <b>About</b>
+                            <br/>
+                            {aboutText}
+                        </p>
                         <br/>
-                        <b>Key Qualifications</b>
+                        <p><b>Key Qualifications</b></p>
                         <ul>{keyQuals.map(text => <li>{text}</li>)}</ul>
                         { prefQuals.length > 0 ? <div>
                             <b>Preferred Qualifications</b>
