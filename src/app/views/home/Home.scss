@@ -31,59 +31,9 @@ html {
   }
 }
 
-.card-body {
-  margin: 0 !important;
-  padding: 0;
-  color: white;
-  background-color: $darkest-blue;
-}
-
-.card {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.card-title {
-  padding: 20px 20px 0 20px;
-  font-size: 28px;
-  margin: 0;
-}
-
-.card-text {
-  font-size: 20px;
-  padding: 0 20px 55px 20px;
-}
-
-.card-deck {
-  display: inline-block;
-  text-align: center;
-  margin: auto;
+.home-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
-
-.card-container {
-  max-width: 1450px !important;
-}
-
-.card-container {
-  padding-top: 30px;
-}
-
-// Bootstrap 4 breakpoints & gutter
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-) !default;
-
-$grid-gutter-width: 30px !default;
-
-// number of cards per line for each breakpoint
-$cards-per-line: (
-  xs: 1,
-  sm: 2,
-  md: 2,
-  lg: 4,
-  xl: 4,
-);

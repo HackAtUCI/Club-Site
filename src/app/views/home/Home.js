@@ -2,13 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { CurrentSponsors, Newsletter } from "app/components";
-import { Card, HomeCard, Header } from "app/containers";
+import { Header } from "app/containers";
 
-import HackUCI from "assets/previews/hackuci.jpg";
-import ZotHacks from "assets/previews/zothacks.jpg";
-import HackNights from "assets/previews/hacknights.jpg";
-import Workshops from "assets/previews/workshops.jpg";
-
+import HomeCards from "./HomeCards";
 import "./Home.scss";
 
 function Home() {
@@ -47,47 +43,7 @@ function Home() {
             <p>
               <Link to="/events">View Upcoming Events &gt;</Link>
             </p>
-
-            <div className='card-container'>
-              <div className='card-deck'>
-                <Card>
-                  <HomeCard
-                    image={HackUCI}
-                    title='HackUCI'
-                    description='HackUCI is the largest collegiate hackathon in Orange County.
-                    Each year, we bring like minded individuals of different backgrounds and 
-                    skill sets together to create something in 36 hours.'
-                  />
-                </Card>
-                <Card>
-                  <HomeCard
-                    image={ZotHacks}
-                    title='ZotHacks'
-                    description='ZotHacks is a beginner-friendly hackathon where students with minimal 
-                    computer science experience will learn new skills, take part in a community of 
-                    creative people, and build projects.'
-                  />
-                </Card>
-                <Card>
-                  <HomeCard
-                    image={HackNights}
-                    title='HackNights'
-                    description='HackNights is a hackathon-style event where you are welcome to come 
-                    work on personal projects and team up with others. HackNights is a great opportunity 
-                    to explore interests and meet new people.'
-                  />
-                </Card>
-                <Card>
-                  <HomeCard
-                    image={Workshops}
-                    title='Workshops'
-                    description='Hack hosts several workshops each quarter which exposes attendees to numerous 
-                    technologies, frameworks, and professional opportunities that will prepare them for their 
-                    future careers.'
-                  />
-                </Card>
-              </div>
-            </div>
+            <HomeCards />
           </section>
         </div>
 

@@ -1,136 +1,50 @@
-@import 'globals/hack-variables.scss';
+@import "globals/hack-variables.scss";
 
 $card-width: 480px;
 $card-height: 270px;
 
 .home-card {
-  border-radius: 5px;
+  max-width: $card-width;
+  max-height: $card-height;
+  margin: 15px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  width: $card-width;
-  height: $card-height;
-  background-color: black;
-  display: grid;
-}
-
-.parent-wrapper-home-card {
-  transition: 0.3s;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 7fr 5fr;
-  width: $card-width;
-  height: $card-height;
-  grid-area: 1 / 1;
-  z-index: 2;
-}
-
-.hover-text {
-  display: none;
-  grid-area: 1 / 1;
-  z-index: 1;
-  width: $card-width;
-  height: $card-height;
-  padding: 40px;
   color: white;
   text-align: left;
-}
 
-.home-card:hover {
-  .parent-wrapper-home-card {
-    // opacity: 25%;
+  .card-title {
+    font-size: 1.75rem;
+    font-weight: 600;
   }
-  .hover-text {
-    z-index: 3;
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .card-img-overlay {
+    padding: 1rem;
+    opacity: 0;
+    background-color: #0005;
+    transition: opacity 0.65s ease-in-out;
+    overflow: auto;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
-.top-part-home-card {
-  width: $card-width;
-  height: $card-height;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.top-part-home-card-img {
-  width: $card-width;
-  height: $card-height;
-  border-radius: 5px;
-}
-
-.bottom-text-home-card {
-  padding: 8px 18px 0px 18px;
-  text-align: left;
-  float: bottom;
-  font-size: 20px;
-}
-
-.top-text-home-card {
-  padding-top: 6px;
-  text-align: left;
-  padding-left: 15px;
-  font-size: 30px;
-}
-
-.bottom-text-home-card {
-  padding-top: 8px;
-  text-align: left;
-  padding-left: 18px;
-  float: bottom;
-  font-size: 20px;
-}
-
-@media screen and (max-width: 760px) {
-  $card-width: 284px;
-  $card-height: 160px;
-
+@media screen and (min-width: 768px) {
   .home-card {
-    border-radius: 5px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width: $card-width;
-    height: $card-height;
-    background-color: $darkest-blue;
-    color: white;
-    display: inline-block;
-    transition: 0.3s;
-  }
+    .card-img-overlay {
+      padding: 2rem;
+    }
 
-  .parent-wrapper-home-card {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 7fr 5fr;
-    width: $card-width;
-    height: $card-height;
-  }
+    .card-title {
+      font-size: 2rem;
+    }
 
-  .top-part-home-card {
-    width: $card-width;
-    height: $card-height;
-  }
-
-  .top-part-home-card-img {
-    width: $card-width;
-    height: $card-height;
-    border-radius: 5px 5px 0px 0px;
-  }
-
-  .bottom-text-home-card {
-    padding: 8px 18px 0px 18px;
-    text-align: left;
-    float: bottom;
-    font-size: 20px;
-  }
-
-  .top-text-home-card {
-    padding-top: 6px;
-    text-align: left;
-    padding-left: 15px;
-    font-size: 30px;
-  }
-
-  .bottom-text-home-card {
-    padding-top: 8px;
-    text-align: left;
-    padding-left: 18px;
-    float: bottom;
-    font-size: 20px;
+    .card-text {
+      font-size: 1.25rem;
+    }
   }
 }
-

@@ -1,24 +1,17 @@
-import React from 'react';
+import React from "react";
+import Card from "react-bootstrap/Card";
 
-import './HomeCard.scss';
+import "./HomeCard.scss";
 
-function HomeCard(props) {
+function HomeCard({ image, title, children }) {
   return (
-    <div className='home-card'>
-      <div className='parent-wrapper-home-card'>
-        <div className='top-part-home-card'>
-          <img
-            className='top-part-home-card-img'
-            src={props.image}
-            alt={props.title}
-          />
-        </div>
-      </div>
-      <div className='hover-text'>
-        <h1>{props.title}</h1>
-        <span>{props.description}</span>
-      </div>
-    </div>
+    <Card className="home-card">
+      <Card.Img src={image} alt={title} />
+      <Card.ImgOverlay>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>{children}</Card.Text>
+      </Card.ImgOverlay>
+    </Card>
   );
 }
 
