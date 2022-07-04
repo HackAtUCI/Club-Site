@@ -1,4 +1,4 @@
-@import "src/globals/hack-variables.scss";
+@import 'src/globals/hack-variables.scss';
 
 .team-card {
   height: 300px;
@@ -54,6 +54,9 @@
         height: 30px;
         width: 30px;
       }
+    }
+    .name-sizing {
+      font-size: 13px;
     }
   }
 }

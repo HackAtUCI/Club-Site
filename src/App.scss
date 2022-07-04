@@ -1,6 +1,11 @@
 @import "globals/hack-variables.scss";
 @import 'src/globals/hack-styles.scss';
 
+body {
+  background: $blue-gradient;
+  background-repeat: repeat-y;
+}
+
 .App {
   text-align: center;
   min-height: 100vh;

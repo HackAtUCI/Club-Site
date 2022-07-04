@@ -66,8 +66,8 @@ function EventCard(props) {
           />
         </div>
         <div className='bottom-part-event-card'>
-          <h3 className='top-text-event-card'>{props.title}</h3>
-          <h4 className='bottom-text-event-card'>{renderBotText()}</h4>
+          <h5 className='top-text-event-card'>{props.title}</h5>
+          <h6 className='bottom-text-event-card'>{renderBotText()}</h6>
         </div>
       </div>
       <Modal
@@ -77,9 +77,6 @@ function EventCard(props) {
         className='modal-styling-event-card'
       >
         <div className='modal-top-part'>
-          <button onClick={closeModal} className='close-button-event-card'>
-            Close
-          </button>
           <div className='header-line-event-card'>
             <span className='popup-title-event-card'>{props.title}</span>
           </div>
@@ -107,6 +104,11 @@ function EventCard(props) {
           <p className='desc-text-event-card'>
             <Linkify> {props.description}</Linkify>
           </p>
+        </div>
+        <div className='modal-bottom-part'>
+          <button onClick={closeModal} className='close-button-event-card'>
+            Close
+          </button>
         </div>
       </Modal>
     </div>

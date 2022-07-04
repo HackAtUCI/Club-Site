@@ -1,4 +1,4 @@
-@import "src/globals/hack-variables.scss";
+@import 'src/globals/hack-variables.scss';
 
 html {
   scroll-behavior: smooth;
@@ -6,15 +6,16 @@ html {
 
 .team-photo {
   background: linear-gradient(
-                  to bottom,
-                  #ffffff 0%,
-                  #ffffff 50%,
-                  #f4f5f8 50%,
-                  #f4f5f8 100%
+    to bottom,
+    #ffffff 0%,
+    #ffffff 50%,
+    #f4f5f8 50%,
+    #f4f5f8 100%
   );
   img {
     filter: drop-shadow(0px 25px 50px rgba(0, 0, 0, 0.5));
     border-radius: 10px;
+    width: 85vw;
   }
 }
 

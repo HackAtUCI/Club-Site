@@ -52,38 +52,3 @@
   width: 100vw;
   height: 100vh;
 }
-
-.global-header {
-  background: linear-gradient(90deg, #1C3385 0%, #118AFB 100%);
-  color: white;
-  height: 21.5rem;
-
-  overflow-y: hidden;
-  overflow-x: hidden;
-  position: relative;
-}
-
-.global-description-container {
-  position: relative;
-  margin: auto;
-
-  .global-description-font {
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    text-align: left;
-    font-weight: bold;
-    font-size: 1.6rem;
-
-  }
-  @media screen and (max-width: 760px) {
-    .global-description-font {
-      position: absolute;
-      top: 50%;
-      bottom: 50%;
-      text-align: left;
-      font-weight: bold;
-      font-size: 1.3rem;
-    }
-  }
-}
