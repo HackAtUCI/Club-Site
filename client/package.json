@@ -1,5 +1,5 @@
 {
-  "name": "react-template",
+  "name": "hack-club-site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,12 +8,8 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-logger": "0.0.3",
     "jquery": "^3.5.1",
     "moment": "^2.27.0",
-    "mongoose": "^5.10.6",
     "popper.js": "^1.16.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
@@ -26,9 +22,8 @@
     "react-spinners": "^0.9.0"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "node server.js",
-    "build": "NODE_PATH=src react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -46,9 +41,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "engines": {
-    "node": "11.15.0"
   },
   "proxy": "http://localhost:8080",
   "devDependencies": {
