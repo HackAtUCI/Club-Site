@@ -1,0 +1,61 @@
+name: Deploy Site
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: us-west-2
+          role-to-assume: ${{ secrets.AWS_DEPLOYMENT_ROLE }}
+
+      - name: Set Up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+
+      - name: Install npm dependencies
+        uses: bahmutov/npm-install@v1
+        with:
+          working-directory: |
+            cdk
+            server
+            client
+
+      - name: Deploy Server API
+        id: deploy-server
+        run: |
+          cd cdk
+          npm run deploy
+          api_url=$(node getApiUrl.js)
+          echo "::set-output name=api_url::$api_url"
+          cd ..
+        env:
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+
+      - name: Build client
+        run: |
+          cd client
+          npm run build
+          cd ..
+        env:
+          REACT_APP_API_URL: ${{ steps.deploy-server.outputs.api_url }}
+
+      - name: Publish client
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./client/build
+          publish_branch: gh-pages

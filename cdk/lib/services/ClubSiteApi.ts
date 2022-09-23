@@ -2,6 +2,7 @@ import {
 	Architecture,
 	Code,
 	Function as LambdaFunction,
+	FunctionUrl,
 	FunctionUrlAuthType,
 	Runtime,
 } from "aws-cdk-lib/aws-lambda";
@@ -16,6 +17,7 @@ interface ClubSiteApiProps {
 
 class ClubSiteApi extends Construct {
 	lambdaFunction: LambdaFunction;
+	functionUrl: FunctionUrl;
 
 	constructor(scope: Construct, id: string, { environment }: ClubSiteApiProps) {
 		super(scope, id);
@@ -29,7 +31,7 @@ class ClubSiteApi extends Construct {
 			logRetention: RetentionDays.ONE_MONTH,
 		});
 
-		const functionUrl = this.lambdaFunction.addFunctionUrl({
+		this.functionUrl = this.lambdaFunction.addFunctionUrl({
 			authType: FunctionUrlAuthType.NONE,
 			cors: {
 				allowedOrigins: ["https://hack.ics.uci.edu"],

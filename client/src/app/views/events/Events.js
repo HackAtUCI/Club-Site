@@ -6,7 +6,7 @@ import calendar from '../../../assets/calendar-alt-regular.svg';
 
 import './Events.scss';
 
-const API_URL = process.env.API_URL;
+const API_URL = process.env.REACT_APP_API_URL;
 
 function Events() {
   const [pastEvents, setPastEvents] = useState([]);
@@ -54,7 +54,7 @@ function Events() {
       return upcomingEvents.length === 0 ? (
         <div className='upcoming-events'>
           <div className='no-events'>
-            <img className='calendar-icon' src={calendar} />
+            <img className='calendar-icon' src={calendar} alt='' />
             <h2 className='title-events'>No Upcoming Events</h2>
             <span className='stay-tuned-text'>
               Stay tuned for upcoming events!

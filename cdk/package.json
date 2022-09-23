@@ -6,7 +6,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "cdk deploy --require-approval never --outputs-file cdk.out.json"
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",
