@@ -6,6 +6,8 @@ import calendar from '../../../assets/calendar-alt-regular.svg';
 
 import './Events.scss';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function Events() {
   const [pastEvents, setPastEvents] = useState([]);
   const [upcomingEvents, setUpcomingEvents] = useState([]);
@@ -13,8 +15,8 @@ function Events() {
 
   // API call to receive event data
   useEffect(() => {
-    axios.get('/api/fbgraph').then((response) => {
-      let data = response.data.events.data;
+    axios.get("/api/events", { baseURL: API_URL }).then((response) => {
+      let data = response.data;
       let currentDate = new Date();
       let splicer = data.length;
       let todayCutOff = 0;
@@ -52,7 +54,7 @@ function Events() {
       return upcomingEvents.length === 0 ? (
         <div className='upcoming-events'>
           <div className='no-events'>
-            <img className='calendar-icon' src={calendar} />
+            <img className='calendar-icon' src={calendar} alt='' />
             <h2 className='title-events'>No Upcoming Events</h2>
             <span className='stay-tuned-text'>
               Stay tuned for upcoming events!
