@@ -6,6 +6,8 @@ pages=(
   "events"
   "sponsors"
   "contact"
+  # There isn't a nice way to specify redirects, but 200 would be better than 404
+  "recruit"
   # Have GitHub Pages serve the index otherwise for React Router catch all other routes
   "404"
 )
