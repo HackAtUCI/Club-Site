@@ -1,0 +1,52 @@
+@import "src/globals/hack-variables.scss";
+
+.Recruitment {
+	.container {
+		padding: 5rem 0;
+	}
+
+	.col-lg {
+		margin: 20px 30px;
+	}
+
+	.about h3 {
+		color: $darkest-blue;
+	}
+
+	.committees {
+		a[role="tab"] {
+			padding: 1rem 0.5rem;
+			width: 25%;
+		}
+
+		background-color: $light-grey;
+
+		& > .container {
+			padding: 10rem 0;
+		}
+
+		.committee {
+			padding: 3rem 1rem;
+		}
+
+		img {
+			width: 50px;
+		}
+
+		p,
+		li {
+			text-align: left;
+		}
+
+		h3 {
+			margin: 30px 0;
+		}
+
+		.apply {
+			background-color: $red;
+			border-radius: 50px;
+			font-size: 20px;
+			margin-top: 2rem;
+		}
+	}
+}
