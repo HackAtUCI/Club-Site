@@ -58,7 +58,7 @@ function Recruitment() {
 			<section className="committees">
 				<Container>
 					<h2 style={{ marginBottom: "3rem" }}>Our Committees</h2>
-					<Tabs defaultActiveKey="corporate">
+					<Tabs defaultActiveKey="corporate" justify>
 						{Object.entries(COMMITTEES).map(([name, component], index) => (
 							<Tab eventKey={name.toLowerCase()} key={index} title={name}>
 								<Container className="committee">{component}</Container>
