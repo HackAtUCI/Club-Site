@@ -26,21 +26,21 @@ function Tech() {
 				<strong>Key Qualifications</strong>
 			</p>
 			<ul>
-				<li>Proficiency in HTML5, CSS3 and Javascript</li>
-				<li>Experience in modern Javascript frameworks</li>
-				<li>Ability to write clean, well documented code</li>
+				<li>Proficiency in HTML, CSS and JavaScript</li>
+				<li>Experience with modern JavaScript frameworks</li>
+				<li>Ability to write clean, well-documented code</li>
 				<li>
-					Experience with front-end styling frameworks (Bootstrap, Semantic UI,
-					Material UI, etc.)
+					Experience with front-end styling libraries (e.g. Bootstrap, Material
+					UI, etc.)
 				</li>
 			</ul>
 			<p>
 				<strong>Preferred Qualifications</strong>
 			</p>
 			<ul>
-				<li>Experience in developing Node.js web applications</li>
-				<li>Experience in setting up and maintaining MongoDB databases</li>
-				<li>Experience with cloud technologies (AWS, GCP, Heroku)</li>
+				<li>Experience developing web applications with React</li>
+				<li>Experience with backend web frameworks (e.g. Express, FastAPI)</li>
+				<li>Experience using cloud databases</li>
 			</ul>
 		</>
 	);
