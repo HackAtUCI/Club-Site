@@ -25,7 +25,7 @@ function Recruitment() {
 	return (
 		<div className="Recruitment">
 			<Header title="Recruitment">
-				<p>Deadline: April 14, 2023 at 11:59 PM PST</p>
+				<p>Deadline: April 14th, 2023 at 11:59 PM PT</p>
 			</Header>
 			<Container className="about">
 				<Row>
