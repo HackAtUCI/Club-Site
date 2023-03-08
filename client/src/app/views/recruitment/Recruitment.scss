@@ -39,9 +39,11 @@
 
 		.apply {
 			background-color: $red;
+			border-color: initial;
 			border-radius: 50px;
 			font-size: 20px;
 			margin-top: 2rem;
+			padding: 1rem 2rem;
 		}
 	}
 }
