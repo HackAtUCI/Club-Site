@@ -42,72 +42,76 @@ function Newsletter(props) {
         <a href="https://discord.gg/2gZjQMjKeF">
           <div className="card discord-card">
             <h2>Join our Discord</h2>
-            <img className="discord-icon" src={DiscordIcon} alt="Join Discord"/>
+            <img
+              className="discord-icon"
+              src={DiscordIcon}
+              alt="Join Discord"
+            />
           </div>
         </a>
         <div className="card">
           <h2>Join our newsletter!</h2>
           <form
-              className="newsletter-form"
-              action={
-                "https://uci.us13.list-manage.com/subscribe/post?u=5976872928cd5681fbaca89f6&amp;id=93333e11eb"
-              }
-              method={"post"}
-              name={"mc-embedded-subscribe-form"}
-              target={"_blank"}
-              onSubmit={submitDiscordSignUp}
+            className="newsletter-form"
+            action={
+              "https://uci.us13.list-manage.com/subscribe/post?u=5976872928cd5681fbaca89f6&amp;id=93333e11eb"
+            }
+            method={"post"}
+            name={"mc-embedded-subscribe-form"}
+            target={"_blank"}
+            onSubmit={submitDiscordSignUp}
           >
             <label>
               Graduating Year <span className="asterisk">*</span>
             </label>
             <input
-                id="userYear"
-                type="text"
-                maxLength="4"
-                className="form-control"
-                name="MMERGE4"
-                required
-                value={graduationYear}
-                onChange={(event) => setGraduationYear(event.target.value)}
+              id="userYear"
+              type="text"
+              maxLength="4"
+              className="form-control"
+              name="MMERGE4"
+              required
+              value={graduationYear}
+              onChange={(event) => setGraduationYear(event.target.value)}
             />
             <br />
             <label>
               First Name <span className="asterisk">*</span>
             </label>
             <input
-                id="userFName"
-                type="text"
-                className="form-control"
-                name="FNAME"
-                required
-                value={firstName}
-                onChange={(event) => setFirstName(event.target.value)}
+              id="userFName"
+              type="text"
+              className="form-control"
+              name="FNAME"
+              required
+              value={firstName}
+              onChange={(event) => setFirstName(event.target.value)}
             />
             <br />
             <label>
               Last Name <span className="asterisk">*</span>
             </label>
             <input
-                id="userLName"
-                type="text"
-                className="form-control"
-                name="LNAME"
-                required
-                value={lastName}
-                onChange={(event) => setLastName(event.target.value)}
+              id="userLName"
+              type="text"
+              className="form-control"
+              name="LNAME"
+              required
+              value={lastName}
+              onChange={(event) => setLastName(event.target.value)}
             />
             <br />
             <label>
               Email Address <span className="asterisk">*</span>
             </label>
             <input
-                id="userEmail"
-                type="email"
-                className="form-control"
-                name="EMAIL"
-                required
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
+              id="userEmail"
+              type="email"
+              className="form-control"
+              name="EMAIL"
+              required
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
             />
             <br />
             <div className="d-flex text-center flex-center">
@@ -118,24 +122,25 @@ function Newsletter(props) {
             <br />
             <div className="d-flex text-left">
               <Alert
-                  show={showAlert}
-                  variant={alertSuccess ? "success" : "danger"}
+                show={showAlert}
+                variant={alertSuccess ? "success" : "danger"}
               >
                 {alertSuccess && (
-                    <React.Fragment>
-                      <Alert.Heading>Successfully Submitted!</Alert.Heading>
-                    </React.Fragment>
+                  <React.Fragment>
+                    <Alert.Heading>Successfully Submitted!</Alert.Heading>
+                  </React.Fragment>
                 )}
                 {!alertSuccess && (
-                    <React.Fragment>
-                      <Alert.Heading>Submission Error!</Alert.Heading>
-                      <p>
-                        Your request to subscribe has not been queued! You may have
-                        already submitted a request under this email. If you do not
-                        receive an invite email in 20 minutes, please contact us at{" "}
-                        <a href="mailto:hackuci@gmail.com">hack@uci.edu</a>.
-                      </p>
-                    </React.Fragment>
+                  <React.Fragment>
+                    <Alert.Heading>Submission Error!</Alert.Heading>
+                    <p>
+                      Your request to subscribe has not been queued! You may
+                      have already submitted a request under this email. If you
+                      do not receive an invite email in 20 minutes, please
+                      contact us at{" "}
+                      <a href="mailto:hackuci@gmail.com">hack@uci.edu</a>.
+                    </p>
+                  </React.Fragment>
                 )}
               </Alert>
             </div>
@@ -144,15 +149,6 @@ function Newsletter(props) {
             Mailchimp collects the following information for our sponsors and to
             ensure all newsletters are sent to the appropriate person.
           </p>
-        </div>
-        <div id="mentors" className="card">
-          <h2 style={{paddingBottom: '1em'}}>Become a mentor!</h2>
-          <p>Apply to be a part of a large group of mentors who will be able to provide support to hackers at Hack events including ZotHacks, Hack workshops, HackUCI, and HackNights!</p>
-          <div className="justify-content-center">
-            <a href="https://airtable.com/shrbPw3zLgnVZkMkA">
-              <button className="mentorship-button">Mentorship Application</button>
-            </a>
-          </div>
         </div>
       </div>
     </div>
