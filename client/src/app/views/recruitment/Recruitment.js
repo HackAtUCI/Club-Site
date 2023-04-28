@@ -1,5 +1,4 @@
 import { Header } from "app/containers";
-import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -24,9 +23,7 @@ const COMMITTEES = {
 function Recruitment() {
 	return (
 		<div className="Recruitment">
-			<Header title="Recruitment">
-				<p>Deadline: April 14th, 2023 at 11:59 PM PT</p>
-			</Header>
+			<Header title="Recruitment" />
 			<Container className="about">
 				<Row>
 					<Col lg>
@@ -65,14 +62,9 @@ function Recruitment() {
 							</Tab>
 						))}
 					</Tabs>
-					<Button
-						href="https://airtable.com/shruvaUxMnhT8A4kp"
-						target="_blank"
-						rel="noreferrer noopener"
-						className="apply"
-					>
-						<strong>Interested? Apply Now!</strong>
-					</Button>
+					<h4 className="text-center m-0">
+						Look out for recruitment in the fall!
+					</h4>
 				</Container>
 			</section>
 		</div>
