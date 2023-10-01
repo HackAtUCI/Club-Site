@@ -16,28 +16,27 @@ function Events() {
   // API call to receive event data
   useEffect(() => {
     axios.get("/api/events", { baseURL: API_URL }).then((response) => {
-      let data = response.data;
-      let currentDate = new Date();
-      let splicer = data.length;
-      let todayCutOff = 0;
-      // find cutoff between past events and current events
-      for (let i = 0; i < data.length; i++) {
-        let eventDate = new Date(data[i].start_time);
-        if ((currentDate.getTime() - eventDate.getTime()) / 31536000000 > 0) {
+      const events = response.data;
+
+      for (const event of events) {
+        event.start = new Date(event.start);
+        event.end = new Date(event.end);
+      }
+
+      const today = new Date();
+      let todayCutOff = events.length;
+
+      // Find cutoff between past events and current events
+      for (let i = 0; i < events.length; ++i) {
+        if (today > events[i].end) {
           todayCutOff = i;
           break;
         }
       }
-      for (let i = 0; i < data.length; i++) {
-        let eventDate = new Date(data[i].start_time);
-        if ((currentDate.getTime() - eventDate.getTime()) / 31536000000 > 1) {
-          splicer = i;
-          break;
-        }
-      }
+
       // set state to upcoming and past events depending on calculated cutoff
-      setUpcomingEvents(data.slice(0, todayCutOff));
-      setPastEvents(data.slice(todayCutOff, splicer));
+      setUpcomingEvents(events.slice(0, todayCutOff));
+      setPastEvents(events.slice(todayCutOff));
       setIsLoading(false);
     });
   }, []);

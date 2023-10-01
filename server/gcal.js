@@ -15,16 +15,16 @@ const EVENT_PROPERTIES = [
 	"attach",
 ];
 
-function processEvent(event) {
-	const filtered = Object.fromEntries(
-		EVENT_PROPERTIES.map((property) => [property, event[property]])
+function processEvent(raw) {
+	const event = Object.fromEntries(
+		EVENT_PROPERTIES.map((property) => [property, raw[property]])
 	);
 
-	if (filtered.attach) {
-		if (!Array.isArray(filtered.attach)) {
-			filtered.attach = [filtered.attach];
+	if (event.attach) {
+		if (!Array.isArray(event.attach)) {
+			event.attach = [event.attach];
 		}
-		for (const attachment of filtered.attach) {
+		for (const attachment of event.attach) {
 			const url = new URL(attachment.val);
 			if (url.hostname === "drive.google.com") {
 				const driveFileId = url.pathname.slice(
@@ -39,16 +39,25 @@ function processEvent(event) {
 		}
 	}
 
-	filtered.id = event.uid;
+	event.id = raw.uid;
 
-	return filtered;
+	return event;
 }
 
 async function getEvents() {
-	const events = await ical.async.fromURL(CALENDAR_URL);
-	delete events.vcalendar;
+	const calendar = await ical.async.fromURL(CALENDAR_URL);
+	delete calendar.vcalendar;
 
-	return Object.entries(events).map(([uid, event]) => processEvent(event));
+	const allEvents = Object.values(calendar).map(processEvent);
+
+	const today = new Date();
+	const T_15_MONTHS = 1000 * 60 * 60 * 24 * 30 * 15;
+	events = allEvents
+		.filter((event) => today - event.start <= T_15_MONTHS)
+		.sort((a, b) => b.start - a.start);
+
+	console.log(`Retrieved ${events.length} events from Google Calendar.`);
+	return events;
 }
 
 module.exports = { getEvents };

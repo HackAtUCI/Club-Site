@@ -20,21 +20,9 @@ function EventCard(props) {
     setModalIsOpen(false);
   }
 
-  function getCardType() {
-    let currentDate = new Date();
-    let eventDate = new Date(props.date);
-    let timeInterval = currentDate.getTime() - eventDate.getTime();
-    if (timeInterval > 0) {
-      return 'eventcard';
-    } else {
-      return 'eventcard';
-    }
-  }
-
   function renderBotText() {
-    let currentDate = new Date();
-    let eventDate = new Date(props.date);
-    let timeInterval = currentDate.getTime() - eventDate.getTime();
+  const currentDate = new Date();
+    const timeInterval = currentDate.getTime() - props.date.getTime();
     if (timeInterval > 0) {
       return (
         <div>
@@ -55,7 +43,7 @@ function EventCard(props) {
   }
 
   return (
-    <div className={getCardType()}>
+    <div className="eventcard">
       <div className='parent-wrapper-event-card' onClick={openModal}>
         <div className='top-part-event-card'>
           <img
