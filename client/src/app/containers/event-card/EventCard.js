@@ -1,7 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
 import Moment from 'react-moment';
-import Linkify from 'react-linkify';
 
 import './EventCard.scss';
 

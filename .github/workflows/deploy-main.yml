@@ -26,13 +26,19 @@ jobs:
           cache: "npm"
           cache-dependency-path: "**/package-lock.json"
 
-      - name: Install npm dependencies
+      - name: Install CDK npm dependencies
+        uses: bahmutov/npm-install@v1
+        with:
+          working-directory: cdk
+
+      - name: Install client/server npm dependencies
         uses: bahmutov/npm-install@v1
         with:
           working-directory: |
-            cdk
-            server
             client
+            server
+        env:
+          NODE_ENV: production
 
       - name: Deploy Server API
         id: deploy-server
