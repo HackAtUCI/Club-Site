@@ -89,20 +89,10 @@ function EventCard(props) {
               <Moment format='h:mma'>{props.end_date}</Moment>
             </div>
           </p>
-          <button className='popup-button-event-card'>
-            <a
-              href={props.link}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='popup-button-event-card-link'
-            >
-              <span>View on Facebook</span>
-            </a>
-          </button>
         </div>
         <div className='desc-text-wrapper-event-card'>
           <p className='desc-text-event-card'>
-            <Linkify> {props.description}</Linkify>
+            <div dangerouslySetInnerHTML={{ __html: props.description }} />
           </p>
         </div>
         <div className='modal-bottom-part'>

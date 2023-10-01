@@ -66,16 +66,13 @@ function Events() {
           <h2 className='title-events'>Upcoming Events</h2>
           {upcomingEvents
             .map((event) => (
-              <Card>
+              <Card key={event.id}>
                 <EventCard
-                  title={event.name}
-                  date={event.start_time}
-                  end_date={event.end_time}
-                  link={'https://www.facebook.com/events/' + event.id}
+                  title={event.summary}
+                  date={event.start}
+                  end_date={event.end}
                   description={event.description}
-                  image={event.cover.source}
-                  time={event.pastOrFuture}
-                  key={event.id}
+                  image={event.attach?.[0].val}
                 />
               </Card>
             ))
@@ -97,16 +94,13 @@ function Events() {
         <h2 className='no-events'>No past events!</h2>
       ) : (
         pastEvents.map((event) => (
-          <Card>
+          <Card key={event.id}>
             <EventCard
-              title={event.name}
-              date={event.start_time}
-              end_date={event.end_time}
-              link={'https://www.facebook.com/events/' + event.id}
+              title={event.summary}
+              date={event.start}
+              end_date={event.end}
               description={event.description}
-              image={event.cover.source}
-              time={event.pastOrFuture}
-              key={event.id}
+              image={event.attach?.[0].val}
             />
           </Card>
         ))
