@@ -26,19 +26,13 @@ jobs:
           cache: "npm"
           cache-dependency-path: "**/package-lock.json"
 
-      - name: Install CDK npm dependencies
-        uses: bahmutov/npm-install@v1
-        with:
-          working-directory: cdk
-
-      - name: Install client/server npm dependencies
+      - name: Install npm dependencies
         uses: bahmutov/npm-install@v1
         with:
           working-directory: |
-            client
+            cdk
             server
-        env:
-          NODE_ENV: production
+            client
 
       - name: Deploy Server API
         id: deploy-server
@@ -48,6 +42,8 @@ jobs:
           api_url=$(node getApiUrl.js)
           echo "::set-output name=api_url::$api_url"
           cd ..
+        env:
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
 
       - name: Build client
         run: |

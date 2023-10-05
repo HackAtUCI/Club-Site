@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import Moment from 'react-moment';
+import Linkify from 'react-linkify';
 
 import './EventCard.scss';
 
@@ -20,9 +21,21 @@ function EventCard(props) {
     setModalIsOpen(false);
   }
 
+  function getCardType() {
+    let currentDate = new Date();
+    let eventDate = new Date(props.date);
+    let timeInterval = currentDate.getTime() - eventDate.getTime();
+    if (timeInterval > 0) {
+      return 'eventcard';
+    } else {
+      return 'eventcard';
+    }
+  }
+
   function renderBotText() {
-  const currentDate = new Date();
-    const timeInterval = currentDate.getTime() - props.date.getTime();
+    let currentDate = new Date();
+    let eventDate = new Date(props.date);
+    let timeInterval = currentDate.getTime() - eventDate.getTime();
     if (timeInterval > 0) {
       return (
         <div>
@@ -43,7 +56,7 @@ function EventCard(props) {
   }
 
   return (
-    <div className="eventcard">
+    <div className={getCardType()}>
       <div className='parent-wrapper-event-card' onClick={openModal}>
         <div className='top-part-event-card'>
           <img
@@ -76,10 +89,20 @@ function EventCard(props) {
               <Moment format='h:mma'>{props.end_date}</Moment>
             </div>
           </p>
+          <button className='popup-button-event-card'>
+            <a
+              href={props.link}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='popup-button-event-card-link'
+            >
+              <span>View on Facebook</span>
+            </a>
+          </button>
         </div>
         <div className='desc-text-wrapper-event-card'>
           <p className='desc-text-event-card'>
-            <div dangerouslySetInnerHTML={{ __html: props.description }} />
+            <Linkify> {props.description}</Linkify>
           </p>
         </div>
         <div className='modal-bottom-part'>
