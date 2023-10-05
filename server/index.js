@@ -1,7 +1,7 @@
-const { get_events } = require("./fbgraph");
+const { getEvents } = require("./gcal");
 
 const ROUTES = {
-	"/api/events": get_events,
+	"/api/events": getEvents,
 };
 
 async function handler(event, context) {
