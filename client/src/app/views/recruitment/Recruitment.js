@@ -1,4 +1,5 @@
 import { Header } from "app/containers";
+import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -62,9 +63,14 @@ function Recruitment() {
 							</Tab>
 						))}
 					</Tabs>
-					<h4 className="text-center m-0">
-						Look out for recruitment in the fall!
-					</h4>
+					<Button
+						href="https://docs.google.com/forms/d/1npzf_gD2omiVOvsN3xXaF4K7EMyfQCvecEQAfCTEwbc/"
+						target="_blank"
+						rel="noreferrer noopener"
+						className="apply"
+					>
+						<strong>Interested? Apply Now!</strong>
+					</Button>
 				</Container>
 			</section>
 		</div>
