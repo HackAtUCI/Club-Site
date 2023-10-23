@@ -7,10 +7,10 @@ function Marketing() {
 			<h3>Marketing</h3>
 			<div style={{ marginBottom: "3rem" }}>
 				<p>
-					<strong>General Marketing Organizer:</strong> As a general marketing
-					organizer, your responsibilities vary from sending emails via to
-					making posts on social media platforms in a witty and creative manner.
-					You are required to meet strict deadlines and have exceptional
+					<strong>General Marketing Intern:</strong> As a general marketing
+					intern, your responsibilities vary from sending emails via to making
+					posts on social media platforms in a witty and creative manner. You
+					are required to meet strict deadlines and have exceptional
 					communication skills since marketing is all about reaching out to the
 					public.
 				</p>
