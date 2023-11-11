@@ -1,5 +1,4 @@
 import { Header } from "app/containers";
-import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
