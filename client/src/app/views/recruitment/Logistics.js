@@ -7,10 +7,10 @@ function Logistics() {
 			<h3>Logistics</h3>
 			<p>
 				The logistics team organizes all hackathon operations, as well as other
-				events during the year such as workshops, fundraising, and socials. We
-				are a detail-oriented and impact-driven team, uniting diverse
-				backgrounds and skill sets to ensure that events run smoothly and
-				benefit all parties involved.
+				events during the year such as workshops and socials. We are a
+				detail-oriented and impact-driven team, uniting diverse backgrounds and
+				skill sets to ensure that events run smoothly and benefit all parties
+				involved.
 			</p>
 			<p>
 				<strong>Key Qualifications</strong>
@@ -21,7 +21,7 @@ function Logistics() {
 				<li>Attention to detail</li>
 				<li>
 					Strong written and verbal communication skills, especially in a timely
-					and efficient manner for issues
+					and efficient manner for issues (within 1 business day)
 				</li>
 				<li>Drive to work in a fast paced environment</li>
 				<li>Work in a team based environment in order to meet goals</li>
@@ -31,9 +31,10 @@ function Logistics() {
 					spreadsheets (Google Sheets), and documents (Google Docs)
 				</li>
 				<li>
-					Willing to dedicate ~4 hours per week to Hack (meeting, content
+					Willing to dedicate ~5 hours per week to Hack (meeting, content
 					creation, etc.)
 				</li>
+				<li>Able to lead small teams of 3-4 organizers</li>
 				<li>Most importantly, willingness to adapt and learn new things</li>
 			</ul>
 		</>
