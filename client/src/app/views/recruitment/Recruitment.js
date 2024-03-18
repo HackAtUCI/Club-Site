@@ -7,6 +7,7 @@ import Tab from "react-bootstrap/Tab";
 import Corporate from "./Corporate";
 import Logistics from "./Logistics";
 import Marketing from "./Marketing";
+import Graphics from "./Graphics";
 import Tech from "./Tech";
 import lightBulb from "assets/icons/light_bulb.svg";
 import searchIcon from "assets/icons/search_icon.svg";
@@ -17,6 +18,7 @@ const COMMITTEES = {
 	Corporate: <Corporate />,
 	Logistics: <Logistics />,
 	Marketing: <Marketing />,
+	Graphics: <Graphics />,
 	Technology: <Tech />,
 };
 
