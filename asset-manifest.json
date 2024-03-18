@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.59e08161.css",
-    "main.js": "/static/js/main.9533da73.js",
+    "main.js": "/static/js/main.14428881.js",
     "static/media/hack_group_photo.svg": "/static/media/hack_group_photo.1f05f2a3c0a973bc295998791f5c0bf7.svg",
     "static/media/hackuci.jpg": "/static/media/hackuci.b8bb5fa301e527227241.jpg",
     "static/media/zothacks.jpg": "/static/media/zothacks.4104fd5bfc599c1671b2.jpg",
@@ -12,6 +12,7 @@
     "static/media/discord_icon.svg": "/static/media/discord_icon.bc92e02342ad30bf4e7e57c6a5551e0d.svg",
     "static/media/gears.svg": "/static/media/gears.38fa5d4574f023f6ebfc27b3de76007a.svg",
     "static/media/logistics-logo.svg": "/static/media/logistics-logo.8e50996ce5148993c8817ff3c009b504.svg",
+    "static/media/graphics-logo.svg": "/static/media/graphics-logo.7026d7bbab2e50a0dc35513980902307.svg",
     "static/media/instagram_icon.svg": "/static/media/instagram_icon.6c767be165b3140c717580e07223a5ff.svg",
     "static/media/marketing-logo.svg": "/static/media/marketing-logo.e0e657fc408c06842da21eb689c9992a.svg",
     "static/media/People.svg": "/static/media/People.8518334eccad7ef307f5b33fe2d1a0ef.svg",
@@ -27,10 +28,10 @@
     "static/media/youtube_icon.svg": "/static/media/youtube_icon.b6b73bc65622565a86cedeeed8126608.svg",
     "static/media/facebook_icon.svg": "/static/media/facebook_icon.1afc609c4854855cda01cc96b6cbc892.svg",
     "main.59e08161.css.map": "/static/css/main.59e08161.css.map",
-    "main.9533da73.js.map": "/static/js/main.9533da73.js.map"
+    "main.14428881.js.map": "/static/js/main.14428881.js.map"
   },
   "entrypoints": [
     "static/css/main.59e08161.css",
-    "static/js/main.9533da73.js"
+    "static/js/main.14428881.js"
   ]
 }
