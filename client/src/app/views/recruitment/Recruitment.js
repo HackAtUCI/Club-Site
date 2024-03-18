@@ -13,6 +13,8 @@ import lightBulb from "assets/icons/light_bulb.svg";
 import searchIcon from "assets/icons/search_icon.svg";
 import gears from "assets/icons/gears.svg";
 import "./Recruitment.scss";
+import Button from "react-bootstrap/Button";
+
 
 const COMMITTEES = {
 	Corporate: <Corporate />,
@@ -64,8 +66,17 @@ function Recruitment() {
 							</Tab>
 						))}
 					</Tabs>
+					<Button
+						href="https://airtable.com/appi73UpO0E7U0RwR/shrvkL0Up9bQVXz0l"
+						target="_blank"
+						rel="noreferrer noopener"
+						className="apply"
+					>
+						<strong>Interested? Apply Now!</strong>
+					</Button>
 				</Container>
 			</section>
+			
 		</div>
 	);
 }
