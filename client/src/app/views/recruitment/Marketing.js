@@ -7,12 +7,12 @@ function Marketing() {
 			<h3>Marketing</h3>
 			<div style={{ marginBottom: "3rem" }}>
 				<p>
-					<strong>General Marketing Intern:</strong> As a general marketing
-					intern, your responsibilities vary from sending emails via to making
-					posts on social media platforms in a witty and creative manner. You
-					are required to meet strict deadlines and have exceptional
-					communication skills since marketing is all about reaching out to the
-					public.
+					<strong>General Marketing Organizer:</strong> As a marketing
+					organizer, your responsibilities vary from sending emails to making
+					posts on social media platforms in a witty and creative manner. This
+					role demands not only meeting strict deadlines but also excelling in
+					communication, as effective engagement with the public is the essence
+					of marketing.
 				</p>
 				<p>
 					<strong>Key Qualifications</strong>
@@ -21,11 +21,11 @@ function Marketing() {
 					<li>Exceptional communication and writing skills</li>
 					<li>
 						Experience with email and social media marketing campaigns
-						(Instagram, Facebook, Discord, MailChimp)
+						(Instagram, Discord, MailChimp)
 					</li>
 					<li>Creative and critical thinking abilities</li>
 					<li>Drive to work in a fast-paced cross-functional team</li>
-					<li>Photography and videography skills (preferred)</li>
+					<li>Photography and videography skills preferred</li>
 				</ul>
 			</div>
 			<div style={{ marginBottom: "3rem" }}>
@@ -33,7 +33,7 @@ function Marketing() {
 					<strong>Graphic Designer:</strong> As a graphic designer, you will be
 					responsible for creating graphics that represent our organization and
 					events for various platforms, such as Facebook or Instagram. Designers
-					also shape the theme and aesthetic for ZotHacks and HackUCI. Each
+					also shape the theme and aesthetic for ZotHacks and IrvineHacks. Each
 					design will follow general guidelines and have to be submitted for
 					review before given deadlines. You must be detail-oriented and have
 					proficient knowledge in visual design, color theory, and typography.
