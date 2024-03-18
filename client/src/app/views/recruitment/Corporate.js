@@ -6,12 +6,12 @@ function Corporate() {
 			<img src={corporateLogo} alt="Corporate logo" />
 			<h3>Corporate</h3>
 			<p>
-				As a Corporate Outreach intern, you will be responsible for contacting
-				companies for financial sponsorship, hardware, swag, and mentorship. We
-				build meaningful relationships with existing partners and reach out to
-				other local companies to support Hack at UCI’s hackathons and club
-				operations. Help us communicate with tech companies by using the
-				following strategies: diligent emailing, scheduling phone calls,
+				As a Corporate Outreach organizer, you will be responsible for
+				contacting companies for financial sponsorship, hardware, swag, and
+				mentorship. We build meaningful relationships with existing partners and
+				reach out to other local companies to support Hack at UCI’s hackathons
+				and club operations. Help us communicate with tech companies by using
+				the following strategies: diligent emailing, scheduling phone calls,
 				attending career fairs, participating at hackathons, and networking at
 				professional events! Not only does this help us grow our professional
 				network to have better experiences for our attendees, but this is also a
@@ -20,7 +20,7 @@ function Corporate() {
 				full-time jobs.
 			</p>
 			<p>
-				<strong>General corporate intern:</strong> Gain as many sponsorships
+				<strong>General corporate organizer:</strong> Gain as many sponsorships
 				from companies whether it be monetary support, prizes, mentors, swag,
 				etc.
 			</p>
