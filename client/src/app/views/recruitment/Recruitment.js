@@ -1,3 +1,4 @@
+import { Button } from "react-bootstrap";
 import { Header } from "app/containers";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -64,6 +65,14 @@ function Recruitment() {
 							</Tab>
 						))}
 					</Tabs>
+					<Button
+						href="https://docs.google.com/forms/d/1Lb0jyuj4Q1-0dV88pIesiG9H41r0Y1aFh8TqTL3Uc_o/"
+						target="_blank"
+						rel="noreferrer noopener"
+						className="apply"
+					>
+						<strong>Interested? Apply Now!</strong>
+					</Button>
 				</Container>
 			</section>
 		</div>
