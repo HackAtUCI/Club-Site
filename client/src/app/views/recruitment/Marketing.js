@@ -6,11 +6,11 @@ function Marketing() {
 			<img src={marketingLogo} alt="Marketing logo" />
 			<h3>Marketing</h3>
 			<p>
-				As a marketing organizer, your responsibilities vary from sending emails
-				to making posts on social media platforms in a witty and creative
-				manner. This role demands not only meeting strict deadlines but also
-				excelling in communication, as effective engagement with the public is
-				the essence of marketing.
+				As a marketing intern, your responsibilities vary from sending emails to
+				making posts on social media platforms in a witty and creative manner.
+				This role demands not only meeting strict deadlines but also excelling
+				in communication, as effective engagement with the public is the essence
+				of marketing.
 			</p>
 			<p>
 				<strong>Key Qualifications</strong>
