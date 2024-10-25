@@ -66,7 +66,7 @@ function Recruitment() {
 						))}
 					</Tabs>
 					<Button
-						href="https://docs.google.com/forms/d/1Lb0jyuj4Q1-0dV88pIesiG9H41r0Y1aFh8TqTL3Uc_o/"
+						href="https://docs.google.com/forms/d/e/1FAIpQLSdZ47w2_ahyLPxHJp06P5HO7ZImIYTD2ScRy9FZgBCXNP95eQ/viewform"
 						target="_blank"
 						rel="noreferrer noopener"
 						className="apply"
