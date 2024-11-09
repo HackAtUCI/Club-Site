@@ -65,14 +65,6 @@ function Recruitment() {
 							</Tab>
 						))}
 					</Tabs>
-					<Button
-						href="https://docs.google.com/forms/d/e/1FAIpQLSdZ47w2_ahyLPxHJp06P5HO7ZImIYTD2ScRy9FZgBCXNP95eQ/viewform"
-						target="_blank"
-						rel="noreferrer noopener"
-						className="apply"
-					>
-						<strong>Interested? Apply Now!</strong>
-					</Button>
 				</Container>
 			</section>
 		</div>
