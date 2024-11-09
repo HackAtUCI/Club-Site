@@ -1,4 +1,3 @@
-import { Button } from "react-bootstrap";
 import { Header } from "app/containers";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
