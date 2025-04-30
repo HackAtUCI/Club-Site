@@ -10,8 +10,8 @@ body {
   text-align: center;
   min-height: 100vh;
   background-color: $white;
-  color: black;
-  font-family: $hackUCIFont;
+  color: $secondary-color;
+  font-family: $primary-font;
   overflow: hidden;
 
   h1 {
