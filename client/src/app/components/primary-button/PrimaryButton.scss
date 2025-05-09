@@ -2,9 +2,10 @@
 
 .primary-button {
 	border-color: transparent;
-	border-radius: 30px;
-	font-size: 24px;
+	border-radius: 50px;
+	font-size: 2em;
 	font-weight: 600;
+	padding: 15px 100px;
 	background: linear-gradient(
 		90deg,
 		rgba(109, 146, 218, 1) 0%,
@@ -14,7 +15,6 @@
 	background-position: 0% 50%;
 	color: $secondary-color;
 	max-width: 10em;
-	padding: 10px 25px;
 	position: relative;
 	z-index: 10;
 	transition: background-position 0.35s ease-out;
