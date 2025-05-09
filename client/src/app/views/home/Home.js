@@ -6,19 +6,13 @@ import { Header } from "app/containers";
 
 import HomeCards from "./HomeCards";
 import "./Home.scss";
-import PrimaryButton from "app/components/primary-button/PrimaryButton";
 
 function Home() {
 	return (
 		<div className="Home">
-			<Header title="Hack at UCI">
-				<a className="involved-button" href="#newsletter">
-					Get Involved
-				</a>
-			</Header>
+			<Header title="Hack at UCI" />
 
 			<div className="home-content">
-				<PrimaryButton href="" text="Get involved"/>
 				<section className="container home-about">
 					<h2>About Us</h2>
 					<p>
