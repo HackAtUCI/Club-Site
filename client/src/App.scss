@@ -9,7 +9,7 @@ body {
 .App {
   text-align: center;
   min-height: 100vh;
-  background-color: $white;
+  background-color: $background-dark-blue;
   color: $secondary-color;
   font-family: $primary-font;
   overflow: hidden;
@@ -25,6 +25,26 @@ body {
   h3 {
     font-size: 2.25rem;
   }
+}
+
+// Applied to background if "/" route is selected
+.home-background {
+  background-image: linear-gradient(
+    to bottom,
+    $background-dark-blue 0px,
+    $background-blue 450px,
+    $background-dark-blue 900px
+  );
+}
+
+// Applied to background if "/about" route is selected
+.about-background {
+  background-image: linear-gradient(
+    to bottom,
+    $background-dark-blue 0px,
+    $background-darker-blue 900px,
+    $background-dark-blue 901px
+  );
 }
 
 .bg-gray {
