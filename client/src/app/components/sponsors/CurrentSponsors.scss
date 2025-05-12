@@ -1,18 +1,69 @@
-.sponsor-list {
-  text-align: center;
+.current-sponsors-container {
+  padding: 2rem;
+  background-color: #1c1c28;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
 
-  .sponsor-list-item {
-    display: inline-block;
-    width: 300px;
-    margin: 2rem;
+  h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
 
-    a {
-      display: contents;
-    }
+  p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
 
-    img {
-      max-width: 100%;
-      max-height: 150px;
-    }
+  }
+}
+
+
+.sponsor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sponsor-logo {
+  flex: 1 1 120px;
+  max-width: 1000px; // keep if you want full flexibility
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.sponsor-logo img {
+  width: 100%;
+  max-width: 400px; // 💡 add this line
+  max-height: 120px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+
+
+.sponsor-logo:hover img {
+  transform: scale(1.05);
+}
+
+/* 📱 Mobile tweaks */
+@media (max-width: 600px) {
+  .current-sponsors-container {
+    padding: 1rem;
+  }
+
+  .sponsor-logo {
+    flex: 1 1 45%; // stack two per row
+    max-width: 100%;
+  }
+
+  .sponsor-logo img {
+    max-height: 100px;
   }
 }

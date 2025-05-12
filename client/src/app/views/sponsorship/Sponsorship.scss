@@ -180,3 +180,26 @@
     font-size: 15px;
   }
 }
+
+.container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 2rem; 
+}
+
+.sponsor-more-info {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  background: linear-gradient(90deg, rgba(126, 169, 251, 1), rgba(130, 255, 180, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
