@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e11d38f5.css",
-    "main.js": "/static/js/main.765507ca.js",
+    "main.css": "/static/css/main.40467a5e.css",
+    "main.js": "/static/js/main.07fc06c9.js",
     "static/media/hack_group_photo.svg": "/static/media/hack_group_photo.1f05f2a3c0a973bc295998791f5c0bf7.svg",
     "static/media/irvinehacks.jpg": "/static/media/irvinehacks.b8bb5fa301e527227241.jpg",
     "static/media/zothacks.jpg": "/static/media/zothacks.4104fd5bfc599c1671b2.jpg",
@@ -27,11 +27,11 @@
     "static/media/search_icon.svg": "/static/media/search_icon.16343d2fce1e0eed9e5907137bd94772.svg",
     "static/media/youtube_icon.svg": "/static/media/youtube_icon.b6b73bc65622565a86cedeeed8126608.svg",
     "static/media/facebook_icon.svg": "/static/media/facebook_icon.1afc609c4854855cda01cc96b6cbc892.svg",
-    "main.e11d38f5.css.map": "/static/css/main.e11d38f5.css.map",
-    "main.765507ca.js.map": "/static/js/main.765507ca.js.map"
+    "main.40467a5e.css.map": "/static/css/main.40467a5e.css.map",
+    "main.07fc06c9.js.map": "/static/js/main.07fc06c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.e11d38f5.css",
-    "static/js/main.765507ca.js"
+    "static/css/main.40467a5e.css",
+    "static/js/main.07fc06c9.js"
   ]
 }
