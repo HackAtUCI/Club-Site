@@ -6,7 +6,6 @@ import { Header } from "app/containers";
 
 import HomeCards from "./HomeCards";
 import "./Home.scss";
-import PrimaryButton from "app/components/primary-button/PrimaryButton";
 
 function Home() {
 	return (
@@ -18,7 +17,6 @@ function Home() {
 			</Header>
 
 			<div className="home-content">
-				<PrimaryButton href="" text="Get involved"/>
 				<section className="container home-about">
 					<h2>About Us</h2>
 					<p>
