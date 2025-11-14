@@ -66,7 +66,7 @@ function Recruitment() {
 						))}
 					</Tabs>
 					<Button
-						href="https://tinyurl.com/hackorgapps"
+						href="https://docs.google.com/forms/d/e/1FAIpQLSe6LyQZ2cGa0Upw0002jTmuKrsEAQPUQ2Vr4rgR1KAqBm-xhQ/viewform?usp=sharing&ouid=103230695375446707556"
 						target="_blank"
 						rel="noreferrer noopener"
 						className="apply"
