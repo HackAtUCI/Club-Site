@@ -19,7 +19,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
 	return (
 		<div className="App">
-			<Router>
+			<Router basename="/Club-Site">
 				<div>
 					<AppNavbar />
 					<Switch>
