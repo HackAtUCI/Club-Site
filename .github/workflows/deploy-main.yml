@@ -53,10 +53,6 @@ jobs:
         env:
           REACT_APP_API_URL: ${{ steps.deploy-server.outputs.api_url }}
 
-      - name: Add SPA fallback
-        run: |
-          cp client/build/index.html client/build/404.html
-
       - name: Publish client
         uses: peaceiris/actions-gh-pages@v3
         with:
