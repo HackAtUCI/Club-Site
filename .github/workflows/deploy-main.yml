@@ -42,7 +42,6 @@ jobs:
       #     api_url=$(node getApiUrl.js)
       #     echo "::set-output name=api_url::$api_url"
       #     cd ..
-
       #   env:
       #     FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
 
