@@ -1,0 +1,134 @@
+@import "src/globals/hack-variables.scss";
+
+.newsletter {
+  background-color: #f3f3f3;
+  margin: 0;
+}
+
+.newsletter-container {
+  display: flex;
+  flex-direction: column;
+  & a {
+    color: black;
+    text-decoration: none;
+  }
+  & a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  & h2 {
+    font-size: 36px !important;
+    font-weight: normal !important;
+  }
+  & .card {
+    padding: 48px;
+    margin: 48px 200px !important;
+  }
+}
+
+.jumbotron {
+  margin-bottom: 0 !important;
+}
+
+.newsletter-container h1 {
+  margin: 0;
+}
+
+.newsletter-mailchimp-info {
+  font-size: 16px;
+  font-weight: 400;
+  color: #a9a9a9;
+}
+
+.newsletter-info {
+  font-size: 25px;
+}
+
+.newsletter-form {
+  text-align: left;
+}
+
+.newsletter-form .form-control {
+  width: 100%;
+  font-size: 24px;
+}
+
+.newsletter-button {
+  border-color: transparent;
+  border-radius: 30px;
+  font-size: 28px;
+  font-weight: 600;
+  padding: 10px 25px;
+  background-color: $red;
+  color: white;
+  max-width: 10em;
+  position: relative;
+  z-index: 10;
+  margin-left: 10px;
+}
+
+.discord-card {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.5s ease;
+  color: black;
+  &:hover {
+    background-color: #5865F0;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.discord-icon {
+  width: 98px;
+  height: 98px;
+}
+
+.discord-button {
+  border-color: transparent;
+  border-radius: 30px;
+  font-size: 28px;
+  padding: 10px 25px;
+  background-color: #7289da;
+  color: white;
+  max-width: 10em;
+  position: relative;
+  z-index: 10;
+}
+
+.newsletter-button a {
+  color: white;
+}
+
+.discord-button a {
+  color: white;
+}
+
+.mentorship-button {
+  border-color: transparent;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 25px;
+  background-color: $red;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+@media screen and (max-width: 780px) {
+  .newsletter-container {
+    font-size: 23px;
+    & .card {
+      margin: 48px 0 !important;
+    }
+  }
+  .discord-button {
+    font-size: 25px;
+  }
+  .newsletter-button {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,50 @@
+@import "globals/hack-variables.scss";
+
+$card-width: 480px;
+$card-height: 270px;
+
+.home-card {
+  max-width: $card-width;
+  max-height: $card-height;
+  margin: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: white;
+  text-align: left;
+
+  .card-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .card-img-overlay {
+    padding: 1rem;
+    opacity: 0;
+    background-color: #0005;
+    transition: opacity 0.65s ease-in-out;
+    overflow: auto;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home-card {
+    .card-img-overlay {
+      padding: 2rem;
+    }
+
+    .card-title {
+      font-size: 2rem;
+    }
+
+    .card-text {
+      font-size: 1.25rem;
+    }
+  }
+}

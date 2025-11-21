@@ -1,0 +1,35 @@
+@import "src/globals/hack-variables.scss";
+
+.navbar-color {
+  background: $blue-gradient;
+}
+
+#inner-navbar-nav {
+  .navbar-nav {
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 10px;
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    padding: 8px 32px;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    &.active {
+      color: #fff;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+.navbar-logo {
+  width: 50px;
+}

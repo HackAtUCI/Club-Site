@@ -1,0 +1,39 @@
+@import 'src/globals/hack-variables.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+.involved-button {
+  border-color: transparent;
+  border-radius: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 10px 25px;
+  background-color: $red;
+  color: white;
+  max-width: 10em;
+  position: relative;
+  z-index: 10;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.home-content {
+  p {
+    font-size: 26px;
+  }
+  a {
+    color: $darkest-blue !important;
+  }
+}
+
+.home-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

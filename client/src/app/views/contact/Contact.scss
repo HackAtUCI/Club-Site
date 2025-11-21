@@ -1,0 +1,40 @@
+@import "src/globals/hack-variables.scss";
+
+.Contact a {
+  color: #233B92;
+  &:hover {
+    color: #233B92
+  }
+}
+
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-icon {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8rem;
+
+  .contact-label {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.contact-icon img {
+  height: 6rem;
+  width: 6rem;
+}
+
+@media (min-width: 768px) {
+  .contact-icons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-icon {
+    margin: 0 0.65rem;
+  }
+}
