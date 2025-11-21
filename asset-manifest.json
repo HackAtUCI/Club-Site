@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.40467a5e.css",
+    "main.js": "/static/js/main.ef88001a.js",
+    "static/media/hack_group_photo.svg": "/static/media/hack_group_photo.1f05f2a3c0a973bc295998791f5c0bf7.svg",
+    "static/media/irvinehacks.jpg": "/static/media/irvinehacks.b8bb5fa301e527227241.jpg",
+    "static/media/zothacks.jpg": "/static/media/zothacks.4104fd5bfc599c1671b2.jpg",
+    "static/media/workshops.jpg": "/static/media/workshops.267920466f839e896e64.jpg",
+    "static/media/hackshapes_header.png": "/static/media/hackshapes_header.3473f4155bb353617aa8.png",
+    "static/media/hacknights.jpg": "/static/media/hacknights.a0d132587508be5cdda0.jpg",
+    "static/media/blank.png": "/static/media/blank.c3f945216dc12c9498dc.png",
+    "static/media/discord_icon.svg": "/static/media/discord_icon.bc92e02342ad30bf4e7e57c6a5551e0d.svg",
+    "static/media/gears.svg": "/static/media/gears.38fa5d4574f023f6ebfc27b3de76007a.svg",
+    "static/media/logistics-logo.svg": "/static/media/logistics-logo.8e50996ce5148993c8817ff3c009b504.svg",
+    "static/media/graphics-logo.svg": "/static/media/graphics-logo.7026d7bbab2e50a0dc35513980902307.svg",
+    "static/media/instagram_icon.svg": "/static/media/instagram_icon.6c767be165b3140c717580e07223a5ff.svg",
+    "static/media/marketing-logo.svg": "/static/media/marketing-logo.e0e657fc408c06842da21eb689c9992a.svg",
+    "static/media/People.svg": "/static/media/People.8518334eccad7ef307f5b33fe2d1a0ef.svg",
+    "index.html": "/index.html",
+    "static/media/light_bulb.svg": "/static/media/light_bulb.993e03714d01e65293d9acd32e76371d.svg",
+    "static/media/corporate-logo.svg": "/static/media/corporate-logo.49a63e1563d78a3dcf3bba3319c681d4.svg",
+    "static/media/calendar-alt-regular.svg": "/static/media/calendar-alt-regular.3c2bd673e29a0238530c05ff0f19c3f6.svg",
+    "static/media/hack-at-uci-logo.svg": "/static/media/hack-at-uci-logo.d33c5cee07c84da6f485d6a7e4ce1b4a.svg",
+    "static/media/tech-logo.svg": "/static/media/tech-logo.e6b1e2c6c4b67a48472945dc6ccd519a.svg",
+    "static/media/linkedin_icon.svg": "/static/media/linkedin_icon.8ad89c8340c8fae9929336c09216702f.svg",
+    "static/media/mail_icon.svg": "/static/media/mail_icon.40209e9d86563a34bbd10b9319b59343.svg",
+    "static/media/search_icon.svg": "/static/media/search_icon.16343d2fce1e0eed9e5907137bd94772.svg",
+    "static/media/youtube_icon.svg": "/static/media/youtube_icon.b6b73bc65622565a86cedeeed8126608.svg",
+    "static/media/facebook_icon.svg": "/static/media/facebook_icon.1afc609c4854855cda01cc96b6cbc892.svg",
+    "main.40467a5e.css.map": "/static/css/main.40467a5e.css.map",
+    "main.ef88001a.js.map": "/static/js/main.ef88001a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40467a5e.css",
+    "static/js/main.ef88001a.js"
+  ]
+}
