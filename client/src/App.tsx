@@ -8,7 +8,7 @@ import {
 import "./App.css";
 
 function Home() {
-	return <h2>Home</h2>;
+	return <h1 className="text-3xl font-bold underline"> Hello world! </h1>;
 }
 
 function About() {
