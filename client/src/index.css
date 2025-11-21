@@ -1,1 +1,92 @@
 @import "tailwindcss";
+
+:root {
+    --font-manrope: 'Manrope', sans-serif;
+
+    --font-size-heading: 6rem;
+    --font-size-subtitle: 3rem;
+    --font-size-body: 1.5rem;
+    --font-size-button: 2.25rem;
+
+    --font-size-heading-mobile: 4rem;
+    --font-size-body-mobile: 1.25rem;
+
+    --font-weight-bold: 700;
+    --font-weight-semibold: 600;
+    --font-weight-regular: 400;
+}
+
+@theme {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-manrope: var(--font-manrope);
+
+    --color-primary: #2d2d3e;
+    --color-secondary: #ffffff;
+    --color-blue-accent: #7ea9fb;
+    --color-green-accent: #82ffb4;
+
+    --color-box: #2c2c3c;
+    --color-blue: var(--color-primary);
+    --color-dark-blue: #232332;
+    --color-darker-blue: #1f1e2d;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--color-secondary);
+    font-family: var(--font-manrope);
+    font-size: var(--font-size-body-mobile);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+}
+
+.text-heading {
+    font-size: var(--font-size-heading-mobile);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+}
+
+.text-subtitle {
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
+}
+
+.text-button {
+    font-size: var(--font-size-button);
+    font-weight: var(--font-weight-semibold);
+}
+
+.home-background {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dark-blue) 0px,
+        var(--color-blue) 450px,
+        var(--color-dark-blue) 900px
+    );
+}
+
+.about-background {
+    background-image: linear-gradient(
+        to bottom,
+        var(--color-dark-blue) 0px,
+        var(--color-darker-blue) 900px,
+        var(--color-dark-blue) 901px
+    );
+}
+
+.shadow-box-glow {
+    box-shadow:
+        0 0 32px 0 #7ea9fb33,
+        0 0 0 1px #7ea9fb22;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: var(--font-size-body);
+    }
+    .text-heading {
+        font-size: var(--font-size-heading);
+    }
+}

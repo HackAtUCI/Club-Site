@@ -1,0 +1,47 @@
+.embla {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.embla__viewport {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.embla__container {
+    display: flex;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    margin-left: -1rem;
+}
+
+.embla__slide {
+    position: relative;
+    min-width: 100%;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s;
+}
+
+.carousel-dot-button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 6px;
+    background: #7ea9fb;
+    transition:
+        background 0.3s,
+        box-shadow 0.3s;
+    cursor: pointer;
+    outline: none;
+}
+
+.carousel-dot-button.selected {
+    background: #82ffb4;
+}

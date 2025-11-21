@@ -1,0 +1,16 @@
+.primary-gradient-btn {
+  background: linear-gradient(90deg, #7ea9fb 0%, #82ffb4 50%, #7ea9fb 100%);
+  background-size: 200% 100%;
+  background-position: left;
+  transition: background-position 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.primary-gradient-btn:hover {
+  cursor: pointer;
+  background-position: right;
+}
+
+.primary-gradient-btn.apply-style {
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 24px 0 #ffffff;
+}

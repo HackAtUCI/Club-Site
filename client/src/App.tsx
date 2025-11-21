@@ -1,64 +1,29 @@
-import {
-	Route,
-	Switch,
-	BrowserRouter as Router,
-	NavLink,
-} from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+
+import Navbar from "@/lib/components/Navbar/Navbar";
+import Footer from "@/lib/components/Footer/Footer";
+import Home from "@/pages/home";
+import About from "@/pages/about";
+import Events from "@/pages/events";
+import Sponsors from "@/pages/sponsors";
+import Recruitment from "@/pages/recruitment";
+import Contact from "@/pages/contact";
+import NotFound from "@/pages/notFound";
 
 import "./App.css";
 
-function Home() {
-	return <h1 className="text-3xl font-bold underline"> Hello world! </h1>;
-}
-
-function About() {
-	return <h2>About</h2>;
-}
-
-function Events() {
-	return <h2>Events</h2>;
-}
-
-function Sponsorship() {
-	return <h2>Sponsorship</h2>;
-}
-
-function Recruitment() {
-	return <h2>Recruitment</h2>;
-}
-
-function Contact() {
-	return <h2>Contact</h2>;
-}
-
-function NotFound() {
-	return <h2>404 Not Found</h2>;
-}
-
-function AppNavbar() {
-	return (
-		<div>
-			<NavLink to="/">Home</NavLink> | <NavLink to="/about">About</NavLink> |{" "}
-			<NavLink to="/events">Events</NavLink> |{" "}
-			<NavLink to="/sponsors">Sponsorship</NavLink> |{" "}
-			<NavLink to="/recruit">Recruitment</NavLink> |{" "}
-			<NavLink to="/contact">Contact</NavLink>
-		</div>
-	);
-}
-
 function App() {
 	return (
-		<div className="App">
+		<div className="bg-dark-blue antialiased">
 			<Router basename="/Club-Site">
 				<div>
-					<AppNavbar />
+					<Navbar />
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/about" component={About} />
 						<Route exact path="/events" component={Events} />
-						<Route exact path="/sponsors" component={Sponsorship} />
-						<Route exact path="/recruit" component={Recruitment} />
+						<Route exact path="/sponsors" component={Sponsors} />
+						<Route exact path="/recruitment" component={Recruitment} />
 						<Route exact path="/contact" component={Contact} />
 						{/* <Route
 							exact
@@ -79,7 +44,7 @@ function App() {
 						/>
 						<Route component={NotFound} />
 					</Switch>
-					{/* <Footer /> */}
+					<Footer />
 				</div>
 			</Router>
 		</div>
