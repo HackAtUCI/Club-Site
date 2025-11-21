@@ -15,7 +15,7 @@ import "./App.css";
 function App() {
 	return (
 		<div className="bg-dark-blue antialiased">
-			<Router basename="/Club-Site">
+			<Router>
 				<div>
 					<Navbar />
 					<Switch>
