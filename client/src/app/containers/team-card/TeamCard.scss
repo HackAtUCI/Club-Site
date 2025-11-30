@@ -9,6 +9,7 @@
   .images-container {
     position: relative;
     margin-bottom: 0.5rem;
+    transition: transform 0.2s ease;
 
     .profpic {
       height: 200px;
@@ -19,6 +20,10 @@
       object-fit: cover;
       object-position: 0 0px;
     }
+
+      &:hover {
+        transform: translateY(-3px) scale(1.02);
+      }
 
     .linkedinLogo {
       position: absolute;

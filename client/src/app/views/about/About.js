@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 
 import { Header } from "app/containers";
-import getSheetsData from "app/services/google-sheets-handler";
-import TeamPhoto from "../../../assets/team/hack_group_photo.svg";
+// import getSheetsData from "app/services/google-sheets-handler";
+import TeamPhoto from "../../../assets/team/group_hack_photo.jpg";
 
 import TeamSection from "./TeamSection";
 import "./About.scss";
 
-function About() {
-  const [teamMembers, setTeamMembers] = useState({});
+import { teamMembers } from "../../../data/team.js"
 
-  useEffect(() => {
-    getSheetsData("members")
-      .then((data) => {
-        setTeamMembers(data);
-      })
-      .catch((err) => {
-        console.log("could not acquire team members:", err);
-      });
-  }, []);
+function About() {
+  // const [teamMembers, setTeamMembers] = useState({});
+
+  // useEffect(() => {
+  //   getSheetsData("members")
+  //     .then((data) => {
+  //       setTeamMembers(data);
+  //     })
+  //     .catch((err) => {
+  //       console.log("could not acquire team members:", err);
+  //     });
+  // }, []);
 
   return (
     <div className="about">
