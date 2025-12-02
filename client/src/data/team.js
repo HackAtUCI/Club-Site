@@ -18,7 +18,7 @@ export const teamMembers = {
 		{
 			name: "Paige Townsend",
 			position: "Corporate Director",
-			image: require("../assets/team/blank.png"),
+			image: require("../assets/team/paige.jpg"),
 			linkedInUrl: "",
 		},
 		{
@@ -36,7 +36,7 @@ export const teamMembers = {
 		{
 			name: "Rishita Dugar",
 			position: "Corporate Organizer",
-			image: require("../assets/team/blank.png"),
+			image: require("../assets/team/rishita.png"),
 			linkedInUrl: "",
 		},
 		{
@@ -75,7 +75,7 @@ export const teamMembers = {
 		{
 			name: "Arnav Pandey",
 			position: "Logistics Organizer",
-			image: require("../assets/team/blank.png"),
+			image: require("../assets/team/arnavp.png"),
 			linkedInUrl: "",
 		},
 		{
@@ -87,7 +87,7 @@ export const teamMembers = {
 		{
 			name: "Ethan Chin",
 			position: "Logistics Organizer",
-			image: require("../assets/team/blank.png"),
+			image: require("../assets/team/ethan.png"),
 			linkedInUrl: "",
 		},
 		{
