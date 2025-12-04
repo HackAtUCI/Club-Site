@@ -1,13 +1,34 @@
 {
   "files": {
-    "main.css": "/static/css/main.40467a5e.css",
-    "main.js": "/static/js/main.ef88001a.js",
-    "static/media/hack_group_photo.svg": "/static/media/hack_group_photo.1f05f2a3c0a973bc295998791f5c0bf7.svg",
+    "main.css": "/static/css/main.62ae65a6.css",
+    "main.js": "/static/js/main.c8550dd8.js",
+    "static/media/connie.png": "/static/media/connie.fd708806f73eddd56aed.png",
+    "static/media/trystan.jpg": "/static/media/trystan.e0af883962ccb35d08f4.jpg",
+    "static/media/zion.jpg": "/static/media/zion.23a5cd390d57bcf20a87.jpg",
+    "static/media/paige.jpg": "/static/media/paige.70a835c507cf51dd7892.jpg",
+    "static/media/rishita.png": "/static/media/rishita.58610dc416119dd9b908.png",
+    "static/media/arnavn.jpg": "/static/media/arnavn.46bab5aa702072e8ae37.jpg",
+    "static/media/angelina.jpg": "/static/media/angelina.c884b8a6a6876a7ec182.jpg",
+    "static/media/julia.jpg": "/static/media/julia.6d65e72e4d628e9816c7.jpg",
+    "static/media/nathan.png": "/static/media/nathan.585ee4b0ac1d5ab3c3e5.png",
+    "static/media/group_hack_photo.jpg": "/static/media/group_hack_photo.b9fba634e3bd823b8696.jpg",
+    "static/media/sharmada.jpg": "/static/media/sharmada.59d1e5cdc7dcbf52e431.jpg",
     "static/media/irvinehacks.jpg": "/static/media/irvinehacks.b8bb5fa301e527227241.jpg",
+    "static/media/yousef.jpeg": "/static/media/yousef.073c3867a1314b6a58e2.jpeg",
     "static/media/zothacks.jpg": "/static/media/zothacks.4104fd5bfc599c1671b2.jpg",
+    "static/media/elijah.jpg": "/static/media/elijah.8713ce320e11df158b10.jpg",
+    "static/media/alex.jpeg": "/static/media/alex.d23665c051c4df420217.jpeg",
+    "static/media/kailey.webp": "/static/media/kailey.f1a416bad188b7029601.webp",
     "static/media/workshops.jpg": "/static/media/workshops.267920466f839e896e64.jpg",
     "static/media/hackshapes_header.png": "/static/media/hackshapes_header.3473f4155bb353617aa8.png",
+    "static/media/arnavp.webp": "/static/media/arnavp.713dace3347d25e584d3.webp",
+    "static/media/ian.jpg": "/static/media/ian.73ad66faa650f87a1d03.jpg",
     "static/media/hacknights.jpg": "/static/media/hacknights.a0d132587508be5cdda0.jpg",
+    "static/media/grace.jpg": "/static/media/grace.1e420aed774f12e43b84.jpg",
+    "static/media/riship.jpeg": "/static/media/riship.2fd9dff003fe0cb593c6.jpeg",
+    "static/media/josh.jpg": "/static/media/josh.13fffe24e98f8b804fed.jpg",
+    "static/media/tracy.jpg": "/static/media/tracy.57dcca1da40d2fe093f6.jpg",
+    "static/media/ethan.webp": "/static/media/ethan.e50593982b783cd6661c.webp",
     "static/media/blank.png": "/static/media/blank.c3f945216dc12c9498dc.png",
     "static/media/discord_icon.svg": "/static/media/discord_icon.bc92e02342ad30bf4e7e57c6a5551e0d.svg",
     "static/media/gears.svg": "/static/media/gears.38fa5d4574f023f6ebfc27b3de76007a.svg",
@@ -27,11 +48,11 @@
     "static/media/search_icon.svg": "/static/media/search_icon.16343d2fce1e0eed9e5907137bd94772.svg",
     "static/media/youtube_icon.svg": "/static/media/youtube_icon.b6b73bc65622565a86cedeeed8126608.svg",
     "static/media/facebook_icon.svg": "/static/media/facebook_icon.1afc609c4854855cda01cc96b6cbc892.svg",
-    "main.40467a5e.css.map": "/static/css/main.40467a5e.css.map",
-    "main.ef88001a.js.map": "/static/js/main.ef88001a.js.map"
+    "main.62ae65a6.css.map": "/static/css/main.62ae65a6.css.map",
+    "main.c8550dd8.js.map": "/static/js/main.c8550dd8.js.map"
   },
   "entrypoints": [
-    "static/css/main.40467a5e.css",
-    "static/js/main.ef88001a.js"
+    "static/css/main.62ae65a6.css",
+    "static/js/main.c8550dd8.js"
   ]
 }
