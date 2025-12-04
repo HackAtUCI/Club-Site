@@ -12,7 +12,7 @@ export const teamMembers = {
 		{
 			name: "Alex Ngo",
 			position: "Corporate Director",
-			image: require("../assets/team/blank.png"),
+			image: require("../assets/team/alex.jpeg"),
 			linkedInUrl: "",
 		},
 		{
@@ -30,7 +30,7 @@ export const teamMembers = {
 		{
 			name: "Rishi Potipreddi",
 			position: "Corporate Organizer",
-			image: require("../assets/team/blank.png"),
+			image: require("../assets/team/riship.jpeg"),
 			linkedInUrl: "",
 		},
 		{
@@ -48,7 +48,7 @@ export const teamMembers = {
 		{
 			name: "Trystan Vasquez",
 			position: "Corporate Organizer",
-			image: require("../assets/team/blank.png"),
+			image: require("../assets/team/trystan.jpg"),
 			linkedInUrl: "",
 		},
 	],
@@ -57,7 +57,7 @@ export const teamMembers = {
 		{
 			name: "Angelina Wang",
 			position: "Logistics Director",
-			image: require("../assets/team/blank.png"),
+			image: require("../assets/team/angelina.jpg"),
 			linkedInUrl: "",
 		},
 		{
@@ -162,7 +162,7 @@ export const teamMembers = {
 		{
 			name: "Tracy Newberry",
 			position: "Marketing Organizer",
-			image: require("../assets/team/blank.png"),
+			image: require("../assets/team/tracy.jpg"),
 			linkedInUrl: "",
 		},
 	],
