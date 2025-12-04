@@ -75,7 +75,7 @@ export const teamMembers = {
 		{
 			name: "Arnav Pandey",
 			position: "Logistics Organizer",
-			image: require("../assets/team/arnavp.png"),
+			image: require("../assets/team/arnavp.webp"),
 			linkedInUrl: "",
 		},
 		{
@@ -87,7 +87,7 @@ export const teamMembers = {
 		{
 			name: "Ethan Chin",
 			position: "Logistics Organizer",
-			image: require("../assets/team/ethan.png"),
+			image: require("../assets/team/ethan.webp"),
 			linkedInUrl: "",
 		},
 		{
@@ -105,7 +105,7 @@ export const teamMembers = {
 		{
 			name: "Kailey Trinh",
 			position: "Logistics Organizer",
-			image: require("../assets/team/kailey.png"),
+			image: require("../assets/team/kailey.webp"),
 			linkedInUrl: "",
 		},
 		{
