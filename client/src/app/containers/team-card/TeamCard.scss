@@ -38,6 +38,8 @@
   .team-card {
     height: 220px;
     width: 110px;
+    text-align: center;
+    margin: auto;
 
     .images-container {
       position: relative;
@@ -61,7 +63,7 @@
       }
     }
     .name-sizing {
-      font-size: 13px;
+      text-align: center;
     }
   }
 }
