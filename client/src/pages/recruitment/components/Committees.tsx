@@ -6,6 +6,7 @@ import LogisticsText from "./committee-texts/LogisticsText";
 import MarketingText from "./committee-texts/MarketingText";
 import GraphicsText from "./committee-texts/GraphicsText";
 import TechnologyText from "./committee-texts/TechnologyText";
+import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
 
 // Extend TabInterface to restrict buttonText to specific committee names
 interface CommitteeTabInterface extends Omit<TabInterface, "buttonText"> {
@@ -17,57 +18,14 @@ interface CommitteeTabInterface extends Omit<TabInterface, "buttonText"> {
 		| "Technology";
 }
 
-const committeeTabs: CommitteeTabInterface[] = [
-	{
-		buttonText: "Corporate",
-		tabComponent: (
-			<RecruitmentTab
-				headingText="Corporate"
-				textComponent={<CorporateText />}
-			/>
-		),
-	},
-	{
-		buttonText: "Logistics",
-		tabComponent: (
-			<RecruitmentTab
-				headingText="Logistics"
-				textComponent={<LogisticsText />}
-			/>
-		),
-	},
-	{
-		buttonText: "Marketing",
-		tabComponent: (
-			<RecruitmentTab
-				headingText="Marketing"
-				textComponent={<MarketingText />}
-			/>
-		),
-	},
-	{
-		buttonText: "Graphics",
-		tabComponent: (
-			<RecruitmentTab headingText="Graphics" textComponent={<GraphicsText />} />
-		),
-	},
-	{
-		buttonText: "Technology",
-		tabComponent: (
-			<RecruitmentTab
-				headingText="Technology"
-				textComponent={<TechnologyText />}
-			/>
-		),
-	},
-];
-
 function RecruitmentTab({
 	textComponent,
 	headingText,
+	showApplyButton,
 }: {
 	textComponent: React.ReactNode;
 	headingText: string;
+	showApplyButton: boolean;
 }) {
 	return (
 		<>
@@ -75,19 +33,74 @@ function RecruitmentTab({
 				<h3 className="text-subtitle mb-8">{headingText}</h3>
 				{textComponent}
 			</Box>
-			{/* <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-                <PrimaryButton
-                    className="px-[10rem]"
-                    variant="apply"
-                >
-                    Apply
-                </PrimaryButton>
-            </div> */}
+			{showApplyButton && (
+				<div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+					<PrimaryButton className="px-[10rem]" variant="apply">
+						Apply
+					</PrimaryButton>
+				</div>
+			)}
 		</>
 	);
 }
 
-export default function Committees() {
+export default function Committees({
+	showApplyButton,
+}: {
+	showApplyButton: boolean;
+}) {
+	const committeeTabs: CommitteeTabInterface[] = [
+		{
+			buttonText: "Corporate",
+			tabComponent: (
+				<RecruitmentTab
+					showApplyButton={showApplyButton}
+					headingText="Corporate"
+					textComponent={<CorporateText />}
+				/>
+			),
+		},
+		{
+			buttonText: "Logistics",
+			tabComponent: (
+				<RecruitmentTab
+					showApplyButton={showApplyButton}
+					headingText="Logistics"
+					textComponent={<LogisticsText />}
+				/>
+			),
+		},
+		{
+			buttonText: "Marketing",
+			tabComponent: (
+				<RecruitmentTab
+					showApplyButton={showApplyButton}
+					headingText="Marketing"
+					textComponent={<MarketingText />}
+				/>
+			),
+		},
+		{
+			buttonText: "Graphics",
+			tabComponent: (
+				<RecruitmentTab
+					showApplyButton={showApplyButton}
+					headingText="Graphics"
+					textComponent={<GraphicsText />}
+				/>
+			),
+		},
+		{
+			buttonText: "Technology",
+			tabComponent: (
+				<RecruitmentTab
+					showApplyButton={showApplyButton}
+					headingText="Technology"
+					textComponent={<TechnologyText />}
+				/>
+			),
+		},
+	];
 	return (
 		<section className="py-30">
 			<h2 className="text-subtitle text-center">Our Committees</h2>
