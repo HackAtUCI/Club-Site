@@ -102,7 +102,9 @@ export default function Committees({
 	];
 	return (
 		<section className="py-30">
-			<h2 className="text-subtitle text-center">Our Committees</h2>
+			<h2 className="text-subtitle text-center" id="committees">
+				Our Committees
+			</h2>
 			<Tabs tabs={committeeTabs} />
 		</section>
 	);

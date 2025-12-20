@@ -1,7 +1,7 @@
 import Committees from "./components/Committees";
 import Hero from "./components/Hero";
 
-const IS_RECRUITMENT_OPEN = false;
+const IS_RECRUITMENT_OPEN = true;
 
 export default function Recruitment() {
 	return (

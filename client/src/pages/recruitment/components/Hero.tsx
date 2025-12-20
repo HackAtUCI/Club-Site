@@ -9,9 +9,13 @@ export default function Hero({
 		<section className="flex flex-col justify-center items-center gap-12 h-screen">
 			<h1 className="text-heading">Recruitment</h1>
 			{showApplyButton ? (
-				<PrimaryButton>Apply to be an organizer!</PrimaryButton>
+				<PrimaryButton href="#committees">
+					Apply to be an organizer!
+				</PrimaryButton>
 			) : (
-				<PrimaryButton>Learn more about our committees!</PrimaryButton>
+				<PrimaryButton href="#committees">
+					Learn more about our committees!
+				</PrimaryButton>
 			)}
 		</section>
 	);
