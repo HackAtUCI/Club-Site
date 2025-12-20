@@ -1,14 +1,13 @@
 import Tabs, { type TabInterface } from "@/lib/components/Tabs/Tabs";
 import Box from "@/lib/components/Box/Box";
-// import PrimaryButton from "../PrimaryButton/PrimaryButton";
+import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
+
 import CorporateText from "./committee-texts/CorporateText";
 import LogisticsText from "./committee-texts/LogisticsText";
 import MarketingText from "./committee-texts/MarketingText";
 import GraphicsText from "./committee-texts/GraphicsText";
 import TechnologyText from "./committee-texts/TechnologyText";
-import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
 
-// Extend TabInterface to restrict buttonText to specific committee names
 interface CommitteeTabInterface extends Omit<TabInterface, "buttonText"> {
 	buttonText:
 		| "Corporate"
