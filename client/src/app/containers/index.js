@@ -5,3 +5,5 @@ export { default as Header } from "./header/Header";
 export { default as Footer } from "./footer/Footer";
 export { default as HomeCard } from "./home-card/HomeCard";
 export { default as TeamCard } from "./team-card/TeamCard";
+export { default as PrimaryButton } from "./primary-button/PrimaryButton";
+export { default as Box } from "./box/Box";

@@ -1,0 +1,60 @@
+.primary-button {
+	font-family: "Manrope", sans-serif;
+	font-weight: 500;
+	font-size: 48px;
+	line-height: 100%;
+	letter-spacing: 0%;
+	text-align: center;
+	background: linear-gradient(90.01deg, #6e93db 0.01%, #82ffb4 166.47%);
+	border: none;
+	border-radius: 500px;
+	color: white;
+	padding: 0;
+	width: 742.92px;
+	height: 106.52px;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: filter 0.3s ease;
+	box-sizing: border-box;
+
+	&:hover {
+		color: white;
+		text-decoration: none;
+		filter: brightness(0.85);
+	}
+
+	&:active {
+		color: white;
+		text-decoration: none;
+		filter: brightness(0.75);
+	}
+
+	&:visited {
+		color: white;
+		text-decoration: none;
+	}
+
+	&:link {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+@media (max-width: 900px) {
+	.primary-button {
+		width: 100%;
+		max-width: 742.92px;
+		font-size: 32px;
+		height: 80px;
+	}
+}
+
+@media (max-width: 480px) {
+	.primary-button {
+		font-size: 24px;
+		height: 60px;
+	}
+}
