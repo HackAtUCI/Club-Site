@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.scss";
 
 import { Newsletter } from "app/components";
@@ -13,6 +13,17 @@ import CircularMailIcon from "assets/icons/circular_mail_icon.svg";
 import DiscordIcon from "assets/icons/discord_icon.svg";
 
 function Contact(props) {
+  const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false);
+
+  const openNewsletterModal = (e) => {
+    e.preventDefault();
+    setIsNewsletterModalOpen(true);
+  };
+
+  const closeNewsletterModal = () => {
+    setIsNewsletterModalOpen(false);
+  };
+
   return (
     <div className="Contact" style={props.style}>
       <Header title="Contact Us" />
@@ -54,7 +65,7 @@ function Contact(props) {
           </div>
           <div className="contact-card-content">
             <h2>Sign up for our newsletter!</h2>
-            <PrimaryButton href="#newsletter">Sign up →</PrimaryButton>
+            <PrimaryButton onClick={openNewsletterModal}>Sign up →</PrimaryButton>
           </div>
         </Box>
 
@@ -69,7 +80,7 @@ function Contact(props) {
         </Box>
       </div>
 
-      <Newsletter />
+      <Newsletter isOpen={isNewsletterModalOpen} onRequestClose={closeNewsletterModal} />
     </div>
   );
 }

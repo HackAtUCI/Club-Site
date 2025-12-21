@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Alert from "react-bootstrap/Alert";
-import DiscordIcon from "../../../assets/icons/discord_icon.svg";
+import Modal from "react-modal";
+import { PrimaryButton } from "app/containers";
 
 import "./Newsletter.scss";
 
-function Newsletter(props) {
+Modal.setAppElement("#root");
+
+function Newsletter({ isOpen, onRequestClose }) {
 	const [showAlert, setShowAlert] = useState(false);
 	const [alertSuccess, setAlertSuccess] = useState(false);
 
@@ -14,7 +17,19 @@ function Newsletter(props) {
 	const [lastName, setLastName] = useState("");
 	const [graduationYear, setGraduationYear] = useState("");
 
+	useEffect(() => {
+		if (!isOpen) {
+			setShowAlert(false);
+			setAlertSuccess(false);
+			setEmail("");
+			setFirstName("");
+			setLastName("");
+			setGraduationYear("");
+		}
+	}, [isOpen]);
+
 	function submitDiscordSignUp(e) {
+		e.preventDefault();
 		axios
 			.post("api/discord/signups", {
 				email,
@@ -32,23 +47,16 @@ function Newsletter(props) {
 	}
 
 	return (
-		<div
-			id="newsletter"
-			className="jumbotron jumbotron-fluid newsletter"
-			style={props.style}
+		<Modal
+			isOpen={isOpen}
+			onRequestClose={onRequestClose}
+			className="newsletter-modal"
+			overlayClassName="newsletter-modal-overlay"
 		>
-			<div id="discord" className="container newsletter-container">
-				<h3> Get Involved! </h3>
-				<a href="https://discord.gg/2gZjQMjKeF">
-					<div className="card discord-card">
-						<h2>Join our Discord</h2>
-						<img
-							className="discord-icon"
-							src={DiscordIcon}
-							alt="Join Discord"
-						/>
-					</div>
-				</a>
+			<div className="newsletter-modal-content">
+				<button className="newsletter-modal-close" onClick={onRequestClose}>
+					×
+				</button>
 				<div className="card">
 					<h2>Join our newsletter!</h2>
 					<form
@@ -115,9 +123,9 @@ function Newsletter(props) {
 						/>
 						<br />
 						<div className="d-flex text-center flex-center">
-							<button className="newsletter-button" name="subscribe">
+							<PrimaryButton type="submit" name="subscribe">
 								Sign Up
-							</button>
+							</PrimaryButton>
 						</div>
 						<br />
 						<div className="d-flex text-left">
@@ -151,7 +159,7 @@ function Newsletter(props) {
 					</p>
 				</div>
 			</div>
-		</div>
+		</Modal>
 	);
 }
 

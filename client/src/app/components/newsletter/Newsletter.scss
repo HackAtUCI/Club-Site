@@ -1,134 +1,184 @@
 @import "src/globals/hack-variables.scss";
 
+.newsletter-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.75);
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.newsletter-modal {
+	position: relative;
+	background: #2d2d3e;
+	border-radius: 1rem;
+	max-width: 600px;
+	width: 90%;
+	max-height: 90vh;
+	overflow-y: auto;
+	outline: none;
+}
+
+.newsletter-modal-content {
+	padding: 2rem;
+	position: relative;
+}
+
+.newsletter-modal-close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: transparent;
+	border: none;
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+	line-height: 1;
+	padding: 0;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
 .newsletter {
-  background-color: #f3f3f3;
-  margin: 0;
+	background-color: #f3f3f3;
+	margin: 0;
+}
+
+.newsletter-modal-content {
+	& .card {
+		padding: 48px;
+		margin: 0;
+		background: transparent;
+		border: none;
+	}
+
+	& h2 {
+		font-size: 36px !important;
+		font-weight: normal !important;
+		color: white;
+	}
+
+	& label {
+		color: white;
+	}
+
+	& .form-control {
+		background-color: rgba(255, 255, 255, 0.1);
+		border-color: rgba(255, 255, 255, 0.3);
+		color: white;
+
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	& .primary-button {
+		width: 100%;
+		max-width: 400px;
+		font-size: 32px;
+		height: 70px;
+	}
 }
 
 .newsletter-container {
-  display: flex;
-  flex-direction: column;
-  & a {
-    color: black;
-    text-decoration: none;
-  }
-  & a:hover {
-    color: white;
-    text-decoration: none;
-  }
-  & h2 {
-    font-size: 36px !important;
-    font-weight: normal !important;
-  }
-  & .card {
-    padding: 48px;
-    margin: 48px 200px !important;
-  }
+	display: flex;
+	flex-direction: column;
+	& a {
+		color: black;
+		text-decoration: none;
+	}
+	& a:hover {
+		color: white;
+		text-decoration: none;
+	}
+	& h2 {
+		font-size: 36px !important;
+		font-weight: normal !important;
+	}
+	& .card {
+		padding: 48px;
+		margin: 48px 200px !important;
+	}
 }
 
 .jumbotron {
-  margin-bottom: 0 !important;
+	margin-bottom: 0 !important;
 }
 
 .newsletter-container h1 {
-  margin: 0;
+	margin: 0;
 }
 
 .newsletter-mailchimp-info {
-  font-size: 16px;
-  font-weight: 400;
-  color: #a9a9a9;
+	font-size: 16px;
+	font-weight: 400;
+	color: #a9a9a9;
 }
 
 .newsletter-info {
-  font-size: 25px;
+	font-size: 25px;
 }
 
 .newsletter-form {
-  text-align: left;
+	text-align: left;
 }
 
 .newsletter-form .form-control {
-  width: 100%;
-  font-size: 24px;
+	width: 100%;
+	font-size: 24px;
 }
 
 .newsletter-button {
-  border-color: transparent;
-  border-radius: 30px;
-  font-size: 28px;
-  font-weight: 600;
-  padding: 10px 25px;
-  background-color: $red;
-  color: white;
-  max-width: 10em;
-  position: relative;
-  z-index: 10;
-  margin-left: 10px;
-}
-
-.discord-card {
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-  transition: background-color 0.5s ease;
-  color: black;
-  &:hover {
-    background-color: #5865F0;
-    color: white;
-    cursor: pointer;
-  }
-}
-
-.discord-icon {
-  width: 98px;
-  height: 98px;
-}
-
-.discord-button {
-  border-color: transparent;
-  border-radius: 30px;
-  font-size: 28px;
-  padding: 10px 25px;
-  background-color: #7289da;
-  color: white;
-  max-width: 10em;
-  position: relative;
-  z-index: 10;
+	border-color: transparent;
+	border-radius: 30px;
+	font-size: 28px;
+	font-weight: 600;
+	padding: 10px 25px;
+	background-color: $red;
+	color: white;
+	max-width: 10em;
+	position: relative;
+	z-index: 10;
+	margin-left: 10px;
 }
 
 .newsletter-button a {
-  color: white;
-}
-
-.discord-button a {
-  color: white;
+	color: white;
 }
 
 .mentorship-button {
-  border-color: transparent;
-  border-radius: 30px;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 10px 25px;
-  background-color: $red;
-  color: white;
-  position: relative;
-  z-index: 10;
+	border-color: transparent;
+	border-radius: 30px;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 10px 25px;
+	background-color: $red;
+	color: white;
+	position: relative;
+	z-index: 10;
 }
 
 @media screen and (max-width: 780px) {
-  .newsletter-container {
-    font-size: 23px;
-    & .card {
-      margin: 48px 0 !important;
-    }
-  }
-  .discord-button {
-    font-size: 25px;
-  }
-  .newsletter-button {
-    font-size: 25px;
-  }
+	.newsletter-container {
+		font-size: 23px;
+		& .card {
+			margin: 48px 0 !important;
+		}
+	}
+	.newsletter-button {
+		font-size: 25px;
+	}
 }
