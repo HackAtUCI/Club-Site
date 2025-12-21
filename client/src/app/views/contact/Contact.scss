@@ -1,40 +1,106 @@
 @import "src/globals/hack-variables.scss";
 
-.Contact a {
-  color: #233B92;
-  &:hover {
-    color: #233B92
-  }
+.Contact {
+	background: #2d2d3e;
+	min-height: 100vh;
+
+	// Override header styles, can be removed if Header.scss is updated
+	.global-header {
+		background: #232332;
+
+		.header-image {
+			background-image: none;
+		}
+	}
 }
 
 .contact-icons {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	padding: 4rem 0;
 }
 
 .contact-icon {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  .contact-label {
-    margin-bottom: 1.5rem;
-  }
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	img {
+		width: 6.25rem;
+		height: 6.25rem;
+	}
+
+	&.contact-icon-mail img {
+		width: 7.3rem;
+		height: 7.3rem;
+	}
+
+	&.contact-icon-youtube img {
+		width: 10rem;
+		height: 10rem;
+	}
 }
 
-.contact-icon img {
-  height: 6rem;
-  width: 6rem;
+@media (min-width: 1024px) {
+	.contact-icons {
+		gap: 3.5rem;
+	}
 }
 
-@media (min-width: 768px) {
-  .contact-icons {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+@media (max-width: 768px) {
+	.contact-icons {
+		gap: 1.5rem;
+		padding: 2.5rem 0;
+	}
 
-  .contact-icon {
-    margin: 0 0.65rem;
-  }
+	.contact-icon img {
+		width: 4rem;
+		height: 4rem;
+	}
+
+	.contact-icon.contact-icon-mail img {
+		width: 4.8rem;
+		height: 4.8rem;
+	}
+
+	.contact-icon.contact-icon-youtube img {
+		width: 6.3rem;
+		height: 6.3rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.contact-icons {
+		gap: 1rem;
+		padding: 2rem 0;
+	}
+
+	.contact-icon img {
+		width: 3rem;
+		height: 3rem;
+	}
+
+	.contact-icon.contact-icon-mail img {
+		width: 3.6rem;
+		height: 3.6rem;
+	}
+
+	.contact-icon.contact-icon-youtube img {
+		width: 4.8rem;
+		height: 4.8rem;
+	}
 }

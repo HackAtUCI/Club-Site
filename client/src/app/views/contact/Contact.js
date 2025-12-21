@@ -20,6 +20,7 @@ function Contact(props) {
           title="Email"
           link="mailto:hack@uci.edu"
           image={MailIcon}
+          isMail={true}
         />
         <ContactIcon
           title="Facebook"
@@ -40,6 +41,7 @@ function Contact(props) {
           title="YouTube"
           link="https://www.youtube.com/channel/UCeQbk4CMo3mxPHMtY80PtFQ"
           image={YouTubeIcon}
+          isYouTube={true}
         />
       </div>
       <Newsletter />
@@ -47,12 +49,12 @@ function Contact(props) {
   );
 }
 
-function ContactIcon({ title, link, image }) {
+function ContactIcon({ title, link, image, isYouTube = false, isMail = false }) {
   return (
-    <div className="contact-icon">
-      <a href={link}>
-        <div className="contact-label">{title}</div>
-        <img src={image} alt="" />
+    // Mail and YouTube icons require different sizing to maintain vertical alignment with other icons
+    <div className={`contact-icon ${isYouTube ? 'contact-icon-youtube' : ''} ${isMail ? 'contact-icon-mail' : ''}`}>
+      <a href={link} aria-label={title}>
+        <img src={image} alt={title} />
       </a>
     </div>
   );
