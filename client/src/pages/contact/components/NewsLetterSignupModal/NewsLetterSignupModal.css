@@ -1,0 +1,144 @@
+.newsletter-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.75);
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.newsletter-modal {
+	position: relative;
+	background: #2d2d3e;
+	border-radius: 1rem;
+	max-width: 600px;
+	width: 90%;
+	max-height: 90vh;
+	overflow-y: auto;
+	outline: none;
+}
+
+.newsletter-modal-content {
+	padding: 2rem;
+	position: relative;
+}
+
+.newsletter-modal-close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: transparent;
+	border: none;
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+	line-height: 1;
+	padding: 0;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+}
+
+.newsletter-modal-close:hover {
+	opacity: 0.7;
+}
+
+.newsletter-modal-content .card {
+	padding: 48px;
+	margin: 0;
+	background: transparent;
+	border: none;
+}
+
+.newsletter-modal-content h2 {
+	font-size: 36px !important;
+	font-weight: 400 !important;
+	color: white;
+}
+
+.newsletter-modal-content label {
+	color: white;
+	font-weight: 400;
+}
+
+.newsletter-modal-content .form-control {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.3);
+	color: white;
+	font-weight: 400;
+}
+
+.newsletter-modal-content .form-control::placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-modal-content .primary-button {
+	width: 100%;
+	max-width: 400px;
+	font-size: 32px;
+	height: 70px;
+}
+
+.newsletter-form {
+	text-align: left;
+}
+
+.newsletter-form .form-control {
+	width: 100%;
+	font-size: 24px;
+}
+
+.newsletter-mailchimp-info {
+	font-size: 16px;
+	font-weight: 400;
+	color: #a9a9a9;
+}
+
+.newsletter-alert {
+	padding: 1rem;
+	border-radius: 0.5rem;
+	margin-top: 1rem;
+}
+
+.newsletter-alert h3 {
+	margin: 0 0 0.5rem 0;
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+.newsletter-alert p {
+	margin: 0.5rem 0 0 0;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.newsletter-alert a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.newsletter-alert-success {
+	background-color: rgba(34, 197, 94, 0.2);
+	border: 1px solid rgba(34, 197, 94, 0.5);
+	color: #86efac;
+}
+
+.newsletter-alert-error {
+	background-color: rgba(239, 68, 68, 0.2);
+	border: 1px solid rgba(239, 68, 68, 0.5);
+	color: #fca5a5;
+}
+
+@media screen and (max-width: 780px) {
+	.newsletter-modal-content .primary-button {
+		font-size: 24px;
+		height: 60px;
+	}
+}
