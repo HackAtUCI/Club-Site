@@ -2,9 +2,16 @@ import React from "react";
 import HackLogo from "@/assets/logos/hack.svg";
 import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
 
-const Hero: React.FC = () => {
+interface HeroProps {
+	[x: string]: unknown;
+}
+
+const Hero: React.FC<HeroProps> = ({ ...props }) => {
 	return (
-		<div className="flex h-screen w-full flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:gap-24">
+		<div
+			className="flex h-screen w-full flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:gap-24"
+			{...props}
+		>
 			<div className="flex items-center justify-center">
 				<img
 					src={HackLogo}
