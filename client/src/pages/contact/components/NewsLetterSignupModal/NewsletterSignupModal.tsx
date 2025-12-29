@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import Modal from "react-modal";
 import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
 
@@ -23,19 +23,22 @@ export default function NewsletterSignupModal({
 	const [lastName, setLastName] = useState("");
 	const [graduationYear, setGraduationYear] = useState("");
 
-	useEffect(() => {
-		if (!isOpen) {
-			setShowAlert(false);
-			setAlertSuccess(false);
-			setEmail("");
-			setFirstName("");
-			setLastName("");
-			setGraduationYear("");
-		}
-	}, [isOpen]);
+	function handleCloseModal() {
+		clearForm();
+		onRequestClose();
+	}
 
-	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-		e.preventDefault();
+	function clearForm() {
+		setShowAlert(false);
+		setAlertSuccess(false);
+		setEmail("");
+		setFirstName("");
+		setLastName("");
+		setGraduationYear("");
+	}
+
+	function handleSubmit() {
+		// Optimistic UI update
 		setAlertSuccess(true);
 		setShowAlert(true);
 	}
@@ -48,7 +51,7 @@ export default function NewsletterSignupModal({
 			overlayClassName="newsletter-modal-overlay"
 		>
 			<div className="newsletter-modal-content">
-				<button className="newsletter-modal-close" onClick={onRequestClose}>
+				<button className="newsletter-modal-close" onClick={handleCloseModal}>
 					×
 				</button>
 				<div className="card">
