@@ -101,41 +101,6 @@
 	color: #a9a9a9;
 }
 
-.newsletter-alert {
-	padding: 1rem;
-	border-radius: 0.5rem;
-	margin-top: 1rem;
-}
-
-.newsletter-alert h3 {
-	margin: 0 0 0.5rem 0;
-	font-size: 1.25rem;
-	font-weight: 600;
-}
-
-.newsletter-alert p {
-	margin: 0.5rem 0 0 0;
-	font-size: 1rem;
-	font-weight: 400;
-}
-
-.newsletter-alert a {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.newsletter-alert-success {
-	background-color: rgba(34, 197, 94, 0.2);
-	border: 1px solid rgba(34, 197, 94, 0.5);
-	color: #86efac;
-}
-
-.newsletter-alert-error {
-	background-color: rgba(239, 68, 68, 0.2);
-	border: 1px solid rgba(239, 68, 68, 0.5);
-	color: #fca5a5;
-}
-
 @media screen and (max-width: 780px) {
 	.newsletter-modal-content .primary-button {
 		font-size: 24px;

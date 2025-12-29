@@ -15,9 +15,6 @@ export default function NewsletterSignupModal({
 	isOpen,
 	onRequestClose,
 }: NewsletterSignupModalProps) {
-	const [showAlert, setShowAlert] = useState(false);
-	const [alertSuccess, setAlertSuccess] = useState(false);
-
 	const [email, setEmail] = useState("");
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("");
@@ -29,18 +26,10 @@ export default function NewsletterSignupModal({
 	}
 
 	function clearForm() {
-		setShowAlert(false);
-		setAlertSuccess(false);
 		setEmail("");
 		setFirstName("");
 		setLastName("");
 		setGraduationYear("");
-	}
-
-	function handleSubmit() {
-		// Optimistic UI update
-		setAlertSuccess(true);
-		setShowAlert(true);
 	}
 
 	return (
@@ -62,7 +51,7 @@ export default function NewsletterSignupModal({
 						method="post"
 						name="mc-embedded-subscribe-form"
 						target="_blank"
-						onSubmit={handleSubmit}
+						// onSubmit={handleSubmit}
 					>
 						<label>
 							Graduating Year <span className="asterisk">*</span>
@@ -123,32 +112,6 @@ export default function NewsletterSignupModal({
 							</PrimaryButton>
 						</div>
 						<br />
-						{showAlert && (
-							<div
-								className={`newsletter-alert ${
-									alertSuccess
-										? "newsletter-alert-success"
-										: "newsletter-alert-error"
-								}`}
-							>
-								{alertSuccess ? (
-									<>
-										<h3>Successfully Submitted!</h3>
-									</>
-								) : (
-									<>
-										<h3>Submission Error!</h3>
-										<p>
-											Your request to subscribe has not been queued! You may
-											have already submitted a request under this email. If you
-											do not receive an invite email in 20 minutes, please
-											contact us at{" "}
-											<a href="mailto:hack@uci.edu">hack@uci.edu</a>.
-										</p>
-									</>
-								)}
-							</div>
-						)}
 					</form>
 					<p className="newsletter-mailchimp-info">
 						Mailchimp collects the following information for our sponsors and to
