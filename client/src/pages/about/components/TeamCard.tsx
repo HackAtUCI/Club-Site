@@ -4,7 +4,7 @@ import linkedinLogo from "@/assets/logos/linkedin.svg";
 interface TeamCardProps {
 	name: string;
 	position: string;
-	image?: any;
+	image?: string;
 	linkedInUrl?: string;
 }
 
@@ -20,6 +20,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
 				<img
 					src={image}
 					alt={name}
+					loading="lazy"
 					className="w-full aspect-square object-cover rounded-md bg-gray-600"
 				/>
 			</div>
