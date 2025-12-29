@@ -87,6 +87,9 @@
 }
 
 .newsletter-form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 	text-align: left;
 }
 
@@ -96,7 +99,8 @@
 }
 
 .newsletter-mailchimp-info {
-	font-size: 16px;
+	margin-top: 16px;
+	font-size: 12px;
 	font-weight: 400;
 	color: #a9a9a9;
 }

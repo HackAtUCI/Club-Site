@@ -51,67 +51,73 @@ export default function NewsletterSignupModal({
 						method="post"
 						name="mc-embedded-subscribe-form"
 						target="_blank"
-						// onSubmit={handleSubmit}
 					>
-						<label>
-							Graduating Year <span className="asterisk">*</span>
-						</label>
-						<input
-							id="userYear"
-							type="text"
-							maxLength={4}
-							className="form-control"
-							name="MMERGE4"
-							required
-							value={graduationYear}
-							onChange={(event) => setGraduationYear(event.target.value)}
-						/>
-						<br />
-						<label>
-							First Name <span className="asterisk">*</span>
-						</label>
-						<input
-							id="userFName"
-							type="text"
-							className="form-control"
-							name="FNAME"
-							required
-							value={firstName}
-							onChange={(event) => setFirstName(event.target.value)}
-						/>
-						<br />
-						<label>
-							Last Name <span className="asterisk">*</span>
-						</label>
-						<input
-							id="userLName"
-							type="text"
-							className="form-control"
-							name="LNAME"
-							required
-							value={lastName}
-							onChange={(event) => setLastName(event.target.value)}
-						/>
-						<br />
-						<label>
-							Email Address <span className="asterisk">*</span>
-						</label>
-						<input
-							id="userEmail"
-							type="email"
-							className="form-control"
-							name="EMAIL"
-							required
-							value={email}
-							onChange={(event) => setEmail(event.target.value)}
-						/>
-						<br />
+						<div className="newletter-input-group">
+							<label>
+								Graduating Year <span className="asterisk">*</span>
+							</label>
+							<input
+								id="userYear"
+								type="text"
+								maxLength={4}
+								className="form-control"
+								name="MMERGE4"
+								required
+								value={graduationYear}
+								onChange={(event) => setGraduationYear(event.target.value)}
+							/>
+						</div>
+
+						<div className="newletter-input-group">
+							<label>
+								First Name <span className="asterisk">*</span>
+							</label>
+							<input
+								id="userFName"
+								type="text"
+								className="form-control"
+								name="FNAME"
+								required
+								value={firstName}
+								onChange={(event) => setFirstName(event.target.value)}
+							/>
+						</div>
+
+						<div className="newletter-input-group">
+							<label>
+								Last Name <span className="asterisk">*</span>
+							</label>
+							<input
+								id="userLName"
+								type="text"
+								className="form-control"
+								name="LNAME"
+								required
+								value={lastName}
+								onChange={(event) => setLastName(event.target.value)}
+							/>
+						</div>
+
+						<div className="newletter-input-group">
+							<label>
+								Email Address <span className="asterisk">*</span>
+							</label>
+							<input
+								id="userEmail"
+								type="email"
+								className="form-control"
+								name="EMAIL"
+								required
+								value={email}
+								onChange={(event) => setEmail(event.target.value)}
+							/>
+						</div>
+
 						<div className="d-flex text-center flex-center">
 							<PrimaryButton type="submit" name="subscribe">
 								Sign Up
 							</PrimaryButton>
 						</div>
-						<br />
 					</form>
 					<p className="newsletter-mailchimp-info">
 						Mailchimp collects the following information for our sponsors and to
