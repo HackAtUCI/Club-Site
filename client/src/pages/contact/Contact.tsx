@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import "./Contact.css";
 
+import ContactCard from "@/lib/components/ContactCard/ContactCard";
 import NewsletterSignupModal from "./components/NewsLetterSignupModal/NewsletterSignupModal";
-import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
-import { UnspacedBox } from "@/lib/components/Box/Box";
 
 import MailIcon from "@/assets/icons/mail.svg";
 import FacebookIcon from "@/assets/logos/facebook.svg";
@@ -12,6 +10,8 @@ import LinkedInIcon from "@/assets/logos/linkedin.svg";
 import YouTubeIcon from "@/assets/logos/youtube.svg";
 import CircularMailIcon from "@/assets/logos/circular_mail.svg";
 import DiscordIcon from "@/assets/logos/circular_discord.svg";
+
+import "./Contact.css";
 
 interface ContactIconProps {
 	title: string;
@@ -91,29 +91,18 @@ export default function Contact() {
 			</div>
 
 			<div className="contact-cards">
-				<UnspacedBox className="contact-card">
-					<div className="contact-card-icon">
-						<img src={CircularMailIcon} alt="Mail" />
-					</div>
-					<div className="contact-card-content">
-						<h2>Sign up for our newsletter!</h2>
-						<PrimaryButton onClick={openNewsletterModal}>
-							Sign up →
-						</PrimaryButton>
-					</div>
-				</UnspacedBox>
-
-				<UnspacedBox className="contact-card">
-					<div className="contact-card-icon">
-						<img src={DiscordIcon} alt="Discord" />
-					</div>
-					<div className="contact-card-content">
-						<h2>Join our Discord!</h2>
-						<PrimaryButton href="https://discord.gg/2gZjQMjKeF">
-							Join →
-						</PrimaryButton>
-					</div>
-				</UnspacedBox>
+				<ContactCard
+					title="Sign up for our newsletter!"
+					buttonText="Sign up →"
+					onClick={openNewsletterModal}
+					icon={CircularMailIcon}
+				/>
+				<ContactCard
+					title="Join our Discord!"
+					buttonText="Join →"
+					href="https://discord.gg/2gZjQMjKeF"
+					icon={DiscordIcon}
+				/>
 			</div>
 
 			<NewsletterSignupModal
