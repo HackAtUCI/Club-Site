@@ -100,3 +100,33 @@
 		font-size: 32px;
 	}
 }
+
+/* ===== Forced mobile styles (ignore viewport size) ===== */
+
+.contact-card.force-mobile {
+	width: 100%;
+	height: auto;
+	min-height: 300px;
+	flex-direction: column;
+	padding: 2rem 1rem;
+}
+
+.contact-card.force-mobile .contact-card-icon {
+	position: relative;
+	left: 0;
+	margin-bottom: 1rem;
+}
+
+.contact-card.force-mobile .contact-card-icon img {
+	width: 120px;
+	height: 120px;
+}
+
+.contact-card.force-mobile .contact-card-content {
+	margin-left: 0;
+	gap: 1.5rem;
+}
+
+.contact-card.force-mobile .contact-card-content h2 {
+	font-size: 32px;
+}
