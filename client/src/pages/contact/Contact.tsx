@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./Contact.css";
 
-import ContactCard from "./components/ContactCard/ContactCard";
+import ContactCard from "@/lib/components/ContactCard/ContactCard";
 import NewsletterSignupModal from "./components/NewsLetterSignupModal/NewsletterSignupModal";
 
 import MailIcon from "@/assets/icons/mail.svg";
@@ -11,6 +10,8 @@ import LinkedInIcon from "@/assets/logos/linkedin.svg";
 import YouTubeIcon from "@/assets/logos/youtube.svg";
 import CircularMailIcon from "@/assets/logos/circular_mail.svg";
 import DiscordIcon from "@/assets/logos/circular_discord.svg";
+
+import "./Contact.css";
 
 interface ContactIconProps {
 	title: string;
