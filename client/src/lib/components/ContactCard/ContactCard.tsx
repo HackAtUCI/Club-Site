@@ -1,6 +1,7 @@
+import clsx from "clsx";
+
 import { UnspacedBox } from "@/lib/components/Box/Box";
 import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
-import clsx from "clsx";
 
 import "./ContactCard.css";
 
