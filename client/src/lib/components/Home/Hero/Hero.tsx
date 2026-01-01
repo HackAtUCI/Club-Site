@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({ onClick, ...props }) => {
 			</div>
 			<div className="flex flex-col items-center justify-center gap-8">
 				<h1 className="text-heading text-center">Hack at UCI</h1>
-				<PrimaryButton className="px-32" onClick={onClick}>
+				<PrimaryButton className="md:px-32" onClick={onClick}>
 					Get Involved
 				</PrimaryButton>
 			</div>
