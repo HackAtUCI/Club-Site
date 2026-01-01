@@ -6,7 +6,7 @@ import NewsletterSignupModal from "./components/NewsLetterSignupModal/Newsletter
 import MailIcon from "@/assets/icons/mail.svg";
 import FacebookIcon from "@/assets/logos/facebook.svg";
 import InstagramIcon from "@/assets/logos/instagram.svg";
-import LinkedInIcon from "@/assets/logos/linkedin.svg";
+import LinkedInIcon from "@/assets/logos/white_linkedin.svg";
 import YouTubeIcon from "@/assets/logos/youtube.svg";
 import CircularMailIcon from "@/assets/logos/circular_mail.svg";
 import DiscordIcon from "@/assets/logos/circular_discord.svg";

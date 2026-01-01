@@ -1,9 +1,13 @@
-import TeamSection from './components/TeamSection';
+import Hero from "./components/Hero";
+import OurMission from "./components/OurMission";
+import TeamSection from "./components/TeamSection";
 
 export default function About() {
 	return (
-	<>
-		<TeamSection />
-	</>
+		<>
+			<Hero />
+			<OurMission />
+			<TeamSection />
+		</>
 	);
 }
