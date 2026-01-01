@@ -2,7 +2,7 @@ import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
 
 export default function OurMission() {
 	return (
-		<section className="bg-box px-10 py-30 md:p-36 lg:p-56">
+		<section className="bg-box px-10 py-30 md:px-36 lg:px-56">
 			<h2 className="text-subtitle mb-4">Our Mission</h2>
 			<p className="mb-14 max-w-3xl">
 				Promote, educate, and enhance the community around us by giving students
