@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import ContactIcon from "@/lib/components/ContactIcon/ContactIcon";
 import ContactCard from "@/lib/components/ContactCard/ContactCard";
 import NewsletterSignupModal from "./components/NewsLetterSignupModal/NewsletterSignupModal";
 
@@ -12,7 +13,6 @@ import CircularMailIcon from "@/assets/logos/circular_mail.svg";
 import DiscordIcon from "@/assets/logos/circular_discord.svg";
 
 import "./Contact.css";
-import ContactIcon from "@/lib/components/ContactIcon/ContactIcon";
 
 export default function Contact() {
 	const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false);
