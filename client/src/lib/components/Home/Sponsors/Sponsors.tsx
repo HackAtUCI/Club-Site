@@ -79,7 +79,7 @@ export default function Sponsors() {
 						Each donation goes right back into creating an outstanding
 						experience for everyone who attends.
 					</p>
-					<PrimaryAnchor href="/">More Information</PrimaryAnchor>
+					<PrimaryAnchor href="mailto:hack@uci.edu">Contact us!</PrimaryAnchor>
 					<div className="flex flex-wrap justify-center gap-x-4 gap-y-6 mt-10 px-10 py-12 border bg-[#ECEFFD] rounded-[20px] ">
 						{sponsors.map((sponsor, idx) => {
 							return (
