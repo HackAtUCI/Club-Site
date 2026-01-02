@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 import "./ContactIcon.css";
 
 interface ContactIconProps {
@@ -6,6 +8,7 @@ interface ContactIconProps {
 	image: string;
 	isYouTube?: boolean;
 	isMail?: boolean;
+	className?: string;
 }
 
 export default function ContactIcon({
@@ -14,13 +17,19 @@ export default function ContactIcon({
 	image,
 	isYouTube = false,
 	isMail = false,
+	className = "",
 }: ContactIconProps) {
 	return (
 		// Mail and YouTube icons require different sizing to maintain vertical alignment with other icons
 		<div
-			className={`contact-icon ${isYouTube ? "contact-icon-youtube" : ""} ${
-				isMail ? "contact-icon-mail" : ""
-			}`}
+			className={clsx(
+				"contact-icon",
+				{
+					"contact-icon-youtube": isYouTube,
+					"contact-icon-mail": isMail,
+				},
+				className
+			)}
 		>
 			<a href={link} aria-label={title}>
 				<img src={image} alt={title} />
