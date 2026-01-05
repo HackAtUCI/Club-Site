@@ -19,5 +19,5 @@ const hackathonTabs: {
 ];
 
 export default function Hackathons() {
-	return <Tabs tabs={hackathonTabs} title="Our Hackathons" useAltButton />;
+	return <Tabs tabs={hackathonTabs} title="Our Hackathons" />;
 }
