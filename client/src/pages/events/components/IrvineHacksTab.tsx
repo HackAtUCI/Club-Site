@@ -1,7 +1,8 @@
 import StatBox from "./StatBox";
 import Carousel from "@/lib/components/Carousel/Carousel";
-import IrvineHacksImg from "@/assets/images/IrvineHacks_img.png";
-import ZotHacksImg from "@/assets/images/ZotHacks_img.png";
+import IH1 from "@/assets/images/IH1-resized.jpg";
+import IH2 from "@/assets/images/IH2-resized.jpg";
+import IH3 from "@/assets/images/IH3-resized.jpg";
 
 export default function IrvineHacksTab() {
 	return (
@@ -26,12 +27,20 @@ export default function IrvineHacksTab() {
 								dotsClassName="mt-4 sm:mt-6 md:mt-8 flex justify-center"
 							>
 								<img
-									src={IrvineHacksImg}
+									src={IH1}
 									alt="IrvineHacks"
-									className="aspect-3/2"
+									className="object-cover aspect-3/2"
 								/>
-								<img src={ZotHacksImg} alt="ZotHacks" className="aspect-3/2" />
-								<img src={ZotHacksImg} alt="ZotHacks" className="aspect-3/2" />
+								<img
+									src={IH2}
+									alt="IrvineHacks"
+									className="object-cover aspect-3/2"
+								/>
+								<img
+									src={IH3}
+									alt="IrvineHacks"
+									className="object-cover aspect-3/2"
+								/>
 							</Carousel>
 						</div>
 					</div>
