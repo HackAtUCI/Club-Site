@@ -16,7 +16,7 @@ export default function IrvineHacksTab() {
 							<p>
 								IrvineHacks is the largest collegiate hackathon in Orange
 								County. Each year, we bring like-minded individuals of different
-								backgrounds and skill sets together to create something in 36
+								backgrounds and skillsets together to create something in 36
 								hours!
 							</p>
 						</div>
@@ -28,10 +28,10 @@ export default function IrvineHacksTab() {
 								<img
 									src={IrvineHacksImg}
 									alt="IrvineHacks"
-									className="w-full"
+									className="aspect-3/2"
 								/>
-								<img src={ZotHacksImg} alt="ZotHacks" className="w-full" />
-								<img src={ZotHacksImg} alt="ZotHacks" className="w-full" />
+								<img src={ZotHacksImg} alt="ZotHacks" className="aspect-3/2" />
+								<img src={ZotHacksImg} alt="ZotHacks" className="aspect-3/2" />
 							</Carousel>
 						</div>
 					</div>
