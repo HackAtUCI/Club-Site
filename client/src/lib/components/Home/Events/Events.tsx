@@ -1,7 +1,7 @@
 import React from "react";
 import PrimaryAnchor from "@/lib/components/PrimaryAnchor/PrimaryAnchor";
-import IrvineHacksImg from "@/assets/images/IrvineHacks_img.png";
-import ZotHacksImg from "@/assets/images/ZotHacks_img.png";
+import IrvineHacksImg from "@/assets/images/IH2-resized.jpg";
+import ZotHacksImg from "@/assets/images/ZH2-resized.jpg";
 
 interface EventCardProps {
 	src: string;
@@ -36,7 +36,7 @@ const EventCard: React.FC<EventCardProps> = ({
 					alt={alt}
 					width={450}
 					height={450}
-					className="h-auto max-h-[400px] w-full rounded-md"
+					className="h-auto w-full rounded-md"
 				/>
 			</div>
 			<div
