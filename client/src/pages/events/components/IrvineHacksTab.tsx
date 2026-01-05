@@ -22,10 +22,7 @@ export default function IrvineHacksTab() {
 							</p>
 						</div>
 						<div className="w-full lg:w-1/2">
-							<Carousel
-								options={{ loop: true }}
-								dotsClassName="mt-4 sm:mt-6 md:mt-8 flex justify-center"
-							>
+							<Carousel options={{ loop: true }}>
 								<img
 									src={IH1}
 									alt="IrvineHacks"
