@@ -27,7 +27,7 @@ function RecruitmentTab({
 	showApplyButton: boolean;
 }) {
 	return (
-		<>
+		<div className="p-4 sm:p-6 md:p-8 lg:p-12">
 			<Box className="pt-18 pb-24">
 				<h3 className="text-subtitle mb-8">{headingText}</h3>
 				{textComponent}
@@ -39,7 +39,7 @@ function RecruitmentTab({
 					</PrimaryButton>
 				</div>
 			)}
-		</>
+		</div>
 	);
 }
 
@@ -102,10 +102,8 @@ export default function Committees({
 	];
 	return (
 		<section className="py-30">
-			<h2 className="text-subtitle text-center" id="committees">
-				Our Committees
-			</h2>
-			<Tabs tabs={committeeTabs} />
+			<div id="committees" />
+			<Tabs tabs={committeeTabs} title="Our Committees" />
 		</section>
 	);
 }
