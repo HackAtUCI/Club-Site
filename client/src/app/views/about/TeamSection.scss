@@ -16,10 +16,6 @@
 
 @media screen and (max-width: 760px) {
   .team-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .team-title {
-    font-size: 32px !important; 
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
