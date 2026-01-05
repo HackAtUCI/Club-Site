@@ -1,6 +1,5 @@
-import React from "react";
 import TeamCard from "./TeamCard";
-import { teamMembers } from "../../../data/team";
+import { teamMembers } from "@/data/team.ts";
 
 interface TeamMember {
 	name: string;
