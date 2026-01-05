@@ -9,8 +9,8 @@ function TeamCard({ name, position, image, linkedInUrl }) {
   return (
     <div className='team-card'>
       <div className='images-container'>
-        <img src={image || blank} className='profpic' alt={name} loading="lazy" />
-        <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
+        <img src={image || blank} className='profpic' alt={name} />
+        <a href={linkedInUrl}>
           <img alt='LinkedIn' className='linkedinLogo' src={linkedinLogo} />
         </a>
       </div>
