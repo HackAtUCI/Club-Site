@@ -53,11 +53,10 @@ body {
     line-height: 1.2;
 }
 
-@utility text-button {
+.text-button {
     font-size: var(--font-size-button);
     font-weight: var(--font-weight-semibold);
 }
-
 
 .home-background {
     background-image: linear-gradient(

@@ -72,31 +72,27 @@ export default function Sponsors() {
 		<section className="py-30">
 			<div className="flex justify-center items-center mt-4">
 				<Box>
-					<div className="container">
-						<h2 className="text-subtitle mb-4">Our Sponsors</h2>
-						<p className="mb-4 max-w-3xl">
-							Hack at UCI&apos;s hackathons and events wouldn&apos;t be possible
-							without our amazing sponsors that have helped us over the years.
-							Each donation goes right back into creating an outstanding
-							experience for everyone who attends.
-						</p>
-						<PrimaryAnchor href="mailto:hack@uci.edu">
-							Contact us!
-						</PrimaryAnchor>
-						<div className="flex flex-wrap justify-center gap-x-4 gap-y-6 mt-10 px-10 py-12 border bg-[#ECEFFD] rounded-[20px] ">
-							{sponsors.map((sponsor, idx) => {
-								return (
-									<img
-										key={idx}
-										src={`sponsors/${sponsor.src}`}
-										alt={`Sponsor ${idx + 1}`}
-										width="10"
-										height="10"
-										className={`mx-auto ${sponsor.size}`}
-									/>
-								);
-							})}
-						</div>
+					<h2 className="text-subtitle mb-4">Our Sponsors</h2>
+					<p className="mb-4 max-w-3xl">
+						Hack at UCI&apos;s hackathons and events wouldn&apos;t be possible
+						without our amazing sponsors that have helped us over the years.
+						Each donation goes right back into creating an outstanding
+						experience for everyone who attends.
+					</p>
+					<PrimaryAnchor href="/">More Information</PrimaryAnchor>
+					<div className="flex flex-wrap justify-center gap-x-4 gap-y-6 mt-10 px-10 py-12 border bg-[#ECEFFD] rounded-[20px] ">
+						{sponsors.map((sponsor, idx) => {
+							return (
+								<img
+									key={idx}
+									src={`sponsors/${sponsor.src}`}
+									alt={`Sponsor ${idx + 1}`}
+									width="10"
+									height="10"
+									className={`mx-auto ${sponsor.size}`}
+								/>
+							);
+						})}
 					</div>
 				</Box>
 			</div>

@@ -1,12 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import ContactIcon from "../ContactIcon/ContactIcon";
-
 import HackLogo from "@/assets/logos/hack_navbar.svg";
-import InstagramIcon from "@/assets/logos/instagram.svg";
-import TiktokIcon from "@/assets/logos/tiktok.svg";
-import DiscordIcon from "@/assets/logos/discord.svg";
+import InstagramLogo from "@/assets/logos/instagram.svg";
+import TiktokLogo from "@/assets/logos/tiktok.svg";
+import DiscordLogo from "@/assets/logos/discord.svg";
 import MailIcon from "@/assets/icons/mail.svg";
 
 import "./Footer.css";
@@ -46,30 +43,25 @@ export default function Footer() {
 				</div>
 				<div className="mt-4 flex justify-center lg:mt-0 lg:items-start lg:justify-end">
 					<div className="flex justify-between gap-8">
-						<ContactIcon
-							title="Instagram"
-							link="https://www.instagram.com/hackatuci/"
-							image={InstagramIcon}
-							className="h-8 w-8 md:h-15 md:w-15"
+						<img
+							src={InstagramLogo}
+							alt="Instagram Logo"
+							className="h-8 w-8 cursor-pointer md:h-15 md:w-15"
 						/>
-						<ContactIcon
-							title="Tiktok"
-							link="https://www.tiktok.com/@hackatuci"
-							image={TiktokIcon}
-							className="h-8 w-8 md:h-15 md:w-15"
+						<img
+							src={TiktokLogo}
+							alt="Tiktok Logo"
+							className="h-8 w-8 cursor-pointer md:h-15 md:w-15"
 						/>
-						<ContactIcon
-							title="Discord"
-							link="https://discord.gg/2gZjQMjKeF"
-							image={DiscordIcon}
-							className="h-8 w-8 md:h-15 md:w-15"
+						<img
+							src={DiscordLogo}
+							alt="Discord Logo"
+							className="h-8 w-8 cursor-pointer md:h-15 md:w-15"
 						/>
-						<ContactIcon
-							title="Email"
-							link="mailto:hack@uci.edu"
-							image={MailIcon}
-							className="h-8 w-8 md:h-15 md:w-15"
-							isMail
+						<img
+							src={MailIcon}
+							alt="Mail icon"
+							className="h-8 w-8 cursor-pointer md:h-15 md:w-15"
 						/>
 					</div>
 				</div>

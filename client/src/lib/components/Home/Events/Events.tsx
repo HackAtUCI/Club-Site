@@ -1,7 +1,7 @@
 import React from "react";
 import PrimaryAnchor from "@/lib/components/PrimaryAnchor/PrimaryAnchor";
-import IrvineHacksImg from "@/assets/images/IH2-resized.jpg";
-import ZotHacksImg from "@/assets/images/ZH2-resized.jpg";
+import IrvineHacksImg from "@/assets/images/IrvineHacks_img.png";
+import ZotHacksImg from "@/assets/images/ZotHacks_img.png";
 
 interface EventCardProps {
 	src: string;
@@ -36,7 +36,7 @@ const EventCard: React.FC<EventCardProps> = ({
 					alt={alt}
 					width={450}
 					height={450}
-					className="h-auto w-full rounded-md"
+					className="h-auto max-h-[400px] w-full rounded-md"
 				/>
 			</div>
 			<div
@@ -59,35 +59,33 @@ const EventCard: React.FC<EventCardProps> = ({
 
 const Events: React.FC = () => {
 	return (
-		<section className="flex justify-center items-center bg-box px-14 py-30 md:px-40 md:py-30">
-			<div className="container">
-				<div>
-					<h2 className="text-subtitle mb-4">Our Events</h2>
-					<p className="mb-4 max-w-3xl">
-						We aim to celebrate UC Irvine&apos;s spirit of innovation by
-						organizing ZotHacks, a beginner friendly hackathon, and IrvineHacks,
-						Orange County&apos;s largest hackathon. Furthermore, our
-						organization regularly host technical and professional development
-						workshops that teach students industry-relevant skills.
-					</p>
-					<PrimaryAnchor href="/events">More Information</PrimaryAnchor>
-				</div>
-				<EventCard
-					src={IrvineHacksImg}
-					alt="IrvineHacks event"
-					title="IrvineHacks"
-					description="HackUCI is the largest collegiate hackathon in Orange County. Each year, we bring like-minded individuals of different backgrounds and skill sets together to create something in 36 hours."
-					accent="blue"
-				/>
-				<EventCard
-					src={ZotHacksImg}
-					alt="ZotHacks event"
-					title="ZotHacks"
-					description="ZotHacks is a beginner-friendly hackathon where students with minimal computer science experience will learn new skills, take part in a community of creative people, and build projects."
-					isReversed
-					accent="green"
-				/>
+		<section className="bg-box px-14 py-30 md:px-40 md:py-30">
+			<div>
+				<h2 className="text-subtitle mb-4">Our Events</h2>
+				<p className="mb-4 max-w-3xl">
+					We aim to celebrate UC Irvine&apos;s spirit of innovation by
+					organizing ZotHacks, a beginner friendly hackathon, and IrvineHacks,
+					Orange County&apos;s largest hackathon. Furthermore, our organization
+					regularly host technical and professional development workshops that
+					teach students industry-relevant skills.
+				</p>
+				<PrimaryAnchor href="/events">More Information</PrimaryAnchor>
 			</div>
+			<EventCard
+				src={IrvineHacksImg}
+				alt="IrvineHacks event"
+				title="IrvineHacks"
+				description="HackUCI is the largest collegiate hackathon in Orange County. Each year, we bring like-minded individuals of different backgrounds and skill sets together to create something in 36 hours."
+				accent="blue"
+			/>
+			<EventCard
+				src={ZotHacksImg}
+				alt="ZotHacks event"
+				title="ZotHacks"
+				description="ZotHacks is a beginner-friendly hackathon where students with minimal computer science experience will learn new skills, take part in a community of creative people, and build projects."
+				isReversed
+				accent="green"
+			/>
 		</section>
 	);
 };

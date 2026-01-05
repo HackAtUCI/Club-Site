@@ -1,13 +1,11 @@
+import Tabs, { type TabInterface } from "@/lib/components/Tabs/Tabs";
 import IrvineHacksTab from "./IrvineHacksTab";
 import ZotHacksTab from "./ZotHacksTab";
-import Tabs from "@/lib/components/Tabs/Tabs";
+interface HackathonTabInterface extends Omit<TabInterface, "buttonText"> {
+	buttonText: "IrvineHacks" | "ZotHacks";
+}
 
-type HackathonTab = "IrvineHacks" | "ZotHacks";
-
-const hackathonTabs: {
-	buttonText: HackathonTab;
-	tabComponent: React.ReactNode;
-}[] = [
+const hackathonTabs: HackathonTabInterface[] = [
 	{
 		buttonText: "IrvineHacks",
 		tabComponent: <IrvineHacksTab />,
@@ -19,5 +17,10 @@ const hackathonTabs: {
 ];
 
 export default function Hackathons() {
-	return <Tabs tabs={hackathonTabs} title="Our Hackathons" />;
+	return (
+		<>
+			<h2 className="text-subtitle text-center">Our Hackathons</h2>
+			<Tabs tabs={hackathonTabs} useAltButton />
+		</>
+	);
 }

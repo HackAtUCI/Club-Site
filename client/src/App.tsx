@@ -1,6 +1,5 @@
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
-import ScrollToTop from "@/lib/components/ScrollToTop/ScrollToTop";
 import Navbar from "@/lib/components/Navbar/Navbar";
 import Footer from "@/lib/components/Footer/Footer";
 import Home from "@/pages/home";
@@ -17,7 +16,6 @@ function App() {
 	return (
 		<div className="bg-dark-blue antialiased">
 			<Router>
-				<ScrollToTop />
 				<div>
 					<Navbar />
 					<Switch>

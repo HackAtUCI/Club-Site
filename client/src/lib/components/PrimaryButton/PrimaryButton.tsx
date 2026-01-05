@@ -17,7 +17,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({
 	...props
 }) => {
 	const isExternal = href?.startsWith("http");
-	const buttonClasses = `primary-gradient-btn px-12 py-3 rounded-full text-center text-md sm:text-button outline-none border-none shadow-none bg-transparent ${className} ${
+	const buttonClasses = `primary-gradient-btn px-12 py-3 rounded-full text-button outline-none border-none shadow-none bg-transparent ${className} ${
 		variant === "apply" ? "apply-style" : ""
 	}`;
 
