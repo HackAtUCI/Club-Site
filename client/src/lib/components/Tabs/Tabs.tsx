@@ -50,8 +50,8 @@ export default function Tabs({
 					)}
 				</div>
 			</div>
-			<div className="relative -mt-10 sm:-mt-12 md:-mt-16 lg:-mt-20">
-				{activeTab?.tabComponent}
+			<div className="flex justify-center items-center relative -mt-10 sm:-mt-12 md:-mt-16 lg:-mt-20">
+				<div className="container">{activeTab?.tabComponent}</div>
 			</div>
 		</>
 	);
