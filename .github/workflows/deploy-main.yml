@@ -11,18 +11,12 @@ jobs:
       contents: write
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
-
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-region: us-west-2
-          role-to-assume: ${{ secrets.AWS_DEPLOYMENT_ROLE }}
+        uses: actions/checkout@v4
 
       - name: Set Up Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: "20"
           cache: "npm"
           cache-dependency-path: "**/package-lock.json"
 
@@ -33,17 +27,6 @@ jobs:
             cdk
             server
             client
-
-      - name: Deploy Server API
-        id: deploy-server
-        run: |
-          cd cdk
-          npm run deploy
-          api_url=$(node getApiUrl.js)
-          echo "::set-output name=api_url::$api_url"
-          cd ..
-        env:
-          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
 
       - name: Build client
         run: |
@@ -57,5 +40,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./client/build
+          publish_dir: ./client/dist
           publish_branch: gh-pages

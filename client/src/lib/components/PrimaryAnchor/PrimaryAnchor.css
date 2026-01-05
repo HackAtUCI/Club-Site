@@ -1,0 +1,14 @@
+.primary-gradient-anchor {
+  background: linear-gradient(90deg, #7ea9fb 0%, #82ffb4 50%, #7ea9fb 100%);
+  background-size: 200% 100%;
+  background-position: left;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+.primary-gradient-anchor:hover {
+  background-position: right;
+  text-decoration: underline;
+}
