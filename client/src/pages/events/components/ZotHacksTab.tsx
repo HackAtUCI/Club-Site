@@ -11,7 +11,14 @@ export default function ZotHacksTab() {
 				<div className="bg-dark-blue rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10">
 					<div className="flex flex-col lg:flex-row w-full gap-6 lg:gap-0">
 						<div className="flex w-full lg:w-1/2 flex-col lg:pr-8">
-							<h2 className="text-subtitle mb-4 sm:mb-6 md:mb-8">ZotHacks</h2>
+							<a
+								className="text-subtitle mb-4 sm:mb-6 md:mb-8 text-blue-accent underline"
+								href="https://zothacks.com/"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								ZotHacks
+							</a>
 							<p>
 								ZotHacks is a beginner-friendly hackathon where students with
 								minimal computer science experience will learn new skills, take
