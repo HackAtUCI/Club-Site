@@ -8,6 +8,7 @@ interface EventCardProps {
 	alt: string;
 	title: string;
 	description: string;
+	href: string;
 	isReversed?: boolean;
 	accent: "blue" | "green";
 }
@@ -17,6 +18,7 @@ const EventCard: React.FC<EventCardProps> = ({
 	alt,
 	title,
 	description,
+	href,
 	isReversed = false,
 	accent,
 }) => {
@@ -44,13 +46,16 @@ const EventCard: React.FC<EventCardProps> = ({
 					isReversed ? "lg:text-right" : ""
 				}`}
 			>
-				<h3
-					className={`text-subtitle mb-2 font-bold ${
+				<a
+					className={`text-subtitle mb-2 font-bold underline ${
 						accent === "blue" ? "text-blue-accent" : "text-green-accent"
 					}`}
+					href={href}
+					rel="noopener noreferrer"
+					target="_blank"
 				>
 					{title}
-				</h3>
+				</a>
 				<p>{description}</p>
 			</div>
 		</div>
@@ -78,6 +83,7 @@ const Events: React.FC = () => {
 					title="IrvineHacks"
 					description="HackUCI is the largest collegiate hackathon in Orange County. Each year, we bring like-minded individuals of different backgrounds and skill sets together to create something in 36 hours."
 					accent="blue"
+					href="https://irvinehacks.com/"
 				/>
 				<EventCard
 					src={ZotHacksImg}
@@ -86,6 +92,7 @@ const Events: React.FC = () => {
 					description="ZotHacks is a beginner-friendly hackathon where students with minimal computer science experience will learn new skills, take part in a community of creative people, and build projects."
 					isReversed
 					accent="green"
+					href="https://zothacks.com/"
 				/>
 			</div>
 		</section>
