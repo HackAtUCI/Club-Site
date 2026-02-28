@@ -1,5 +1,5 @@
 import TeamCard from "./TeamCard";
-import { teamMembers } from "@/data/team.ts";
+import { teamMembers } from "@/data/team";
 
 interface TeamMember {
 	name: string;
