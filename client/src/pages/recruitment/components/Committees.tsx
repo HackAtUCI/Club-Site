@@ -31,7 +31,7 @@ function RecruitmentTab({
 	showApplyButton: boolean;
 }) {
 	return (
-		<>
+		<div className="p-4 sm:p-6 md:p-8 lg:p-12">
 			<Box className="pt-18 pb-24">
 				<h3 className="text-subtitle mb-8">{headingText}</h3>
 				{textComponent}
