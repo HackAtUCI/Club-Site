@@ -13,7 +13,7 @@ export default function Hero({
 					Apply to be an organizer!
 				</PrimaryButton>
 			) : (
-				<PrimaryButton href="#committees">
+				<PrimaryButton href="https://www.notion.so/hackatuci/Hack-at-UCI-c0c393c84e5d8297957f8112679502fb?source=copy_link">
 					Learn more about our committees!
 				</PrimaryButton>
 			)}

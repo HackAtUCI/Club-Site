@@ -5,7 +5,7 @@ import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
 import CorporateText from "./committee-texts/CorporateText";
 import LogisticsText from "./committee-texts/LogisticsText";
 import MarketingText from "./committee-texts/MarketingText";
-import GraphicsText from "./committee-texts/GraphicsText";
+import DesignText from "./committee-texts/DesignText";
 import TechnologyText from "./committee-texts/TechnologyText";
 
 type BaseTab = Omit<TabInterface, "buttonText">;
@@ -14,7 +14,7 @@ type CommitteeButtonText =
 	| "Corporate"
 	| "Logistics"
 	| "Marketing"
-	| "Graphics"
+	| "Design"
 	| "Technology";
 
 interface CommitteeTabInterface extends BaseTab {
@@ -84,12 +84,12 @@ export default function Committees({
 			),
 		},
 		{
-			buttonText: "Graphics",
+			buttonText: "Design",
 			tabComponent: (
 				<RecruitmentTab
 					showApplyButton={showApplyButton}
-					headingText="Graphics"
-					textComponent={<GraphicsText />}
+					headingText="Design"
+					textComponent={<DesignText />}
 				/>
 			),
 		},
