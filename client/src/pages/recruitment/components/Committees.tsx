@@ -43,7 +43,7 @@ function RecruitmentTab({
 					</PrimaryButton>
 				</div>
 			)}
-		</div>
+		</>
 	);
 }
 
