@@ -4,7 +4,7 @@ import "./Tabs.css";
 
 export interface TabInterface {
 	buttonText: string;
-	tabComponent: React.ReactNode;
+	tabComponent: () => React.ReactNode;
 }
 
 interface TabsInterface {
@@ -51,7 +51,9 @@ export default function Tabs({
 				</div>
 			</div>
 			<div className="flex justify-center items-center relative -mt-10 sm:-mt-12 md:-mt-16 lg:-mt-20">
-				<div className="container">{activeTab?.tabComponent}</div>
+				<div className="container">
+					{activeTab ? activeTab.tabComponent() : null}
+				</div>
 			</div>
 		</>
 	);

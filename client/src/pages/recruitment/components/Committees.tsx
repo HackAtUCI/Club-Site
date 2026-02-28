@@ -8,7 +8,7 @@ import MarketingText from "./committee-texts/MarketingText";
 import GraphicsText from "./committee-texts/GraphicsText";
 import TechnologyText from "./committee-texts/TechnologyText";
 
-type BaseTab = Omit<TabInterface, "buttonText">;
+type BaseTab = Omit<TabInterface, "buttonText" | "tabComponent">;
 
 type CommitteeButtonText =
 	| "Corporate"
@@ -19,6 +19,7 @@ type CommitteeButtonText =
 
 interface CommitteeTabInterface extends BaseTab {
 	buttonText: CommitteeButtonText;
+	tabComponent: () => React.ReactNode;
 }
 
 function RecruitmentTab({
@@ -55,7 +56,7 @@ export default function Committees({
 	const committeeTabs: CommitteeTabInterface[] = [
 		{
 			buttonText: "Corporate",
-			tabComponent: (
+			tabComponent: () => (
 				<RecruitmentTab
 					showApplyButton={showApplyButton}
 					headingText="Corporate"
@@ -65,7 +66,7 @@ export default function Committees({
 		},
 		{
 			buttonText: "Logistics",
-			tabComponent: (
+			tabComponent: () => (
 				<RecruitmentTab
 					showApplyButton={showApplyButton}
 					headingText="Logistics"
@@ -75,7 +76,7 @@ export default function Committees({
 		},
 		{
 			buttonText: "Marketing",
-			tabComponent: (
+			tabComponent: () => (
 				<RecruitmentTab
 					showApplyButton={showApplyButton}
 					headingText="Marketing"
@@ -85,7 +86,7 @@ export default function Committees({
 		},
 		{
 			buttonText: "Graphics",
-			tabComponent: (
+			tabComponent: () => (
 				<RecruitmentTab
 					showApplyButton={showApplyButton}
 					headingText="Graphics"
@@ -95,7 +96,7 @@ export default function Committees({
 		},
 		{
 			buttonText: "Technology",
-			tabComponent: (
+			tabComponent: () => (
 				<RecruitmentTab
 					showApplyButton={showApplyButton}
 					headingText="Technology"
