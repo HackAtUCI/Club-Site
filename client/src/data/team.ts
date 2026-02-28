@@ -294,7 +294,7 @@ export const teamMembers = {
 		{
 			name: "Vishok Lakshmankumar",
 			position: "Tech Organizer",
-			image: "/team/blank.webp",
+			image: "/team/vishok.webp",
 			linkedInUrl: "https://www.linkedin.com/in/vishokl/",
 		},
 		{
