@@ -5,6 +5,9 @@ import Hero from "@/lib/components/Home/Hero/Hero";
 import AboutUs from "@/lib/components/Home/AboutUs/AboutUs";
 import Events from "@/lib/components/Home/Events/Events";
 import Sponsors from "@/lib/components/Home/Sponsors/Sponsors";
+import Contact from "@/lib/components/Home/Contact/Contact";
+
+import UpArrow from "@/assets/icons/up-arrow.svg";
 
 import UpArrow from "@/assets/icons/up-arrow.svg";
 
@@ -22,6 +25,7 @@ export default function Home() {
 			<Hero ref={heroRef} />
 			<AboutUs />
 			<Events />
+			<Contact ref={contactRef} />
 			<Sponsors />
 
 			<section className="flex justify-center items-center pb-24">

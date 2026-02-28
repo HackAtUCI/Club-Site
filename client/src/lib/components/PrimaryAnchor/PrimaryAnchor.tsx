@@ -14,12 +14,23 @@ const PrimaryAnchor: React.FC<PrimaryAnchorProps> = ({
 	className = "",
 	...props
 }) => {
-	const isExternal = href.startsWith("http");
-	return (
+	const isExternal = !href.startsWith("/");
+
+	return isExternal ? (
+		<a
+			href={href}
+			target="_blank"
+			rel="noreferrer"
+			className={`primary-gradient-anchor ${className}`}
+			{...props}
+		>
+			{children} ›
+		</a>
+	) : (
 		<Link
 			to={href}
-			target={isExternal ? "_blank" : undefined}
-			rel={isExternal ? "noreferrer" : undefined}
+			target={undefined}
+			rel={undefined}
 			className={`primary-gradient-anchor ${className}`}
 			{...props}
 		>
