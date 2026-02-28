@@ -1,4 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
+import clsx from "clsx";
+
 import type { EmblaCarouselType, EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -12,6 +14,7 @@ interface CarouselProps {
 	options?: EmblaOptionsType;
 	className?: string;
 	dotsClassName?: string;
+	caption?: string;
 }
 
 const Carousel: React.FC<CarouselProps> = ({
@@ -19,6 +22,7 @@ const Carousel: React.FC<CarouselProps> = ({
 	options,
 	className = "",
 	dotsClassName = "",
+	caption = "",
 }) => {
 	const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
 	const [selectedIndex, setSelectedIndex] = useState(0);
@@ -72,7 +76,12 @@ const Carousel: React.FC<CarouselProps> = ({
 					))}
 				</div>
 			</div>
-			<div className={dotsClassName}>
+			<div
+				className={clsx(
+					dotsClassName,
+					"flex justify-center items-center mt-2 sm:mt-4 md:mt-6"
+				)}
+			>
 				{scrollSnaps.map((_, idx) => (
 					<CarouselDotButton
 						key={idx}
@@ -80,6 +89,7 @@ const Carousel: React.FC<CarouselProps> = ({
 						onClick={() => onDotButtonClick(idx)}
 					/>
 				))}
+				{caption && <p className="ml-8">{caption}</p>}
 			</div>
 		</div>
 	);
