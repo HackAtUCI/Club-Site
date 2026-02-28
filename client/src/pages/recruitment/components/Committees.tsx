@@ -8,13 +8,17 @@ import MarketingText from "./committee-texts/MarketingText";
 import GraphicsText from "./committee-texts/GraphicsText";
 import TechnologyText from "./committee-texts/TechnologyText";
 
-interface CommitteeTabInterface extends Omit<TabInterface, "buttonText"> {
-	buttonText:
-		| "Corporate"
-		| "Logistics"
-		| "Marketing"
-		| "Graphics"
-		| "Technology";
+type BaseTab = Omit<TabInterface, "buttonText">;
+
+type CommitteeButtonText =
+	| "Corporate"
+	| "Logistics"
+	| "Marketing"
+	| "Graphics"
+	| "Technology";
+
+interface CommitteeTabInterface extends BaseTab {
+	buttonText: CommitteeButtonText;
 }
 
 function RecruitmentTab({
