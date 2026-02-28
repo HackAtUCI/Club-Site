@@ -9,32 +9,27 @@ import Contact from "@/lib/components/Home/Contact/Contact";
 
 import UpArrow from "@/assets/icons/up-arrow.svg";
 
-export default function Home() {
-	const heroRef = useRef<HTMLDivElement>(null);
-	const contactRef = useRef<HTMLDivElement>(null);
+import UpArrow from "@/assets/icons/up-arrow.svg";
 
-	const scrollToRef = ({
-		ref,
-	}: {
-		ref: React.RefObject<HTMLElement | null>;
-	}) => {
-		ref.current?.scrollIntoView({ behavior: "smooth" });
+export default function Home() {
+	const heroRef = useRef<HTMLInputElement>(null);
+
+	const scrollToTop = () => {
+		if (heroRef.current) {
+			heroRef.current.scrollIntoView({ behavior: "smooth" });
+		}
 	};
 
 	return (
 		<div className="home-background min-h-screen">
-			<Hero ref={heroRef} onClick={() => scrollToRef({ ref: contactRef })} />
+			<Hero ref={heroRef} />
 			<AboutUs />
 			<Events />
 			<Contact ref={contactRef} />
 			<Sponsors />
 
 			<section className="flex justify-center items-center pb-24">
-				<PrimaryButton
-					onClick={() => {
-						scrollToRef({ ref: heroRef });
-					}}
-				>
+				<PrimaryButton onClick={scrollToTop}>
 					Back To Top
 					<img
 						src={UpArrow}

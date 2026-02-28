@@ -1,18 +1,46 @@
 import React, { useState } from "react";
+import "./Contact.css";
 
-import ContactIcon from "@/lib/components/ContactIcon/ContactIcon";
-import ContactCard from "@/lib/components/ContactCard/ContactCard";
 import NewsletterSignupModal from "./components/NewsLetterSignupModal/NewsletterSignupModal";
+import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
+import { UnspacedBox } from "@/lib/components/Box/Box";
 
 import MailIcon from "@/assets/icons/mail.svg";
 import FacebookIcon from "@/assets/logos/facebook.svg";
 import InstagramIcon from "@/assets/logos/instagram.svg";
-import LinkedInIcon from "@/assets/logos/white_linkedin.svg";
+import LinkedInIcon from "@/assets/logos/linkedin.svg";
 import YouTubeIcon from "@/assets/logos/youtube.svg";
 import CircularMailIcon from "@/assets/logos/circular_mail.svg";
 import DiscordIcon from "@/assets/logos/circular_discord.svg";
 
-import "./Contact.css";
+interface ContactIconProps {
+	title: string;
+	link: string;
+	image: string;
+	isYouTube?: boolean;
+	isMail?: boolean;
+}
+
+function ContactIcon({
+	title,
+	link,
+	image,
+	isYouTube = false,
+	isMail = false,
+}: ContactIconProps) {
+	return (
+		// Mail and YouTube icons require different sizing to maintain vertical alignment with other icons
+		<div
+			className={`contact-icon ${isYouTube ? "contact-icon-youtube" : ""} ${
+				isMail ? "contact-icon-mail" : ""
+			}`}
+		>
+			<a href={link} aria-label={title}>
+				<img src={image} alt={title} />
+			</a>
+		</div>
+	);
+}
 
 export default function Contact() {
 	const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false);
@@ -63,18 +91,29 @@ export default function Contact() {
 			</div>
 
 			<div className="contact-cards">
-				<ContactCard
-					title="Sign up for our newsletter!"
-					buttonText="Sign up →"
-					onClick={openNewsletterModal}
-					icon={CircularMailIcon}
-				/>
-				<ContactCard
-					title="Join our Discord!"
-					buttonText="Join →"
-					href="https://discord.gg/2gZjQMjKeF"
-					icon={DiscordIcon}
-				/>
+				<UnspacedBox className="contact-card">
+					<div className="contact-card-icon">
+						<img src={CircularMailIcon} alt="Mail" />
+					</div>
+					<div className="contact-card-content">
+						<h2>Sign up for our newsletter!</h2>
+						<PrimaryButton onClick={openNewsletterModal}>
+							Sign up →
+						</PrimaryButton>
+					</div>
+				</UnspacedBox>
+
+				<UnspacedBox className="contact-card">
+					<div className="contact-card-icon">
+						<img src={DiscordIcon} alt="Discord" />
+					</div>
+					<div className="contact-card-content">
+						<h2>Join our Discord!</h2>
+						<PrimaryButton href="https://discord.gg/2gZjQMjKeF">
+							Join →
+						</PrimaryButton>
+					</div>
+				</UnspacedBox>
 			</div>
 
 			<NewsletterSignupModal
