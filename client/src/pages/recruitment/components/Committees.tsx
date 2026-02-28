@@ -39,7 +39,7 @@ function RecruitmentTab({
 					</PrimaryButton>
 				</div>
 			)}
-		</>
+		</div>
 	);
 }
 
@@ -102,10 +102,8 @@ export default function Committees({
 	];
 	return (
 		<section className="py-30">
-			<h2 className="text-subtitle text-center" id="committees">
-				Our Committees
-			</h2>
-			<Tabs tabs={committeeTabs} />
+			<div id="committees" />
+			<Tabs tabs={committeeTabs} title="Our Committees" />
 		</section>
 	);
 }
