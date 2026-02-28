@@ -1,4 +1,13 @@
-export const teamMembers = {
+export interface TeamMember {
+	name: string;
+	position: string;
+	image: string;
+	linkedInUrl?: string;
+}
+
+export type TeamMembers = Record<string, TeamMember[]>;
+
+export const teamMembers: TeamMembers = {
 	Communications: [
 		{
 			name: "Arnav Nigam",
@@ -80,7 +89,7 @@ export const teamMembers = {
 			position: "Corporate Intern",
 			image: "/team/reneem.webp",
 			linkedInUrl: "",
-		}
+		},
 	],
 
 	Logistics: [
@@ -206,7 +215,7 @@ export const teamMembers = {
 			position: "Marketing Intern",
 			image: "/team/avinav.webp",
 			linkedInUrl: "https://www.linkedin.com/in/avinav-shrestha-236b7623a/",
-		}
+		},
 	],
 
 	Design: [
@@ -245,7 +254,7 @@ export const teamMembers = {
 			position: "Design Intern",
 			image: "/team/blank.webp",
 			linkedInUrl: "https://www.linkedin.com/in/evelyn-rodriguez-r/",
-		}
+		},
 	],
 
 	Tech: [
@@ -308,6 +317,6 @@ export const teamMembers = {
 			position: "Tech Intern",
 			image: "/team/blank.webp",
 			linkedInUrl: "https://www.linkedin.com/in/victoria-lee13/",
-		}
+		},
 	],
 };

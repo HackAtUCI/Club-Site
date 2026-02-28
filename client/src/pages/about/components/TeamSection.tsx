@@ -1,13 +1,5 @@
-import React from "react";
 import TeamCard from "./TeamCard";
 import { teamMembers } from "../../../data/team";
-
-interface TeamMember {
-	name: string;
-	position: string;
-	image: string;
-	linkedInUrl?: string;
-}
 
 export default function TeamSection() {
 	return (
@@ -24,7 +16,7 @@ export default function TeamSection() {
 				</p>
 			</div>
 			{Object.entries(teamMembers).map(
-				([teamName, members]: [string, TeamMember[]]) => (
+				([teamName, members]) => (
 					<section key={teamName} className="w-full">
 						<div className="flex items-center gap-2 mb-6">
 							<h2 className="text-2xl md:text-3xl font-bold text-white">
