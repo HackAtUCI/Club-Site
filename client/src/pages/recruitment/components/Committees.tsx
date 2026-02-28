@@ -8,18 +8,13 @@ import MarketingText from "./committee-texts/MarketingText";
 import GraphicsText from "./committee-texts/GraphicsText";
 import TechnologyText from "./committee-texts/TechnologyText";
 
-type BaseTab = Omit<TabInterface, "buttonText" | "tabComponent">;
-
-type CommitteeButtonText =
-	| "Corporate"
-	| "Logistics"
-	| "Marketing"
-	| "Graphics"
-	| "Technology";
-
-interface CommitteeTabInterface extends BaseTab {
-	buttonText: CommitteeButtonText;
-	tabComponent: () => React.ReactNode;
+interface CommitteeTabInterface extends Omit<TabInterface, "buttonText"> {
+	buttonText:
+		| "Corporate"
+		| "Logistics"
+		| "Marketing"
+		| "Graphics"
+		| "Technology";
 }
 
 function RecruitmentTab({
@@ -32,7 +27,7 @@ function RecruitmentTab({
 	showApplyButton: boolean;
 }) {
 	return (
-		<div className="p-4 sm:p-6 md:p-8 lg:p-12">
+		<>
 			<Box className="pt-18 pb-24">
 				<h3 className="text-subtitle mb-8">{headingText}</h3>
 				{textComponent}
@@ -56,7 +51,7 @@ export default function Committees({
 	const committeeTabs: CommitteeTabInterface[] = [
 		{
 			buttonText: "Corporate",
-			tabComponent: () => (
+			tabComponent: (
 				<RecruitmentTab
 					showApplyButton={showApplyButton}
 					headingText="Corporate"
@@ -66,7 +61,7 @@ export default function Committees({
 		},
 		{
 			buttonText: "Logistics",
-			tabComponent: () => (
+			tabComponent: (
 				<RecruitmentTab
 					showApplyButton={showApplyButton}
 					headingText="Logistics"
@@ -76,7 +71,7 @@ export default function Committees({
 		},
 		{
 			buttonText: "Marketing",
-			tabComponent: () => (
+			tabComponent: (
 				<RecruitmentTab
 					showApplyButton={showApplyButton}
 					headingText="Marketing"
@@ -86,7 +81,7 @@ export default function Committees({
 		},
 		{
 			buttonText: "Graphics",
-			tabComponent: () => (
+			tabComponent: (
 				<RecruitmentTab
 					showApplyButton={showApplyButton}
 					headingText="Graphics"
@@ -96,7 +91,7 @@ export default function Committees({
 		},
 		{
 			buttonText: "Technology",
-			tabComponent: () => (
+			tabComponent: (
 				<RecruitmentTab
 					showApplyButton={showApplyButton}
 					headingText="Technology"

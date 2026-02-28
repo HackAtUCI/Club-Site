@@ -9,8 +9,6 @@ import Contact from "@/lib/components/Home/Contact/Contact";
 
 import UpArrow from "@/assets/icons/up-arrow.svg";
 
-import UpArrow from "@/assets/icons/up-arrow.svg";
-
 export default function Home() {
 	const heroRef = useRef<HTMLInputElement>(null);
 	const contactRef = useRef<HTMLDivElement>(null);
