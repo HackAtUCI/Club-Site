@@ -13,22 +13,28 @@ export default function Home() {
 	const heroRef = useRef<HTMLInputElement>(null);
 	const contactRef = useRef<HTMLDivElement>(null);
 
-	const scrollToTop = () => {
-		if (heroRef.current) {
-			heroRef.current.scrollIntoView({ behavior: "smooth" });
-		}
+	const scrollToRef = ({
+		ref,
+	}: {
+		ref: React.RefObject<HTMLElement | null>;
+	}) => {
+		ref.current?.scrollIntoView({ behavior: "smooth" });
 	};
 
 	return (
 		<div className="home-background min-h-screen">
-			<Hero ref={heroRef} />
+			<Hero ref={heroRef} onClick={() => scrollToRef({ ref: contactRef })} />
 			<AboutUs />
 			<Events />
 			<Contact ref={contactRef} />
 			<Sponsors />
 
 			<section className="flex justify-center items-center pb-24">
-				<PrimaryButton onClick={scrollToTop}>
+				<PrimaryButton
+					onClick={() => {
+						scrollToRef({ ref: heroRef });
+					}}
+				>
 					Back To Top
 					<img
 						src={UpArrow}

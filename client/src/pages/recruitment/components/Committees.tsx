@@ -8,13 +8,17 @@ import MarketingText from "./committee-texts/MarketingText";
 import GraphicsText from "./committee-texts/GraphicsText";
 import TechnologyText from "./committee-texts/TechnologyText";
 
-interface CommitteeTabInterface extends Omit<TabInterface, "buttonText"> {
-	buttonText:
-		| "Corporate"
-		| "Logistics"
-		| "Marketing"
-		| "Graphics"
-		| "Technology";
+type BaseTab = Omit<TabInterface, "buttonText">;
+
+type CommitteeButtonText =
+	| "Corporate"
+	| "Logistics"
+	| "Marketing"
+	| "Graphics"
+	| "Technology";
+
+interface CommitteeTabInterface extends BaseTab {
+	buttonText: CommitteeButtonText;
 }
 
 function RecruitmentTab({
@@ -39,7 +43,7 @@ function RecruitmentTab({
 					</PrimaryButton>
 				</div>
 			)}
-		</>
+		</div>
 	);
 }
 
@@ -102,10 +106,8 @@ export default function Committees({
 	];
 	return (
 		<section className="py-30">
-			<h2 className="text-subtitle text-center" id="committees">
-				Our Committees
-			</h2>
-			<Tabs tabs={committeeTabs} />
+			<div id="committees" />
+			<Tabs tabs={committeeTabs} title="Our Committees" />
 		</section>
 	);
 }
