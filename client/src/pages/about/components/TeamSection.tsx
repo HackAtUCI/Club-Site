@@ -20,8 +20,8 @@ export default function TeamSection() {
 						<p className="text-lg md:text-2xl">
 							We strive to provide students with a platform to learn, grow, and
 							develop technology of the future. With every event Hack at UCI
-							puts on, there is an outstanding team behind it composed of four
-							hardworking departments: Corporate, Marketing, Logistics, and
+							puts on, there is an outstanding team behind it composed of five
+							hardworking departments: Corporate, Marketing, Logistics, Design, and
 							Tech.
 						</p>
 					</div>
