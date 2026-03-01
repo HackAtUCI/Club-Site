@@ -14,7 +14,7 @@ export default function Hero({
 					Click me!
 				</PrimaryButton>
 			) : (
-				<PrimaryButton href="#committees">
+				<PrimaryButton href="https://www.notion.so/hackatuci/Hack-at-UCI-Spring-2026-Organizer-Recruitment-311393c84e5d80fabf9eea424ddee5c7?source=copy_link">
 					Learn more about our committees!
 				</PrimaryButton>
 			)}
