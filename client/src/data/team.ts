@@ -1,13 +1,4 @@
 export const teamMembers = {
-	Communications: [
-		{
-			name: "Arnav Nigam",
-			position: "Communications Director",
-			image: "/team/arnavn.webp",
-			linkedInUrl: "https://www.linkedin.com/in/just-arnav/",
-		},
-	],
-
 	Corporate: [
 		{
 			name: "Alex Ngo",
@@ -34,22 +25,10 @@ export const teamMembers = {
 			linkedInUrl: "https://www.linkedin.com/in/rishi-potipireddi/",
 		},
 		{
-			name: "Rishita Dugar",
-			position: "Corporate Organizer",
-			image: "/team/rishita.webp",
-			linkedInUrl: "https://www.linkedin.com/in/rishita-dugar/",
-		},
-		{
 			name: "Shea Thomopoulos",
 			position: "Corporate Organizer",
 			image: "/team/blank.webp",
 			linkedInUrl: "https://www.linkedin.com/in/shea-anastasia-thomopoulos/",
-		},
-		{
-			name: "Trystan Vasquez",
-			position: "Corporate Organizer",
-			image: "/team/trystan.webp",
-			linkedInUrl: "https://www.linkedin.com/in/trystan-camden-vasquez/",
 		},
 		{
 			name: "Nathan Che",
@@ -144,12 +123,6 @@ export const teamMembers = {
 			image: "/team/jolene.webp",
 			linkedInUrl: "https://www.linkedin.com/in/jolene-chou/",
 		},
-		{
-			name: "Ronald Wen",
-			position: "Logistics Intern",
-			image: "/team/ronald.webp",
-			linkedInUrl: "https://www.linkedin.com/in/ronaldwen/",
-		},
 	],
 
 	Marketing: [
@@ -158,18 +131,6 @@ export const teamMembers = {
 			position: "Marketing Director",
 			image: "/team/blank.webp",
 			linkedInUrl: "https://www.linkedin.com/in/pavana-upadhyaya/",
-		},
-		{
-			name: "Jazib Rahim",
-			position: "Marketing Organizer",
-			image: "/team/blank.webp",
-			linkedInUrl: "",
-		},
-		{
-			name: "Lavanya Agarwal",
-			position: "Marketing Organizer",
-			image: "/team/blank.webp",
-			linkedInUrl: "https://www.linkedin.com/in/lavanya-agarwal-25a56933b/",
 		},
 		{
 			name: "Pragya Jhunjhunwala",
@@ -188,12 +149,6 @@ export const teamMembers = {
 			position: "Marketing Organizer",
 			image: "/team/blank.webp",
 			linkedInUrl: "https://www.linkedin.com/in/sejal-pawar-3abb7a280/",
-		},
-		{
-			name: "Tiffany Cheung",
-			position: "Marketing Organizer",
-			image: "/team/blank.webp",
-			linkedInUrl: "https://www.linkedin.com/in/tifffanycheung/",
 		},
 		{
 			name: "Tracy Newberry",
@@ -234,18 +189,6 @@ export const teamMembers = {
 			image: "/team/elijah.webp",
 			linkedInUrl: "https://www.linkedin.com/in/elijah-smith-71319429a/",
 		},
-		{
-			name: "Julia Modina",
-			position: "Design Organizer",
-			image: "/team/julia.webp",
-			linkedInUrl: "https://www.linkedin.com/in/julia-modina/",
-		},
-		{
-			name: "Evelyn Rodriguez",
-			position: "Design Intern",
-			image: "/team/blank.webp",
-			linkedInUrl: "https://www.linkedin.com/in/evelyn-rodriguez-r/",
-		},
 	],
 
 	Tech: [
@@ -254,12 +197,6 @@ export const teamMembers = {
 			position: "Tech Director",
 			image: "/team/ian.webp",
 			linkedInUrl: "https://www.linkedin.com/in/ian-dai/",
-		},
-		{
-			name: "Andrew Hwang",
-			position: "Tech Organizer",
-			image: "/team/andrew.webp",
-			linkedInUrl: "https://www.linkedin.com/in/andrew-hwang-78b375258/",
 		},
 		{
 			name: "Cyril Joby",
