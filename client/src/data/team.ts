@@ -139,12 +139,6 @@ export const teamMembers = {
 			linkedInUrl: "https://www.linkedin.com/in/pragya-jhunjhunwala/",
 		},
 		{
-			name: "Rithika Yalla",
-			position: "Marketing Organizer",
-			image: "/team/rithika.webp",
-			linkedInUrl: "https://www.linkedin.com/in/rithika-yalla-96a490328/",
-		},
-		{
 			name: "Sejal Pawar",
 			position: "Marketing Organizer",
 			image: "/team/blank.webp",
