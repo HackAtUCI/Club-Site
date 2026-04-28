@@ -10,31 +10,24 @@ interface TeamMember {
 
 export default function TeamSection() {
 	return (
-		<section className="flex justify-center items-center px-10 py-30 md:px-36 lg:px-56">
+		<section className="flex justify-center items-center text-[#2D2D3E] px-10 py-30 md:px-36 lg:px-46">
 			<div className="container">
-				<div className="flex flex-col gap-16">
-					<div>
-						<h1 className="text-4xl md:text-5xl font-bold mb-4">
-							Meet the Team
+				<div className="flex flex-col gap-16 rounded-[40px] px-10 py-16 bg-gradient-to-b from-[#ECEFFD] to-[#B7C2F3]">
+					<div className="flex justify-center">
+						<h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-b from-[#2D2D3E] to-[#4D4D70E5] bg-clip-text text-transparent ">
+							Our Team
 						</h1>
-						<p className="text-lg md:text-2xl">
-							We strive to provide students with a platform to learn, grow, and
-							develop technology of the future. With every event Hack at UCI
-							puts on, there is an outstanding team behind it composed of five
-							hardworking departments: Corporate, Marketing, Logistics, Design, and
-							Tech.
-						</p>
 					</div>
 					{Object.entries(teamMembers).map(
 						([teamName, members]: [string, TeamMember[]]) => (
-							<section key={teamName} className="w-full">
-								<div className="flex items-center gap-2 mb-6">
-									<h2 className="text-2xl md:text-3xl font-bold text-white">
+							<section key={teamName} className="w-full p-10 rounded-[40px] bg-white/20 backdrop-blur-lg shadow-[0_3.2px_3.2px_0px_#00000040,inset_0_3.2px_3.2px_0px_#00000040]">
+								<div className="flex items-center justify-center gap-2 mb-6">
+									<h2 className="text-2xl md:text-3xl font-bold">
 										{teamName}
 									</h2>
 								</div>
 
-								<div className="grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-5 md:place-items-start">
+								<div className="grid grid-cols-2 place-items-center md:grid-cols-3 lg:grid-cols-5 md:place-items-start">
 									{members.map((member) => (
 										<TeamCard
 											key={member.name}

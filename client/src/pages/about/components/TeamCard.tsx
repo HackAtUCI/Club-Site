@@ -21,13 +21,13 @@ const TeamCard: React.FC<TeamCardProps> = ({
 					src={image}
 					alt={name}
 					loading="lazy"
-					className="w-full aspect-square object-cover rounded-md bg-gray-600"
+					className="w-full aspect-square object-cover rounded-2xl bg-gray-600"
 				/>
 			</div>
 
 			<div className="flex items-center justify-between">
 				<h5
-					className="text-sm md:text-lg font-bold text-white"
+					className="text-sm md:text-md"
 				>
 					{name}
 				</h5>
@@ -41,7 +41,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
 				</a>
 			</div>
 
-			<h6 className="text-xs md:text-sm text-gray-200">{position}</h6>
+			<h6 className="text-xxs md:text-xs">{position}</h6>
 		</div>
 	);
 };
