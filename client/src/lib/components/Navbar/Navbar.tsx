@@ -1,9 +1,9 @@
-import { useState, type PropsWithChildren } from "react";
+import { use, useState, type PropsWithChildren } from "react";
 import * as NavMenu from "@radix-ui/react-navigation-menu";
 
 import HackLogo from "@/assets/logos/hack_navbar.svg";
 import hamburger from "@/assets/icons/navigation-icon.svg";
-import useScrollFromTop from "@/lib/hooks/useScrollFromTop";
+import useScrollDirection from "@/lib/hooks/useScrollDirection";
 import NavLinkItem from "./NavLinkItem";
 
 import "./Navbar.css";
@@ -24,11 +24,11 @@ export default function BaseNavbar({ children }: PropsWithChildren) {
 	const [listShown, setListShown] = useState(false);
 	const [hidden, setHidden] = useState(true);
 
-	const hasScrolledFromTop = useScrollFromTop();
-
+	const scrollDirection = useScrollDirection();
+	
 	return (
 		<NavMenu.Root
-			className={`${hasScrolledFromTop ? "opacity-0" : "opacity-100"
+			className={`${scrollDirection ? "opacity-0" : "opacity-100"
                } hidden md:flex items-center justify-center fixed px-12 py-6 my-20 left-1/2 -translate-x-1/2 z-50 w-[700px] h-[60px] rounded-[25px] border border-[1.5px] border-white bg-black transition-opacity duration-300 ease-out`}
 		>
 			<NavMenu.List className="flex justify-between items-center w-full gap-32">
