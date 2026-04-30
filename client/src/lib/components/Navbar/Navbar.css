@@ -5,13 +5,13 @@
 }
 
 .navMenuLink {
-    font-size: 24px;
+    font-size: 12px;
 
     padding-bottom: 0.5rem;
 
     background-image: linear-gradient(white, white);
     background-repeat: no-repeat;
-    background-position-y: 34px;
+    background-position-y: 14px;
     background-size: 0% 2px;
     transition: background-size 0.25s ease;
 }

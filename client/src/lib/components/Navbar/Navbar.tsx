@@ -28,36 +28,30 @@ export default function BaseNavbar({ children }: PropsWithChildren) {
 
 	return (
 		<NavMenu.Root
-			className={`${hasScrolledFromTop ? "md:bg-black/50" : ""} ${
-				hidden ? "max-md:h-[4rem] max-md:overflow-hidden" : ""
-			} fixed z-50 flex w-full flex-col bg-black bg-black/0 transition-colors duration-0 ease-out md:flex-row md:items-center md:duration-700`}
+			className={`${hasScrolledFromTop ? "opacity-0" : "opacity-100"
+               } hidden md:flex items-center justify-center fixed px-[50px] py-[25px] my-20 left-1/2 -translate-x-1/2 z-50 w-[700px] h-[60px] rounded-[25px] border border-[1.5px] border-white bg-black transition-opacity duration-300 ease-out`}
 		>
-			<NavMenu.List className="flex bg-black bg-black/50 p-3 md:bg-black/0">
-				<NavLinkItem to="/">
-					<img src={HackLogo} alt="Hack at UCI Logo" width={40} height={40} />
-				</NavLinkItem>
-				<HamburgerMenu
-					handleClick={() => {
-						setListShown((listShown) => !listShown);
-						setHidden(false);
-					}}
-				/>
-			</NavMenu.List>
-			<div className="navMenuListWrapper inline-block md:my-3 md:ml-auto md:flex md:items-center">
-				<NavMenu.List
-					className={`${hidden ? "opacity-0" : "opacity-100"} ${
-						listShown ? "" : "-translate-y-full"
-					} font-display gap-10 bg-black bg-black/50 p-5 pt-3 transition-transform duration-500 ease-in-out md:flex md:translate-y-0 md:items-center md:gap-0 md:bg-black/0 md:p-0 md:opacity-100 md:transition-none [&>*]:mr-10 [&>*]:mb-5 [&>*]:md:mb-0`}
-					onTransitionEnd={() => setHidden(!listShown)}
-				>
+
+			<NavMenu.List className="grid grid-cols-3 items-center w-full px-6">
+				<div className="justify-self-start">
+					<NavLinkItem to="/">
+						<img src={HackLogo} alt="Hack at UCI Logo" width={34} height={34} />
+					</NavLinkItem>
+				</div>
+				
+				<div className="flex justify-center items-center gap-10 pt-2">
 					<NavLinkItem to="/about">About</NavLinkItem>
 					<NavLinkItem to="/events">Events</NavLinkItem>
 					<NavLinkItem to="/recruitment">Recruitment</NavLinkItem>
-					<NavLinkItem to="/contact">Contact Us</NavLinkItem>
+				</div>
+				<div className="justify-self-end ml-auto flex px-6 pt-3 pb-1 bg-[#333333] rounded-[12px]">
+					<NavLinkItem to="/contact" className="flex justify-center items-center leading-none"
+					>Join Us</NavLinkItem>
+				</div>
 
-					{children}
-				</NavMenu.List>
-			</div>
+				{children}
+			</NavMenu.List>
+
 		</NavMenu.Root>
 	);
 }
