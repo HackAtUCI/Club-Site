@@ -1,10 +1,10 @@
 import React from "react";
 
-import bigCircleLeft from "@/assets/hero-decor/big-circle-left.svg";
-import bigCircleRight from "@/assets/hero-decor/big-circle-right.svg";
-import smallCircle from "@/assets/hero-decor/small-circle.svg";
-import heroVectorLeft from "@/assets/hero-decor/hero-vector-left.svg";
-import heroVectorRight from "@/assets/hero-decor/hero-vector-right.svg";
+import bigCircleLeft from "@/assets/home-decor/big-circle-left.svg";
+import bigCircleRight from "@/assets/home-decor/big-circle-right.svg";
+import smallCircle from "@/assets/home-decor/small-circle.svg";
+import heroVectorLeft from "@/assets/home-decor/hero-vector-left.svg";
+import heroVectorRight from "@/assets/home-decor/hero-vector-right.svg";
 
 type HomeDecorProps = {
 	children: React.ReactNode;
