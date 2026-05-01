@@ -3,8 +3,9 @@ import { useRef } from "react";
 import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
 import Hero from "@/lib/components/Home/Hero/Hero";
 import Events from "@/lib/components/Home/Events/Events";
-import Sponsors from "@/lib/components/Home/Sponsors/Sponsors";
-import Contact from "@/lib/components/Home/Contact/Contact";
+import Stats from "@/lib/components/Home/Stats/Stats";
+import OurAlumni from "@/lib/components/Home/Alumni/OurAlumni";
+import Organization from "@/lib/components/Home/Organization/Organization";
 
 import UpArrow from "@/assets/icons/up-arrow.svg";
 import HomeDecor from "./HomeDecor";
@@ -28,8 +29,9 @@ export default function Home() {
 				<Events />
 			</HomeDecor>
 			<div className="home-background">
-				<Contact ref={contactRef} />
-				<Sponsors />
+				<Stats />
+				<OurAlumni />
+				<Organization />
 
 				<section className="flex justify-center items-center pb-24">
 					<PrimaryButton
