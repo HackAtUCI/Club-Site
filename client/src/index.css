@@ -96,13 +96,13 @@ body {
     background-clip: text;
 }
 
-  .hack-white-gradient {
+.hack-white-gradient {
     background: linear-gradient(
-      to bottom,
-      #ECEFFD 0%,
-      #B7C2F3 100%
+        to bottom,
+        #ECEFFD 0%,
+        #B7C2F3 100%
     );
-  }
+}
 
   .hack-white-gradient-transparent {
     background: linear-gradient(
