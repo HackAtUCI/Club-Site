@@ -1,29 +1,11 @@
 import React from "react";
 import IrvineHacksImg from "@/assets/images/IH26-closing.png";
-import heroVectorLeft from "@/assets/hero-decor/hero-vector-left.svg";
-import bigCircleRight from "@/assets/hero-decor/big-circle-right.svg";
 
 const Events: React.FC = () => {
 	return (
-		<section className="relative isolate overflow-hidden">
+		<section className="relative isolate overflow-visible">
 			{/* Continue the Hero's light field with a subtle white gradient */}
-			<div className="hack-background-gradient absolute inset-0" aria-hidden />
-
-			{/* Hero decor spillover into Events (behind the panel, above the background) */}
-			<img
-				src={heroVectorLeft}
-				alt=""
-				draggable={false}
-				aria-hidden
-				className="pointer-events-none absolute -top-[18%] left-0 z-0 w-[clamp(200px,29vw,440px)] -translate-x-[20%] select-none"
-			/>
-			<img
-				src={bigCircleRight}
-				alt=""
-				draggable={false}
-				aria-hidden
-				className="pointer-events-none absolute -top-[10%] right-0 z-0 w-[clamp(320px,38vw,760px)] translate-x-[36%] select-none opacity-70"
-			/>
+			{/* Background is provided by the shared Home wrapper so decor can span sections */}
 
 			<div className="relative z-10 flex mx-8 flex-col px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14">
 				{/* Top panel */}
