@@ -2,45 +2,96 @@ import React from "react";
 
 type AlumniCardProps = {
 	name: string;
-	title: string;
-	company: string;
 	quote: string;
+	hackRole: string;
+	hackPeriod: string;
+	companyTitle: string;
+	company: string;
 };
 
-const AlumniCard: React.FC<AlumniCardProps> = ({ name, title, company, quote }) => {
+const AlumniCard: React.FC<AlumniCardProps> = ({
+	name,
+	quote,
+	hackRole,
+	hackPeriod,
+	companyTitle,
+	company,
+}) => {
 	return (
-		<div className="box-shadow flex h-full flex-col rounded-[22px] bg-white/20 p-6 md:p-7">
-			<div className="flex items-start justify-between gap-4">
-				<div className="flex items-center gap-4">
-					<div className="h-12 w-12 shrink-0 rounded-full bg-black/10 ring-1 ring-black/10" />
-					<div className="min-w-0">
-						<p className="truncate text-lg font-bold text-primary md:text-xl">
-							{name}
-						</p>
-						<p className="truncate text-sm font-semibold text-black/70 md:text-base">
-							{title}
-						</p>
-					</div>
-				</div>
-
-				<span className="shrink-0 text-3xl leading-none text-black/60">“</span>
+		<div className="box-shadow relative flex flex-col rounded-[36px] bg-white/20 p-7 md:p-8">
+			{/* Quotation mark */}
+			<div className="absolute left-7 top-6 select-none text-[44px] font-black leading-none text-black/70 md:left-8 md:top-7 md:text-[52px]">
+				“
 			</div>
 
-			<p className="mt-4 flex-1 text-sm leading-6 text-black/80 md:text-base md:leading-7">
+			{/* Quote */}
+			<p className="mt-10 text-balance text-[14px] italic leading-[1.35] text-black md:mt-12 md:text-xs">
 				{quote}
 			</p>
 
-			<div className="mt-5 flex items-center justify-between gap-4">
-				<span className="text-sm font-semibold text-black/70 md:text-base">
-					{company}
-				</span>
-				<span className="text-3xl leading-none text-black/60">”</span>
+			{/* Name */}
+			<div className="mt-3">
+				<p className="text-3xl font-black leading-none tracking-[-0.02em] text-[#2d2d3e] md:text-xl">
+					{name}
+				</p>
+
+				<div className="mt-2 flex flex-col gap-3 text-[#2d2d3e] md:flex-row md:items-start md:gap-3">
+					<div className="md:max-w-60">
+						<p className="text-xs font-extrabold leading-tight md:text-xs">
+							{hackRole}
+						</p>
+						<p className="text-xs font-extrabold leading-tight md:text-xs">
+							{hackPeriod}
+						</p>
+					</div>
+
+					<div className="hidden h-8 w-[3px] shrink-0 rounded bg-[#2d2d3e] md:block" />
+
+					<div className="md:max-w-60">
+						<p className="text-xs font-extrabold leading-tight md:text-xs">
+							{companyTitle}
+						</p>
+						<p className="text-xs font-extrabold leading-tight md:text-xs">
+							@ {company}
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
 };
 
 const OurAlumni: React.FC = () => {
+	const alumni: AlumniCardProps[] = [
+		{
+			name: "Alex Ngo",
+			hackRole: "Corporate Director",
+			hackPeriod: "Hack at UCI '23-'26",
+			companyTitle: "Product Manager Intern",
+			company: "Microsoft",
+			quote:
+				"As part of Hack at UCI for three years, working my way up to Corporate Outreach Director, this organization has defined my college experience, helping me grow as a public speaker, build a professional network, and find a community who have become some of my closest friends. Being able to give back, empower the next generation of students through hackathons, and play a part in their journeys has been the most rewarding experience.",
+		},
+		{
+			name: "Audrey Lam",
+			hackRole: "Corporate Organizer",
+			hackPeriod: "Hack at UCI 2022-2024",
+			companyTitle: "Software Engineer",
+			company: "The Trade Desk",
+			quote:
+				"Working with sponsors helped me gain confidence when interviewing for a job. I met a lot of other Hack members who not only inspired me and helped me navigate the CS world, but are also some of my closest friends.",
+		},
+		{
+			name: "Randy Huynh",
+			hackRole: "Tech Organizer",
+			hackPeriod: "Hack at UCI '22-'24",
+			companyTitle: "Software Engineer",
+			company: "Amazon",
+			quote:
+				"I really liked the people I met and talked to within Hack and in hackathons (mentors, volunteers, sponsors and hackers). Many of the organizers I worked with are still my closest friends to this day.",
+		},
+	];
+
 	return (
 		<section className="flex w-full justify-center px-4 py-14 md:px-8 md:py-18">
 			<div className="hack-white-gradient w-full max-w-7xl rounded-[45px] p-6 md:p-10">
@@ -54,25 +105,12 @@ const OurAlumni: React.FC = () => {
 						</p>
 					</div>
 
-					<div className="flex flex-col gap-6 md:flex-row md:gap-10">
-						<AlumniCard
-							name="Alex Ngo"
-							title="Corporate Director"
-							company="Hack at UCI '23-'26"
-							quote="Hack at UCI gave me the confidence to ship real projects with a team. The community is unmatched."
-						/>
-						<AlumniCard
-							name="Priya Patel"
-							title="Product Designer"
-							company="Figma"
-							quote="Organizing events taught me how to lead, communicate, and build experiences that people actually love."
-						/>
-						<AlumniCard
-							name="Ethan Lee"
-							title="Data Scientist"
-							company="Meta"
-							quote="From workshops to hackathons, I learned more by building alongside others than I ever did alone."
-						/>
+					<div className="flex flex-col items-center gap-6 md:flex-row md:justify-center md:flex-wrap md:gap-8">
+						{alumni.map((a) => (
+							<div key={a.name} className="w-full md:basis-[calc(33.333%-1.4rem)]">
+								<AlumniCard {...a} />
+							</div>
+						))}
 					</div>
 				</div>
 			</div>
