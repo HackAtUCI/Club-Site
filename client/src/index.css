@@ -1,156 +1,150 @@
 @import "tailwindcss";
 
 :root {
-    --font-manrope: 'Manrope', sans-serif;
+	--font-manrope: "Manrope", sans-serif;
 
-    --font-size-heading: 4rem;
-    --font-size-subtitle: 3rem;
-    --font-size-body: 1.5rem;
-    --font-size-button: 2.25rem;
+	--font-size-heading: 4rem;
+	--font-size-subtitle: 3rem;
+	--font-size-body: 1.5rem;
+	--font-size-button: 2.25rem;
 
-    --font-size-heading-mobile: 2rem;
-    --font-size-body-mobile: 1rem;
+	--font-size-heading-mobile: 2rem;
+	--font-size-body-mobile: 1rem;
 
-    --font-weight-bold: 700;
-    --font-weight-semibold: 600;
-    --font-weight-regular: 400;
+	--font-weight-bold: 700;
+	--font-weight-semibold: 600;
+	--font-weight-regular: 400;
 }
 
 @theme {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-manrope: var(--font-manrope);
-    --font-inter: var(--font-inter);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-manrope: var(--font-manrope);
+	--font-inter: var(--font-inter);
 
-    --color-primary: #2d2d3e;
-    --color-secondary: #ffffff;
-    --color-blue-accent: #7ea9fb;
-    --color-green-accent: #82ffb4;
+	--color-primary: #2d2d3e;
+	--color-secondary: #ffffff;
+	--color-blue-accent: #7ea9fb;
+	--color-green-accent: #82ffb4;
 
-    --color-box: #2c2c3c;
-    --color-blue: var(--color-primary);
-    --color-dark-blue: #2D2D3E;
-    --color-darker-blue: #1f1e2d;
+	--color-box: #2c2c3c;
+	--color-blue: var(--color-primary);
+	--color-dark-blue: #2d2d3e;
+	--color-darker-blue: #1f1e2d;
 }
 
 body {
-    min-height: 100vh;
-    color: var(--color-secondary);
-    font-family: var(--font-manrope);
-    font-size: var(--font-size-body-mobile);
-    font-weight: var(--font-weight-regular);
-    line-height: 1.5;
+	min-height: 100vh;
+	color: var(--color-secondary);
+	font-family: var(--font-manrope);
+	font-size: var(--font-size-body-mobile);
+	font-weight: var(--font-weight-regular);
+	line-height: 1.5;
 }
 
 .text-heading {
-    font-family: var(--font-inter);
-    font-size: var(--font-size-heading-mobile);
-    font-weight: var(--font-weight-bold);
-    line-height: 1.1;
+	font-family: var(--font-inter);
+	font-size: var(--font-size-heading-mobile);
+	font-weight: var(--font-weight-bold);
+	line-height: 1.1;
 }
 
 .text-subtitle {
-    font-size: var(--font-size-subtitle);
-    font-weight: var(--font-weight-semibold);
-    line-height: 1.2;
+	font-size: var(--font-size-subtitle);
+	font-weight: var(--font-weight-semibold);
+	line-height: 1.2;
 }
 
 .text-body {
-    font-family: var(--font-inter);
-    font-size: var(--font-size-body-mobile);
-    line-height: 1.5;
+	font-family: var(--font-inter);
+	font-size: var(--font-size-body-mobile);
+	line-height: 1.5;
 }
 
 @utility text-button {
-    font-size: var(--font-size-button);
-    font-weight: var(--font-weight-semibold);
+	font-size: var(--font-size-button);
+	font-weight: var(--font-weight-semibold);
 }
 
-
 .home-background {
-    background-image: linear-gradient(
-        to bottom,
-        var(--color-dark-blue) 0px,
-        var(--color-blue) 450px,
-        var(--color-dark-blue) 900px
-    );
+	background-image: linear-gradient(
+		to bottom,
+		var(--color-dark-blue) 0px,
+		var(--color-blue) 450px,
+		var(--color-dark-blue) 900px
+	);
 }
 
 .gunmetal-gradient {
-    background: linear-gradient(
-      to bottom,
-      #2D2D3E 0%,
-      rgba(77, 77, 112, 0.9) 100%
-    );
-  }
-
-  .gunmetal-text-gradient {
-    background: linear-gradient(
-        to bottom,
-        #2D2D3E 0%,
-        rgba(77, 77, 112, 0.9) 100%
-    );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+	background: linear-gradient(
+		to bottom,
+		#2d2d3e 0%,
+		rgba(77, 77, 112, 0.9) 100%
+	);
 }
 
-  .hack-white-gradient {
-    background: linear-gradient(
-      to bottom,
-      #ECEFFD 0%,
-      #B7C2F3 100%
-    );
-  }
+.gunmetal-text-gradient {
+	background: linear-gradient(
+		to bottom,
+		#2d2d3e 0%,
+		rgba(77, 77, 112, 0.9) 100%
+	);
 
-  .hack-white-gradient-transparent {
-    background: linear-gradient(
-        to bottom,
-        rgba(236, 239, 253, 0.85) 0%,
-        rgba(183, 194, 243, 0.85) 100%
-    );
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
-  .box-shadow {
-    box-shadow:
-        0px 3.2px 3.2px rgba(0, 0, 0, 0.25),
-        inset 0px 3.2px 3.2px rgba(0, 0, 0, 0.25);
+.hack-white-gradient {
+	background: linear-gradient(to bottom, #eceffd 0%, #b7c2f3 100%);
+}
+
+.hack-white-gradient-transparent {
+	background: linear-gradient(
+		to bottom,
+		rgba(236, 239, 253, 0.85) 0%,
+		rgba(183, 194, 243, 0.85) 100%
+	);
+}
+
+.box-shadow {
+	box-shadow: 0px 3.2px 3.2px rgba(0, 0, 0, 0.25),
+		inset 0px 3.2px 3.2px rgba(0, 0, 0, 0.25);
 }
 
 @keyframes scroll-left {
-    from {
-        transform: translateX(0%);
-    }
+	from {
+		transform: translateX(0%);
+	}
 
-    to {
-        transform: translateX(-50%);
-    }
+	to {
+		transform: translateX(-50%);
+	}
 }
 
 @keyframes scroll-right {
-    from {
-        transform: translateX(-50%);
-    }
+	from {
+		transform: translateX(-50%);
+	}
 
-    to {
-        transform: translateX(0%);
-    }
+	to {
+		transform: translateX(0%);
+	}
 }
 
 .animate-scroll-left {
-    animation: scroll-left 18s linear infinite;
+	animation: scroll-left 18s linear infinite;
 }
 
 .animate-scroll-right {
-    animation: scroll-right 18s linear infinite;
+	animation: scroll-right 18s linear infinite;
 }
 
 @media (min-width: 768px) {
-    .text-heading {
-        font-size: var(--font-size-heading);
-    }
-    .text-body {
-        font-size: var(--font-size-body);
-    }
+	.text-heading {
+		font-size: var(--font-size-heading);
+	}
+	.text-body {
+		font-size: var(--font-size-body);
+	}
 }
