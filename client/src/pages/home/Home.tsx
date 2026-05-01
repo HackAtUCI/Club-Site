@@ -31,7 +31,7 @@ export default function Home() {
 			<div className="relative isolate overflow-visible">
 				{/* Shared light background behind Hero + Events */}
 				<div
-					className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[calc(100svh+40rem)] hack-background-gradient"
+					className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[calc(100svh+52rem)] hack-background-gradient"
 					aria-hidden
 				/>
 
@@ -63,14 +63,14 @@ export default function Home() {
 					alt=""
 					aria-hidden
 					draggable={false}
-					className="pointer-events-none absolute left-0 top-[calc(110svh-10rem)] z-10 w-[clamp(200px,29vw,440px)] -translate-x-[20%] select-none"
+					className="pointer-events-none absolute left-0 top-[calc(100svh+2rem)] z-10 w-[clamp(200px,29vw,440px)] -translate-x-[20%] select-none"
 				/>
 				<img
 					src={bigCircleRight}
 					alt=""
 					aria-hidden
 					draggable={false}
-					className="pointer-events-none absolute right-38 top-[calc(100svh-6rem)] z-10 w-[clamp(320px,30vw,760px)] translate-x-[36%] select-none opacity-70"
+					className="pointer-events-none absolute right-38 top-[calc(100svh+6rem)] z-10 w-[clamp(320px,30vw,760px)] translate-x-[36%] select-none opacity-70"
 				/>
 
 				<div className="relative z-20">
