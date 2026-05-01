@@ -87,6 +87,7 @@ body {
 	background: linear-gradient(
 		to bottom,
 		#2d2d3e 0%,
+		#2d2d3e 55%,
 		rgba(77, 77, 112, 0.9) 100%
 	);
 

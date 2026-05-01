@@ -29,7 +29,7 @@ export default function SponsorRow({
 						<img
 							src={sponsor.logo}
 							alt={sponsor.name}
-							className="h-12 md:h-auto w-auto object-contain"
+							className="h-20 md:h-auto w-auto object-contain"
 						/>
 					</a>
 				))}
