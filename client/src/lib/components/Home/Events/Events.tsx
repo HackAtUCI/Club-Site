@@ -25,9 +25,9 @@ const EventCard: React.FC<EventCardProps> = ({
 			rel="noreferrer"
 			className="group block w-full"
 		>
-			<div className="hack-white-gradient rounded-[44px] p-8 ring-1 ring-black/10 transition group-hover:brightness-[1.02] md:p-10">
-				<div className="rounded-[36px] box-shadow bg-white/20 md:p-10">
-					<h3 className="gunmetal-text-gradient text-center text-3xl font-bold leading-none md:text-4xl">
+			<div className="hack-white-gradient mx-4 md:mx-0 rounded-[44px] p-4 ring-1 ring-black/10 transition group-hover:brightness-[1.02] md:p-10">
+				<div className="rounded-[36px]  box-shadow bg-white/20 p-6 md:p-10">
+					<h3 className="gunmetal-text-gradient text-center text-3xl font-extrabold leading-none md:text-4xl">
 						{title}
 					</h3>
 					<p className="mt-5 text-center text-lg leading-5 text-black md:mt-6 md:text-base md:leading-6 font-medium">
@@ -58,7 +58,7 @@ const Events: React.FC = () => {
 			{/* Continue the Hero's light field with a subtle white gradient */}
 			{/* Background is provided by the shared Home wrapper so decor can span sections */}
 
-			<div className="relative z-10 flex mx-8 flex-col px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14">
+			<div className="relative z-10 flex mx-auto w-full max-w-7xl flex-col px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14">
 				{/* Top panel */}
 				<div className="hack-white-gradient ring-1 ring-black/10 w-full rounded-[44px] p-7 md:p-12">
 					<div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2 lg:gap-10">
@@ -103,7 +103,17 @@ const Events: React.FC = () => {
 
 			{/* Event cards area (dark) */}
 			<div className="">
-				<div className="mx-auto w-full max-w-6xl px-4 pb-30 md:px-8 md:pb-36">
+				<div className="mx-auto w-full max-w-3/4 md:max-w-md px-3 pt-6 md:px-5">
+					<div className="hack-white-gradient ring-1 ring-black/10 rounded-[56px] p-5 md:p-8">
+						<div className="rounded-[56px] box-shadow bg-white/20 p-2">
+							<h2 className="gunmetal-text-gradient text-center text-2xl font-extrabold md:text-[40px] tracking-tight">
+								Hackathons
+							</h2>
+						</div>
+					</div>
+				</div>
+
+				<div className="mx-auto w-full max-w-6xl px-4 pb-30 pt-10 md:px-8 md:pb-36 md:pt-12">
 					<div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-15">
 						<EventCard
 							src={IrvineHacksOpeningImg}
