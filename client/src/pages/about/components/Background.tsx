@@ -40,7 +40,7 @@ export default function Background() {
                 }}
 				src={greenBlob}
 				alt=""
-				className="absolute right-0 top-[4%] z-0"
+				className="absolute right-0 top-[4%] z-0 pointer-events-none select-none"
 			/>
 			<motion.img
                 aria-hidden="true"
@@ -75,7 +75,7 @@ export default function Background() {
                 }}
 				src={blueBlob}
 				alt=""
-				className="absolute left-0 top-[18%] z-0"
+				className="absolute left-0 top-[18%] z-0 pointer-events-none select-none"
 			/>
 			<motion.img
                 aria-hidden="true"
@@ -111,7 +111,7 @@ export default function Background() {
                 }}
 				src={whiteBlob}
 				alt=""
-				className="absolute right-0 top-[60%] z-0"
+				className="absolute right-0 top-[60%] z-0 pointer-events-none select-none"
 			/>
         </div>
     );
