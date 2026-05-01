@@ -18,7 +18,7 @@ const HamburgerMenu = ({ handleClick }: { handleClick: () => void }) => {
 	return (
 		<button
 			type="button"
- 			className="fixed z-50 bg-black p-4 top-16 right-8 rounded-[30px] h-auto border border-[1.5px] border-white cursor-pointer md:hidden"
+ 			className="fixed z-50 bg-black p-4 top-16 right-8 rounded-[30px] h-auto border border-white cursor-pointer md:hidden"
 			onClick={handleClick}
 		>
 			<img src={hamburger} width="35" alt="Mobile hamburger menu" />
@@ -43,11 +43,11 @@ const MobileDrawer = ({open, onClose, children}: PropsWithChildren<{open: boolea
 			<NavMenu.List className="flex flex-col">
 					<div className="flex flex-col items-end gap-12 my-20">
 						{navItems.map(({ to, label }) => (
-							<NavLinkItem key={to} to={to} className="!text-4xl" onClick={onClose}>{label}</NavLinkItem>
+							<NavLinkItem key={to} to={to} className="text-4xl!" onClick={onClose}>{label}</NavLinkItem>
 						))}
 					</div>
 					<div className="flex w-fit ml-auto px-12 py-4 bg-[#333333] rounded-3xl" onClick={onClose}>
-						<NavLinkItem to="/recruitment" className="!text-2xl leading-none block">Join Us</NavLinkItem>
+						<NavLinkItem to="/recruitment" className="text-2xl! leading-none block">Join Us</NavLinkItem>
 					</div>
 			</NavMenu.List>
 			{children}
@@ -77,11 +77,11 @@ export default function BaseNavbar({ children }: PropsWithChildren) {
        </NavMenu.Root>
 
 		<NavMenu.Root
-			className={`${scrollDirection ? "-translate-y-full opacity-0" : "-translate-y-0 opacity-100"
-               } hidden md:flex items-center justify-center fixed px-12 py-6 my-20 left-1/2 -translate-x-1/2 z-50 w-[700px] h-[60px] rounded-[25px] border border-[1.5px] border-white bg-black transition-all duration-300 ease-out`}
+			className={`${scrollDirection ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+               } hidden md:flex items-center justify-center fixed px-12 py-6 my-10 left-1/2 -translate-x-1/2 z-50 w-[750px] h-[75px] rounded-3xl border border-white bg-black transition-all duration-300 ease-out`}
 		>
 			<NavMenu.List className="flex justify-between items-center w-full gap-32">
-				<div className="flex-shrink-0">
+				<div className="shrink-0">
 					<NavLinkItem to="/">
 						<img src={HackLogo} alt="Hack at UCI Logo" className="transition-transform hover:scale-110 duration-300" width={34} height={34} />
 					</NavLinkItem>
@@ -94,7 +94,7 @@ export default function BaseNavbar({ children }: PropsWithChildren) {
 						</div>
 					))}
 				</div>
-				<div className="flex-shrink-0 flex px-6 pt-2 bg-[#333333] rounded-xl transition-transform hover:scale-110 duration-300">
+				<div className="shrink-0 flex px-6 pt-2 bg-[#333333] rounded-xl transition-transform hover:scale-110 duration-300">
 					<NavLinkItem to="/recruitment">Join Us</NavLinkItem>
 				</div>
 
