@@ -1,4 +1,4 @@
-import { use, useState, type PropsWithChildren } from "react";
+import { useEffect, useState, type PropsWithChildren } from "react";
 import * as NavMenu from "@radix-ui/react-navigation-menu";
 
 import HackLogo from "@/assets/logos/hack_navbar.svg";
@@ -53,6 +53,19 @@ export default function BaseNavbar({ children }: PropsWithChildren) {
 
 	const scrollDirection = useScrollDirection();
 
+	useEffect(() => {
+		const handler = () => {
+			if (window.innerWidth >= 768) {
+				setDrawerOpen(false);
+			}	
+		}
+		window.addEventListener("resize", handler);
+
+		return () => {
+			window.removeEventListener("resize", handler);
+		}
+	}, []);
+	
 	return (
 		<>
 		<HamburgerMenu
