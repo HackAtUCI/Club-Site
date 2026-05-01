@@ -17,7 +17,7 @@ export default function Hero() {
 				duration: 0.6,
 				ease: "easeOut",
 			}}
-			className="flex flex-col md:flex-row justify-center items-center pt-30 p-10 md:p-36 lg:p-56"
+			className="flex flex-col md:flex-row justify-center items-center pt-36 p-10 md:p-36 lg:p-56"
 		>
 			<div className="container z-40">
 				<div className="flex rounded-[40px] p-10 bg-gradient-to-b from-[#ECEFFD] to-[#B7C2F3]">
