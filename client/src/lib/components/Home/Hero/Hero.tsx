@@ -1,9 +1,7 @@
 import React, { forwardRef } from "react";
 
-import bigCircleRight from "@/assets/hero-decor/big-circle-right.svg";
 import bigCircleLeft from "@/assets/hero-decor/big-circle-left.svg";
 import smallCircle from "@/assets/hero-decor/small-circle.svg";
-import heroVectorLeft from "@/assets/hero-decor/hero-vector-left.svg";
 import heroVectorRight from "@/assets/hero-decor/hero-vector-right.svg";
 
 interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -37,13 +35,6 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(
 					className="pointer-events-none absolute top-35 left-29 z-0 w-[clamp(220px,24vw,520px)] -translate-x-[34%] -translate-y-[38%] select-none opacity-80"
 				/>
 				<img
-					src={bigCircleRight}
-					alt=""
-					draggable={false}
-					aria-hidden
-					className="pointer-events-none absolute bottom-0 right-25 z-0 w-[clamp(220px,24vw,520px)] translate-x-[30%] translate-y-[30%] select-none opacity-80"
-				/>
-				<img
 					src={smallCircle}
 					alt=""
 					draggable={false}
@@ -59,13 +50,6 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(
 					draggable={false}
 					aria-hidden
 					className="pointer-events-none absolute top-25 right-0 z-0 w-[clamp(200px,29vw,440px)] translate-x-[30%] -translate-y-[10%] select-none"
-				/>
-				<img
-					src={heroVectorLeft}
-					alt=""
-					draggable={false}
-					aria-hidden
-					className="pointer-events-none absolute bottom-0 left-0 z-0 w-[clamp(200px,29vw,440px)] -translate-x-[20%] translate-y-[10%] select-none"
 				/>
 
 

@@ -1,7 +1,8 @@
 import React from "react";
-import PrimaryAnchor from "@/lib/components/PrimaryAnchor/PrimaryAnchor";
-import IrvineHacksImg from "@/assets/images/IH2-resized.jpg";
+import IrvineHacksImg from "@/assets/images/IH26-closing.png";
 import ZotHacksImg from "@/assets/images/ZH2-resized.jpg";
+import heroVectorLeft from "@/assets/hero-decor/hero-vector-left.svg";
+import bigCircleRight from "@/assets/hero-decor/big-circle-right.svg";
 
 interface EventCardProps {
 	src: string;
@@ -64,36 +65,95 @@ const EventCard: React.FC<EventCardProps> = ({
 
 const Events: React.FC = () => {
 	return (
-		<section className="flex justify-center items-center bg-box px-14 py-30 md:px-40 md:py-30">
-			<div className="container">
-				<div>
-					<h2 className="text-subtitle mb-4">Our Events</h2>
-					<p className="mb-4 max-w-3xl">
-						We aim to celebrate UC Irvine&apos;s spirit of innovation by
-						organizing ZotHacks, a beginner friendly hackathon, and IrvineHacks,
-						Orange County&apos;s largest hackathon. Furthermore, our
-						organization regularly host technical and professional development
-						workshops that teach students industry-relevant skills.
-					</p>
-					<PrimaryAnchor href="/events">More Information</PrimaryAnchor>
+		<section className="relative isolate overflow-hidden">
+			{/* Continue the Hero's light field with a subtle white gradient */}
+			<div className="hack-white-gradient absolute inset-0" aria-hidden />
+
+			{/* Hero decor spillover into Events (behind the panel, above the background) */}
+			<img
+				src={heroVectorLeft}
+				alt=""
+				draggable={false}
+				aria-hidden
+				className="pointer-events-none absolute -top-[18%] left-0 z-0 w-[clamp(200px,29vw,440px)] -translate-x-[20%] select-none"
+			/>
+			<img
+				src={bigCircleRight}
+				alt=""
+				draggable={false}
+				aria-hidden
+				className="pointer-events-none absolute -top-[10%] right-0 z-0 w-[clamp(320px,38vw,760px)] translate-x-[36%] select-none opacity-70"
+			/>
+
+			<div className="relative z-10 flex mx-8 flex-col px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14">
+				{/* Top panel */}
+				<div className="hack-white-gradient ring-1 ring-black/10 w-full rounded-[44px] p-7 md:p-12">
+					<div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2 lg:gap-10">
+						<div className="flex flex-col justify-center box-shadow bg-white/20 rounded-4xl p-6 md:p-10">
+	
+							<h2 className="text-4xl mb-9 gunmetal-text-gradient font-bold">Our Events</h2>
+							<p className="mb-5 max-w-xl text-black text-lg leading-6">
+								We aim to celebrate UC Irvine&apos;s spirit of innovation by
+								organizing ZotHacks, a beginner friendly hackathon, and IrvineHacks,
+								Orange County&apos;s largest hackathon. Furthermore, our
+								organization regularly host technical and professional development
+								workshops that teach students industry-relevant skills.
+							</p>
+							<a
+								href="/events"
+								className="box-shadow mt-2 rounded-full gunmetal-gradient px-12 py-2.5 text-2xl inline-flex items-center justify-center text-center w-full font-medium"
+								style={{
+									maxWidth: "250px",
+								}}
+							>
+								<span className="whitespace-nowrap w-full text-center flex justify-center items-center">
+									More Information
+								</span>
+							</a>
+		
+		
+		
+						</div>
+
+						<div className="relative overflow-hidden rounded-[32px] ring-2 ring-white/70">
+							<img
+								src={IrvineHacksImg}
+								alt="IrvineHacks 2026 Closing Ceremony"
+								className="h-full min-h-[240px] w-full object-cover"
+								loading="lazy"
+							/>
+						</div>
+					</div>
 				</div>
-				<EventCard
-					src={IrvineHacksImg}
-					alt="IrvineHacks event"
-					title="IrvineHacks"
-					description="HackUCI is the largest collegiate hackathon in Orange County. Each year, we bring like-minded individuals of different backgrounds and skill sets together to create something in 36 hours."
-					accent="blue"
-					href="https://irvinehacks.com/"
+
+				{/* Transition into the darker home section below */}
+				<div
+					className="pointer-events-none -mx-6 mt-16 h-[clamp(10rem,26vh,20rem)] w-[calc(100%+3rem)] bg-linear-to-b from-transparent from-0% via-dark-blue via-55% to-box to-100% md:-mx-12 md:w-[calc(100%+6rem)]"
+					aria-hidden
 				/>
-				<EventCard
-					src={ZotHacksImg}
-					alt="ZotHacks event"
-					title="ZotHacks"
-					description="ZotHacks is a beginner-friendly hackathon where students with minimal computer science experience will learn new skills, take part in a community of creative people, and build projects."
-					isReversed
-					accent="green"
-					href="https://zothacks.com/"
-				/>
+			</div>
+
+			{/* Event cards area (dark) */}
+			<div className="bg-box">
+				<div className="mx-auto w-full max-w-7xl px-6 pb-30 md:px-12 md:pb-36">
+					<EventCard
+						src={IrvineHacksImg}
+						alt="IrvineHacks event"
+						title="IrvineHacks"
+						description="HackUCI is the largest collegiate hackathon in Orange County. Each year, we bring like-minded individuals of different backgrounds and skill sets together to create something in 36 hours."
+						accent="blue"
+						href="https://irvinehacks.com/"
+					/>
+					<EventCard
+						src={ZotHacksImg}
+						alt="ZotHacks event"
+						title="ZotHacks"
+						description="ZotHacks is a beginner-friendly hackathon where students with minimal computer science experience will learn new skills, take part in a community of creative people, and build projects."
+						isReversed
+						accent="green"
+						href="https://zothacks.com/"
+					/>
+				</div>
 			</div>
 		</section>
 	);
