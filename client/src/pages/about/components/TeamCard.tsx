@@ -27,7 +27,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
 
 			<div className="flex items-center justify-between">
 				<h5
-					className="text-sm md:text-md"
+					className="text-sm md:text-lg"
 				>
 					{name}
 				</h5>
@@ -36,12 +36,12 @@ const TeamCard: React.FC<TeamCardProps> = ({
 					<img
 						src={linkedinLogo}
 						alt="LinkedIn"
-						className="w-4 h-4 md:w-5 md:h-5 opacity-90 hover:opacity-100"
+						className="ml-1 w-4 h-4 md:w-5 md:h-5 opacity-90 hover:opacity-100"
 					/>
 				</a>
 			</div>
 
-			<h6 className="text-xxs md:text-xs">{position}</h6>
+			<h6 className="text-sm md:text-md">{position}</h6>
 		</div>
 	);
 };
