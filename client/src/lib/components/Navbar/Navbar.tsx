@@ -18,7 +18,7 @@ const HamburgerMenu = ({ handleClick }: { handleClick: () => void }) => {
 	return (
 		<button
 			type="button"
- 			className="fixed z-50 bg-black p-4 top-16 right-8 rounded-[30px] h-auto border border-white cursor-pointer md:hidden"
+ 			className="fixed z-50 bg-black p-4 top-6 right-5 rounded-[30px] h-auto border border-white cursor-pointer md:hidden"
 			onClick={handleClick}
 		>
 			<img src={hamburger} width="35" alt="Mobile hamburger menu" />
@@ -41,7 +41,7 @@ const MobileDrawer = ({open, onClose, children}: PropsWithChildren<{open: boolea
 			</div>
 
 			<NavMenu.List className="flex flex-col">
-					<div className="flex flex-col items-end gap-12 my-20">
+					<div className="flex flex-col items-end gap-8 my-18">
 						{navItems.map(({ to, label }) => (
 							<NavLinkItem key={to} to={to} className="text-4xl!" onClick={onClose}>{label}</NavLinkItem>
 						))}
