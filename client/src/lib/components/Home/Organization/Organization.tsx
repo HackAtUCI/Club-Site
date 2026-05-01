@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { IoIosArrowDropright } from "react-icons/io";
 
 import IrvineHacksClosingImg from "@/assets/images/IH26-closing.png";
@@ -46,6 +46,24 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ slide, variant }) => {
 };
 
 const Organization: React.FC = () => {
+	const revealRef = useRef<HTMLElement>(null);
+	const [inView, setInView] = useState(false);
+
+	useEffect(() => {
+		const el = revealRef.current;
+		if (!el) return;
+
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				setInView(Boolean(entry?.isIntersecting));
+			},
+			{ threshold: 0.15 },
+		);
+
+		observer.observe(el);
+		return () => observer.disconnect();
+	}, []);
+
 	const slides: Slide[] = useMemo(
 		() => [
 			{
@@ -77,7 +95,15 @@ const Organization: React.FC = () => {
 	const rightIndex = (activeIndex + 1) % slides.length;
 
 	return (
-		<section className="flex w-full justify-center px-4 py-14 md:px-30 md:py-18">
+		<section
+			ref={revealRef}
+			className={`flex w-full justify-center px-4 py-14 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:scale-100 md:px-30 md:py-18 ${
+				inView ? "opacity-100 scale-100" : "opacity-0 scale-50"
+			}`}
+			style={{
+				transitionDelay: inView ? "350ms" : "0ms",
+			}}
+		>
 			<div className="hack-white-gradient w-full max-w-7xl rounded-[45px] p-6 md:p-20">
 				<div
 					className="rounded-[45px] bg-white/20 p-6 md:p-10"

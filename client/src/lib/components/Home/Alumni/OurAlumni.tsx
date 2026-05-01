@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 type AlumniCardProps = {
 	name: string;
@@ -62,6 +62,24 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
 };
 
 const OurAlumni: React.FC = () => {
+	const revealRef = useRef<HTMLElement>(null);
+	const [inView, setInView] = useState(false);
+
+	useEffect(() => {
+		const el = revealRef.current;
+		if (!el) return;
+
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				setInView(Boolean(entry?.isIntersecting));
+			},
+			{ threshold: 0.15 },
+		);
+
+		observer.observe(el);
+		return () => observer.disconnect();
+	}, []);
+
 	const alumni: AlumniCardProps[] = [
 		{
 			name: "Alex Ngo",
@@ -93,7 +111,15 @@ const OurAlumni: React.FC = () => {
 	];
 
 	return (
-		<section className="flex w-full justify-center px-4 py-14 md:px-8 md:py-18">
+		<section
+			ref={revealRef}
+			className={`flex w-full justify-center px-4 py-14 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:scale-100 md:px-8 md:py-18 ${
+				inView ? "opacity-100 scale-100" : "opacity-0 scale-50"
+			}`}
+			style={{
+				transitionDelay: inView ? "350ms" : "0ms",
+			}}
+		>
 			<div className="hack-white-gradient w-full max-w-7xl rounded-[45px] p-6 md:p-10">
 				<div className="box-shadow rounded-[45px] bg-white/20 p-6 md:p-10">
 					<div className="mb-8 flex flex-col items-center text-center md:mb-12">

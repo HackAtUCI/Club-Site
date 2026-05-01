@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import IrvineHacksClosingImg from "@/assets/images/IH26-closing.png";
 import IrvineHacksOpeningImg from "@/assets/images/IH26-opening.png";
 import ZotHacksImg from "@/assets/images/ZH25-hacking.png";
@@ -54,12 +54,70 @@ const EventCard: React.FC<EventCardProps> = ({
 }; 
 
 const Events: React.FC = () => {
+	const topRevealRef = useRef<HTMLDivElement>(null);
+	const [topRevealed, setTopRevealed] = useState(false);
+	const hackathonsPillRef = useRef<HTMLDivElement>(null);
+	const hackathonsCardsRef = useRef<HTMLDivElement>(null);
+	const [hackathonsPillIn, setHackathonsPillIn] = useState(false);
+	const [hackathonsCardsIn, setHackathonsCardsIn] = useState(false);
+
+	useEffect(() => {
+		const topEl = topRevealRef.current;
+		let topObserver: IntersectionObserver | null = null;
+		if (topEl) {
+			topObserver = new IntersectionObserver(
+				([entry]) => {
+					setTopRevealed(Boolean(entry?.isIntersecting));
+				},
+				{ threshold: 0.15 },
+			);
+			topObserver.observe(topEl);
+		}
+
+		const pillEl = hackathonsPillRef.current;
+		const cardsEl = hackathonsCardsRef.current;
+
+		let pillObserver: IntersectionObserver | null = null;
+		let cardsObserver: IntersectionObserver | null = null;
+
+		if (pillEl) {
+			pillObserver = new IntersectionObserver(
+				([entry]) => {
+					setHackathonsPillIn(Boolean(entry?.isIntersecting));
+				},
+				{ threshold: 0.15 },
+			);
+			pillObserver.observe(pillEl);
+		}
+
+		if (cardsEl) {
+			cardsObserver = new IntersectionObserver(
+				([entry]) => {
+					setHackathonsCardsIn(Boolean(entry?.isIntersecting));
+				},
+				{ threshold: 0.15 },
+			);
+			cardsObserver.observe(cardsEl);
+		}
+
+		return () => {
+			topObserver?.disconnect();
+			pillObserver?.disconnect();
+			cardsObserver?.disconnect();
+		};
+	}, []);
+
 	return (
 		<section className="relative isolate overflow-visible">
 			{/* Continue the Hero's light field with a subtle white gradient */}
 			{/* Background is provided by the shared Home wrapper so decor can span sections */}
 
-			<div className="relative z-10 flex mx-auto w-full max-w-7xl flex-col px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14">
+			<div
+				ref={topRevealRef}
+				className={`relative z-10 mx-auto flex w-full max-w-7xl flex-col px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14 motion-reduce:opacity-100 motion-reduce:translate-y-0 ${
+					topRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+				} transition-all duration-700 ease-out`}
+			>
 				{/* Top panel */}
 				<div className="hack-white-gradient ring-1 ring-black/10 w-full rounded-[44px] p-7 md:p-12">
 					<div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2 lg:gap-10">
@@ -103,8 +161,17 @@ const Events: React.FC = () => {
 			</div>
 
 			{/* Event cards area (dark) */}
-			<div className="">
-				<div className="mx-auto w-full max-w-3/4 md:max-w-md px-3 pt-6 md:px-5">
+			<div>
+				<div
+					ref={hackathonsPillRef}
+					className={`mx-auto w-full max-w-3/4 px-3 pt-6 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:translate-y-0 md:max-w-md md:px-5 ${
+						hackathonsCardsIn
+							? "opacity-0 translate-y-8 pointer-events-none"
+							: hackathonsPillIn
+								? "opacity-100 translate-y-0"
+								: "opacity-0 translate-y-10"
+					}`}
+				>
 					<Pill className="p-5 md:p-8" innerClassName="p-2">
 						<h2 className="gunmetal-text-gradient text-center text-2xl font-extrabold tracking-tight md:text-[40px]">
 							Hackathons
@@ -112,7 +179,14 @@ const Events: React.FC = () => {
 					</Pill>
 				</div>
 
-				<div className="mx-auto w-full max-w-6xl px-4 pb-30 pt-10 md:px-8 md:pb-36 md:pt-12">
+				<div
+					ref={hackathonsCardsRef}
+					className={`mx-auto w-full max-w-6xl px-4 pb-30 pt-10 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:translate-y-0 md:px-8 md:pb-36 md:pt-12 ${
+						hackathonsCardsIn
+							? "opacity-100 translate-y-0"
+							: "opacity-0 translate-y-10"
+					}`}
+				>
 					<div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-15">
 						<EventCard
 							src={IrvineHacksOpeningImg}

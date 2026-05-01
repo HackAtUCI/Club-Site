@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Hero from "@/lib/components/Home/Hero/Hero";
 import Events from "@/lib/components/Home/Events/Events";
@@ -12,6 +12,8 @@ import Pill from "@/lib/components/Pill/Pill";
 export default function Home() {
 	const heroRef = useRef<HTMLDivElement>(null);
 	const contactRef = useRef<HTMLDivElement>(null);
+	const backToTopRevealRef = useRef<HTMLDivElement>(null);
+	const [backToTopInView, setBackToTopInView] = useState(false);
 
 	const scrollToRef = ({
 		ref,
@@ -20,6 +22,21 @@ export default function Home() {
 	}) => {
 		ref.current?.scrollIntoView({ behavior: "smooth" });
 	};
+
+	useEffect(() => {
+		const el = backToTopRevealRef.current;
+		if (!el) return;
+
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				setBackToTopInView(Boolean(entry?.isIntersecting));
+			},
+			{ threshold: 0.15 },
+		);
+
+		observer.observe(el);
+		return () => observer.disconnect();
+	}, []);
 
 	return (
 		<div className="min-h-screen overflow-x-hidden">
@@ -32,7 +49,12 @@ export default function Home() {
 				<OurAlumni />
 				<Organization />
 
-				<div className="flex mx-auto items-center w-full px-3 pt-6 mb-30 md:px-5">
+				<div
+					ref={backToTopRevealRef}
+					className={`flex mx-auto items-center w-full px-3 pt-6 mb-30 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:scale-100 md:px-5 ${
+						backToTopInView ? "opacity-100 scale-100" : "opacity-0 scale-50"
+					}`}
+				>
 					<Pill 
 						as="button"
 						onClick={() => {
