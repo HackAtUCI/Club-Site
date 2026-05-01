@@ -22,27 +22,29 @@ export default function Home() {
 	};
 
 	return (
-		<div className="home-background min-h-screen">
+		<div className="min-h-screen">
 			<Hero ref={heroRef} onClick={() => scrollToRef({ ref: contactRef })} />
-			<AboutUs />
-			<Events />
-			<Contact ref={contactRef} />
-			<Sponsors />
+			<div className="home-background">
+				{/* <AboutUs /> */}
+				<Events />
+				<Contact ref={contactRef} />
+				<Sponsors />
 
-			<section className="flex justify-center items-center pb-24">
-				<PrimaryButton
-					onClick={() => {
-						scrollToRef({ ref: heroRef });
-					}}
-				>
-					Back To Top
-					<img
-						src={UpArrow}
-						alt="Up Arrow"
-						className="w-8 h-8 ml-4 inline-block"
-					/>
-				</PrimaryButton>
-			</section>
+				<section className="flex justify-center items-center pb-24">
+					<PrimaryButton
+						onClick={() => {
+							scrollToRef({ ref: heroRef });
+						}}
+					>
+						Back To Top
+						<img
+							src={UpArrow}
+							alt="Up Arrow"
+							className="w-8 h-8 ml-4 inline-block"
+						/>
+					</PrimaryButton>
+				</section>
+			</div>
 		</div>
 	);
 }
