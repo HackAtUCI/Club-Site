@@ -7,7 +7,7 @@ export default function SponsorGrid() {
 			{sponsorRows.map((row, index) => (
 				<div
 					key={index}
-					className="hack-white-gradient overflow-hidden not-last:py-8">
+					className="hack-white-gradient-transparent overflow-hidden backdrop-blur-md not-last:py-8">
 					<SponsorRow
 						sponsors={row}
 						direction={index % 2 === 0 ? "right" : "left"}

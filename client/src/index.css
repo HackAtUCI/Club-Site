@@ -104,6 +104,14 @@ body {
     );
   }
 
+  .hack-white-gradient-transparent {
+    background: linear-gradient(
+        to bottom,
+        rgba(236, 239, 253, 0.85) 0%,
+        rgba(183, 194, 243, 0.85) 100%
+    );
+}
+
   .box-shadow {
     box-shadow:
         0px 3.2px 3.2px rgba(0, 0, 0, 0.25),
