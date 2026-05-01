@@ -1,5 +1,56 @@
 import React from "react";
-import IrvineHacksImg from "@/assets/images/IH26-closing.png";
+import IrvineHacksClosingImg from "@/assets/images/IH26-closing.png";
+import IrvineHacksOpeningImg from "@/assets/images/IH26-opening.png";
+import ZotHacksImg from "@/assets/images/ZH25-hacking.png";
+
+interface EventCardProps {
+	src: string;
+	alt: string;
+	title: string;
+	description: string;
+	href: string;
+}
+
+const EventCard: React.FC<EventCardProps> = ({
+	src,
+	alt,
+	title,
+	description,
+	href,
+}) => {
+	return (
+		<a
+			href={href}
+			target="_blank"
+			rel="noreferrer"
+			className="group block w-full"
+		>
+			<div className="hack-white-gradient rounded-[44px] p-8 ring-1 ring-black/10 transition group-hover:brightness-[1.02] md:p-10">
+				<div className="rounded-[36px] box-shadow bg-white/20 md:p-10">
+					<h3 className="gunmetal-text-gradient text-center text-3xl font-bold leading-none md:text-4xl">
+						{title}
+					</h3>
+					<p className="mt-5 text-center text-lg leading-5 text-black md:mt-6 md:text-base md:leading-6 font-medium">
+						{description}
+					</p>
+
+					<div className="mt-7 flex justify-center md:mt-8">
+						<div className="relative w-full max-w-[360px] overflow-hidden rounded-[26px] p-0">
+							<div className="overflow-hidden rounded-[44px] border-[3px] border-white shadow-md">
+								<img
+									src={src}
+									alt={alt}
+									loading="lazy"
+									className="h-[160px] w-full object-cover md:h-[190px] rounded-[18px]"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	);
+}; 
 
 const Events: React.FC = () => {
 	return (
@@ -11,7 +62,7 @@ const Events: React.FC = () => {
 				{/* Top panel */}
 				<div className="hack-white-gradient ring-1 ring-black/10 w-full rounded-[44px] p-7 md:p-12">
 					<div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2 lg:gap-10">
-						<div className="flex flex-col justify-center box-shadow bg-white/20 rounded-4xl p-6 md:p-10">
+						<div className="flex flex-col justify-center box-shadow bg-white/20 rounded-[50px] p-6 md:p-10">
 	
 							<h2 className="text-4xl mb-9 gunmetal-text-gradient font-bold">Our Events</h2>
 							<p className="mb-5 max-w-xl text-black text-lg leading-6">
@@ -39,7 +90,7 @@ const Events: React.FC = () => {
 
 						<div className="relative overflow-hidden rounded-[32px] ring-2 ring-white/70">
 							<img
-								src={IrvineHacksImg}
+								src={IrvineHacksClosingImg}
 								alt="IrvineHacks 2026 Closing Ceremony"
 								className="h-full min-h-[240px] w-full object-cover"
 								loading="lazy"
@@ -51,27 +102,26 @@ const Events: React.FC = () => {
 			</div>
 
 			{/* Event cards area (dark) */}
-			{/* <div className="bg-box">
-				<div className="mx-auto w-full max-w-7xl px-6 pb-30 md:px-12 md:pb-36">
-					<EventCard
-						src={IrvineHacksImg}
-						alt="IrvineHacks event"
-						title="IrvineHacks"
-						description="HackUCI is the largest collegiate hackathon in Orange County. Each year, we bring like-minded individuals of different backgrounds and skill sets together to create something in 36 hours."
-						accent="blue"
-						href="https://irvinehacks.com/"
-					/>
-					<EventCard
-						src={ZotHacksImg}
-						alt="ZotHacks event"
-						title="ZotHacks"
-						description="ZotHacks is a beginner-friendly hackathon where students with minimal computer science experience will learn new skills, take part in a community of creative people, and build projects."
-						isReversed
-						accent="green"
-						href="https://zothacks.com/"
-					/>
+			<div className="">
+				<div className="mx-auto w-full max-w-6xl px-4 pb-30 md:px-8 md:pb-36">
+					<div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-15">
+						<EventCard
+							src={IrvineHacksOpeningImg}
+							alt="IrvineHacks 2026 Opening Ceremony"
+							title="IrvineHacks"
+							description="HackUCI is the largest collegiate hackathon in Orange County. Each year, we bring like-minded individuals of different backgrounds and skill sets together to create something in 36 hours."
+							href="https://irvinehacks.com/"
+						/>
+						<EventCard
+							src={ZotHacksImg}
+							alt="ZotHacks event"
+							title="ZotHacks"
+							description="ZotHacks is a beginner-friendly hackathon where students with minimal computer science experience will learn new skills, take part in a community of creative people, and build projects."
+							href="https://zothacks.com/"
+						/>
+					</div>
 				</div>
-			</div> */}
+			</div>
 		</section>
 	);
 };
