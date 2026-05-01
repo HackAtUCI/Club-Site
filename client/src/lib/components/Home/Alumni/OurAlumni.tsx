@@ -25,13 +25,13 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
 			</div>
 
 			{/* Quote */}
-			<p className="mt-10 text-balance text-[14px] italic leading-[1.35] text-black md:mt-12 md:text-xs">
+			<p className="mt-10 text-balance text-xs italic leading-[1.35] text-black md:mt-12">
 				{quote}
 			</p>
 
 			{/* Name */}
 			<div className="mt-3">
-				<p className="text-3xl font-black leading-none tracking-[-0.02em] text-[#2d2d3e] md:text-xl">
+				<p className="text-lg font-black leading-none tracking-[-0.02em] text-[#2d2d3e] md:text-xl">
 					{name}
 				</p>
 
@@ -45,7 +45,7 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
 						</p>
 					</div>
 
-					<div className="hidden h-8 w-[3px] shrink-0 rounded bg-[#2d2d3e] md:block" />
+					<div className="hidden md:block h-8 w-[3px] shrink-0 rounded bg-[#2d2d3e]" />
 
 					<div className="md:max-w-60">
 						<p className="text-xs font-extrabold leading-tight md:text-xs">
