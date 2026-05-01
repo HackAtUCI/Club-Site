@@ -2,10 +2,10 @@ import retreatImg from "@/assets/images/Retreat2025.jpeg"
 
 export default function Hero() {
 	return (
-		<section className="flex flex-col md:flex-row justify-center items-center p-10 md:p-36 lg:p-56">
-			<div className="container">
+		<section className="flex flex-col md:flex-row justify-center items-center pt-30 p-10 md:p-36 lg:p-56">
+			<div className="container z-40">
 				<div className="flex rounded-[40px] p-10 bg-gradient-to-b from-[#ECEFFD] to-[#B7C2F3]">
-					<div className="flex flex-col gap-2 p-10 rounded-[40px] items-center justify-center  bg-white/20 backdrop-blur-lg shadow-[0_3.2px_3.2px_0px_#00000040,inset_0_3.2px_3.2px_0px_#00000040]">
+					<div className="flex flex-col gap-2 p-10 rounded-[40px] items-center justify-center bg-white/20 backdrop-blur-lg shadow-[0_3px_3px_0px_#00000040,inset_0_3px_3px_0px_#00000040]">
 						<h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-b from-[#2D2D3E] to-[#4D4D70E5] bg-clip-text text-transparent ">
 							About
 						</h1>
