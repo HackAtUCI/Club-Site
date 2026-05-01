@@ -2,6 +2,7 @@ import React from "react";
 import IrvineHacksClosingImg from "@/assets/images/IH26-closing.png";
 import IrvineHacksOpeningImg from "@/assets/images/IH26-opening.png";
 import ZotHacksImg from "@/assets/images/ZH25-hacking.png";
+import Pill from "@/lib/components/Pill/Pill";
 
 interface EventCardProps {
 	src: string;
@@ -104,13 +105,11 @@ const Events: React.FC = () => {
 			{/* Event cards area (dark) */}
 			<div className="">
 				<div className="mx-auto w-full max-w-3/4 md:max-w-md px-3 pt-6 md:px-5">
-					<div className="hack-white-gradient ring-1 ring-black/10 rounded-[56px] p-5 md:p-8">
-						<div className="rounded-[56px] box-shadow bg-white/20 p-2">
-							<h2 className="gunmetal-text-gradient text-center text-2xl font-extrabold md:text-[40px] tracking-tight">
-								Hackathons
-							</h2>
-						</div>
-					</div>
+					<Pill className="p-5 md:p-8" innerClassName="p-2">
+						<h2 className="gunmetal-text-gradient text-center text-2xl font-extrabold tracking-tight md:text-[40px]">
+							Hackathons
+						</h2>
+					</Pill>
 				</div>
 
 				<div className="mx-auto w-full max-w-6xl px-4 pb-30 pt-10 md:px-8 md:pb-36 md:pt-12">
