@@ -1,8 +1,24 @@
 import retreatImg from "@/assets/images/Retreat2025.jpeg"
+import { motion } from "framer-motion";
 
 export default function Hero() {
 	return (
-		<section className="flex flex-col md:flex-row justify-center items-center pt-30 p-10 md:p-36 lg:p-56">
+		<motion.section 
+			initial={{
+				opacity: 0,
+				y: 80,
+			}}
+			whileInView={{
+				opacity: 1,
+				y: 0,
+			}}
+			viewport={{ amount: 0.3 }}
+			transition={{
+				duration: 0.6,
+				ease: "easeOut",
+			}}
+			className="flex flex-col md:flex-row justify-center items-center pt-30 p-10 md:p-36 lg:p-56"
+		>
 			<div className="container z-40">
 				<div className="flex rounded-[40px] p-10 bg-gradient-to-b from-[#ECEFFD] to-[#B7C2F3]">
 					<div className="flex flex-col gap-2 p-10 rounded-[40px] items-center justify-center bg-white/20 backdrop-blur-lg shadow-[0_3px_3px_0px_#00000040,inset_0_3px_3px_0px_#00000040]">
@@ -23,6 +39,6 @@ export default function Hero() {
 
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 }

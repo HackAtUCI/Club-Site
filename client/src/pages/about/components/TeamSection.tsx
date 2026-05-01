@@ -1,5 +1,6 @@
 import TeamCard from "./TeamCard";
 import { teamMembers } from "@/data/team.ts";
+import { motion } from "framer-motion";
 
 interface TeamMember {
 	name: string;
@@ -10,7 +11,22 @@ interface TeamMember {
 
 export default function TeamSection() {
 	return (
-		<section className="flex justify-center items-center text-[#2D2D3E] px-10 pb-30 md:px-36 lg:px-46">
+		<motion.section 
+			initial={{
+				opacity: 0,
+				y: 80,
+			}}
+			whileInView={{
+				opacity: 1,
+				y: 0,
+			}}
+			viewport={{ amount: 0.1 }}
+			transition={{
+				duration: 0.6,
+				ease: "easeOut",
+			}}
+			className="flex justify-center items-center text-[#2D2D3E] px-10 pb-30 md:px-36 lg:px-46"
+		>
 			<div className="container z-40">
 				<div className="flex flex-col gap-16 rounded-[40px] px-10 py-16 bg-gradient-to-b from-[#ECEFFD] to-[#B7C2F3]">
 					<div className="flex justify-center">
@@ -43,6 +59,6 @@ export default function TeamSection() {
 					)}
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 }
