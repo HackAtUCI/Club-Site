@@ -1,73 +1,13 @@
 import React from "react";
 import IrvineHacksImg from "@/assets/images/IH26-closing.png";
-import ZotHacksImg from "@/assets/images/ZH2-resized.jpg";
 import heroVectorLeft from "@/assets/hero-decor/hero-vector-left.svg";
 import bigCircleRight from "@/assets/hero-decor/big-circle-right.svg";
-
-interface EventCardProps {
-	src: string;
-	alt: string;
-	title: string;
-	description: string;
-	href: string;
-	isReversed?: boolean;
-	accent: "blue" | "green";
-}
-
-const EventCard: React.FC<EventCardProps> = ({
-	src,
-	alt,
-	title,
-	description,
-	href,
-	isReversed = false,
-	accent,
-}) => {
-	return (
-		<div
-			className={`flex w-full flex-col lg:flex-row ${
-				isReversed ? "lg:flex-row-reverse" : ""
-			} mt-30`}
-		>
-			<div
-				className={`flex w-full items-center justify-center lg:w-1/2 ${
-					isReversed ? "lg:ml-20" : "lg:mr-20"
-				}`}
-			>
-				<img
-					src={src}
-					alt={alt}
-					width={450}
-					height={450}
-					className="h-auto w-full rounded-md"
-				/>
-			</div>
-			<div
-				className={`mt-8 flex w-full flex-col lg:w-1/2 ${
-					isReversed ? "lg:text-right" : ""
-				}`}
-			>
-				<a
-					className={`text-subtitle mb-2 font-bold underline ${
-						accent === "blue" ? "text-blue-accent" : "text-green-accent"
-					}`}
-					href={href}
-					rel="noopener noreferrer"
-					target="_blank"
-				>
-					{title}
-				</a>
-				<p>{description}</p>
-			</div>
-		</div>
-	);
-};
 
 const Events: React.FC = () => {
 	return (
 		<section className="relative isolate overflow-hidden">
 			{/* Continue the Hero's light field with a subtle white gradient */}
-			<div className="hack-white-gradient absolute inset-0" aria-hidden />
+			<div className="hack-background-gradient absolute inset-0" aria-hidden />
 
 			{/* Hero decor spillover into Events (behind the panel, above the background) */}
 			<img
@@ -126,15 +66,10 @@ const Events: React.FC = () => {
 					</div>
 				</div>
 
-				{/* Transition into the darker home section below */}
-				<div
-					className="pointer-events-none -mx-6 mt-16 h-[clamp(10rem,26vh,20rem)] w-[calc(100%+3rem)] bg-linear-to-b from-transparent from-0% via-dark-blue via-55% to-box to-100% md:-mx-12 md:w-[calc(100%+6rem)]"
-					aria-hidden
-				/>
 			</div>
 
 			{/* Event cards area (dark) */}
-			<div className="bg-box">
+			{/* <div className="bg-box">
 				<div className="mx-auto w-full max-w-7xl px-6 pb-30 md:px-12 md:pb-36">
 					<EventCard
 						src={IrvineHacksImg}
@@ -154,7 +89,7 @@ const Events: React.FC = () => {
 						href="https://zothacks.com/"
 					/>
 				</div>
-			</div>
+			</div> */}
 		</section>
 	);
 };

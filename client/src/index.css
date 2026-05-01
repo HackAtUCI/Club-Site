@@ -119,6 +119,14 @@ body {
     border: none;
 }
 
+.hack-background-gradient {
+    background: linear-gradient(
+        to bottom,
+        #ECEFFD 50%,
+        #2D2D3E 100%
+    );
+}
+
 @keyframes scroll-left {
     from {
         transform: translateX(0%);

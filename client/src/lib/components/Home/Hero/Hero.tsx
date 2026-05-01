@@ -13,7 +13,7 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(
 		return (
 			<div
 				ref={ref}
-				className={`relative isolate flex min-h-svh w-full flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-20 md:px-12 ${className}`}
+				className={`relative isolate flex min-h-svh w-full flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-30 md:px-12 ${className}`}
 				{...props}
 			>
 				{/* Background: light hero field → dark handoff (matches Figma paint0 / solid band) */}
