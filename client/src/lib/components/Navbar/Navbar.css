@@ -16,8 +16,10 @@
     transition: background-size 0.25s ease;
 }
 
-.navMenuLink:hover,
-.navMenuLink:focus,
-.navMenuLink:active {
-    background-size: 100% 2px;
+@media (min-width: 768px) {
+    .navMenuLink:hover,
+    .navMenuLink:focus,
+    .navMenuLink:active {
+        background-size: 100% 2px;
+    }
 }

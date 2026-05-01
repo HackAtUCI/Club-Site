@@ -22,26 +22,30 @@ const HamburgerMenu = ({ handleClick }: { handleClick: () => void }) => {
 
 const MobileDrawer = ({open, onClose, children}: PropsWithChildren<{open: boolean; onClose: () => void}>) => {
 	return (
-		<div className={`fixed top-0 right-0 z-50 h-full w-full bg-black flex flex-col transform transition-transform duration-300 ease-out md:hidden
+		<div className={`fixed top-0 right-0 z-50 h-full w-full bg-black flex flex-col transform transition-transform duration-300 ease-out md:hidden py-16 px-6
 		${open ? "translate-x-0" : "translate-x-full"}`}
 		>
 			<div className="flex flex-row items-center justify-between">
-				<NavLinkItem to="/">
-						<img src={HackLogo} alt="Hack at UCI Logo" width={34} height={34} />
+				<NavLinkItem to="/" onClick={onClose}>
+						<img src={HackLogo} alt="Hack at UCI Logo" width={50} height={50} />
 				</NavLinkItem>
 				<button
 					onClick={onClose}
-					className="text-white"
+					className="text-white text-2xl"
 				>
 					Back
 				</button>
 			</div>
 
 			<NavMenu.List className="flex flex-col">
-					<NavLinkItem to="/about">About</NavLinkItem>
-					<NavLinkItem to="/events">Events</NavLinkItem>
-					<NavLinkItem to="/sponsors">Sponsors</NavLinkItem>
-					<NavLinkItem to="/recruitment">Join Us</NavLinkItem>
+					<div className="flex flex-col items-end gap-12 my-20">
+						<NavLinkItem to="/about" className="!text-4xl" onClick={onClose}>About</NavLinkItem>
+						<NavLinkItem to="/events" className="!text-4xl" onClick={onClose}>Events</NavLinkItem>
+						<NavLinkItem to="/sponsors" className="!text-4xl" onClick={onClose}>Sponsors</NavLinkItem>
+					</div>
+					<div className="flex w-fit ml-auto px-12 py-4 bg-[#333333] rounded-3xl" onClick={onClose}>
+						<NavLinkItem to="/recruitment" className="!text-2xl leading-none block">Join Us</NavLinkItem>
+					</div>
 			</NavMenu.List>
 			{children}
 		</div>
@@ -65,7 +69,7 @@ export default function BaseNavbar({ children }: PropsWithChildren) {
 			window.removeEventListener("resize", handler);
 		}
 	}, []);
-	
+
 	return (
 		<>
 		<HamburgerMenu
@@ -87,16 +91,16 @@ export default function BaseNavbar({ children }: PropsWithChildren) {
 			<NavMenu.List className="flex justify-between items-center w-full gap-32">
 				<div className="flex-shrink-0">
 					<NavLinkItem to="/">
-						<img src={HackLogo} alt="Hack at UCI Logo" width={34} height={34} />
+						<img src={HackLogo} alt="Hack at UCI Logo" className="transition-transform hover:scale-110 duration-300" width={34} height={34} />
 					</NavLinkItem>
 				</div>
 				
 				<div className="flex items-center gap-10 pt-2">
-					<NavLinkItem to="/about">About</NavLinkItem>
-					<NavLinkItem to="/events">Events</NavLinkItem>
-					<NavLinkItem to="/sponsors">Sponsors</NavLinkItem>
+					<NavLinkItem to="/about" className="transition-transform hover:scale-110 duration-300">About</NavLinkItem>
+					<NavLinkItem to="/events" className="transition-transform hover:scale-110 duration-300">Events</NavLinkItem>
+					<NavLinkItem to="/sponsors" className="transition-transform hover:scale-110 duration-300">Sponsors</NavLinkItem>
 				</div>
-				<div className="flex-shrink-0 flex px-6 pt-2 bg-[#333333] rounded-xl">
+				<div className="flex-shrink-0 flex px-6 pt-2 bg-[#333333] rounded-xl transition-transform hover:scale-110 duration-300">
 					<NavLinkItem to="/recruitment">Join Us</NavLinkItem>
 				</div>
 
