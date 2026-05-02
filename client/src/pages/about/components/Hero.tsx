@@ -1,47 +1,44 @@
-import AboutHack from "@/assets/images/AboutHack.svg";
-import GreenStar from "@/assets/images/GreenStar.svg";
-import Squiggle from "@/assets/images/Squiggle.svg";
-
-function Logo() {
-	return (
-		<div className="max-w-40 md:max-w-80">
-			<img src={AboutHack} alt="About Hack at UCI" />
-		</div>
-	);
-}
-
-function HeroText() {
-	return (
-		<div className="flex flex-col gap-4 max-w-84 font-semibold">
-			<p>Hack at UCI is Irvine’s premiere collegiate hackathon committee.</p>
-			<p>
-				We strive to unite students passionate about hacking and retaining the
-				spirit of community.
-			</p>
-			<div className="relative inline-flex items-center w-fit">
-				<p className="text-[#71DD9C] whitespace-nowrap z-10">
-					Let’s take the next step
-				</p>
-				<img
-					src={GreenStar}
-					alt="Green Star"
-					className="ml-4 mt-1 w-8 h-8 z-10"
-				/>
-				<img
-					src={Squiggle}
-					alt="Squiggle"
-					className="absolute -translate-x-1/32 translate-y-1/16 w-full z-0"
-				/>
-			</div>
-		</div>
-	);
-}
+import retreatImg from "@/assets/images/Retreat2025.jpeg"
+import { motion } from "framer-motion";
 
 export default function Hero() {
 	return (
-		<section className="h-screen flex flex-col md:flex-row justify-center items-center gap-12 md:gap-30 p-10 md:p-36 lg:p-56">
-			<Logo />
-			<HeroText />
-		</section>
+		<motion.section 
+			initial={{
+				opacity: 0,
+				y: 80,
+			}}
+			whileInView={{
+				opacity: 1,
+				y: 0,
+			}}
+			viewport={{ amount: 0.3 }}
+			transition={{
+				duration: 0.6,
+				ease: "easeOut",
+			}}
+			className="flex flex-col md:flex-row justify-center items-center pt-36 pb-24 px-4 md:p-36 lg:p-56"
+		>
+			<div className="container z-40">
+				<div className="flex rounded-[40px] p-10 bg-gradient-to-b from-[#ECEFFD] to-[#B7C2F3]">
+					<div className="flex flex-col gap-2 p-4 md:p-10 rounded-[40px] items-center justify-center border border-white/10 bg-white/20 backdrop-blur-lg shadow-[0_3px_3px_0px_#00000040,inset_0_3px_3px_0px_#00000040]">
+						<h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-b from-[#2D2D3E] via-[#2D2D3E] to-[#4D4D70E5] bg-clip-text text-transparent ">
+							About
+						</h1>
+						<p className="text-center text-base md:text-lg text-[#2D2D3E]">
+							Hack at UCI is Irvine’s premiere collegiate hackathon committee.
+							We strive to unite students passionate about hacking and retaining 
+							the spirit of community.
+						</p>
+						<img
+							src={retreatImg}
+							alt="Hack About Group Photo"
+							className="rounded-2xl md:rounded-[40px]"
+						/>
+					</div>
+
+				</div>
+			</div>
+		</motion.section>
 	);
 }
