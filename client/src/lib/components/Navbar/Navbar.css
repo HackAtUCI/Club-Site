@@ -5,19 +5,21 @@
 }
 
 .navMenuLink {
-    font-size: 24px;
+    font-size: 18px;
 
     padding-bottom: 0.5rem;
 
     background-image: linear-gradient(white, white);
     background-repeat: no-repeat;
-    background-position-y: 34px;
+    background-position-y: 21px;
     background-size: 0% 2px;
     transition: background-size 0.25s ease;
 }
 
-.navMenuLink:hover,
-.navMenuLink:focus,
-.navMenuLink:active {
-    background-size: 100% 2px;
+@media (min-width: 768px) {
+    .navMenuLink:hover,
+    .navMenuLink:focus,
+    .navMenuLink:active {
+        background-size: 100% 2px;
+    }
 }
