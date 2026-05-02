@@ -23,13 +23,13 @@ export default function OrganizationDecor({ children }: OrganizationDecorProps) 
 					src={greenHexagonLeft}
 					alt=""
 					draggable={false}
-					className="pointer-events-none absolute bottom-0 left-0 z-10 w-[clamp(220px,38vw,520px)] -translate-x-[38%] translate-y-[22%] select-none opacity-90 md:w-[clamp(260px,36vw,600px)] md:-translate-x-[34%] md:translate-y-[0%]"
+					className="pointer-events-none absolute bottom-0 left-0 z-10 w-[clamp(220px,38vw,520px)] -translate-x-[38%] translate-y-[0%] select-none opacity-90 md:w-[clamp(260px,36vw,600px)] md:-translate-x-[34%] md:translate-y-[0%]"
 				/>
 				<img
 					src={blueCircleRight}
 					alt=""
 					draggable={false}
-					className="pointer-events-none absolute bottom-0 right-0 z-10 w-[clamp(140px,26vw,320px)] translate-x-[42%] translate-y-[18%] select-none opacity-90 md:w-[clamp(170px,28vw,360px)] md:translate-x-[40%] md:translate-y-[0%]"
+					className="pointer-events-none absolute bottom-0 right-0 z-10 w-[clamp(140px,26vw,320px)] translate-x-[42%] translate-y-[0%] select-none opacity-90 md:w-[clamp(170px,28vw,360px)] md:translate-x-[40%] md:translate-y-[0%]"
 				/>
 			</div>
 

@@ -24,14 +24,14 @@ export default function HomeDecor({ children }: HomeDecorProps) {
 				alt=""
 				aria-hidden
 				draggable={false}
-				className="pointer-events-none absolute top-35 left-30 z-10 w-[clamp(220px,24vw,520px)] -translate-x-[34%] -translate-y-[38%] select-none opacity-80"
+				className="pointer-events-none absolute top-15 left-10 md:top-35 md:left-30 z-10 w-[clamp(220px,24vw,520px)] -translate-x-[34%] -translate-y-[38%] select-none opacity-80"
 			/>
 			<img
 				src={smallCircle}
 				alt=""
 				aria-hidden
 				draggable={false}
-				className="pointer-events-none absolute top-92 left-82 z-10 w-[clamp(32px,7vw,120px)] -translate-x-[34%] -translate-y-[38%] select-none opacity-80"
+				className="hidden md:block pointer-events-none absolute top-50 left-40 md:top-92 md:left-82 z-10 w-[clamp(32px,7vw,120px)] -translate-x-[34%] -translate-y-[38%] select-none opacity-80"
 			/>
 			<img
 				src={heroVectorRight}
@@ -54,7 +54,7 @@ export default function HomeDecor({ children }: HomeDecorProps) {
 				alt=""
 				aria-hidden
 				draggable={false}
-				className="pointer-events-none absolute right-38 top-[calc(73svh+1rem)] z-10 w-[clamp(320px,30vw,760px)] translate-x-[36%] select-none opacity-70"
+				className="pointer-events-none absolute right-0 md:right-38 top-[calc(73svh+1rem)] z-10 w-[clamp(320px,30vw,760px)] translate-x-[36%] select-none opacity-70"
 			/>
 
 			<div className="relative z-20">{children}</div>
