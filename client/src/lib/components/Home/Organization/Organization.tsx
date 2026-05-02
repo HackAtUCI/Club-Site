@@ -45,6 +45,31 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ slide, variant }) => {
 	);
 };
 
+/** Single slide — full width of the inner card on small screens */
+const MobileCarouselCard: React.FC<{ slide: Slide }> = ({ slide }) => {
+	return (
+		<div className="relative aspect-360/230 w-full overflow-hidden rounded-[28px] ring-1 ring-black/10 box-shadow hack-white-gradient-transparent">
+			<div className="absolute inset-0 bg-linear-to-b from-white/50 to-white/5" />
+			<img
+				src={slide.imgSrc}
+				alt={slide.imgAlt}
+				loading="lazy"
+				className="absolute inset-0 h-full w-full object-cover opacity-95"
+			/>
+		</div>
+	);
+};
+
+const carouselArrowBtn =
+	"rounded-full p-2 text-white/80 transition hover:text-white focus-visible:outline focus-visible:ring-2 focus-visible:ring-white/60";
+
+/**
+ * Mobile arrows: `IoIosArrowDropright` already draws the white circle + chevron;
+ * keep the button as a plain hit target so we don’t stack a second ring.
+ */
+const mobileCarouselArrowBtn =
+	"absolute top-1/2 z-10 -translate-y-1/2 bg-transparent p-0 text-white opacity-95 transition hover:opacity-100 focus-visible:rounded-full focus-visible:outline focus-visible:ring-2 focus-visible:ring-white/70";
+
 const Organization: React.FC = () => {
 	const revealRef = useRef<HTMLElement>(null);
 	const [inView, setInView] = useState(false);
@@ -107,9 +132,8 @@ const Organization: React.FC = () => {
 			<div className="hack-white-gradient w-full max-w-7xl rounded-[45px] p-6 md:p-20">
 				<div
 					className="rounded-[45px] bg-white/20 p-6 md:p-10"
-					style={{ // copied from figma, prolly turn into a css class later
-						boxShadow:
-							"0px 3.6px 3.6px rgba(0, 0, 0, 0.25)",
+					style={{
+						boxShadow: "0px 3.6px 3.6px rgba(0, 0, 0, 0.25)",
 					}}
 				>
 					<div className="flex flex-col items-center text-center">
@@ -124,24 +148,46 @@ const Organization: React.FC = () => {
 						</a>
 					</div>
 
-					<div className="relative mt-10">
-						{/* Overlapped carousel stack (matches mock) */}
+					{/* Mobile: one slide, full width; arrows overlaid on the image */}
+					<div className="relative mt-10 w-full md:hidden">
+						<MobileCarouselCard slide={slides[activeIndex]} />
+						<button
+							type="button"
+							aria-label="Previous slide"
+							onClick={goPrev}
+							className={`${mobileCarouselArrowBtn} left-2`}
+						>
+							<IoIosArrowDropright className="h-10 w-10 -translate-x-px rotate-180 drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]" />
+						</button>
+						<button
+							type="button"
+							aria-label="Next slide"
+							onClick={goNext}
+							className={`${mobileCarouselArrowBtn} right-2`}
+						>
+							<IoIosArrowDropright className="h-10 w-10 translate-x-px drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]" />
+						</button>
+					</div>
+
+					{/* Desktop: 3-card overlap (unchanged sizing) */}
+					<div className="relative mt-10 hidden md:block">
 						<div className="relative mx-auto h-[230px] w-full max-w-[980px]">
-							{/* Side cards */}
-							<div className="absolute inset-y-0 left-6 hidden items-center md:flex">
+							<div className="absolute inset-y-0 left-6 flex items-center">
 								<div className="opacity-70">
 									<CarouselCard slide={slides[leftIndex]} variant="left" />
 								</div>
 							</div>
-							<div className="absolute inset-y-0 right-6 hidden items-center md:flex">
+							<div className="absolute inset-y-0 right-6 flex items-center">
 								<div className="opacity-70">
 									<CarouselCard slide={slides[rightIndex]} variant="right" />
 								</div>
 							</div>
 
-							{/* Center card */}
 							<div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-								<CarouselCard slide={slides[activeIndex]} variant="center" />
+								<CarouselCard
+									slide={slides[activeIndex]}
+									variant="center"
+								/>
 							</div>
 						</div>
 
@@ -149,7 +195,7 @@ const Organization: React.FC = () => {
 							type="button"
 							aria-label="Previous slide"
 							onClick={goPrev}
-							className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full p-2 text-white/80 hover:text-white md:left-6"
+							className={`absolute left-2 top-1/2 z-20 -translate-y-1/2 md:left-6 ${carouselArrowBtn}`}
 						>
 							<IoIosArrowDropright className="h-10 w-10 rotate-180" />
 						</button>
@@ -157,7 +203,7 @@ const Organization: React.FC = () => {
 							type="button"
 							aria-label="Next slide"
 							onClick={goNext}
-							className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-2 text-white/80 hover:text-white md:right-6"
+							className={`absolute right-2 top-1/2 z-20 -translate-y-1/2 md:right-6 ${carouselArrowBtn}`}
 						>
 							<IoIosArrowDropright className="h-10 w-10" />
 						</button>
