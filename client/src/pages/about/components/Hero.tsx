@@ -19,12 +19,12 @@ export default function Hero() {
 			className="flex flex-col md:flex-row justify-center items-center pt-36 pb-24 px-4 md:p-36 lg:p-56"
 		>
 			<div className="container z-40">
-				<div className="flex rounded-[40px] p-10 bg-linear-to-b from-[#ECEFFD] to-[#B7C2F3]">
-					<div className="flex flex-col gap-2 p-4 md:p-10 rounded-[40px] items-center justify-center border border-white/10 bg-white/20 backdrop-blur-lg shadow-[0_3px_3px_0px_#00000040,inset_0_3px_3px_0px_#00000040]">
-						<h1 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-b from-[#2D2D3E] via-[#2D2D3E] to-[#4D4D70E5] bg-clip-text text-transparent ">
+				<div className="flex rounded-4xl p-10 hack-white-gradient">
+					<div className="flex flex-col gap-2 p-4 md:p-10 rounded-4xl items-center justify-center border border-white/10 box-shadow">
+						<h1 className="text-heading font-bold mb-4 gunmetal-text-gradient">
 							About
 						</h1>
-						<p className="text-center text-base md:text-lg text-[#2D2D3E]">
+						<p className="md:px-48 md:py-4 text-center text-base md:text-lg text-body gunmetal-text-gradient">
 							Hack at UCI is Irvine’s premiere collegiate hackathon committee.
 							We strive to unite students passionate about hacking and retaining 
 							the spirit of community.
@@ -32,8 +32,8 @@ export default function Hero() {
 						<img
 							src={"team/group_hack_photo.webp"}
 							alt="Hack About Group Photo"
-							className="rounded-2xl md:rounded-[40px]"
-						/>
+							className="rounded-2xl md:rounded-4xl h-64 w-full object-cover md:h-auto md:w-auto"
+							/>
 					</div>
 
 				</div>
