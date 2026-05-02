@@ -20,7 +20,7 @@ export default function Hero() {
 		>
 			<div className="container z-40">
 				<div className="flex rounded-4xl p-10 hack-white-gradient">
-					<div className="flex flex-col gap-2 p-4 md:p-10 rounded-4xl items-center justify-center border border-white/10 box-shadow">
+					<div className="flex flex-col gap-2 p-4 md:p-10 rounded-4xl items-center justify-center border border-white/10 glass-shadow">
 						<h1 className="text-heading font-bold mb-4 gunmetal-text-gradient">
 							About
 						</h1>

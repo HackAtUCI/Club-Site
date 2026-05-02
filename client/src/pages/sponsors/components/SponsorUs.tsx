@@ -21,11 +21,11 @@ export default function SponsorUs() {
 				}}
 				className="hack-white-gradient flex max-w-4xl flex-col gap-10 rounded-4xl p-4 md:p-12"
 			>
-				<div className="box-shadow rounded-full border border-white/10 bg-[#F2F2F233] px-8 py-4 text-center">
+				<div className="glass-shadow rounded-full border border-white/10 bg-[#F2F2F233] px-8 py-4 text-center">
 					<h2 className="text-heading gunmetal-text-gradient">Sponsor Us!</h2>
 				</div>
 
-				<div className="box-shadow flex flex-col gap-6 rounded-4xl border border-white/10 bg-[#F2F2F233] p-6 backdrop-blur-md md:p-8">
+				<div className="glass-shadow flex flex-col gap-6 rounded-4xl border border-white/10 bg-[#F2F2F233] p-6 backdrop-blur-md md:p-8">
 					<ul className="text-body list-disc space-y-1 pl-5 text-black">
 						<li>
 							Showcase your product/platform to our vast network of next
@@ -74,7 +74,7 @@ export default function SponsorUs() {
 				className="flex justify-center"
 			>
 				<div className="hack-white-gradient rounded-4xl px-5 py-3 md:px-8 md:py-4">
-					<div className="box-shadow rounded-full border border-white/10 bg-[#F2F2F233] px-8 py-3 text-center">
+					<div className="glass-shadow rounded-full border border-white/10 bg-[#F2F2F233] px-8 py-3 text-center">
 						<p className="gunmetal-text-gradient text-md font-bold md:text-4xl">
 							Thank you to all our sponsors ❤️
 						</p>

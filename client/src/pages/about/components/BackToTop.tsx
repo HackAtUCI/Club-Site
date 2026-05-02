@@ -23,7 +23,7 @@ export default function BackToTop() {
         <div className="flex flex-col z-50 rounded-4xl p-6 hack-white-gradient cursor-pointer" onClick={scrollToTop}>
             <button
                 onClick={scrollToTop}
-                className="flex w-full z-50 rounded-4xl px-10 py-2 justify-center items-center border border-white/10 cursor-pointer box-shadow"
+                className="flex w-full z-50 rounded-4xl px-10 py-2 justify-center items-center border border-white/10 cursor-pointer glass-shadow"
             >
                 <h1 className="text-2xl md:text-4xl font-bold gunmetal-text-gradient">
                     Back to the top

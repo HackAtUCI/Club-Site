@@ -36,7 +36,7 @@ export default function TeamSection() {
 					</div>
 					{Object.entries(teamMembers).map(
 						([teamName, members]: [string, TeamMember[]]) => (
-							<section key={teamName} className="w-full p-4 md:p-10 rounded-4xl border border-white/10 box-shadow">
+							<section key={teamName} className="w-full p-4 md:p-10 rounded-4xl border border-white/10 glass-shadow">
 								<div className="flex items-center justify-center gap-2 mb-6">
 									<h2 className="text-2xl md:text-3xl text-gunmetal font-bold">
 										{teamName}
