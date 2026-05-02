@@ -8,6 +8,7 @@ import Organization from "@/lib/components/Home/Organization/Organization";
 
 import HomeDecor from "./HomeDecor";
 import EventsDecor from "./EventsDecor";
+import OurAlumniDecor from "./OurAlumniDecor";
 import Pill from "@/lib/components/Pill/Pill";
 
 export default function Home() {
@@ -49,7 +50,9 @@ export default function Home() {
 				</EventsDecor>
 			</HomeDecor>
 			<div className="home-background">
-				<OurAlumni />
+				<OurAlumniDecor>
+					<OurAlumni />
+				</OurAlumniDecor>
 				<Organization />
 
 				<div

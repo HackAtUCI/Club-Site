@@ -113,30 +113,33 @@ const OurAlumni: React.FC = () => {
 	return (
 		<section
 			ref={revealRef}
-			className={`flex w-full justify-center px-4 py-14 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:scale-100 md:px-8 md:py-18 ${
+			className={`flex w-full justify-center py-14 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:scale-100 md:py-18 ${
 				inView ? "opacity-100 scale-100" : "opacity-0 scale-50"
 			}`}
 			style={{
 				transitionDelay: inView ? "350ms" : "0ms",
 			}}
 		>
-			<div className="hack-white-gradient w-full max-w-7xl rounded-[45px] p-6 md:p-10">
-				<div className="box-shadow rounded-[45px] bg-white/20 p-6 md:p-10">
-					<div className="mb-8 flex flex-col items-center text-center md:mb-12">
-						<h2 className="gunmetal-text-gradient text-4xl font-extrabold leading-none md:text-5xl">
-							Our Alumni
-						</h2>
-						<p className="mt-3 text-base text-black/75 md:text-lg">
-              Over the years, our alumni have gone on to do great things beyond Hack at UCI. Here are some of their experiences!
-						</p>
-					</div>
+			<div className="mx-auto w-full max-w-7xl px-4 md:px-8">
+				<div className="hack-white-gradient w-full rounded-[45px] p-6 md:p-10">
+					<div className="box-shadow rounded-[45px] bg-white/20 p-6 md:p-10">
+						<div className="mb-8 flex flex-col items-center text-center md:mb-12">
+							<h2 className="gunmetal-text-gradient text-4xl font-extrabold leading-none md:text-5xl">
+								Our Alumni
+							</h2>
+							<p className="mt-3 text-base text-black/75 md:text-lg">
+								Over the years, our alumni have gone on to do great things beyond
+								Hack at UCI. Here are some of their experiences!
+							</p>
+						</div>
 
-					<div className="flex flex-col items-center gap-6 md:flex-row md:justify-center md:flex-wrap md:gap-8">
-						{alumni.map((a) => (
-							<div key={a.name} className="w-full md:basis-[calc(33.333%-1.4rem)]">
-								<AlumniCard {...a} />
-							</div>
-						))}
+						<div className="flex flex-col items-center gap-6 md:flex-row md:flex-wrap md:justify-center md:gap-8">
+							{alumni.map((a) => (
+								<div key={a.name} className="w-full md:basis-[calc(33.333%-1.4rem)]">
+									<AlumniCard {...a} />
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
 			</div>

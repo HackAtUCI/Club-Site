@@ -20,7 +20,7 @@ const StatColumn: React.FC<StatColumnProps> = ({ value, label, subLabel }) => {
 
 const Stats: React.FC = () => {
 	return (
-		<section className="w-full">
+		<section className="mb-16 w-full md:mb-50">
 			<div className="hack-white-gradient-transparent mx-4 rounded-[20px] md:rounded-none md:mx-0 md:w-full shadow-[0_4px_8px_rgba(0,0,0,0.25)]">
 				<div className="mx-auto flex w-full max-w-7xl flex-col gap-10 py-14 md:flex-row md:items-center md:justify-between md:gap-28 ">
 					<StatColumn value="2600+" label="Hackers" subLabel="since 2021" />
