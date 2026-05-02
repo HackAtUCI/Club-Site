@@ -9,6 +9,7 @@ import Organization from "@/lib/components/Home/Organization/Organization";
 import HomeDecor from "./HomeDecor";
 import EventsDecor from "./EventsDecor";
 import OurAlumniDecor from "./OurAlumniDecor";
+import OrganizationDecor from "./OrganizationDecor";
 import Pill from "@/lib/components/Pill/Pill";
 
 export default function Home() {
@@ -53,28 +54,29 @@ export default function Home() {
 				<OurAlumniDecor>
 					<OurAlumni />
 				</OurAlumniDecor>
-				<Organization />
-
-				<div
-					ref={backToTopRevealRef}
-					className={`flex mx-auto items-center w-full px-3 pt-6 mb-30 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:scale-100 md:px-5 ${
-						backToTopInView ? "opacity-100 scale-100" : "opacity-0 scale-50"
-					}`}
-				>
-					<Pill 
-						as="button"
-						onClick={() => {
-							scrollToRef({ ref: heroRef });
-						}}
-						className="mx-auto w-fit p-3 md:p-9"
-						roundedClassName="rounded-[50px]"
-						innerClassName="px-7 py-3.5 md:px-10 md:py-4"
+				<OrganizationDecor>
+					<Organization />
+					<div
+						ref={backToTopRevealRef}
+						className={`flex mx-auto w-full items-center px-3 pt-6 pb-0 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:scale-100 md:px-5 ${
+							backToTopInView ? "opacity-100 scale-100" : "opacity-0 scale-50"
+						}`}
 					>
-						<span className="block whitespace-nowrap text-center text-3xl font-black leading-none tracking-[-0.02em] gunmetal-text-gradient md:text-[40px]">
-							Back to the top
-						</span>
-					</Pill>
-				</div>
+						<Pill
+							as="button"
+							onClick={() => {
+								scrollToRef({ ref: heroRef });
+							}}
+							className="mx-auto w-fit p-3 transition-transform duration-200 ease-out hover:scale-110 focus:scale-110 active:scale-100 md:p-9"
+							roundedClassName="rounded-[50px]"
+							innerClassName="px-7 py-3.5 md:px-10 md:py-4"
+						>
+							<span className="block whitespace-nowrap text-center text-3xl font-black leading-none tracking-[-0.02em] gunmetal-text-gradient md:text-[40px]">
+								Back to the top
+							</span>
+						</Pill>
+					</div>
+				</OrganizationDecor>
 			</div>
 		</div>
 	);

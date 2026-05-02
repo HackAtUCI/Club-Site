@@ -97,7 +97,7 @@ const Organization: React.FC = () => {
 	return (
 		<section
 			ref={revealRef}
-			className={`flex w-full justify-center px-4 py-14 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:scale-100 md:px-30 md:py-18 ${
+			className={`flex w-full justify-center px-4 pt-14 pb-20 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:scale-100 md:px-30 md:pt-18 md:pb-34 ${
 				inView ? "opacity-100 scale-100" : "opacity-0 scale-50"
 			}`}
 			style={{
