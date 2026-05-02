@@ -14,7 +14,7 @@ export default function SponsorRow({
 	return (
 		<div className="overflow-hidden">
 			<div
-				className={`flex gap-10 md:gap-20 py-4 md:py-6 w-max animate-scroll-${
+				className={`flex gap-10 md:gap-20 py-1 md:py-6 w-max animate-scroll-${
 					direction === "left" ? "left" : "right"
 				}`}
 			>
@@ -29,7 +29,7 @@ export default function SponsorRow({
 						<img
 							src={sponsor.logo}
 							alt={sponsor.name}
-							className="h-20 md:h-auto w-auto object-contain"
+							className="max-h-16 md:max-h-32 md:w-auto object-contain"
 						/>
 					</a>
 				))}
