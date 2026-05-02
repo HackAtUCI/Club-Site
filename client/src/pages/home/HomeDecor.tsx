@@ -47,14 +47,14 @@ export default function HomeDecor({ children }: HomeDecorProps) {
 				alt=""
 				aria-hidden
 				draggable={false}
-				className="pointer-events-none absolute left-0 top-[calc(100svh+2rem)] z-10 w-[clamp(200px,29vw,440px)] -translate-x-[20%] select-none"
+				className="pointer-events-none absolute left-0 top-[calc(80svh+2rem)] z-10 w-[clamp(200px,29vw,440px)] -translate-x-[20%] select-none"
 			/>
 			<img
 				src={bigCircleRight}
 				alt=""
 				aria-hidden
 				draggable={false}
-				className="pointer-events-none absolute right-38 top-[calc(100svh+6rem)] z-10 w-[clamp(320px,30vw,760px)] translate-x-[36%] select-none opacity-70"
+				className="pointer-events-none absolute right-38 top-[calc(73svh+1rem)] z-10 w-[clamp(320px,30vw,760px)] translate-x-[36%] select-none opacity-70"
 			/>
 
 			<div className="relative z-20">{children}</div>

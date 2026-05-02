@@ -7,6 +7,7 @@ import OurAlumni from "@/lib/components/Home/Alumni/OurAlumni";
 import Organization from "@/lib/components/Home/Organization/Organization";
 
 import HomeDecor from "./HomeDecor";
+import EventsDecor from "./EventsDecor";
 import Pill from "@/lib/components/Pill/Pill";
 
 export default function Home() {
@@ -42,10 +43,12 @@ export default function Home() {
 		<div className="min-h-screen overflow-x-hidden">
 			<HomeDecor>
 				<Hero ref={heroRef} onClick={() => scrollToRef({ ref: contactRef })} />
-				<Events />
+				<EventsDecor>
+					<Events />
+					<Stats />
+				</EventsDecor>
 			</HomeDecor>
 			<div className="home-background">
-				<Stats />
 				<OurAlumni />
 				<Organization />
 

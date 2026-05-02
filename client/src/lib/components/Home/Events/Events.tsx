@@ -114,7 +114,7 @@ const Events: React.FC = () => {
 
 			<div
 				ref={topRevealRef}
-				className={`relative z-10 mx-auto flex w-full max-w-7xl flex-col px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14 motion-reduce:opacity-100 motion-reduce:translate-y-0 ${
+				className={`relative z-10 mx-auto flex w-full max-w-7xl flex-col px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14 mb-16 md:mb-28 motion-reduce:opacity-100 motion-reduce:translate-y-0 ${
 					topRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 				} transition-all duration-700 ease-out`}
 			>
