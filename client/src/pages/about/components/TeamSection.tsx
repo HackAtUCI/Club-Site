@@ -28,9 +28,9 @@ export default function TeamSection() {
 			className="flex justify-center items-center text-[#2D2D3E] px-6 md:px-10 pb-30 lg:px-46"
 		>
 			<div className="container z-40">
-				<div className="flex flex-col gap-16 rounded-[40px] px-4 md:px-10 py-16 bg-gradient-to-b from-[#ECEFFD] to-[#B7C2F3]">
+				<div className="flex flex-col gap-16 rounded-[40px] px-4 md:px-10 py-16 bg-linear-to-b from-[#ECEFFD] to-[#B7C2F3]">
 					<div className="flex justify-center">
-						<h1 className="text-4xl md:text-5xl font-bold md:mb-4 bg-gradient-to-b from-[#2D2D3E] via-[#2D2D3E] to-[#4D4D70E5] bg-clip-text text-transparent ">
+						<h1 className="text-4xl md:text-5xl font-bold md:mb-4 bg-linear-to-b from-[#2D2D3E] via-[#2D2D3E] to-[#4D4D70E5] bg-clip-text text-transparent ">
 							Our Team
 						</h1>
 					</div>

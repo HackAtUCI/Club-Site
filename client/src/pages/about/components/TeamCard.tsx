@@ -27,8 +27,8 @@ const TeamCard: React.FC<TeamCardProps> = ({
 
 			<div className="flex items-center justify-between">
 				<h5
-					className={`leading-tight wrap-break-word ${
-						name.length > 18 ? "text-xs md:text-base" : "text-sm md:text-lg"
+					className={`leading-tight wrap-break-word font-semibold ${
+						name.length > 18 ? "text-xs md:text-lg" : "text-sm md:text-xl"
 					} `}
 				>
 					{name}
@@ -43,7 +43,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
 				</a>
 			</div>
 
-			<h6 className="text-xs md:text-md">{position}</h6>
+			<h6 className="text-xs md:text-lg">{position}</h6>
 		</div>
 	);
 };
