@@ -1,0 +1,21 @@
+.marquee-row {
+	display: flex;
+	width: max-content;
+	gap: 0.75rem;
+	animation-name: marquee-translate;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.marquee-row:hover {
+	animation-play-state: paused;
+}
+
+@keyframes marquee-translate {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(calc(-50% - 0.375rem));
+	}
+}
