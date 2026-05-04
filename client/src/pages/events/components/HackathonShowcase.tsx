@@ -39,7 +39,7 @@ function TrackCard({ name }: { name: string }) {
 	return (
 		<div className="shrink-0 rounded-3xl glass-shadow bg-[#F2F2F233] px-5 py-3 flex items-center gap-3">
 			<div className="w-6 h-6 rounded bg-[#cccccc] shrink-0" />
-			<span className="text-gunmetal text-sm underline whitespace-nowrap">
+			<span className="text-[#1f1e2d] text-sm underline whitespace-nowrap">
 				{name}
 			</span>
 		</div>
