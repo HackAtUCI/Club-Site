@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import DiscordIcon from "@/assets/logos/discord.svg";
 import InstagramIcon from "@/assets/logos/instagram.svg";
 
@@ -18,7 +20,7 @@ function PrimaryFormButton({
 			href={href}
 			target="_blank"
 			rel="noreferrer"
-			className="text-center rounded-full bg-linear-to-br from-[#3a3a4a] to-[#1a1a28] px-6 py-3 text-white text-sm md:text-base font-medium hover:opacity-90 transition-opacity"
+			className="w-full rounded-full gunmetal-gradient px-6 py-3 text-center text-white text-base sm:text-lg md:text-xl font-medium tracking-wide transition-transform duration-200 hover:scale-[1.02]"
 		>
 			{children}
 		</a>
@@ -27,51 +29,80 @@ function PrimaryFormButton({
 
 export default function InterestSection() {
 	return (
-		<section className="px-4 sm:px-6 md:px-10 py-6 md:py-8">
-			<div className="mx-auto w-full max-w-[1032px] rounded-[40px] bg-linear-to-b from-[#ECEFFD] to-[#B7C2F3] p-8 sm:p-12 md:p-16 shadow-[0_3.2px_3.2px_#00000040] flex flex-col items-center gap-6">
-				<h2 className="text-[#1f1e2d] text-2xl sm:text-3xl md:text-4xl font-bold text-center max-w-2xl">
-					Interested in competing, mentoring, or volunteering?
-				</h2>
+		<section className="px-4 sm:px-6 md:px-10 py-6 md:pb-32">
+			<motion.div
+				initial={{
+					opacity: 0,
+					scale: 0.5,
+				}}
+				whileInView={{
+					opacity: 1,
+					scale: 1,
+				}}
+				viewport={{
+					amount: 0.15,
+				}}
+				transition={{
+					duration: 0.7,
+					ease: "easeOut",
+					delay: 0.35,
+				}}
+				className="mx-auto w-full max-w-3/4 rounded-[40px] hack-white-gradient p-8 sm:p-10 md:p-12"
+			>
+				<div className="glass-shadow rounded-[36px] bg-[#F2F2F233] px-6 py-12 sm:px-10 md:px-16 md:py-16 flex flex-col items-center">
+					<h2 className="max-w-[680px] text-center gunmetal-text-gradient text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+						Interested in competing, mentoring, or volunteering?
+					</h2>
 
-				<p className="text-[#1f1e2d] text-sm md:text-base text-center">
-					Get updates by joining our discord or following our instagram!
-				</p>
+					<p className="mt-8 text-center text-black text-sm sm:text-base md:text-lg">
+						Get updates by joining our discord or following our instagram!
+					</p>
 
-				<div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
-					<a
-						href={DISCORD_URL}
-						target="_blank"
-						rel="noreferrer"
-						className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-					>
-						<img src={DiscordIcon} alt="Discord" className="w-10 h-10" />
-						<span className="text-[#1f1e2d] text-sm md:text-base underline font-semibold">
-							Discord Invite
-						</span>
-					</a>
+					<div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-24">
+						<a
+							href={DISCORD_URL}
+							target="_blank"
+							rel="noreferrer"
+							className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+						>
+							<img
+								src={DiscordIcon}
+								alt="Discord"
+								className="h-14 w-14 sm:h-16 sm:w-16"
+							/>
+							<span className="text-black text-sm sm:text-base font-bold underline">
+								Discord Invite
+							</span>
+						</a>
 
-					<a
-						href={INSTAGRAM_URL}
-						target="_blank"
-						rel="noreferrer"
-						className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-					>
-						<img src={InstagramIcon} alt="Instagram" className="w-10 h-10" />
-						<span className="text-[#1f1e2d] text-sm md:text-base font-semibold">
-							@HackatUCI
-						</span>
-					</a>
+						<a
+							href={INSTAGRAM_URL}
+							target="_blank"
+							rel="noreferrer"
+							className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+						>
+							<img
+								src={InstagramIcon}
+								alt="Instagram"
+								className="h-14 w-14 sm:h-16 sm:w-16"
+							/>
+							<span className="text-black text-sm sm:text-base font-bold">
+								@HackatUCI
+							</span>
+						</a>
+					</div>
+
+					<div className="mt-8 flex w-full max-w-[430px] flex-col gap-4">
+						<PrimaryFormButton href={ZOTHACKS_MENTORS_FORM}>
+							Interest form for ZotHacks Mentors!
+						</PrimaryFormButton>
+
+						<PrimaryFormButton href={ZOTHACKS_JUDGING_FORM}>
+							Interest form for ZotHacks Judging
+						</PrimaryFormButton>
+					</div>
 				</div>
-
-				<div className="flex flex-col gap-3 w-full max-w-md mt-2">
-					<PrimaryFormButton href={ZOTHACKS_MENTORS_FORM}>
-						Interest form for ZotHacks Mentors!
-					</PrimaryFormButton>
-					<PrimaryFormButton href={ZOTHACKS_JUDGING_FORM}>
-						Interest form for ZotHacks Judging
-					</PrimaryFormButton>
-				</div>
-			</div>
+			</motion.div>
 		</section>
 	);
 }

@@ -3,6 +3,7 @@ import Hackathons from "./components/Hackathons";
 import HackathonShowcase from "./components/HackathonShowcase";
 import Testimonials from "./components/Testimonials";
 import InterestSection from "./components/InterestSection";
+import BackToTop from "@/lib/components/BackToTop/BackToTop";
 
 const PLACEHOLDER_PHOTO =
 	"https://placehold.co/400x300/cccccc/666666?text=Photo";
@@ -53,6 +54,7 @@ export default function Events() {
 			/>
 			<Testimonials />
 			<InterestSection />
+			<BackToTop />
 		</>
 	);
 }

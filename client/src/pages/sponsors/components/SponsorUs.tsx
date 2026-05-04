@@ -49,7 +49,7 @@ export default function SponsorUs() {
 					<div className="flex justify-center md:justify-start">
 						<a
 							href="mailto:hack@uci.edu"
-							className="gunmetal-gradient rounded-4xl px-12 py-2 text-body font-bold text-[#FFFFFF] transition-transform duration-200 hover:scale-105"
+							className="gunmetal-gradient rounded-4xl px-12 py-2 text-body font-bold text-[#FFFFFF] transition-transform duration-200 hover:scale-105 cursor-pointer"
 						>
 							Contact Us
 						</a>

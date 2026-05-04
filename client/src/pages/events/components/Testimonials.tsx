@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 interface Testimony {
 	name: string;
 	role: string;
@@ -16,13 +18,14 @@ const TESTIMONIES: Testimony[] = Array.from({ length: 6 }, () => ({
 
 function TestimonyCard({ name, role, statement }: Testimony) {
 	return (
-		<div className="rounded-[24px] bg-white/20 shadow-[inset_0_3.2px_3.2px_#00000040,0_3.2px_3.2px_#00000040] p-5 md:p-6 flex flex-col gap-3">
+		<div className="rounded-[24px] glass-shadow bg-[#F2F2F233] p-5 md:p-6 flex flex-col gap-3">
 			<div>
 				<h3 className="text-[#1f1e2d] font-bold text-base md:text-lg">
 					{name}
 				</h3>
 				<p className="text-[#1f1e2d]/70 text-sm">{role}</p>
 			</div>
+
 			<p className="text-[#1f1e2d] text-sm md:text-base">{statement}</p>
 		</div>
 	);
@@ -31,9 +34,27 @@ function TestimonyCard({ name, role, statement }: Testimony) {
 export default function Testimonials() {
 	return (
 		<section className="px-4 sm:px-6 md:px-10 py-6 md:py-8">
-			<div className="mx-auto w-full max-w-[1032px] rounded-[40px] bg-linear-to-b from-[#ECEFFD] to-[#B7C2F3] p-6 sm:p-8 md:p-10 shadow-[0_3.2px_3.2px_#00000040] flex flex-col gap-6 md:gap-8">
-				<div className="rounded-[40px] bg-white/20 shadow-[inset_0_3.2px_3.2px_#00000040,0_3.2px_3.2px_#00000040] px-6 py-6 flex items-center justify-center">
-					<h2 className="text-[#1f1e2d] text-2xl sm:text-3xl md:text-4xl font-bold text-center">
+			<motion.div
+				initial={{
+					opacity: 0,
+					scale: 0.5,
+				}}
+				whileInView={{
+					opacity: 1,
+					scale: 1,
+				}}
+				viewport={{
+					amount: 0.15,
+				}}
+				transition={{
+					duration: 0.7,
+					ease: "easeOut",
+					delay: 0.35,
+				}}
+				className="mx-auto w-full max-w-3/4 rounded-[40px] hack-white-gradient p-6 sm:p-8 md:p-10 flex flex-col gap-6 md:gap-8"
+			>
+				<div className="rounded-[40px] glass-shadow bg-[#F2F2F233] px-6 py-6 flex items-center justify-center">
+					<h2 className="gunmetal-text-gradient text-2xl sm:text-3xl md:text-4xl font-bold text-center">
 						Build, Learn, Connect
 					</h2>
 				</div>
@@ -43,7 +64,7 @@ export default function Testimonials() {
 						<TestimonyCard key={i} {...t} />
 					))}
 				</div>
-			</div>
+			</motion.div>
 		</section>
 	);
 }
