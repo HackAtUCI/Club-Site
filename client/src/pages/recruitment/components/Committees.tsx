@@ -14,7 +14,6 @@ import MarketingGroupPic from "@/assets/images/MarketingGroupPic.jpeg";
 import DesignGroupPic from "@/assets/images/DesignGroupPic.jpeg";
 import TechnologyGroupPic from "@/assets/images/TechnologyGroupPic.jpeg";
 
-
 interface Committee {
 	key: string;
 	label: string;
@@ -65,8 +64,8 @@ const COMMITTEES: Committee[] = [
 		],
 	},
 	{
-		key: "tech",
-		label: "Tech",
+		key: "technology",
+		label: "Technology",
 		text: <TechnologyText />,
 		imageSrc: TechnologyGroupPic,
 		faqs: [
@@ -81,7 +80,7 @@ export default function Committees() {
 	const active = COMMITTEES.find((c) => c.key === activeKey) ?? COMMITTEES[0];
 
 	return (
-		<section className="px-4 sm:px-6 md:px-10 py-12">
+		<section className="px-6 md:px-10 py-12">
 			<motion.div
 				initial={{ opacity: 0, y: 18 }}
 				whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +96,8 @@ export default function Committees() {
 				</h2>
 
 				<div className="rounded-[40px] glass-shadow bg-[#F2F2F233] p-6 md:p-10 flex flex-col gap-6">
-					<div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4">
+					<div className="flex flex-col sm:flex-row items-stretch sm:items-center sm:justify-between md:px-16 gap-2 sm:gap-3 md:gap-4">
+						{" "}
 						{COMMITTEES.map((c) => {
 							const isActive = c.key === activeKey;
 
@@ -106,10 +106,10 @@ export default function Committees() {
 									key={c.key}
 									type="button"
 									onClick={() => setActiveKey(c.key)}
-									className={`rounded-full px-4 py-2 text-sm md:text-base font-semibold transition-all duration-200 cursor-pointer ${
+									className={`rounded-full px-4 py-2 text-sm md:text-xl font-semibold transition-all duration-200 cursor-pointer ${
 										isActive
-											? "bg-[#B5EDC9] text-[#1f1e2d]"
-											: "text-[#1f1e2d]/70 hover:text-[#1f1e2d] hover:bg-white/20"
+											? "bg-[#B5EDC9] text-black"
+											: "text-black/70 hover:text-black hover:bg-white/20"
 									}`}
 								>
 									{c.label}
@@ -118,7 +118,7 @@ export default function Committees() {
 						})}
 					</div>
 
-					<div className="rounded-2xl overflow-hidden bg-[#cccccc] aspect-[2.2/1] glass-shadow">
+					<div className="rounded-2xl overflow-hidden bg-[#cccccc] aspect-square md:aspect-[2.4/1] glass-shadow">
 						<img
 							src={active.imageSrc}
 							alt={`${active.label}`}
@@ -126,7 +126,7 @@ export default function Committees() {
 						/>
 					</div>
 
-					<div className="text-[#1f1e2d] text-sm md:text-[14.4px] leading-[1.5]">
+					<div className="text-black text-sm md:text-[14.4px] leading-normal">
 						{active.text}
 					</div>
 

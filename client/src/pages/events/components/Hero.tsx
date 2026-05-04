@@ -22,14 +22,14 @@ export default function Hero() {
 			duration: 0.6,
 			ease: "easeOut",
 		}}
-		className="px-4 sm:px-6 md:px-10 pt-28 md:py-48 pb-20">
-			<div className="mx-auto w-full max-w-3/4 rounded-[40px] hack-white-gradient p-6 sm:p-8 md:p-10">
-				<div className="rounded-[40px] glass-shadow p-6 md:p-10 flex flex-col items-center gap-4 md:gap-6 bg-[#F2F2F233]">
+		className="px-6 md:px-10 pt-28 md:py-48 pb-20">
+			<div className="mx-auto w-full max-w-5xl rounded-[40px] hack-white-gradient p-6 sm:p-8 md:p-10">
+				<div className="rounded-[40px] glass-shadow p-6 md:p-10 flex flex-col items-center gap-2 md:gap-6 bg-[#F2F2F233]">
 					<h1 className="gunmetal-text-gradient text-heading">
 						Our Events
 					</h1>
 
-					<p className="text-[#111111] text-body">
+					<p className="text-[#111111] text-body text-center">
 						Explore what our annual{" "}
 						<a
 							href={HACKATHONS_LINK}
@@ -42,7 +42,7 @@ export default function Hero() {
 						have to offer
 					</p>
 
-					<div className="w-full rounded-3xl overflow-hidden bg-[#cccccc] aspect-[2.4/1] mt-2">
+					<div className="w-full rounded-3xl overflow-hidden bg-[#cccccc] aspect-[0.95/1] md:aspect-[2.4/1] mt-2">
 						<img
 							src={EventsPic}
 							alt="IrvineHacks 2026"

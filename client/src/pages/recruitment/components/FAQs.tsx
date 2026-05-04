@@ -64,7 +64,7 @@ const FAQ_ITEMS: FAQItem[] = [
 
 export default function FAQs() {
 	return (
-		<section className="px-4 sm:px-6 md:px-10 py-12">
+		<section className="px-6 md:px-10 py-12">
 			<motion.div
 				initial={{ opacity: 0, y: 18 }}
 				whileInView={{ opacity: 1, y: 0 }}

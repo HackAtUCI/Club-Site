@@ -8,7 +8,6 @@ import About from "@/pages/about";
 import Events from "@/pages/events";
 import Sponsors from "@/pages/sponsors";
 import Recruitment from "@/pages/recruitment";
-import Contact from "@/pages/contact";
 import NotFound from "@/pages/notFound";
 
 import "./App.css";
@@ -26,7 +25,6 @@ function App() {
 						<Route exact path="/events" component={Events} />
 						<Route exact path="/sponsors" component={Sponsors} />
 						<Route exact path="/recruitment" component={Recruitment} />
-						<Route exact path="/contact" component={Contact} />
 						{/* <Route
 							exact
 							path="/mentor"

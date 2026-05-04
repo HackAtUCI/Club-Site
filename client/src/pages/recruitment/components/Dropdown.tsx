@@ -9,7 +9,7 @@ export default function Dropdown({ question, children }: DropdownProps) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<div className="text-[#1f1e2d]">
+		<div className="text-black">
 			<button
 				type="button"
 				onClick={() => setIsOpen((prev) => !prev)}
@@ -32,7 +32,7 @@ export default function Dropdown({ question, children }: DropdownProps) {
 			</button>
 
 			{isOpen && (
-				<div className="mt-2 ml-7 text-sm md:text-base text-[#1f1e2d]/80">
+				<div className="mt-2 ml-7 text-sm md:text-base text-black/80">
 					{children}
 				</div>
 			)}

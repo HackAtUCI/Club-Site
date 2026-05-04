@@ -29,7 +29,7 @@ function PrimaryFormButton({
 
 export default function InterestSection() {
 	return (
-		<section className="px-4 sm:px-6 md:px-10 py-6 md:pb-32">
+		<section className="px-6 md:px-10 py-6 md:pb-32">
 			<motion.div
 				initial={{
 					opacity: 0,
@@ -47,7 +47,7 @@ export default function InterestSection() {
 					ease: "easeOut",
 					delay: 0.35,
 				}}
-				className="mx-auto w-full max-w-3/4 rounded-[40px] hack-white-gradient p-8 sm:p-10 md:p-12"
+				className="mx-auto w-full max-w-5xl rounded-[40px] hack-white-gradient p-8 sm:p-10 md:p-12"
 			>
 				<div className="glass-shadow rounded-[36px] bg-[#F2F2F233] px-6 py-12 sm:px-10 md:px-16 md:py-16 flex flex-col items-center">
 					<h2 className="max-w-[680px] text-center gunmetal-text-gradient text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">

@@ -23,7 +23,7 @@ function JoinUsCard({ showApplyButton }: { showApplyButton: boolean }) {
 					Join Us!
 				</h2>
 
-				<div className="flex flex-col gap-3 text-[#1f1e2d] text-sm md:text-[14.4px] leading-[1.35]">
+				<div className="flex flex-col gap-3 text-black text-sm md:text-[14.4px] leading-[1.35]">
 					<p>
 						More than organizing hackathons, we're a community where you'll{" "}
 						<strong>build</strong> real projects, <strong>grow</strong> as a
@@ -43,7 +43,7 @@ function JoinUsCard({ showApplyButton }: { showApplyButton: boolean }) {
 					href={APPLY_URL}
 					target="_blank"
 					rel="noreferrer"
-					className="self-start rounded-full gunmetal-gradient px-6 py-2.5 text-white text-sm font-medium transition-transform duration-200 hover:scale-105"
+					className="self-start rounded-full gunmetal-gradient px-6 py-2.5 text-white text-body font-bold transition-transform duration-200 hover:scale-105"
 				>
 					Apply to be an Organizer
 				</a>
@@ -58,7 +58,7 @@ export default function Hero({
 	showApplyButton: boolean;
 }) {
 	return (
-		<section className="px-4 sm:px-6 md:px-10 pt-28 md:py-48 pb-12">
+		<section className="px-6 md:px-10 pt-28 md:py-48 pb-12">
 			<motion.div
 				initial={{ opacity: 0, y: 18 }}
 				whileInView={{ opacity: 1, y: 0 }}

@@ -1,12 +1,15 @@
-"use client";
-
 import { motion } from "framer-motion";
+
+import EmailIcon from "@/assets/sponsor-decor/email-icon.svg";
+import PersonIcon from "@/assets/sponsor-decor/person-icon.svg";
+import BlueCircleOutline from "@/assets/sponsor-decor/blue-circle-outline.svg";
+import GreenCircleOutline from "@/assets/sponsor-decor/green-circle-outline.svg";
 
 export default function AnimatedBackground() {
 	return (
 		<>
 			<motion.img
-				src="/background/email-icon.svg"
+				src={EmailIcon}
 				alt=""
 				aria-hidden="true"
 				initial={{
@@ -19,34 +22,34 @@ export default function AnimatedBackground() {
 					x: 0,
 					rotate: 0,
 				}}
-                animate={{
-                    y: [0, -20, 0],
-                }}
+				animate={{
+					y: [0, -20, 0],
+				}}
 				viewport={{ amount: 0.3 }}
-                transition={{
-                    opacity: {
-                        duration: 0.7,
-                        ease: "easeOut",
-                    },
-                    x: {
-                        duration: 0.7,
-                        ease: "easeOut",
-                    },
-                    rotate: {
-                        duration: 0.7,
-                        ease: "easeOut",
-                    },
-                    y: {
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                    },
-                }}
+				transition={{
+					opacity: {
+						duration: 0.7,
+						ease: "easeOut",
+					},
+					x: {
+						duration: 0.7,
+						ease: "easeOut",
+					},
+					rotate: {
+						duration: 0.7,
+						ease: "easeOut",
+					},
+					y: {
+						duration: 4,
+						repeat: Infinity,
+						ease: "easeInOut",
+					},
+				}}
 				className="pointer-events-none absolute right-80 top-[62%] z-0 hidden w-100 select-none lg:block"
 			/>
 
 			<motion.img
-				src="/background/person-icon.svg"
+				src={PersonIcon}
 				alt=""
 				aria-hidden="true"
 				initial={{
@@ -59,34 +62,34 @@ export default function AnimatedBackground() {
 					x: 0,
 					rotate: 0,
 				}}
-                animate={{
-                    y: [0, -20, 0],
-                }}
+				animate={{
+					y: [0, -20, 0],
+				}}
 				viewport={{ amount: 0.3 }}
-                transition={{
-                    opacity: {
-                        duration: 0.7,
-                        ease: "easeOut",
-                    },
-                    x: {
-                        duration: 0.7,
-                        ease: "easeOut",
-                    },
-                    rotate: {
-                        duration: 0.7,
-                        ease: "easeOut",
-                    },
-                    y: {
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                    },
-                }}
+				transition={{
+					opacity: {
+						duration: 0.7,
+						ease: "easeOut",
+					},
+					x: {
+						duration: 0.7,
+						ease: "easeOut",
+					},
+					rotate: {
+						duration: 0.7,
+						ease: "easeOut",
+					},
+					y: {
+						duration: 4,
+						repeat: Infinity,
+						ease: "easeInOut",
+					},
+				}}
 				className="pointer-events-none absolute right-6 top-[74%] z-0 hidden w-100 select-none lg:block"
 			/>
 
 			<motion.img
-				src="/background/blue-circle-outline.svg"
+				src={BlueCircleOutline}
 				alt=""
 				aria-hidden="true"
 				initial={{
@@ -106,7 +109,7 @@ export default function AnimatedBackground() {
 			/>
 
 			<motion.img
-				src="/background/green-circle-outline.svg"
+				src={GreenCircleOutline}
 				alt=""
 				aria-hidden="true"
 				initial={{

@@ -10,6 +10,7 @@ import ZHMatchaPic from "@/assets/images/ZHMatchaPic.jpg";
 import IHVictoryPic from "@/assets/images/IHVictoryPic.jpg";
 import HackHikePic2 from "@/assets/images/HackHikePic2.jpg";
 import HackHikePic3 from "@/assets/images/HackHikePic3.jpg";
+import DisneyPic from "@/assets/images/DisneyPic.jpg";
 
 type Slide = {
 	id: string;
@@ -168,6 +169,11 @@ const Organization: React.FC = () => {
 				id: "ih-victory-pic",
 				imgSrc: IHVictoryPic,
 				imgAlt: "Hack @ UCI Victory Pose",
+			},
+			{
+				id: "disney-pic",
+				imgSrc: DisneyPic,
+				imgAlt: "Hack @ UCI Disney",
 			},
 		],
 		[]
