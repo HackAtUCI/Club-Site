@@ -78,7 +78,7 @@ body {
 .gunmetal-gradient {
 	background: linear-gradient(
 		to bottom,
-		#2d2d3e 50%,
+		#2d2d3e 0%,
 		rgba(77, 77, 112, 0.9) 100%
 	);
 }
@@ -86,7 +86,8 @@ body {
 .gunmetal-text-gradient {
 	background: linear-gradient(
 		to bottom,
-		#2d2d3e 50%,
+		#2d2d3e 0%,
+		#2d2d3e 55%,
 		rgba(77, 77, 112, 0.9) 100%
 	);
 

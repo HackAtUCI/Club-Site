@@ -9,16 +9,14 @@ const NavLinkItem = React.forwardRef<
 	React.ComponentPropsWithoutRef<typeof NavMenu.Link> & { to: string }
 >(({ children, className, to, ...props }, forwardedRef) => {
 	return (
-		<NavMenu.Item>
-			<NavMenu.Link
-				className={`navMenuLink ${className}`}
-				{...props}
-				ref={forwardedRef}
-				asChild
-			>
-				<Link to={to}>{children}</Link>
-			</NavMenu.Link>
-		</NavMenu.Item>
+		<NavMenu.Link
+			className={`navMenuLink ${className}`}
+			{...props}
+			ref={forwardedRef}
+			asChild
+		>				
+			<Link to={to}>{children}</Link>
+		</NavMenu.Link>
 	);
 });
 

@@ -1,0 +1,25 @@
+<svg width="443" height="443" viewBox="0 0 443 443" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M411.81 251.746C428.688 146.468 357.025 47.4396 251.746 30.5613C146.467 13.683 47.4392 85.3458 30.5609 190.625C13.6826 295.904 85.3454 394.932 190.624 411.81C295.903 428.688 394.931 357.025 411.81 251.746Z" stroke="white" stroke-width="0.7" stroke-miterlimit="10" stroke-dasharray="3.5 3.5"/>
+<path d="M220.486 366.786C301.092 366.786 366.436 301.442 366.436 220.836C366.436 140.23 301.092 74.8857 220.486 74.8857C139.88 74.8857 74.5356 140.23 74.5356 220.836C74.5356 301.442 139.88 366.786 220.486 366.786Z" fill="url(#paint0_linear_513_2017)"/>
+<g clip-path="url(#clip0_513_2017)">
+<path d="M266.327 145.089L132.05 193.961C127.416 195.648 125.026 200.773 126.713 205.408L163.367 306.115C165.054 310.75 170.179 313.14 174.814 311.453L309.09 262.58C313.725 260.893 316.115 255.768 314.428 251.133L277.773 150.426C276.086 145.791 270.961 143.402 266.327 145.089Z" fill="white" fill-opacity="0.2" stroke="url(#paint1_linear_513_2017)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M126.713 205.408L225.783 235.878L277.774 150.427" stroke="url(#paint2_linear_513_2017)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_513_2017" x1="220.486" y1="74.8857" x2="220.486" y2="366.786" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ECEFFD"/>
+<stop offset="1" stop-color="#B7C2F3"/>
+</linearGradient>
+<linearGradient id="paint1_linear_513_2017" x1="199.189" y1="169.525" x2="241.952" y2="287.016" gradientUnits="userSpaceOnUse">
+<stop offset="0.475962" stop-color="#2D2D3E"/>
+<stop offset="1" stop-color="#4D4D70" stop-opacity="0.9"/>
+</linearGradient>
+<linearGradient id="paint2_linear_513_2017" x1="202.243" y1="177.917" x2="223.625" y2="236.663" gradientUnits="userSpaceOnUse">
+<stop offset="0.475962" stop-color="#2D2D3E"/>
+<stop offset="1" stop-color="#4D4D70" stop-opacity="0.9"/>
+</linearGradient>
+<clipPath id="clip0_513_2017">
+<rect width="214.34" height="214.34" fill="white" transform="translate(83.209 164.218) rotate(-20)"/>
+</clipPath>
+</defs>
+</svg>
