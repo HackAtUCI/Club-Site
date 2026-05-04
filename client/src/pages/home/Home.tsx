@@ -1,17 +1,22 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
 import Hero from "@/lib/components/Home/Hero/Hero";
-import AboutUs from "@/lib/components/Home/AboutUs/AboutUs";
 import Events from "@/lib/components/Home/Events/Events";
-import Sponsors from "@/lib/components/Home/Sponsors/Sponsors";
-import Contact from "@/lib/components/Home/Contact/Contact";
+import Stats from "@/lib/components/Home/Stats/Stats";
+import OurAlumni from "@/lib/components/Home/Alumni/OurAlumni";
+import Organization from "@/lib/components/Home/Organization/Organization";
 
-import UpArrow from "@/assets/icons/up-arrow.svg";
+import HomeDecor from "./HomeDecor";
+import EventsDecor from "./EventsDecor";
+import OurAlumniDecor from "./OurAlumniDecor";
+import OrganizationDecor from "./OrganizationDecor";
+import Pill from "@/lib/components/Pill/Pill";
 
 export default function Home() {
 	const heroRef = useRef<HTMLDivElement>(null);
 	const contactRef = useRef<HTMLDivElement>(null);
+	const backToTopRevealRef = useRef<HTMLDivElement>(null);
+	const [backToTopInView, setBackToTopInView] = useState(false);
 
 	const scrollToRef = ({
 		ref,
@@ -21,28 +26,58 @@ export default function Home() {
 		ref.current?.scrollIntoView({ behavior: "smooth" });
 	};
 
-	return (
-		<div className="home-background min-h-screen">
-			<Hero ref={heroRef} onClick={() => scrollToRef({ ref: contactRef })} />
-			<AboutUs />
-			<Events />
-			<Contact ref={contactRef} />
-			<Sponsors />
+	useEffect(() => {
+		const el = backToTopRevealRef.current;
+		if (!el) return;
 
-			<section className="flex justify-center items-center pb-24">
-				<PrimaryButton
-					onClick={() => {
-						scrollToRef({ ref: heroRef });
-					}}
-				>
-					Back To Top
-					<img
-						src={UpArrow}
-						alt="Up Arrow"
-						className="w-8 h-8 ml-4 inline-block"
-					/>
-				</PrimaryButton>
-			</section>
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				setBackToTopInView(Boolean(entry?.isIntersecting));
+			},
+			{ threshold: 0.15 },
+		);
+
+		observer.observe(el);
+		return () => observer.disconnect();
+	}, []);
+
+	return (
+		<div className="min-h-screen overflow-x-hidden">
+			<HomeDecor>
+				<Hero ref={heroRef} onClick={() => scrollToRef({ ref: contactRef })} />
+				<EventsDecor>
+					<Events />
+					<Stats />
+				</EventsDecor>
+			</HomeDecor>
+			<div className="home-background">
+				<OurAlumniDecor>
+					<OurAlumni />
+				</OurAlumniDecor>
+				<OrganizationDecor>
+					<Organization />
+					<div
+						ref={backToTopRevealRef}
+						className={`flex mx-auto w-full items-center px-3 pt-6 pb-0 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:scale-100 md:px-5 ${
+							backToTopInView ? "opacity-100 scale-100" : "opacity-0 scale-50"
+						}`}
+					>
+						<Pill
+							as="button"
+							onClick={() => {
+								scrollToRef({ ref: heroRef });
+							}}
+							className="mx-auto w-fit p-3 transition-transform duration-200 ease-out hover:scale-110 focus:scale-110 active:scale-100 md:p-9"
+							roundedClassName="rounded-[50px]"
+							innerClassName="px-7 py-3.5 md:px-10 md:py-4"
+						>
+							<span className="block whitespace-nowrap text-center text-3xl font-black leading-none tracking-[-0.02em] gunmetal-text-gradient md:text-[40px]">
+								Back to the top
+							</span>
+						</Pill>
+					</div>
+				</OrganizationDecor>
+			</div>
 		</div>
 	);
 }
