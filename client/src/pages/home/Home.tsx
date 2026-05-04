@@ -10,7 +10,6 @@ import HomeDecor from "./HomeDecor";
 import EventsDecor from "./EventsDecor";
 import OurAlumniDecor from "./OurAlumniDecor";
 import OrganizationDecor from "./OrganizationDecor";
-import Pill from "@/lib/components/Pill/Pill";
 import BackToTop from "@/lib/components/BackToTop/BackToTop";
 
 export default function Home() {
