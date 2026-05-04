@@ -1,4 +1,5 @@
 import { useState, type ReactNode } from "react";
+import { motion } from "framer-motion";
 
 import LogisticsText from "./committee-texts/LogisticsText";
 import CorporateText from "./committee-texts/CorporateText";
@@ -7,13 +8,18 @@ import MarketingText from "./committee-texts/MarketingText";
 import TechnologyText from "./committee-texts/TechnologyText";
 import Dropdown from "./Dropdown";
 
-const PLACEHOLDER_IMAGE =
-	"https://placehold.co/900x400/cccccc/666666?text=Committee+Photo";
+import LogisticsGroupPic from "@/assets/images/LogisticsGroupPic.jpeg";
+import CorporateGroupPic from "@/assets/images/CorporateGroupPic.jpeg";
+import MarketingGroupPic from "@/assets/images/MarketingGroupPic.jpeg";
+import DesignGroupPic from "@/assets/images/DesignGroupPic.jpeg";
+import TechnologyGroupPic from "@/assets/images/TechnologyGroupPic.jpeg";
+
 
 interface Committee {
 	key: string;
 	label: string;
 	text: ReactNode;
+	imageSrc?: string;
 	faqs: string[];
 }
 
@@ -22,6 +28,7 @@ const COMMITTEES: Committee[] = [
 		key: "logistics",
 		label: "Logistics",
 		text: <LogisticsText />,
+		imageSrc: LogisticsGroupPic,
 		faqs: [
 			"What kind of candidates are we looking for?",
 			"What can I expect for the coffee chat?",
@@ -31,15 +38,7 @@ const COMMITTEES: Committee[] = [
 		key: "corporate",
 		label: "Corporate",
 		text: <CorporateText />,
-		faqs: [
-			"What kind of candidates are we looking for?",
-			"What can I expect for the coffee chat?",
-		],
-	},
-	{
-		key: "design",
-		label: "Design",
-		text: <DesignText />,
+		imageSrc: CorporateGroupPic,
 		faqs: [
 			"What kind of candidates are we looking for?",
 			"What can I expect for the coffee chat?",
@@ -49,6 +48,17 @@ const COMMITTEES: Committee[] = [
 		key: "marketing",
 		label: "Marketing",
 		text: <MarketingText />,
+		imageSrc: MarketingGroupPic,
+		faqs: [
+			"What kind of candidates are we looking for?",
+			"What can I expect for the coffee chat?",
+		],
+	},
+	{
+		key: "design",
+		label: "Design",
+		text: <DesignText />,
+		imageSrc: DesignGroupPic,
 		faqs: [
 			"What kind of candidates are we looking for?",
 			"What can I expect for the coffee chat?",
@@ -58,6 +68,7 @@ const COMMITTEES: Committee[] = [
 		key: "tech",
 		label: "Tech",
 		text: <TechnologyText />,
+		imageSrc: TechnologyGroupPic,
 		faqs: [
 			"What kind of candidates are we looking for?",
 			"What can I expect for the coffee chat?",
@@ -71,24 +82,34 @@ export default function Committees() {
 
 	return (
 		<section className="px-4 sm:px-6 md:px-10 py-12">
-			<div className="mx-auto w-full max-w-[1032px] rounded-[40px] bg-linear-to-b from-[#ECEFFD] to-[#B7C2F3] p-6 sm:p-8 md:p-10 shadow-[0_3.2px_3.2px_#00000040] flex flex-col gap-6 md:gap-10">
-				<h2 className="bg-linear-to-br from-[#3a3a4a] to-[#1a1a28] bg-clip-text text-transparent text-3xl sm:text-4xl md:text-[56px] md:leading-[64px] font-bold text-center">
+			<motion.div
+				initial={{ opacity: 0, y: 18 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true, amount: 0.2 }}
+				transition={{
+					duration: 0.45,
+					ease: "easeOut",
+				}}
+				className="mx-auto w-full max-w-5xl rounded-[40px] hack-white-gradient p-6 sm:p-8 md:p-10 flex flex-col gap-6 md:gap-10"
+			>
+				<h2 className="gunmetal-text-gradient text-4xl font-extrabold leading-none md:text-5xl text-center">
 					Learn About Our Committees
 				</h2>
 
-				<div className="rounded-[40px] bg-white/20 shadow-[inset_0_3.2px_3.2px_#00000040,0_3.2px_3.2px_#00000040] p-6 md:p-10 flex flex-col gap-6">
+				<div className="rounded-[40px] glass-shadow bg-[#F2F2F233] p-6 md:p-10 flex flex-col gap-6">
 					<div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4">
 						{COMMITTEES.map((c) => {
 							const isActive = c.key === activeKey;
+
 							return (
 								<button
 									key={c.key}
 									type="button"
 									onClick={() => setActiveKey(c.key)}
-									className={`rounded-full px-4 py-2 text-sm md:text-base font-semibold transition-colors cursor-pointer ${
+									className={`rounded-full px-4 py-2 text-sm md:text-base font-semibold transition-all duration-200 cursor-pointer ${
 										isActive
 											? "bg-[#B5EDC9] text-[#1f1e2d]"
-											: "text-[#1f1e2d]/70 hover:text-[#1f1e2d]"
+											: "text-[#1f1e2d]/70 hover:text-[#1f1e2d] hover:bg-white/20"
 									}`}
 								>
 									{c.label}
@@ -97,10 +118,10 @@ export default function Committees() {
 						})}
 					</div>
 
-					<div className="rounded-2xl overflow-hidden bg-[#cccccc] aspect-[2.2/1]">
+					<div className="rounded-2xl overflow-hidden bg-[#cccccc] aspect-[2.2/1] glass-shadow">
 						<img
-							src={PLACEHOLDER_IMAGE}
-							alt={`${active.label} committee placeholder`}
+							src={active.imageSrc}
+							alt={`${active.label}`}
 							className="w-full h-full object-cover"
 						/>
 					</div>
@@ -109,10 +130,11 @@ export default function Committees() {
 						{active.text}
 					</div>
 
-					<div className="flex flex-col gap-4">
-						<h3 className="text-[#1f1e2d] font-bold text-base md:text-lg">
+					{/* <div className="flex flex-col gap-4">
+						<h3 className="gunmetal-text-gradient font-bold text-base md:text-lg">
 							Committee FAQs
 						</h3>
+
 						<div className="flex flex-col gap-4">
 							{active.faqs.map((question, index) => (
 								<Dropdown
@@ -123,9 +145,9 @@ export default function Committees() {
 								</Dropdown>
 							))}
 						</div>
-					</div>
+					</div> */}
 				</div>
-			</div>
+			</motion.div>
 		</section>
 	);
 }
