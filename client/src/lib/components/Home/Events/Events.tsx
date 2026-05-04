@@ -20,17 +20,14 @@ const EventCard: React.FC<EventCardProps> = ({
 	href,
 }) => {
 	return (
-		<a
-			href={href}
-			target="_blank"
-			rel="noreferrer"
-			className="group block w-full"
-		>
-			<div className="hack-white-gradient mx-4 md:mx-0 rounded-[44px] p-4 ring-1 ring-black/10 transition group-hover:brightness-[1.02] md:p-10">
-				<div className="rounded-[36px]  box-shadow bg-white/20 p-6 md:p-10">
-					<h3 className="gunmetal-text-gradient text-center text-3xl font-extrabold leading-none md:text-4xl">
-						{title}
-					</h3>
+		<div className="group block w-full">
+			<div className="hack-white-gradient mx-4 md:mx-0 rounded-[44px] p-4 ring-1 ring-black/10 md:p-10">
+				<div className="rounded-[36px] glass-shadow bg-white/20 p-6 md:p-10">
+					<a href={href} target="_blank" rel="noreferrer">
+						<h3 className="gunmetal-text-gradient text-center text-3xl font-extrabold leading-none md:text-4xl">
+							{title}
+						</h3>
+					</a>
 					<p className="mt-5 text-center text-lg leading-5 text-black md:mt-6 md:text-base md:leading-6 font-medium">
 						{description}
 					</p>
@@ -42,16 +39,16 @@ const EventCard: React.FC<EventCardProps> = ({
 									src={src}
 									alt={alt}
 									loading="lazy"
-									className="h-[160px] w-full object-cover md:h-[190px] rounded-[18px]"
+									className="h-40 w-full object-cover md:h-[190px] rounded-[18px]"
 								/>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</a>
+		</div>
 	);
-}; 
+};
 
 const Events: React.FC = () => {
 	const topRevealRef = useRef<HTMLDivElement>(null);
@@ -109,19 +106,15 @@ const Events: React.FC = () => {
 
 	return (
 		<section className="relative isolate overflow-visible">
-			{/* Continue the Hero's light field with a subtle white gradient */}
-			{/* Background is provided by the shared Home wrapper so decor can span sections */}
-
 			<div
 				ref={topRevealRef}
 				className={`relative z-10 mx-auto flex w-full max-w-7xl flex-col px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14 mb-16 md:mb-28 motion-reduce:opacity-100 motion-reduce:translate-y-0 ${
 					topRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 				} transition-all duration-700 ease-out`}
 			>
-				{/* Top panel */}
 				<div className="hack-white-gradient ring-1 ring-black/10 w-full rounded-[44px] p-7 md:p-12">
 					<div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2 lg:gap-10">
-						<div className="flex flex-col justify-center box-shadow bg-white/20 rounded-[50px] p-6 md:p-10">
+						<div className="flex flex-col justify-center glass-shadow bg-white/20 rounded-[50px] p-6 md:p-10">
 	
 							<h2 className="text-4xl mb-9 gunmetal-text-gradient font-bold">Our Events</h2>
 							<p className="mb-5 max-w-xl text-black text-lg leading-6">
@@ -133,12 +126,12 @@ const Events: React.FC = () => {
 							</p>
 							<a
 								href="/events"
-								className="box-shadow mt-2 rounded-full gunmetal-gradient px-12 py-2.5 text-2xl inline-flex items-center justify-center text-center w-full font-medium"
+								className="box-shadow mt-2 rounded-full gunmetal-gradient px-12 py-2.5 text-2xl inline-flex items-center justify-center text-center w-full font-medium transition-transform duration-200 ease-out hover:scale-[1.1] cursor-pointer"
 								style={{
 									maxWidth: "250px",
 								}}
 							>
-								<span className="whitespace-nowrap w-full text-center flex justify-center items-center">
+								<span className="whitespace-nowrap w-full text-center flex justify-center items-center ">
 									More Information
 								</span>
 							</a>
@@ -147,11 +140,11 @@ const Events: React.FC = () => {
 		
 						</div>
 
-						<div className="relative overflow-hidden rounded-[32px] ring-2 ring-white/70">
+						<div className="relative overflow-hidden rounded-4xl ring-2 ring-white/70">
 							<img
 								src={IrvineHacksClosingImg}
 								alt="IrvineHacks 2026 Closing Ceremony"
-								className="h-full min-h-[240px] w-full object-cover"
+								className="h-full min-h-60 w-full object-cover"
 								loading="lazy"
 							/>
 						</div>
@@ -160,7 +153,6 @@ const Events: React.FC = () => {
 
 			</div>
 
-			{/* Event cards area (dark) */}
 			<div>
 				<div
 					ref={hackathonsPillRef}

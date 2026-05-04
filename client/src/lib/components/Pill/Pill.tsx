@@ -32,7 +32,7 @@ export default function Pill(props: PillProps) {
 	} = props as PillProps & Record<string, unknown>;
 
 	const outer = `hack-white-gradient ring-1 ring-black/10 ${roundedClassName} ${outerClassName}`.trim();
-	const inner = `box-shadow bg-white/20 ${roundedClassName} ${innerClassName}`.trim();
+	const inner = `glass-shadow bg-white/20 ${roundedClassName} ${innerClassName}`.trim();
 
 	if (as === "button") {
 		const buttonProps = rest as React.ButtonHTMLAttributes<HTMLButtonElement>;

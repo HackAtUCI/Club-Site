@@ -12,9 +12,8 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(
 				className={`relative isolate flex min-h-[calc(100svh+12rem)] w-full flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-30 md:px-12 ${className}`}
 				{...props}
 			>
-				{/* Content */}
 				<div className="relative z-10 flex max-w-4xl flex-col items-center gap-6 text-center md:gap-8">
-					<p className="box-shadow rounded-full border text-primary px-6 py-2 text-2xl font-normal transition-transform duration-200 ease-out hover:scale-[1.1]">
+					<p className="glass-shadow rounded-full border text-primary px-6 py-2 text-2xl font-normal">
 						Est. 2013
 					</p>
 
@@ -29,7 +28,7 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(
 					<button
 						type="button"
 						onClick={onClick}
-						className="box-shadow mt-2 rounded-full gunmetal-gradient px-12 py-2.5 text-2xl font-bold transition-transform duration-200 ease-out hover:scale-[1.1]"
+						className="glass-shadow mt-2 rounded-full gunmetal-gradient px-12 py-2.5 text-2xl font-bold transition-transform duration-200 ease-out hover:scale-[1.1] cursor-pointer"
 					>
 						Learn More
 					</button>

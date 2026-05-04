@@ -18,26 +18,23 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
 	company,
 }) => {
 	return (
-		<div className="box-shadow relative flex flex-col rounded-[36px] bg-white/20 p-7 md:p-8">
-			{/* Quotation mark */}
+		<div className="glass-shadow relative flex flex-col rounded-[36px] bg-white/20 p-7 md:p-8">
 			<div className="absolute left-7 top-6 select-none text-[44px] font-black leading-none text-black/70 md:left-8 md:top-7 md:text-[52px]">
 				“
 			</div>
 
-			{/* Quote */}
 			<p className="mt-10 text-balance text-xs italic leading-[1.35] text-black md:mt-12">
 				{quote}
 			</p>
 
-			{/* Name */}
 			<div className="mt-3">
 				<p className="text-lg font-black leading-none tracking-[-0.02em] text-[#2d2d3e] md:text-xl">
 					{name}
 				</p>
 
-				<div className="mt-2 flex flex-col gap-3 text-[#2d2d3e] md:flex-row md:items-start md:gap-3">
+				<div className="mt-2 flex flex-col gap-3 text-[#2d2d3e] md:flex-row md:items-stretch md:gap-3">
 					<div className="md:max-w-60">
-						<p className="text-xs font-extrabold leading-tight md:text-xs">
+						<p className="whitespace-nowrap text-xs font-extrabold leading-tight md:text-xs">
 							{hackRole}
 						</p>
 						<p className="text-xs font-extrabold leading-tight md:text-xs">
@@ -45,7 +42,7 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
 						</p>
 					</div>
 
-					<div className="hidden md:block h-8 w-[3px] shrink-0 rounded bg-[#2d2d3e]" />
+					<div className="hidden md:block w-[3px] shrink-0 self-stretch rounded bg-[#2d2d3e]" />
 
 					<div className="md:max-w-60">
 						<p className="text-xs font-extrabold leading-tight md:text-xs">
@@ -93,7 +90,7 @@ const OurAlumni: React.FC = () => {
 		{
 			name: "Audrey Lam",
 			hackRole: "Corporate Organizer",
-			hackPeriod: "Hack at UCI 2022-2024",
+			hackPeriod: "Hack at UCI '22-'24",
 			companyTitle: "Software Engineer",
 			company: "The Trade Desk",
 			quote:
@@ -122,7 +119,7 @@ const OurAlumni: React.FC = () => {
 		>
 			<div className="mx-auto w-full max-w-7xl px-4 md:px-8">
 				<div className="hack-white-gradient w-full rounded-[45px] p-6 md:p-10">
-					<div className="box-shadow rounded-[45px] bg-white/20 p-6 md:p-10">
+					<div className="glass-shadow rounded-[45px] bg-white/20 p-6 md:p-10">
 						<div className="mb-8 flex flex-col items-center text-center md:mb-12">
 							<h2 className="gunmetal-text-gradient text-4xl font-extrabold leading-none md:text-5xl">
 								Our Alumni

@@ -23,7 +23,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ slide, variant }) => {
 		<div
 			className={`relative overflow-hidden rounded-[26px] ${
 				isCenter
-					? "box-shadow hack-white-gradient-transparent h-[230px] w-[360px] ring-1 ring-black/10"
+					? "glass-shadow hack-white-gradient-transparent h-[230px] w-[360px] ring-1 ring-black/10"
 					: "h-[190px] w-[300px] bg-black/15"
 			}`}
 		>
@@ -45,10 +45,9 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ slide, variant }) => {
 	);
 };
 
-/** Single slide — full width of the inner card on small screens */
 const MobileCarouselCard: React.FC<{ slide: Slide }> = ({ slide }) => {
 	return (
-		<div className="relative aspect-360/230 w-full overflow-hidden rounded-[28px] ring-1 ring-black/10 box-shadow hack-white-gradient-transparent">
+		<div className="relative aspect-360/230 w-full overflow-hidden rounded-[28px] ring-1 ring-black/10 glass-shadow hack-white-gradient-transparent">
 			<div className="absolute inset-0 bg-linear-to-b from-white/50 to-white/5" />
 			<img
 				src={slide.imgSrc}
@@ -63,10 +62,6 @@ const MobileCarouselCard: React.FC<{ slide: Slide }> = ({ slide }) => {
 const carouselArrowBtn =
 	"rounded-full p-2 text-white/80 transition hover:text-white focus-visible:outline focus-visible:ring-2 focus-visible:ring-white/60";
 
-/**
- * Mobile arrows: `IoIosArrowDropright` already draws the white circle + chevron;
- * keep the button as a plain hit target so we don’t stack a second ring.
- */
 const mobileCarouselArrowBtn =
 	"absolute top-1/2 z-10 -translate-y-1/2 bg-transparent p-0 text-white opacity-95 transition hover:opacity-100 focus-visible:rounded-full focus-visible:outline focus-visible:ring-2 focus-visible:ring-white/70";
 
@@ -148,7 +143,6 @@ const Organization: React.FC = () => {
 						</a>
 					</div>
 
-					{/* Mobile: one slide, full width; arrows overlaid on the image */}
 					<div className="relative mt-10 w-full md:hidden">
 						<MobileCarouselCard slide={slides[activeIndex]} />
 						<button
@@ -169,7 +163,6 @@ const Organization: React.FC = () => {
 						</button>
 					</div>
 
-					{/* Desktop: 3-card overlap (unchanged sizing) */}
 					<div className="relative mt-10 hidden md:block">
 						<div className="relative mx-auto h-[230px] w-full max-w-[980px]">
 							<div className="absolute inset-y-0 left-6 flex items-center">
@@ -195,7 +188,7 @@ const Organization: React.FC = () => {
 							type="button"
 							aria-label="Previous slide"
 							onClick={goPrev}
-							className={`absolute left-2 top-1/2 z-20 -translate-y-1/2 md:left-6 ${carouselArrowBtn}`}
+							className={`absolute left-2 top-1/2 z-20 -translate-y-1/2 md:left-6 ${carouselArrowBtn} cursor-pointer`}
 						>
 							<IoIosArrowDropright className="h-10 w-10 rotate-180" />
 						</button>
@@ -203,7 +196,7 @@ const Organization: React.FC = () => {
 							type="button"
 							aria-label="Next slide"
 							onClick={goNext}
-							className={`absolute right-2 top-1/2 z-20 -translate-y-1/2 md:right-6 ${carouselArrowBtn}`}
+							className={`absolute right-2 top-1/2 z-20 -translate-y-1/2 md:right-6 ${carouselArrowBtn} cursor-pointer`}
 						>
 							<IoIosArrowDropright className="h-10 w-10" />
 						</button>
