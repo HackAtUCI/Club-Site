@@ -5,11 +5,11 @@ import TeamSection from "./components/TeamSection";
 
 export default function About() {	
 	return (
-		<div className="relative">
+		<main className="relative min-h-screen overflow-hidden bg-dark-blue">
 			<Background />	
 			<Hero />
 			<TeamSection />
 			<BackToTop />	
-		</div>
+		</main>
 	);
 }

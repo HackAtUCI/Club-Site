@@ -6,10 +6,10 @@ import Stats from "@/lib/components/Home/Stats/Stats";
 import OurAlumni from "@/lib/components/Home/Alumni/OurAlumni";
 import Organization from "@/lib/components/Home/Organization/Organization";
 
-import HomeDecor from "./HomeDecor";
-import EventsDecor from "./EventsDecor";
-import OurAlumniDecor from "./OurAlumniDecor";
-import OrganizationDecor from "./OrganizationDecor";
+import HomeDecor from "./components/HomeDecor";
+import EventsDecor from "./components/EventsDecor";
+import OurAlumniDecor from "./components/OurAlumniDecor";
+import OrganizationDecor from "./components/OrganizationDecor";
 import BackToTop from "@/lib/components/BackToTop/BackToTop";
 
 export default function Home() {
@@ -42,7 +42,7 @@ export default function Home() {
 	}, []);
 
 	return (
-		<div className="min-h-screen overflow-x-hidden">
+		<main className="relative min-h-screen overflow-hidden bg-dark-blue">
 			<HomeDecor>
 				<Hero ref={heroRef} onClick={() => scrollToRef({ ref: contactRef })} />
 				<EventsDecor>
@@ -66,6 +66,6 @@ export default function Home() {
 					<BackToTop />
 				</OrganizationDecor>
 			</div>
-		</div>
+		</main>
 	);
 }
