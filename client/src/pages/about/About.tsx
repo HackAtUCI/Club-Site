@@ -1,5 +1,5 @@
 import Background from "./components/Background";
-import BackToTop from "./components/BackToTop";
+import BackToTop from "../../lib/components/BackToTop/BackToTop";
 import Hero from "./components/Hero";
 import TeamSection from "./components/TeamSection";
 

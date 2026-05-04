@@ -13,7 +13,6 @@ type HomeDecorProps = {
 export default function HomeDecor({ children }: HomeDecorProps) {
 	return (
 		<div className="relative isolate overflow-visible">
-			{/* Shared light background behind Hero + Events */}
 			<div
 				className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[calc(100svh+52rem)] hack-background-gradient"
 				aria-hidden
@@ -41,7 +40,6 @@ export default function HomeDecor({ children }: HomeDecorProps) {
 				className="pointer-events-none absolute top-0 right-0 z-10 w-[clamp(200px,29vw,440px)] translate-x-[30%] -translate-y-[10%] select-none"
 			/>
 
-			{/* Spillover assets: anchor near Hero bottom so they remain visible into Events */}
 			<img
 				src={heroVectorLeft}
 				alt=""

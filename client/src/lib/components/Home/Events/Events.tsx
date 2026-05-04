@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import IrvineHacksClosingImg from "@/assets/images/IH26-closing.png";
 import IrvineHacksOpeningImg from "@/assets/images/IH26-opening.png";
 import ZotHacksImg from "@/assets/images/ZH25-hacking.png";
@@ -21,14 +22,15 @@ const EventCard: React.FC<EventCardProps> = ({
 }) => {
 	return (
 		<div className="group block w-full">
-			<div className="hack-white-gradient mx-4 md:mx-0 rounded-[44px] p-4 ring-1 ring-black/10 md:p-10">
-				<div className="rounded-[36px] glass-shadow bg-white/20 p-6 md:p-10">
+			<div className="hack-white-gradient mx-4 rounded-[44px] p-4 ring-1 ring-black/10 md:mx-0 md:p-10">
+				<div className="glass-shadow rounded-[36px] bg-white/20 p-6 md:p-10">
 					<a href={href} target="_blank" rel="noreferrer">
 						<h3 className="gunmetal-text-gradient text-center text-3xl font-extrabold leading-none md:text-4xl">
 							{title}
 						</h3>
 					</a>
-					<p className="mt-5 text-center text-lg leading-5 text-black md:mt-6 md:text-base md:leading-6 font-medium">
+
+					<p className="mt-5 text-center text-lg font-medium leading-5 text-black md:mt-6 md:text-base md:leading-6">
 						{description}
 					</p>
 
@@ -39,7 +41,7 @@ const EventCard: React.FC<EventCardProps> = ({
 									src={src}
 									alt={alt}
 									loading="lazy"
-									className="h-40 w-full object-cover md:h-[190px] rounded-[18px]"
+									className="h-40 w-full rounded-[18px] object-cover md:h-[190px]"
 								/>
 							</div>
 						</div>
@@ -51,93 +53,53 @@ const EventCard: React.FC<EventCardProps> = ({
 };
 
 const Events: React.FC = () => {
-	const topRevealRef = useRef<HTMLDivElement>(null);
-	const [topRevealed, setTopRevealed] = useState(false);
-	const hackathonsPillRef = useRef<HTMLDivElement>(null);
-	const hackathonsCardsRef = useRef<HTMLDivElement>(null);
-	const [hackathonsPillIn, setHackathonsPillIn] = useState(false);
-	const [hackathonsCardsIn, setHackathonsCardsIn] = useState(false);
-
-	useEffect(() => {
-		const topEl = topRevealRef.current;
-		let topObserver: IntersectionObserver | null = null;
-		if (topEl) {
-			topObserver = new IntersectionObserver(
-				([entry]) => {
-					setTopRevealed(Boolean(entry?.isIntersecting));
-				},
-				{ threshold: 0.15 },
-			);
-			topObserver.observe(topEl);
-		}
-
-		const pillEl = hackathonsPillRef.current;
-		const cardsEl = hackathonsCardsRef.current;
-
-		let pillObserver: IntersectionObserver | null = null;
-		let cardsObserver: IntersectionObserver | null = null;
-
-		if (pillEl) {
-			pillObserver = new IntersectionObserver(
-				([entry]) => {
-					setHackathonsPillIn(Boolean(entry?.isIntersecting));
-				},
-				{ threshold: 0.15 },
-			);
-			pillObserver.observe(pillEl);
-		}
-
-		if (cardsEl) {
-			cardsObserver = new IntersectionObserver(
-				([entry]) => {
-					setHackathonsCardsIn(Boolean(entry?.isIntersecting));
-				},
-				{ threshold: 0.15 },
-			);
-			cardsObserver.observe(cardsEl);
-		}
-
-		return () => {
-			topObserver?.disconnect();
-			pillObserver?.disconnect();
-			cardsObserver?.disconnect();
-		};
-	}, []);
-
 	return (
 		<section className="relative isolate overflow-visible">
-			<div
-				ref={topRevealRef}
-				className={`relative z-10 mx-auto flex w-full max-w-7xl flex-col px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14 mb-16 md:mb-28 motion-reduce:opacity-100 motion-reduce:translate-y-0 ${
-					topRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-				} transition-all duration-700 ease-out`}
+			<motion.div
+				initial={{
+					opacity: 0,
+					y: 90,
+				}}
+				whileInView={{
+					opacity: 1,
+					y: 0,
+				}}
+				viewport={{
+					amount: 0.3,
+				}}
+				transition={{
+					duration: 0.7,
+					ease: "easeOut",
+				}}
+				className="relative z-10 mx-auto mb-16 flex w-full max-w-7xl flex-col px-4 py-10 sm:px-6 sm:py-12 md:mb-28 md:px-8 md:py-14"
 			>
-				<div className="hack-white-gradient ring-1 ring-black/10 w-full rounded-[44px] p-7 md:p-12">
+				<div className="hack-white-gradient w-full rounded-[44px] p-7 ring-1 ring-black/10 md:p-12">
 					<div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2 lg:gap-10">
-						<div className="flex flex-col justify-center glass-shadow bg-white/20 rounded-[50px] p-6 md:p-10">
-	
-							<h2 className="text-4xl mb-9 gunmetal-text-gradient font-bold">Our Events</h2>
-							<p className="mb-5 max-w-xl text-black text-lg leading-6">
+						<div className="glass-shadow flex flex-col justify-center rounded-[50px] bg-white/20 p-6 md:p-10">
+							<h2 className="gunmetal-text-gradient mb-9 text-4xl font-bold">
+								Our Events
+							</h2>
+
+							<p className="mb-5 max-w-xl text-lg leading-6 text-black">
 								We aim to celebrate UC Irvine&apos;s spirit of innovation by
-								organizing ZotHacks, a beginner friendly hackathon, and IrvineHacks,
-								Orange County&apos;s largest hackathon. Furthermore, our
-								organization regularly host technical and professional development
-								workshops that teach students industry-relevant skills.
+								organizing ZotHacks, a beginner friendly hackathon, and
+								IrvineHacks, Orange County&apos;s largest hackathon.
+								Furthermore, our organization regularly host technical and
+								professional development workshops that teach students
+								industry-relevant skills.
 							</p>
+
 							<a
 								href="/events"
-								className="box-shadow mt-2 rounded-full gunmetal-gradient px-12 py-2.5 text-2xl inline-flex items-center justify-center text-center w-full font-medium transition-transform duration-200 ease-out hover:scale-[1.1] cursor-pointer"
+								className="box-shadow gunmetal-gradient mt-2 inline-flex w-full cursor-pointer items-center justify-center rounded-full px-12 py-2.5 text-center text-2xl font-medium transition-transform duration-200 ease-out hover:scale-[1.1]"
 								style={{
 									maxWidth: "250px",
 								}}
 							>
-								<span className="whitespace-nowrap w-full text-center flex justify-center items-center ">
+								<span className="flex w-full items-center justify-center whitespace-nowrap text-center">
 									More Information
 								</span>
 							</a>
-		
-		
-		
 						</div>
 
 						<div className="relative overflow-hidden rounded-4xl ring-2 ring-white/70">
@@ -150,34 +112,51 @@ const Events: React.FC = () => {
 						</div>
 					</div>
 				</div>
-
-			</div>
+			</motion.div>
 
 			<div>
-				<div
-					ref={hackathonsPillRef}
-					className={`mx-auto w-full max-w-3/4 px-3 pt-6 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:translate-y-0 md:max-w-md md:px-5 ${
-						hackathonsCardsIn
-							? "opacity-0 translate-y-8 pointer-events-none"
-							: hackathonsPillIn
-								? "opacity-100 translate-y-0"
-								: "opacity-0 translate-y-10"
-					}`}
+				<motion.div
+					initial={{
+						opacity: 0,
+						y: 85,
+					}}
+					whileInView={{
+						opacity: 1,
+						y: 0,
+					}}
+					viewport={{
+						amount: 0.3,
+					}}
+					transition={{
+						duration: 0.6,
+						ease: "easeOut",
+					}}
+					className="mx-auto w-full max-w-3/4 px-3 pt-6 md:max-w-md md:px-5"
 				>
 					<Pill className="p-5 md:p-8" innerClassName="p-2">
 						<h2 className="gunmetal-text-gradient text-center text-2xl font-extrabold tracking-tight md:text-[40px]">
 							Hackathons
 						</h2>
 					</Pill>
-				</div>
+				</motion.div>
 
-				<div
-					ref={hackathonsCardsRef}
-					className={`mx-auto w-full max-w-6xl px-4 pb-30 pt-10 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:translate-y-0 md:px-8 md:pb-36 md:pt-12 ${
-						hackathonsCardsIn
-							? "opacity-100 translate-y-0"
-							: "opacity-0 translate-y-10"
-					}`}
+				<motion.div
+					initial={{
+						opacity: 0,
+						y: 130,
+					}}
+					whileInView={{
+						opacity: 1,
+						y: 0,
+					}}
+					viewport={{
+						amount: 0.15,
+					}}
+					transition={{
+						duration: 0.6,
+						ease: "easeOut",
+					}}
+					className="mx-auto w-full max-w-6xl px-4 pb-30 pt-10 md:px-8 md:pb-36 md:pt-12"
 				>
 					<div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-15">
 						<EventCard
@@ -187,6 +166,7 @@ const Events: React.FC = () => {
 							description="HackUCI is the largest collegiate hackathon in Orange County. Each year, we bring like-minded individuals of different backgrounds and skill sets together to create something in 36 hours."
 							href="https://irvinehacks.com/"
 						/>
+
 						<EventCard
 							src={ZotHacksImg}
 							alt="ZotHacks event"
@@ -195,7 +175,7 @@ const Events: React.FC = () => {
 							href="https://zothacks.com/"
 						/>
 					</div>
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	);

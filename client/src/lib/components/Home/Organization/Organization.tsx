@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useMemo, useState } from "react";
+import { motion } from "framer-motion";
 import { IoIosArrowDropright } from "react-icons/io";
 
 import IrvineHacksClosingImg from "@/assets/images/IH26-closing.png";
@@ -47,7 +48,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ slide, variant }) => {
 
 const MobileCarouselCard: React.FC<{ slide: Slide }> = ({ slide }) => {
 	return (
-		<div className="relative aspect-360/230 w-full overflow-hidden rounded-[28px] ring-1 ring-black/10 glass-shadow hack-white-gradient-transparent">
+		<div className="glass-shadow hack-white-gradient-transparent relative aspect-360/230 w-full overflow-hidden rounded-[28px] ring-1 ring-black/10">
 			<div className="absolute inset-0 bg-linear-to-b from-white/50 to-white/5" />
 			<img
 				src={slide.imgSrc}
@@ -66,24 +67,6 @@ const mobileCarouselArrowBtn =
 	"absolute top-1/2 z-10 -translate-y-1/2 bg-transparent p-0 text-white opacity-95 transition hover:opacity-100 focus-visible:rounded-full focus-visible:outline focus-visible:ring-2 focus-visible:ring-white/70";
 
 const Organization: React.FC = () => {
-	const revealRef = useRef<HTMLElement>(null);
-	const [inView, setInView] = useState(false);
-
-	useEffect(() => {
-		const el = revealRef.current;
-		if (!el) return;
-
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				setInView(Boolean(entry?.isIntersecting));
-			},
-			{ threshold: 0.15 },
-		);
-
-		observer.observe(el);
-		return () => observer.disconnect();
-	}, []);
-
 	const slides: Slide[] = useMemo(
 		() => [
 			{
@@ -109,20 +92,31 @@ const Organization: React.FC = () => {
 
 	const goPrev = () =>
 		setActiveIndex((i) => (i - 1 + slides.length) % slides.length);
+
 	const goNext = () => setActiveIndex((i) => (i + 1) % slides.length);
 
 	const leftIndex = (activeIndex - 1 + slides.length) % slides.length;
 	const rightIndex = (activeIndex + 1) % slides.length;
 
 	return (
-		<section
-			ref={revealRef}
-			className={`flex w-full justify-center px-4 pt-14 pb-20 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:scale-100 md:px-30 md:pt-18 md:pb-34 ${
-				inView ? "opacity-100 scale-100" : "opacity-0 scale-50"
-			}`}
-			style={{
-				transitionDelay: inView ? "350ms" : "0ms",
+		<motion.section
+			initial={{
+				opacity: 0,
+				scale: 0.5,
 			}}
+			whileInView={{
+				opacity: 1,
+				scale: 1,
+			}}
+			viewport={{
+				amount: 0.15,
+			}}
+			transition={{
+				duration: 0.7,
+				ease: "easeOut",
+				delay: 0.35,
+			}}
+			className="flex w-full justify-center px-4 pb-20 pt-14 md:px-30 md:pb-34 md:pt-18"
 		>
 			<div className="hack-white-gradient w-full max-w-7xl rounded-[45px] p-6 md:p-20">
 				<div
@@ -170,6 +164,7 @@ const Organization: React.FC = () => {
 									<CarouselCard slide={slides[leftIndex]} variant="left" />
 								</div>
 							</div>
+
 							<div className="absolute inset-y-0 right-6 flex items-center">
 								<div className="opacity-70">
 									<CarouselCard slide={slides[rightIndex]} variant="right" />
@@ -177,10 +172,7 @@ const Organization: React.FC = () => {
 							</div>
 
 							<div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-								<CarouselCard
-									slide={slides[activeIndex]}
-									variant="center"
-								/>
+								<CarouselCard slide={slides[activeIndex]} variant="center" />
 							</div>
 						</div>
 
@@ -188,22 +180,23 @@ const Organization: React.FC = () => {
 							type="button"
 							aria-label="Previous slide"
 							onClick={goPrev}
-							className={`absolute left-2 top-1/2 z-20 -translate-y-1/2 md:left-6 ${carouselArrowBtn} cursor-pointer`}
+							className={`absolute left-2 top-1/2 z-20 -translate-y-1/2 cursor-pointer md:left-6 ${carouselArrowBtn}`}
 						>
 							<IoIosArrowDropright className="h-10 w-10 rotate-180" />
 						</button>
+
 						<button
 							type="button"
 							aria-label="Next slide"
 							onClick={goNext}
-							className={`absolute right-2 top-1/2 z-20 -translate-y-1/2 md:right-6 ${carouselArrowBtn} cursor-pointer`}
+							className={`absolute right-2 top-1/2 z-20 -translate-y-1/2 cursor-pointer md:right-6 ${carouselArrowBtn}`}
 						>
 							<IoIosArrowDropright className="h-10 w-10" />
 						</button>
 					</div>
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 
