@@ -74,7 +74,6 @@ const Stats: React.FC = () => {
 			}}
 			viewport={{
 				amount: 0.2,
-				once: true,
 			}}
 			transition={{
 				duration: 1.5,

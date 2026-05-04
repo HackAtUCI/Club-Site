@@ -76,7 +76,7 @@ export default function SponsorUs() {
 				<div className="hack-white-gradient rounded-4xl px-5 py-3 md:px-8 md:py-4">
 					<div className="glass-shadow rounded-full border border-white/10 bg-[#F2F2F233] px-8 py-3 text-center">
 						<p className="gunmetal-text-gradient text-md font-bold md:text-4xl">
-							Thank you to all our sponsors ❤️
+							Thank you to all our sponsors &hearts;
 						</p>
 					</div>
 				</div>

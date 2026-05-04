@@ -8,7 +8,6 @@ import HackLogo from "@/assets/logos/hack_navbar.svg";
 import { FaDiscord, FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaRegEnvelope } from "react-icons/fa6";
 
-
 import "./Footer.css";
 
 const navLinks = [
@@ -28,12 +27,10 @@ export default function Footer() {
 							alt="Hack at UCI Logo"
 							className="h-17 w-17 shrink-0 cursor-pointer"
 						/>
-						<p className="text-[26px] font-semibold text-white">
-							Hack at UCI
-						</p>
+						<p className="text-[26px] font-semibold text-white">Hack at UCI</p>
 					</Link>
-					<p className="text-center text-sm text-white">
-						Made with ♥ Hack ‘26-’27
+					<p className="text-center text-sm md:text-xl text-white">
+						Made with &hearts; Hack &lsquo;26-&rsquo;27
 					</p>
 				</div>
 
