@@ -1,34 +1,43 @@
-import React from "react";
-import HackLogo from "@/assets/logos/hack.svg";
-import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
+import React, { forwardRef } from "react";
 
-interface HeroProps {
-	[x: string]: unknown;
+interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {
+	onClick?: () => void;
 }
 
-const Hero: React.FC<HeroProps> = ({ onClick, ...props }) => {
-	return (
-		<div
-			className="flex h-screen w-full flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:gap-24"
-			{...props}
-		>
-			<div className="flex items-center justify-center">
-				<img
-					src={HackLogo}
-					alt="Hack at UCI Logo"
-					width={300}
-					height={300}
-					className="w-[30%] lg:w-[300px]"
-				/>
+const Hero = forwardRef<HTMLDivElement, HeroProps>(
+	({ onClick, className = "", ...props }, ref) => {
+		return (
+			<div
+				ref={ref}
+				className={`relative isolate flex min-h-[calc(100svh+12rem)] w-full flex-col items-center justify-center overflow-hidden px-6 pb-30 md:px-12 ${className}`}
+				{...props}
+			>
+				<div className="relative z-10 flex max-w-4xl flex-col items-center gap-6 text-center md:gap-8">
+					<p className="glass-shadow rounded-full border text-primary px-6 py-2 text-2xl font-normal">
+						Est. 2013
+					</p>
+
+					<h1 className="text-6xl max-w-[18ch] gunmetal-text-gradient font-extrabold">
+						Hack At UCI
+					</h1>
+
+					<p className="max-w-2xl text-lg font-medium text-black md:text-xl">
+					    a student-run organization established to provide students with a platform to learn, grow, and develop technology of the future.
+					</p>
+
+					<button
+						type="button"
+						onClick={onClick}
+						className="glass-shadow mt-2 rounded-full gunmetal-gradient px-12 py-2.5 text-2xl font-bold transition-transform duration-200 ease-out hover:scale-[1.1] cursor-pointer"
+					>
+						Learn More
+					</button>
+				</div>
 			</div>
-			<div className="flex flex-col items-center justify-center gap-8">
-				<h1 className="text-heading text-center">Hack at UCI</h1>
-				<PrimaryButton className="md:px-32" onClick={onClick}>
-					Get Involved
-				</PrimaryButton>
-			</div>
-		</div>
-	);
-};
+		);
+	},
+);
+
+Hero.displayName = "Hero";
 
 export default Hero;

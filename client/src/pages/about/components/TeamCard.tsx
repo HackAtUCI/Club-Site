@@ -21,13 +21,15 @@ const TeamCard: React.FC<TeamCardProps> = ({
 					src={image}
 					alt={name}
 					loading="lazy"
-					className="w-full aspect-square object-cover rounded-md bg-gray-600"
+					className="w-full aspect-square object-cover rounded-2xl bg-gray-600"
 				/>
 			</div>
 
 			<div className="flex items-center justify-between">
 				<h5
-					className="text-sm md:text-lg font-bold text-white"
+					className={`leading-tight wrap-break-word font-semibold ${
+						name.length > 18 ? "text-xs md:text-lg" : "text-sm md:text-xl"
+					} `}
 				>
 					{name}
 				</h5>
@@ -36,12 +38,12 @@ const TeamCard: React.FC<TeamCardProps> = ({
 					<img
 						src={linkedinLogo}
 						alt="LinkedIn"
-						className="w-4 h-4 md:w-5 md:h-5 opacity-90 hover:opacity-100"
+						className="ml-2 w-4 h-4 md:w-5 md:h-5 shrink-0 opacity-90 hover:opacity-100"
 					/>
 				</a>
 			</div>
 
-			<h6 className="text-xs md:text-sm text-gray-200">{position}</h6>
+			<h6 className="text-xs md:text-lg">{position}</h6>
 		</div>
 	);
 };

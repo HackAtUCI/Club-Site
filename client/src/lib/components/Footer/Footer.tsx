@@ -4,73 +4,74 @@ import { Link } from "react-router-dom";
 import ContactIcon from "../ContactIcon/ContactIcon";
 
 import HackLogo from "@/assets/logos/hack_navbar.svg";
-import InstagramIcon from "@/assets/logos/instagram.svg";
-import TiktokIcon from "@/assets/logos/tiktok.svg";
-import DiscordIcon from "@/assets/logos/discord.svg";
-import MailIcon from "@/assets/icons/mail.svg";
+
+import { FaDiscord, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaRegEnvelope } from "react-icons/fa6";
 
 import "./Footer.css";
 
 const navLinks = [
 	{ href: "/about", label: "About" },
-	{ href: "/events", label: "Events" },
-	{ href: "/contact", label: "Contact Us" },
+	{ href: "/events", label: "Event" },
+	{ href: "/sponsors", label: "Sponsors" },
 ];
 
 export default function Footer() {
 	return (
-		<footer className="footer-container w-full px-4 pt-8 pb-10 md:px-24 md:py-10">
-			<div className="flex flex-col justify-center gap-0 lg:flex-row lg:gap-10">
-				<Link to="/" className="flex justify-center lg:justify-start">
-					<img
-						src={HackLogo}
-						alt="Hack at UCI Logo"
-						className="h-12 w-12 cursor-pointer md:h-24 md:w-24"
-					/>
-				</Link>
-				<div className="flex grow flex-col items-center gap-2 lg:items-start lg:gap-4">
-					<p className="text-subtitle">Hack at UCI</p>
-					<div className="flex items-center gap-6">
+		<footer className="bg-black w-full px-4 pt-8 pb-10 md:px-24 md:py-10">
+			<div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 md:flex-row md:items-center md:gap-10">
+				<div className="flex flex-col items-center gap-2 p-8 md:p-0">
+					<Link to="/" className="flex items-center gap-3 mb-2">
+						<img
+							src={HackLogo}
+							alt="Hack at UCI Logo"
+							className="h-17 w-17 shrink-0 cursor-pointer"
+						/>
+						<p className="text-[26px] font-semibold text-white">Hack at UCI</p>
+					</Link>
+					<p className="text-center text-sm md:text-xl text-white">
+						Made with &hearts; Hack &lsquo;26-&rsquo;27
+					</p>
+				</div>
+
+				<div className="flex flex-col items-center gap-7 p-8 md:p-0">
+					<div className="flex items-center justify-center gap-8 md:gap-10">
+						<ContactIcon
+							title="Instagram"
+							link="https://www.instagram.com/hackatuci/"
+							image={FaInstagram}
+							className="h-7 w-7 md:h-9 md:w-9"
+						/>
+						<ContactIcon
+							title="Discord"
+							link="https://discord.gg/2gZjQMjKeF"
+							image={FaDiscord}
+							className="h-7 w-7 md:h-9 md:w-9"
+						/>
+						<ContactIcon
+							title="Tiktok"
+							link="https://www.tiktok.com/@hackatuci"
+							image={FaTiktok}
+							className="h-7 w-7 md:h-9 md:w-9"
+						/>
+						<ContactIcon
+							title="Email"
+							link="mailto:hack@uci.edu"
+							image={FaRegEnvelope}
+							className="h-7 w-7 md:h-9 md:w-9"
+							isMail
+						/>
+					</div>
+
+					<div className="flex flex-wrap items-center justify-center gap-3 text-center text-[19px] text-white md:text-2xl">
 						{navLinks.map((link, index) => (
 							<React.Fragment key={link.href}>
-								<Link
-									to={link.href}
-									className="text-center text-white hover:underline"
-								>
+								<Link to={link.href} className="hover:underline">
 									{link.label}
 								</Link>
 								{index < navLinks.length - 1 && <span>•</span>}
 							</React.Fragment>
 						))}
-					</div>
-				</div>
-				<div className="mt-4 flex justify-center lg:mt-0 lg:items-start lg:justify-end">
-					<div className="flex justify-between gap-8">
-						<ContactIcon
-							title="Instagram"
-							link="https://www.instagram.com/hackatuci/"
-							image={InstagramIcon}
-							className="h-8 w-8 md:h-15 md:w-15"
-						/>
-						<ContactIcon
-							title="Tiktok"
-							link="https://www.tiktok.com/@hackatuci"
-							image={TiktokIcon}
-							className="h-8 w-8 md:h-15 md:w-15"
-						/>
-						<ContactIcon
-							title="Discord"
-							link="https://discord.gg/2gZjQMjKeF"
-							image={DiscordIcon}
-							className="h-8 w-8 md:h-15 md:w-15"
-						/>
-						<ContactIcon
-							title="Email"
-							link="mailto:hack@uci.edu"
-							image={MailIcon}
-							className="h-8 w-8 md:h-15 md:w-15"
-							isMail
-						/>
 					</div>
 				</div>
 			</div>

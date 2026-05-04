@@ -1,11 +1,12 @@
 import clsx from "clsx";
+import type { ComponentType } from "react";
 
 import "./ContactIcon.css";
 
 interface ContactIconProps {
 	title: string;
 	link: string;
-	image: string;
+	image: ComponentType<{ className?: string }>; // Now takes a component
 	isYouTube?: boolean;
 	isMail?: boolean;
 	className?: string;
@@ -14,7 +15,7 @@ interface ContactIconProps {
 export default function ContactIcon({
 	title,
 	link,
-	image,
+	image: Icon, // renamed for clarity
 	isYouTube = false,
 	isMail = false,
 	className = "",
@@ -31,8 +32,12 @@ export default function ContactIcon({
 				className
 			)}
 		>
-			<a href={link} aria-label={title}>
-				<img src={image} alt={title} />
+			<a
+				href={link}
+				aria-label={title}
+				className="flex size-full items-center justify-center"
+			>
+				<Icon className="size-full" />
 			</a>
 		</div>
 	);

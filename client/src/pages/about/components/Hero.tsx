@@ -1,47 +1,43 @@
-import AboutHack from "@/assets/images/AboutHack.svg";
-import GreenStar from "@/assets/images/GreenStar.svg";
-import Squiggle from "@/assets/images/Squiggle.svg";
-
-function Logo() {
-	return (
-		<div className="max-w-40 md:max-w-80">
-			<img src={AboutHack} alt="About Hack at UCI" />
-		</div>
-	);
-}
-
-function HeroText() {
-	return (
-		<div className="flex flex-col gap-4 max-w-84 font-semibold">
-			<p>Hack at UCI is Irvine’s premiere collegiate hackathon committee.</p>
-			<p>
-				We strive to unite students passionate about hacking and retaining the
-				spirit of community.
-			</p>
-			<div className="relative inline-flex items-center w-fit">
-				<p className="text-[#71DD9C] whitespace-nowrap z-10">
-					Let’s take the next step
-				</p>
-				<img
-					src={GreenStar}
-					alt="Green Star"
-					className="ml-4 mt-1 w-8 h-8 z-10"
-				/>
-				<img
-					src={Squiggle}
-					alt="Squiggle"
-					className="absolute -translate-x-1/32 translate-y-1/16 w-full z-0"
-				/>
-			</div>
-		</div>
-	);
-}
+import { motion } from "framer-motion";
 
 export default function Hero() {
 	return (
-		<section className="h-screen flex flex-col md:flex-row justify-center items-center gap-12 md:gap-30 p-10 md:p-36 lg:p-56">
-			<Logo />
-			<HeroText />
-		</section>
+		<motion.section 
+			initial={{
+				opacity: 0,
+				y: 80,
+			}}
+			whileInView={{
+				opacity: 1,
+				y: 0,
+			}}
+			viewport={{ amount: 0.3 }}
+			transition={{
+				duration: 0.6,
+				ease: "easeOut",
+			}}
+			className="flex flex-col md:flex-row justify-center items-center pt-36 pb-24 px-4 md:p-36 lg:p-56"
+		>
+			<div className="container z-40">
+				<div className="flex rounded-4xl p-10 hack-white-gradient">
+					<div className="flex flex-col gap-2 p-4 md:p-10 rounded-4xl items-center justify-center border border-white/10 glass-shadow">
+						<h1 className="text-heading font-bold mb-4 gunmetal-text-gradient">
+							About
+						</h1>
+						<p className="md:px-48 md:py-4 text-center text-base md:text-lg text-body gunmetal-text-gradient">
+							Hack at UCI is Irvine’s premiere collegiate hackathon committee.
+							We strive to unite students passionate about hacking and retaining 
+							the spirit of community.
+						</p>
+						<img
+							src={"team/group_hack_photo.webp"}
+							alt="Hack About Group Photo"
+							className="rounded-2xl md:rounded-4xl h-64 w-full object-cover md:h-auto md:w-auto"
+							/>
+					</div>
+
+				</div>
+			</div>
+		</motion.section>
 	);
 }
