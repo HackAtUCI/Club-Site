@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
 type AlumniCardProps = {
 	name: string;
@@ -42,7 +43,7 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
 						</p>
 					</div>
 
-					<div className="hidden md:block w-[3px] shrink-0 self-stretch rounded bg-[#2d2d3e]" />
+					<div className="hidden w-[3px] shrink-0 self-stretch rounded bg-[#2d2d3e] md:block" />
 
 					<div className="md:max-w-60">
 						<p className="text-xs font-extrabold leading-tight md:text-xs">
@@ -59,24 +60,6 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
 };
 
 const OurAlumni: React.FC = () => {
-	const revealRef = useRef<HTMLElement>(null);
-	const [inView, setInView] = useState(false);
-
-	useEffect(() => {
-		const el = revealRef.current;
-		if (!el) return;
-
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				setInView(Boolean(entry?.isIntersecting));
-			},
-			{ threshold: 0.15 },
-		);
-
-		observer.observe(el);
-		return () => observer.disconnect();
-	}, []);
-
 	const alumni: AlumniCardProps[] = [
 		{
 			name: "Alex Ngo",
@@ -108,14 +91,24 @@ const OurAlumni: React.FC = () => {
 	];
 
 	return (
-		<section
-			ref={revealRef}
-			className={`flex w-full justify-center py-14 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:scale-100 md:py-18 ${
-				inView ? "opacity-100 scale-100" : "opacity-0 scale-50"
-			}`}
-			style={{
-				transitionDelay: inView ? "350ms" : "0ms",
+		<motion.section
+			initial={{
+				opacity: 0,
+				scale: 0.5,
 			}}
+			whileInView={{
+				opacity: 1,
+				scale: 1,
+			}}
+			viewport={{
+				amount: 0.15,
+			}}
+			transition={{
+				duration: 0.7,
+				ease: "easeOut",
+				delay: 0.35,
+			}}
+			className="flex w-full justify-center py-14 md:py-18"
 		>
 			<div className="mx-auto w-full max-w-7xl px-4 md:px-8">
 				<div className="hack-white-gradient w-full rounded-[45px] p-6 md:p-10">
@@ -140,7 +133,7 @@ const OurAlumni: React.FC = () => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 

@@ -7,13 +7,9 @@ type EventsDecorProps = {
 	children: React.ReactNode;
 };
 
-/**
- * Decorative SVGs behind the Hackathons / event cards + Stats band (same stacking context as content).
- */
 export default function EventsDecor({ children }: EventsDecorProps) {
 	return (
 		<div className="relative isolate overflow-visible">
-			{/* Green blob: left edge, partially off-canvas; spans cards + bleeds toward Stats */}
 			<img
 				src={greenBlobLeft}
 				alt=""
@@ -22,7 +18,6 @@ export default function EventsDecor({ children }: EventsDecorProps) {
 				className="pointer-events-none absolute left-0 top-[clamp(26rem,52vh,50rem)] z-10 w-[clamp(340px,48vw,840px)] -translate-x-[40%] -translate-y-[-42%] select-none opacity-85 md:top-[clamp(28rem,50vh,52rem)] md:translate-x-[0%]"
 			/>
 
-			{/* Blue circle: right edge, partially off-canvas; ~aligned with card row */}
 			<img
 				src={blueCircle}
 				alt=""

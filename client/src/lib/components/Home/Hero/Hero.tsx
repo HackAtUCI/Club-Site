@@ -9,7 +9,7 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(
 		return (
 			<div
 				ref={ref}
-				className={`relative isolate flex min-h-[calc(100svh+12rem)] w-full flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-30 md:px-12 ${className}`}
+				className={`relative isolate flex min-h-[calc(100svh+12rem)] w-full flex-col items-center justify-center overflow-hidden px-6 pb-30 md:px-12 ${className}`}
 				{...props}
 			>
 				<div className="relative z-10 flex max-w-4xl flex-col items-center gap-6 text-center md:gap-8">

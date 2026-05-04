@@ -7,14 +7,9 @@ type OrganizationDecorProps = {
 	children: React.ReactNode;
 };
 
-/**
- * Bottom-corner SVGs behind Organization + “Back to the top”.
- * `bottom-0` is relative to this wrapper — include those blocks as children so the art
- * anchors to the real bottom of the home page (above the global footer), not only the org card.
- */
 export default function OrganizationDecor({ children }: OrganizationDecorProps) {
 	return (
-		<div className="relative isolate w-full overflow-visible pb-12 md:pb-16">
+		<div className="relative isolate w-full overflow-visible pb-8 md:pb-12">
 			<div
 				className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-10 overflow-visible"
 				aria-hidden
