@@ -1,29 +1,31 @@
 import { motion } from "framer-motion";
 
-import EventsPic from "@/assets/images/EventsPic.jpg"
+import EventsPic from "@/assets/images/EventsPic.jpg";
 
 export default function Hero() {
 	return (
-		<motion.section 
-		initial={{
-			opacity: 0,
-			y: 80,
-		}}
-		whileInView={{
-			opacity: 1,
-			y: 0,
-		}}
-		viewport={{ amount: 0.3 }}
-		transition={{
-			duration: 0.6,
-			ease: "easeOut",
-		}}
-		className="px-6 md:px-10 pt-28 md:py-48 pb-20">
+		<motion.section
+			initial={{
+				opacity: 0,
+				y: 80,
+			}}
+			whileInView={{
+				opacity: 1,
+				y: 0,
+			}}
+			viewport={{
+				amount: 0.3,
+				once: true,
+			}}
+			transition={{
+				duration: 0.6,
+				ease: "easeOut",
+			}}
+			className="px-6 md:px-10 pt-28 md:py-48 pb-20"
+		>
 			<div className="mx-auto w-full max-w-5xl rounded-[40px] hack-white-gradient p-6 sm:p-8 md:p-10">
 				<div className="rounded-[40px] glass-shadow p-6 md:p-10 flex flex-col items-center gap-2 md:gap-6 bg-[#F2F2F233]">
-					<h1 className="gunmetal-text-gradient text-heading">
-						Our Events
-					</h1>
+					<h1 className="gunmetal-text-gradient text-heading">Our Events</h1>
 
 					<p className="text-[#111111] text-body text-center">
 						Explore what our annual{" "}

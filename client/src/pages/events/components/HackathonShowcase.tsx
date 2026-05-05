@@ -79,9 +79,18 @@ export default function HackathonShowcase({
 	return (
 		<section className="px-6 md:px-10 py-6 md:py-8">
 			<motion.div
-				initial={{ opacity: 0, y: 80 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				viewport={{ amount: 0.2 }}
+				initial={{
+					opacity: 0,
+					y: 80,
+				}}
+				whileInView={{
+					opacity: 1,
+					y: 0,
+				}}
+				viewport={{
+					amount: 0.2,
+					once: true,
+				}}
 				transition={{
 					duration: 0.8,
 					ease: "easeOut",

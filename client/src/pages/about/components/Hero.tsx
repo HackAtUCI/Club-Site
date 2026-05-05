@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
 	return (
-		<motion.section 
+		<motion.section
 			initial={{
 				opacity: 0,
 				y: 80,
@@ -11,7 +11,10 @@ export default function Hero() {
 				opacity: 1,
 				y: 0,
 			}}
-			viewport={{ amount: 0.3 }}
+			viewport={{
+				amount: 0.3,
+				once: true,
+			}}
 			transition={{
 				duration: 0.6,
 				ease: "easeOut",
@@ -25,17 +28,16 @@ export default function Hero() {
 							About
 						</h1>
 						<p className="md:px-48 md:py-4 text-center text-base md:text-lg text-body gunmetal-text-gradient">
-							Hack at UCI is Irvine’s premier collegiate hackathon committee.
-							We strive to unite students passionate about hacking and retaining 
+							Hack at UCI is Irvine’s premier collegiate hackathon committee. We
+							strive to unite students passionate about hacking and retaining
 							the spirit of community.
 						</p>
 						<img
 							src={"team/group_hack_photo.webp"}
 							alt="Hack About Group Photo"
 							className="rounded-2xl md:rounded-4xl h-64 w-full object-cover md:h-auto md:w-auto"
-							/>
+						/>
 					</div>
-
 				</div>
 			</div>
 		</motion.section>

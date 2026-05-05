@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin }	from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 interface TeamCardProps {
 	name: string;
@@ -16,12 +16,12 @@ const TeamCard: React.FC<TeamCardProps> = ({
 }) => {
 	return (
 		<div className="flex flex-col w-4/5 mb-5">
-			<div className="relative mb-2 transition-transform duration-200 ease-in-out hover:-translate-y-1 hover:scale-[1.02]">
+			<div className="relative mb-2 aspect-square overflow-hidden rounded-2xl bg-gray-600 transition-transform duration-200 ease-in-out hover:-translate-y-1 hover:scale-[1.02]">
 				<img
 					src={image}
 					alt={name}
 					loading="lazy"
-					className="w-full aspect-square object-cover rounded-2xl bg-gray-600"
+					className="w-full aspect-square object-cover object-[center_70%] scale-130 rounded-2xl bg-gray-600"
 				/>
 			</div>
 

@@ -11,7 +11,10 @@ export default function SponsorHero() {
 				opacity: 1,
 				y: 0,
 			}}
-			viewport={{ amount: 0.3 }}
+			viewport={{
+				amount: 0.3,
+				once: true,
+			}}
 			transition={{
 				duration: 0.6,
 				ease: "easeOut",
