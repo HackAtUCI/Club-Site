@@ -12,12 +12,12 @@ const PLACEHOLDER_PHOTO =
 const PHOTOS = [PLACEHOLDER_PHOTO, PLACEHOLDER_PHOTO, PLACEHOLDER_PHOTO];
 
 const TRACKS = [
-	"Best Track Name",
-	"Best Track Name",
-	"Best Track Name",
-	"Best Track Name",
-	"Best Track Name",
-	"Best Track Name",
+	"Best Sustainable Hack",
+	"Most innovative use of Arduino UNO Q Board - Qualcomm",
+	"Best Use of AI in Real Estate - First American",
+	"Best UI/UX Hack - Opennote",
+	"Best AI Safety Hack - AI Safety at UCI",
+	"Best Neuro Hack - Cognitive Science Association at UCI",
 ];
 
 export default function Events() {
@@ -48,12 +48,12 @@ export default function Events() {
 						href: "https://zothacks.com/",
 					}}
 					stats={[
-						{ value: "50%", label: "ICS Majors" },
-						{ value: "50%", label: "Non-ICS Majors" },
-						{ value: "4:1", label: "Hacker:Mentor Ratio" },
+						{ value: "50%", label: "Female Identifying Hackers" },
+						{ value: "50%", label: "First Year Hackers" },
+						{ value: "4:1", label: "Hackers to Mentors" },
 					]}
-					tracks={TRACKS}
 					photos={PHOTOS}
+					showTracks={false}
 				/>
 				<Testimonials />
 				<InterestSection />

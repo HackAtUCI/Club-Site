@@ -25,7 +25,7 @@ export default function Hero() {
 							About
 						</h1>
 						<p className="md:px-48 md:py-4 text-center text-base md:text-lg text-body gunmetal-text-gradient">
-							Hack at UCI is Irvine’s premiere collegiate hackathon committee.
+							Hack at UCI is Irvine’s premier collegiate hackathon committee.
 							We strive to unite students passionate about hacking and retaining 
 							the spirit of community.
 						</p>

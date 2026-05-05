@@ -3,11 +3,6 @@ import { motion } from "framer-motion";
 import DiscordIcon from "@/assets/logos/discord.svg";
 import InstagramIcon from "@/assets/logos/instagram.svg";
 
-const DISCORD_URL = "https://discord.gg/HhPNuAj";
-const INSTAGRAM_URL = "https://www.instagram.com/hackatuci/";
-const ZOTHACKS_MENTORS_FORM = "#";
-const ZOTHACKS_JUDGING_FORM = "#";
-
 function PrimaryFormButton({
 	href,
 	children,
@@ -60,7 +55,7 @@ export default function InterestSection() {
 
 					<div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-24">
 						<a
-							href={DISCORD_URL}
+							href="https://discord.gg/HhPNuAj"
 							target="_blank"
 							rel="noreferrer"
 							className="flex items-center gap-3 hover:opacity-80 transition-opacity"
@@ -76,7 +71,7 @@ export default function InterestSection() {
 						</a>
 
 						<a
-							href={INSTAGRAM_URL}
+							href="https://www.instagram.com/hackatuci/"
 							target="_blank"
 							rel="noreferrer"
 							className="flex items-center gap-3 hover:opacity-80 transition-opacity"
@@ -93,11 +88,11 @@ export default function InterestSection() {
 					</div>
 
 					<div className="mt-8 flex w-full max-w-[430px] flex-col gap-4">
-						<PrimaryFormButton href={ZOTHACKS_MENTORS_FORM}>
-							Interest form for ZotHacks Mentors!
+						<PrimaryFormButton href="#">
+							Interest form for ZotHacks Mentors
 						</PrimaryFormButton>
 
-						<PrimaryFormButton href={ZOTHACKS_JUDGING_FORM}>
+						<PrimaryFormButton href="#">
 							Interest form for ZotHacks Judging
 						</PrimaryFormButton>
 					</div>

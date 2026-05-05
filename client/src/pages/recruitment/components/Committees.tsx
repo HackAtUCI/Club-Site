@@ -24,20 +24,20 @@ interface Committee {
 
 const COMMITTEES: Committee[] = [
 	{
-		key: "logistics",
-		label: "Logistics",
-		text: <LogisticsText />,
-		imageSrc: LogisticsGroupPic,
+		key: "corporate",
+		label: "Corporate",
+		text: <CorporateText />,
+		imageSrc: CorporateGroupPic,
 		faqs: [
 			"What kind of candidates are we looking for?",
 			"What can I expect for the coffee chat?",
 		],
 	},
 	{
-		key: "corporate",
-		label: "Corporate",
-		text: <CorporateText />,
-		imageSrc: CorporateGroupPic,
+		key: "logistics",
+		label: "Logistics",
+		text: <LogisticsText />,
+		imageSrc: LogisticsGroupPic,
 		faqs: [
 			"What kind of candidates are we looking for?",
 			"What can I expect for the coffee chat?",
@@ -126,7 +126,7 @@ export default function Committees() {
 						/>
 					</div>
 
-					<div className="text-black text-sm md:text-[14.4px] leading-normal">
+					<div className="text-black text-sm md:text-lg leading-normal">
 						{active.text}
 					</div>
 

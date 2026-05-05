@@ -7,10 +7,6 @@
 	animation-iteration-count: infinite;
 }
 
-.marquee-row:hover {
-	animation-play-state: paused;
-}
-
 @keyframes marquee-translate {
 	from {
 		transform: translateX(0);

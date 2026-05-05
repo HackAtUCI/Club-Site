@@ -16,17 +16,16 @@ interface HackathonShowcaseProps {
 	title: string;
 	previousLink?: PreviousLink;
 	stats: Stat[];
-	tracks: string[];
+	tracks?: string[];
 	photos: string[];
+	showTracks?: boolean;
 }
 
 function StatItem({ value, label, isFirst }: Stat & { isFirst: boolean }) {
 	return (
 		<div
 			className={`flex-1 flex flex-col items-center justify-center text-center py-5 sm:py-2 ${
-				isFirst
-					? ""
-					: "border-t sm:border-t-0 sm:border-l border-[#1f1e2d]/30"
+				isFirst ? "" : "border-t sm:border-t-0 sm:border-l border-[#1f1e2d]/30"
 			}`}
 		>
 			<div className="text-[#1f1e2d] text-2xl md:text-3xl font-bold">
@@ -60,8 +59,9 @@ export default function HackathonShowcase({
 	title,
 	previousLink,
 	stats,
-	tracks,
+	tracks = [],
 	photos,
+	showTracks = true,
 }: HackathonShowcaseProps) {
 	return (
 		<section className="px-6 md:px-10 py-6 md:py-8">
@@ -105,19 +105,21 @@ export default function HackathonShowcase({
 					</div>
 				</div>
 
-				<div className="flex flex-col gap-4">
-					<h3 className="gunmetal-text-gradient text-2xl md:text-3xl font-bold text-center">
-						Our Tracks
-					</h3>
+				{showTracks && tracks.length > 0 && (
+					<div className="flex flex-col gap-4">
+						<h3 className="gunmetal-text-gradient text-2xl md:text-3xl font-bold text-center">
+							Our Tracks
+						</h3>
 
-					<div className="overflow-hidden py-2">
-						<div className="marquee-row" style={{ animationDuration: "25s" }}>
-							{[...tracks, ...tracks].map((track, i) => (
-								<TrackCard key={`track-${i}`} name={track} />
-							))}
+						<div className="overflow-hidden py-2">
+							<div className="marquee-row" style={{ animationDuration: "25s" }}>
+								{[...tracks, ...tracks].map((track, i) => (
+									<TrackCard key={`track-${i}`} name={track} />
+								))}
+							</div>
 						</div>
 					</div>
-				</div>
+				)}
 
 				<div className="overflow-hidden py-2">
 					<div className="marquee-row" style={{ animationDuration: "40s" }}>

@@ -74,7 +74,7 @@ export default function Hackathons() {
 				<PreviewCard
 					index={1}
 					name="IrvineHacks"
-					description="Our premiere hackathon that takes places during Winter Quarter"
+					description="Our premier hackathon that takes places during Winter Quarter"
 					logoSrc={IrvineHacksLogo}
 					href="https://irvinehacks.com/"
 				/>
