@@ -56,7 +56,7 @@ const StatColumn: React.FC<StatColumnProps> = ({
 				{label}
 			</p>
 
-			<span className="mt-1 text-base text-medium text-black">{subLabel}</span>
+			<span className="mt-1 text-md text-lg text-black">{subLabel}</span>
 		</div>
 	);
 };
@@ -76,7 +76,7 @@ const Stats: React.FC = () => {
 				amount: 0.2,
 			}}
 			transition={{
-				duration: 1.5,
+				duration: 0.8,
 				ease: "easeOut",
 			}}
 			className="mb-16 w-full md:mb-50"

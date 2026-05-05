@@ -2,15 +2,15 @@ import React, { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoIosArrowDropright } from "react-icons/io";
 
-import UTCSocialPic from "@/assets/images/UTCSocialPic.jpg";
-import CDMBonfirePic from "@/assets/images/CDMBonfirePic.jpg";
-import HackHikePic from "@/assets/images/HackHikePic.jpg";
-import LAHacksPic from "@/assets/images/LAHacksPic.jpeg";
-import ZHMatchaPic from "@/assets/images/ZHMatchaPic.jpg";
-import IHVictoryPic from "@/assets/images/IHVictoryPic.jpg";
-import HackHikePic2 from "@/assets/images/HackHikePic2.jpg";
-import HackHikePic3 from "@/assets/images/HackHikePic3.jpg";
-import DisneyPic from "@/assets/images/DisneyPic.jpg";
+import UTCSocialPic from "@/assets/images/community/UTCSocialPic.jpg";
+import CDMBonfirePic from "@/assets/images/community/CDMBonfirePic.jpg";
+import HackHikePic from "@/assets/images/community/HackHikePic.jpg";
+import LAHacksPic from "@/assets/images/community/LAHacksPic.jpeg";
+import ZHMatchaPic from "@/assets/images/community/ZHMatchaPic.jpg";
+import IHVictoryPic from "@/assets/images/community/IHVictoryPic.jpg";
+import HackHikePic2 from "@/assets/images/community/HackHikePic2.jpg";
+import HackHikePic3 from "@/assets/images/community/HackHikePic3.jpg";
+import DisneyPic from "@/assets/images/community/DisneyPic.jpg";
 
 type Slide = {
 	id: string;
@@ -236,7 +236,7 @@ const Organization: React.FC = () => {
 
 						<a
 							href="/recruitment"
-							className="mt-2 text-sm font-semibold text-primary underline underline-offset-4 md:text-base"
+							className="mt-2 text-sm font-semibold text-primary underline underline-offset-4 md:text-xl"
 						>
 							Learn more about what we have to offer!
 						</a>

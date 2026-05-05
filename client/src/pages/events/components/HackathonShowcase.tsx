@@ -12,11 +12,16 @@ interface PreviousLink {
 	href: string;
 }
 
+interface Track {
+	name: string;
+	iconSrc: string;
+}
+
 interface HackathonShowcaseProps {
 	title: string;
 	previousLink?: PreviousLink;
 	stats: Stat[];
-	tracks?: string[];
+	tracks?: Track[];
 	photos: string[];
 	showTracks?: boolean;
 }
@@ -31,16 +36,24 @@ function StatItem({ value, label, isFirst }: Stat & { isFirst: boolean }) {
 			<div className="text-[#1f1e2d] text-2xl md:text-3xl font-bold">
 				{value}
 			</div>
-			<div className="text-[#1f1e2d] text-xs md:text-sm mt-1">{label}</div>
+			<div className="text-[#1f1e2d] text-xs md:text-lg mt-1">{label}</div>
 		</div>
 	);
 }
 
-function TrackCard({ name }: { name: string }) {
+function TrackCard({ name, iconSrc }: Track) {
 	return (
-		<div className="shrink-0 rounded-3xl glass-shadow bg-[#F2F2F233] px-4 py-2.5 sm:px-5 sm:py-3 flex items-center gap-2 sm:gap-3">
-			<div className="w-5 h-5 sm:w-6 sm:h-6 rounded bg-[#cccccc] shrink-0" />
-			<span className="text-[#1f1e2d] text-xs sm:text-sm underline whitespace-nowrap">
+		<div className="shrink-0 rounded-[28px] glass-shadow bg-[#F2F2F233] px-6 py-4 flex items-center gap-4 min-w-[280px]">
+			<div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/30">
+				<img
+					src={iconSrc}
+					alt=""
+					aria-hidden="true"
+					className="h-8 w-8 object-contain"
+				/>
+			</div>
+
+			<span className="max-w-[260px] text-[#1f1e2d] text-sm md:text-base font-semibold leading-tight">
 				{name}
 			</span>
 		</div>
@@ -86,7 +99,7 @@ export default function HackathonShowcase({
 								href={previousLink.href}
 								target="_blank"
 								rel="noreferrer"
-								className="text-[#1f1e2d] text-sm md:text-base underline hover:opacity-80 transition-opacity"
+								className="text-[#1f1e2d] text-sm md:text-lg font-semibold underline hover:opacity-80 transition-opacity"
 							>
 								{previousLink.text}
 							</a>
@@ -112,9 +125,9 @@ export default function HackathonShowcase({
 						</h3>
 
 						<div className="overflow-hidden py-2">
-							<div className="marquee-row" style={{ animationDuration: "25s" }}>
+							<div className="marquee-row" style={{ animationDuration: "35s" }}>
 								{[...tracks, ...tracks].map((track, i) => (
-									<TrackCard key={`track-${i}`} name={track} />
+									<TrackCard key={`track-${i}`} {...track} />
 								))}
 							</div>
 						</div>
@@ -122,7 +135,7 @@ export default function HackathonShowcase({
 				)}
 
 				<div className="overflow-hidden py-2">
-					<div className="marquee-row" style={{ animationDuration: "40s" }}>
+					<div className="marquee-row" style={{ animationDuration: "45s" }}>
 						{[...photos, ...photos].map((photo, i) => (
 							<PhotoSlide
 								key={`${title}-photo-${i}`}

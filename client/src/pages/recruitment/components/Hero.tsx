@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 
-import RecruitmentGroupPic from "@/assets/images/RecruitmentGroupPic.jpg";
-
-const APPLY_URL =
-	"https://www.notion.so/hackatuci/Hack-at-UCI-Spring-2026-Organizer-Recruitment-311393c84e5d80fabf9eea424ddee5c7?source=copy_link";
+import RecruitmentGroupPic from "@/assets/images/recruitment/RecruitmentGroupPic.jpg";
 
 function HeaderPill() {
 	return (
@@ -40,7 +37,7 @@ function JoinUsCard({ showApplyButton }: { showApplyButton: boolean }) {
 
 			{showApplyButton ? (
 				<a
-					href={APPLY_URL}
+					href="https://www.notion.so/hackatuci/Hack-at-UCI-Spring-2026-Organizer-Recruitment-311393c84e5d80fabf9eea424ddee5c7?source=copy_link"
 					target="_blank"
 					rel="noreferrer"
 					className="self-start rounded-full gunmetal-gradient px-6 py-2.5 text-white text-body font-bold transition-transform duration-200 hover:scale-105"

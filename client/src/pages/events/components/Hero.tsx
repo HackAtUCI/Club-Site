@@ -2,10 +2,6 @@ import { motion } from "framer-motion";
 
 import EventsPic from "@/assets/images/EventsPic.jpg"
 
-const HACKATHONS_LINK =
-	"https://www.notion.so/hackatuci/HACKATHONS-311393c84e5d80cf8d22e466e1e6e6ed";
-
-
 export default function Hero() {
 	return (
 		<motion.section 
@@ -32,7 +28,7 @@ export default function Hero() {
 					<p className="text-[#111111] text-body text-center">
 						Explore what our annual{" "}
 						<a
-							href={HACKATHONS_LINK}
+							href="https://www.notion.so/hackatuci/HACKATHONS-311393c84e5d80cf8d22e466e1e6e6ed"
 							target="_blank"
 							rel="noreferrer"
 							className="underline font-semibold cursor-pointer"

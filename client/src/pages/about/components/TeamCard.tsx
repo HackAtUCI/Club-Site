@@ -1,5 +1,5 @@
 import React from "react";
-import linkedinLogo from "@/assets/logos/linkedin.svg";
+import { FaLinkedin }	from "react-icons/fa";
 
 interface TeamCardProps {
 	name: string;
@@ -35,11 +35,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
 				</h5>
 
 				<a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
-					<img
-						src={linkedinLogo}
-						alt="LinkedIn"
-						className="ml-2 w-4 h-4 md:w-5 md:h-5 shrink-0 opacity-90 hover:opacity-100"
-					/>
+					<FaLinkedin className="h-4 w-4 md:h-5 md:w-5" />
 				</a>
 			</div>
 

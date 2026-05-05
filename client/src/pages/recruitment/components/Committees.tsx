@@ -6,13 +6,12 @@ import CorporateText from "./committee-texts/CorporateText";
 import DesignText from "./committee-texts/DesignText";
 import MarketingText from "./committee-texts/MarketingText";
 import TechnologyText from "./committee-texts/TechnologyText";
-import Dropdown from "./Dropdown";
 
-import LogisticsGroupPic from "@/assets/images/LogisticsGroupPic.jpeg";
-import CorporateGroupPic from "@/assets/images/CorporateGroupPic.jpeg";
-import MarketingGroupPic from "@/assets/images/MarketingGroupPic.jpeg";
-import DesignGroupPic from "@/assets/images/DesignGroupPic.jpeg";
-import TechnologyGroupPic from "@/assets/images/TechnologyGroupPic.jpeg";
+import LogisticsGroupPic from "@/assets/images/recruitment/LogisticsGroupPic.jpeg";
+import CorporateGroupPic from "@/assets/images/recruitment/CorporateGroupPic.jpeg";
+import MarketingGroupPic from "@/assets/images/recruitment/MarketingGroupPic.jpeg";
+import DesignGroupPic from "@/assets/images/recruitment/DesignGroupPic.jpeg";
+import TechnologyGroupPic from "@/assets/images/recruitment/TechnologyGroupPic.jpeg";
 
 interface Committee {
 	key: string;
@@ -129,23 +128,6 @@ export default function Committees() {
 					<div className="text-black text-sm md:text-lg leading-normal">
 						{active.text}
 					</div>
-
-					{/* <div className="flex flex-col gap-4">
-						<h3 className="gunmetal-text-gradient font-bold text-base md:text-lg">
-							Committee FAQs
-						</h3>
-
-						<div className="flex flex-col gap-4">
-							{active.faqs.map((question, index) => (
-								<Dropdown
-									key={`${active.key}-${index}-${question}`}
-									question={question}
-								>
-									Placeholder Answer
-								</Dropdown>
-							))}
-						</div>
-					</div> */}
 				</div>
 			</motion.div>
 		</section>

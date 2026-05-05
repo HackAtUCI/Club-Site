@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
-import ZotHacksLogo from "@/assets/images/ZotHacksLogo.png";
-import IrvineHacksLogo from "@/assets/images/IrvineHacksLogo.png";
+import ZotHacksLogo from "@/assets/logos/ZotHacksLogo.png";
+import IrvineHacksLogo from "@/assets/logos/IrvineHacksLogo.png";
 
 interface HackathonPreview {
 	name: string;

@@ -1,9 +1,7 @@
 import React, { forwardRef } from "react";
 import { motion, type Variants } from "framer-motion";
 
-interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {
-	onClick?: () => void;
-}
+interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const containerVariants: Variants = {
 	hidden: {
@@ -36,7 +34,7 @@ const itemVariants: Variants = {
 };
 
 const Hero = forwardRef<HTMLDivElement, HeroProps>(
-	({ onClick, className = "", ...props }, ref) => {
+	({ className = "", ...props }, ref) => {
 		return (
 			<div
 				ref={ref}
@@ -71,7 +69,7 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(
 						platform to learn, grow, and develop technology of the future.
 					</motion.p>
 
-					<motion.button
+					<motion.a
 						variants={itemVariants}
 						whileHover={{
 							scale: 1.08,
@@ -79,12 +77,11 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(
 						whileTap={{
 							scale: 0.96,
 						}}
-						type="button"
-						onClick={onClick}
+						href="/recruitment"
 						className="glass-shadow mt-2 rounded-full gunmetal-gradient px-12 py-2.5 text-2xl font-bold cursor-pointer"
 					>
 						Learn More
-					</motion.button>
+					</motion.a>
 				</motion.div>
 			</div>
 		);

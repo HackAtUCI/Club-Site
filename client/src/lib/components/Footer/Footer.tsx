@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import ContactIcon from "../ContactIcon/ContactIcon";
 
-import HackLogo from "@/assets/logos/hack_navbar.svg";
+import HackLogo from "@/assets/logos/HackLogo.svg";
 
-import { FaDiscord, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaDiscord, FaLinkedin, FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaRegEnvelope } from "react-icons/fa6";
 
 import "./Footer.css";
@@ -35,11 +35,17 @@ export default function Footer() {
 				</div>
 
 				<div className="flex flex-col items-center gap-7 p-8 md:p-0">
-					<div className="flex items-center justify-center gap-8 md:gap-10">
+					<div className="flex items-center justify-center gap-6 md:gap-8">
 						<ContactIcon
 							title="Instagram"
 							link="https://www.instagram.com/hackatuci/"
 							image={FaInstagram}
+							className="h-7 w-7 md:h-9 md:w-9"
+						/>
+						<ContactIcon
+							title="LinkedIn"
+							link="https://www.linkedin.com/company/hack-at-uci/"
+							image={FaLinkedin}
 							className="h-7 w-7 md:h-9 md:w-9"
 						/>
 						<ContactIcon

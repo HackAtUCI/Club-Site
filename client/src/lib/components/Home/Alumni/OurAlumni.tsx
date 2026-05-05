@@ -19,12 +19,12 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
 	company,
 }) => {
 	return (
-		<div className="glass-shadow relative flex flex-col rounded-[36px] bg-white/20 p-7 md:p-8">
+		<div className="glass-shadow relative flex flex-col h-full rounded-[36px] bg-white/20 p-7 md:p-8">
 			<div className="absolute left-7 top-6 select-none text-[44px] font-black leading-none text-black/70 md:left-8 md:top-7 md:text-[52px]">
 				“
 			</div>
 
-			<p className="mt-10 text-balance text-xs italic leading-[1.35] text-black md:mt-12">
+			<p className="mt-10 flex-1 text-balance text-md italic leading-[1.35] text-black md:mt-12">
 				{quote}
 			</p>
 
@@ -68,7 +68,7 @@ const OurAlumni: React.FC = () => {
 			companyTitle: "Product Manager Intern",
 			company: "Microsoft",
 			quote:
-				"As part of Hack at UCI for three years, working my way up to Corporate Outreach Director, this organization has defined my college experience, helping me grow as a public speaker, build a professional network, and find a community who have become some of my closest friends. Being able to give back, empower the next generation of students through hackathons, and play a part in their journeys has been the most rewarding experience.",
+				"Being part of Hack at UCI for three years shaped my college experience. It helped me grow as a public speaker, build a professional network, and find a community of close friends. Giving back through hackathons and supporting other students has been incredibly rewarding.",
 		},
 		{
 			name: "Audrey Lam",
@@ -118,14 +118,14 @@ const OurAlumni: React.FC = () => {
 								Our Alumni
 							</h2>
 							<p className="mt-3 text-base text-black/75 md:text-lg">
-								Over the years, our alumni have gone on to do great things beyond
-								Hack at UCI. Here are some of their experiences!
+								Over the years, our alumni have gone on to do great things
+								beyond Hack at UCI. Here are some of their experiences!
 							</p>
 						</div>
 
-						<div className="flex flex-col items-center gap-6 md:flex-row md:flex-wrap md:justify-center md:gap-8">
+						<div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
 							{alumni.map((a) => (
-								<div key={a.name} className="w-full md:basis-[calc(33.333%-1.4rem)]">
+								<div key={a.name} className="h-full">
 									<AlumniCard {...a} />
 								</div>
 							))}

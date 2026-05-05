@@ -34,6 +34,8 @@ export default function ContactIcon({
 		>
 			<a
 				href={link}
+				target="_blank"
+				rel="noreferrer"
 				aria-label={title}
 				className="flex size-full items-center justify-center"
 			>

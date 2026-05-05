@@ -1,7 +1,7 @@
 import { useEffect, useState, type PropsWithChildren } from "react";
 import * as NavMenu from "@radix-ui/react-navigation-menu";
 
-import HackLogo from "@/assets/logos/hack_navbar.svg";
+import HackLogo from "@/assets/logos/HackLogo.svg";
 import hamburger from "@/assets/icons/navigation-icon.svg";
 import useScrollDirection from "@/lib/hooks/useScrollDirection";
 import NavLinkItem from "./NavLinkItem";
@@ -87,9 +87,9 @@ export default function BaseNavbar({ children }: PropsWithChildren) {
 					</NavLinkItem>
 				</div>
 				
-				<div className="flex items-center gap-10 pt-2">
+				<div className="flex items-center gap-10">
 					{navItems.map(({ to, label }) => (
-						<div className="pb-4 transition-transform hover:scale-110 duration-300">
+						<div className="transition-transform hover:scale-110 duration-300">
 						<NavLinkItem key={to} to={to}>{label}</NavLinkItem>
 						</div>
 					))}

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
-import DiscordIcon from "@/assets/logos/discord.svg";
-import InstagramIcon from "@/assets/logos/instagram.svg";
+import { FaInstagram, FaDiscord } from "react-icons/fa";
 
 function PrimaryFormButton({
 	href,
@@ -60,11 +59,7 @@ export default function InterestSection() {
 							rel="noreferrer"
 							className="flex items-center gap-3 hover:opacity-80 transition-opacity"
 						>
-							<img
-								src={DiscordIcon}
-								alt="Discord"
-								className="h-14 w-14 sm:h-16 sm:w-16"
-							/>
+							<FaDiscord className="h-14 w-14 sm:h-16 sm:w-16"/>
 							<span className="text-black text-sm sm:text-base font-bold underline">
 								Discord Invite
 							</span>
@@ -76,11 +71,7 @@ export default function InterestSection() {
 							rel="noreferrer"
 							className="flex items-center gap-3 hover:opacity-80 transition-opacity"
 						>
-							<img
-								src={InstagramIcon}
-								alt="Instagram"
-								className="h-14 w-14 sm:h-16 sm:w-16"
-							/>
+							<FaInstagram className="h-14 w-14 sm:h-16 sm:w-16"/>
 							<span className="text-black text-sm sm:text-base font-bold">
 								@HackatUCI
 							</span>

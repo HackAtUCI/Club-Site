@@ -6,23 +6,50 @@ interface Testimony {
 	statement: string;
 }
 
-const PLACEHOLDER_TESTIMONY: Testimony = {
-	name: "FirstName LastName",
-	role: "Role @ Event",
-	statement: "Testimony Statement that we can pull from feedback forms",
-};
-
-const TESTIMONIES: Testimony[] = Array.from({ length: 6 }, () => ({
-	...PLACEHOLDER_TESTIMONY,
-}));
+const TESTIMONIES: Testimony[] = [
+	{
+		name: "Nathan Pietrantonio",
+		role: "Hacker @ IrvineHacks 2026",
+		statement:
+			"The hacking space was very lively, I've been to other hackathons where the hacking space was too big or not populated, but IrvineHacks was great!",
+	},
+	{
+		name: "Leo Siu",
+		role: "Mentor @ ZotHacks 2025",
+		statement:
+			"I loved seeing the eagerness and curiosity of my team! Watching them grow, overcome challenges, and feel proud of their final project was extremely rewarding.",
+	},
+	{
+		name: "Martin Tran",
+		role: "Hacker @ IrvineHacks 2026",
+		statement:
+			"My favorite part of IrvineHacks was meeting new people and just putting myself out there for exposure and projects. I enjoyed the new experience and it was very insightful.",
+	},
+	{
+		name: "Meera Phandis",
+		role: "Hacker @ ZotHacks 2025",
+		statement:
+			"I loved how organized it was, how helpful the staff was, and how they facilitated learning instead of just making it a rat race to win the competition. Seriously one of the best hackathons Ive been to. Will do again.",
+	},
+	{
+		name: "Nanci Nakagawa",
+		role: "Volunteer @ IrvineHacks 2026",
+		statement:
+			"I really enjoyed meeting the other volunteers and hack members. Everyone was very welcoming and I would like to help out next year! You guys are the best!",
+	},
+	{
+		name: "Madison Olivia",
+		role: "Hacker @ IrvineHacks 2026",
+		statement:
+			"I liked the community a lot, everyone was very friendly and supportive. The mentors and organizers were some the best support I've seen in a hackathon.",
+	},
+];
 
 function TestimonyCard({ name, role, statement }: Testimony) {
 	return (
 		<div className="rounded-3xl glass-shadow bg-[#F2F2F233] p-5 md:p-6 flex flex-col gap-3">
 			<div>
-				<h3 className="text-black font-bold text-base md:text-lg">
-					{name}
-				</h3>
+				<h3 className="text-black font-bold text-base md:text-lg">{name}</h3>
 				<p className="text-black/70 text-sm">{role}</p>
 			</div>
 
@@ -60,8 +87,8 @@ export default function Testimonials() {
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-					{TESTIMONIES.map((t, i) => (
-						<TestimonyCard key={i} {...t} />
+					{TESTIMONIES.map((t) => (
+						<TestimonyCard key={`${t.name}-${t.role}`} {...t} />
 					))}
 				</div>
 			</motion.div>
