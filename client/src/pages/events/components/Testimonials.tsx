@@ -8,40 +8,40 @@ interface Testimony {
 
 const TESTIMONIES: Testimony[] = [
 	{
-		name: "Nathan Pietrantonio",
+		name: "Anonymous Hacker",
 		role: "Hacker @ IrvineHacks 2026",
 		statement:
 			"The hacking space was very lively, I've been to other hackathons where the hacking space was too big or not populated, but IrvineHacks was great!",
 	},
 	{
-		name: "Leo Siu",
+		name: "Anonymous Mentor",
 		role: "Mentor @ ZotHacks 2025",
 		statement:
 			"I loved seeing the eagerness and curiosity of my team! Watching them grow, overcome challenges, and feel proud of their final project was extremely rewarding.",
 	},
 	{
-		name: "Martin Tran",
+		name: "Anonymous Hacker",
 		role: "Hacker @ IrvineHacks 2026",
 		statement:
 			"My favorite part of IrvineHacks was meeting new people and just putting myself out there for exposure and projects. I enjoyed the new experience and it was very insightful.",
 	},
 	{
-		name: "Meera Phandis",
+		name: "Anonymous Hacker",
 		role: "Hacker @ ZotHacks 2025",
 		statement:
-			"I loved how organized it was, how helpful the staff was, and how they facilitated learning instead of just making it a rat race to win the competition. Seriously one of the best hackathons Ive been to. Will do again.",
+			"I loved how organized it was, how helpful the staff was, and how they facilitated learning instead of just making it a rat race to win the competition. Seriously one of the best hackathons I've been to. Will do again.",
 	},
 	{
-		name: "Nanci Nakagawa",
+		name: "Anonymous Volunteer",
 		role: "Volunteer @ IrvineHacks 2026",
 		statement:
 			"I really enjoyed meeting the other volunteers and hack members. Everyone was very welcoming and I would like to help out next year! You guys are the best!",
 	},
 	{
-		name: "Madison Olivia",
+		name: "Anonymous Hacker",
 		role: "Hacker @ IrvineHacks 2026",
 		statement:
-			"I liked the community a lot, everyone was very friendly and supportive. The mentors and organizers were some the best support I've seen in a hackathon.",
+			"I liked the community a lot, everyone was very friendly and supportive. The mentors and organizers were some of the best support I've seen in a hackathon.",
 	},
 ];
 

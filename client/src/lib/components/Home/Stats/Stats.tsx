@@ -46,7 +46,7 @@ const StatColumn: React.FC<StatColumnProps> = ({
 
 	return (
 		<div ref={ref} className="flex flex-1 flex-col items-center text-center">
-			<h3 className="text-5xl font-extrabold leading-none text-black md:text-7xl">
+			<h3 className="text-4xl font-extrabold leading-none text-black lg:text-7xl">
 				{prefix}
 				{displayValue.toLocaleString()}
 				{suffix}
@@ -81,7 +81,7 @@ const Stats: React.FC = () => {
 			}}
 			className="mb-16 w-full md:mb-50"
 		>
-			<div className="hack-white-gradient-transparent mx-4 rounded-[20px] shadow-[0_4px_8px_rgba(0,0,0,0.25)] md:mx-0 md:w-full md:rounded-none">
+			<div className="hack-white-gradient-transparent mx-4 rounded-[20px] shadow-[0_4px_8px_rgba(0,0,0,0.25)] md:mx-0 lg:w-full lg:rounded-none">
 				<div className="mx-auto flex w-full max-w-7xl flex-col gap-10 py-14 md:flex-row md:items-center md:justify-between md:gap-28">
 					<StatColumn value={2600} suffix="+" label="Hackers" subLabel="since 2021" />
 					<StatColumn

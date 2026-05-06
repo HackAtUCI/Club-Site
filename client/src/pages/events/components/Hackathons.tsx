@@ -42,16 +42,16 @@ function PreviewCard({ name, description, logoSrc, href }: HackathonPreview) {
 
 			<div className="rounded-4xl glass-shadow p-6 flex flex-1 flex-col gap-3 justify-between items-center text-center bg-[#F2F2F233]">
 				<div className="flex flex-col gap-3 items-center">
-					<h2 className="gunmetal-text-gradient text-2xl md:text-3xl font-bold">
+					<h2 className="gunmetal-text-gradient text-2xl lg:text-3xl font-bold">
 						{name}
 					</h2>
-					<p className="text-black text-sm md:text-base">{description}</p>
+					<p className="text-black text-sm lg:text-base">{description}</p>
 				</div>
 				<a
 					href={href}
 					target="_blank"
 					rel="noreferrer"
-					className="gunmetal-gradient rounded-4xl px-4 md:px-12 py-2 text-md md:text-xl font-bold text-[#FFFFFF] transition-transform duration-200 hover:scale-105 cursor-pointer"
+					className="gunmetal-gradient rounded-4xl px-4 lg:px-12 py-2 text-md lg:text-xl font-bold text-[#FFFFFF] transition-transform duration-200 hover:scale-105 cursor-pointer"
 				>
 					More Information
 				</a>
@@ -62,8 +62,8 @@ function PreviewCard({ name, description, logoSrc, href }: HackathonPreview) {
 
 export default function Hackathons() {
 	return (
-		<section className="px-1 md:px-10 py-6 md:py-8">
-			<div className="mx-auto w-full max-w-3/4 flex flex-col md:flex-row gap-6 md:gap-32 pb-20 md:pb-48">
+		<section className="px-1 lg:px-10 py-6 lg:py-8">
+			<div className="mx-auto w-full max-w-3/4 flex flex-col lg:flex-row gap-6 lg:gap-32 pb-20 lg:pb-48">
 				<PreviewCard
 					index={0}
 					name="ZotHacks"

@@ -53,7 +53,7 @@ export default function TeamSection() {
 									initial="hidden"
 									whileInView="visible"
 									viewport={{ once: true, amount: 0.2 }}
-									className="grid grid-cols-2 place-items-center md:grid-cols-3 lg:grid-cols-5 md:place-items-start"
+									className="grid grid-cols-2 place-items-center lg:grid-cols-5 md:place-items-start"
 								>
 									{members.map((member) => (
 										<TeamCard

@@ -33,7 +33,7 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
 					{name}
 				</p>
 
-				<div className="mt-2 flex flex-col gap-3 text-[#2d2d3e] md:flex-row md:items-stretch md:gap-3">
+				<div className="mt-2 flex flex-col gap-3 text-[#2d2d3e] lg:flex-row md:items-stretch md:gap-3">
 					<div className="md:max-w-60">
 						<p className="whitespace-nowrap text-xs font-extrabold leading-tight md:text-xs">
 							{hackRole}
@@ -123,7 +123,7 @@ const OurAlumni: React.FC = () => {
 							</p>
 						</div>
 
-						<div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+						<div className="grid grid-cols-1 gap-6 lg:grid-cols-3 md:gap-8">
 							{alumni.map((a) => (
 								<div key={a.name} className="h-full">
 									<AlumniCard {...a} />

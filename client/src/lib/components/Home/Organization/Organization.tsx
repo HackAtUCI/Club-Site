@@ -242,7 +242,7 @@ const Organization: React.FC = () => {
 						</a>
 					</div>
 
-					<div className="relative mt-10 w-full md:hidden">
+					<div className="relative mt-10 w-full lg:hidden">
 						<MobileCarouselCard slide={activeSlide} direction={direction} />
 
 						<motion.button
@@ -268,7 +268,7 @@ const Organization: React.FC = () => {
 						</motion.button>
 					</div>
 
-					<div className="relative mt-12 hidden md:block">
+					<div className="relative mt-12 hidden lg:block">
 						<div className="relative mx-auto h-[500px] w-full max-w-[1400px]">
 							<motion.div
 								key={`left-${leftSlide.id}`}
