@@ -165,7 +165,7 @@ const Events: React.FC = () => {
 							src={IrvineHacksOpeningImg}
 							alt="IrvineHacks 2026 Opening Ceremony"
 							title="IrvineHacks"
-							description="HackUCI is the largest collegiate hackathon in Orange County. Each year, we bring like-minded individuals of different backgrounds and skill sets together to create something in 36 hours."
+							description="IrvineHacks is the largest collegiate hackathon in Orange County. Each year, we bring like-minded individuals of different backgrounds and skill sets together to create something in 36 hours."
 							href="https://irvinehacks.com/"
 						/>
 
