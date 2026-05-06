@@ -45,7 +45,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
 				/>
 			</div>
 
-			<div className="flex items-center justify-between">
+			<div className="flex min-h-8 items-center justify-between">
 				<h5
 					className={`leading-tight wrap-break-word font-semibold ${
 						name.length > 18 ? "text-xs md:text-lg" : "text-sm md:text-xl"

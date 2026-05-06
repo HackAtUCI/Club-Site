@@ -79,7 +79,7 @@ export default function Committees() {
 	const active = COMMITTEES.find((c) => c.key === activeKey) ?? COMMITTEES[0];
 
 	return (
-		<section className="px-6 md:px-10 py-12">
+		<section className="px-6 lg:px-10 py-12">
 			<motion.div
 				initial={{
 					opacity: 0,
@@ -97,14 +97,14 @@ export default function Committees() {
 					duration: 0.45,
 					ease: "easeOut",
 				}}
-				className="mx-auto w-full max-w-5xl rounded-[40px] hack-white-gradient p-6 sm:p-8 md:p-10 flex flex-col gap-6 md:gap-10"
+				className="mx-auto w-full max-w-5xl rounded-[40px] hack-white-gradient p-6 sm:p-8 lg:p-10 flex flex-col gap-6 lg:gap-10"
 			>
-				<h2 className="gunmetal-text-gradient text-4xl font-extrabold leading-none md:text-5xl text-center">
+				<h2 className="gunmetal-text-gradient text-4xl font-extrabold leading-none lg:text-5xl text-center">
 					Learn About Our Committees
 				</h2>
 
-				<div className="rounded-[40px] glass-shadow bg-[#F2F2F233] p-6 md:p-10 flex flex-col gap-6">
-					<div className="flex flex-col sm:flex-row items-stretch sm:items-center sm:justify-between md:px-16 gap-2 sm:gap-3 md:gap-4">
+				<div className="rounded-[40px] glass-shadow bg-[#F2F2F233] p-6 lg:p-10 flex flex-col gap-6">
+					<div className="flex flex-col sm:flex-row items-stretch sm:items-center sm:justify-between lg:px-16 gap-2 sm:gap-3 lg:gap-4">
 						{" "}
 						{COMMITTEES.map((c) => {
 							const isActive = c.key === activeKey;
@@ -114,7 +114,7 @@ export default function Committees() {
 									key={c.key}
 									type="button"
 									onClick={() => setActiveKey(c.key)}
-									className={`rounded-full px-4 py-2 text-sm md:text-xl font-semibold transition-all duration-200 cursor-pointer ${
+									className={`rounded-full px-4 py-2 text-sm lg:text-xl font-semibold transition-all duration-200 cursor-pointer ${
 										isActive
 											? "bg-[#B5EDC9] text-black"
 											: "text-black/70 hover:text-black hover:bg-white/20"
@@ -134,7 +134,7 @@ export default function Committees() {
 						/>
 					</div>
 
-					<div className="text-black text-sm md:text-lg leading-normal">
+					<div className="text-black text-sm lg:text-lg leading-normal">
 						{active.text}
 					</div>
 				</div>

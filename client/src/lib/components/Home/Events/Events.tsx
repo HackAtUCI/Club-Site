@@ -152,6 +152,7 @@ const Events: React.FC = () => {
 					}}
 					viewport={{
 						amount: 0.15,
+						once: true,
 					}}
 					transition={{
 						duration: 0.6,
