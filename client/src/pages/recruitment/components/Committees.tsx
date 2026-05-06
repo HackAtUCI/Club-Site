@@ -1,113 +1,144 @@
-import Tabs, { type TabInterface } from "@/lib/components/Tabs/Tabs";
-import Box from "@/lib/components/Box/Box";
-import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
+import { useState, type ReactNode } from "react";
+import { motion } from "framer-motion";
 
-import CorporateText from "./committee-texts/CorporateText";
 import LogisticsText from "./committee-texts/LogisticsText";
-import MarketingText from "./committee-texts/MarketingText";
+import CorporateText from "./committee-texts/CorporateText";
 import DesignText from "./committee-texts/DesignText";
+import MarketingText from "./committee-texts/MarketingText";
 import TechnologyText from "./committee-texts/TechnologyText";
 
-type BaseTab = Omit<TabInterface, "buttonText">;
+import LogisticsGroupPic from "@/assets/images/recruitment/LogisticsGroupPic.jpeg";
+import CorporateGroupPic from "@/assets/images/recruitment/CorporateGroupPic.jpeg";
+import MarketingGroupPic from "@/assets/images/recruitment/MarketingGroupPic.jpeg";
+import DesignGroupPic from "@/assets/images/recruitment/DesignGroupPic.jpeg";
+import TechnologyGroupPic from "@/assets/images/recruitment/TechnologyGroupPic.jpeg";
 
-type CommitteeButtonText =
-	| "Corporate"
-	| "Logistics"
-	| "Marketing"
-	| "Design"
-	| "Technology";
-
-interface CommitteeTabInterface extends BaseTab {
-	buttonText: CommitteeButtonText;
+interface Committee {
+	key: string;
+	label: string;
+	text: ReactNode;
+	imageSrc?: string;
+	faqs: string[];
 }
 
-function RecruitmentTab({
-	textComponent,
-	headingText,
-	showApplyButton,
-}: {
-	textComponent: React.ReactNode;
-	headingText: string;
-	showApplyButton: boolean;
-}) {
+const COMMITTEES: Committee[] = [
+	{
+		key: "corporate",
+		label: "Corporate",
+		text: <CorporateText />,
+		imageSrc: CorporateGroupPic,
+		faqs: [
+			"What kind of candidates are we looking for?",
+			"What can I expect for the coffee chat?",
+		],
+	},
+	{
+		key: "logistics",
+		label: "Logistics",
+		text: <LogisticsText />,
+		imageSrc: LogisticsGroupPic,
+		faqs: [
+			"What kind of candidates are we looking for?",
+			"What can I expect for the coffee chat?",
+		],
+	},
+	{
+		key: "marketing",
+		label: "Marketing",
+		text: <MarketingText />,
+		imageSrc: MarketingGroupPic,
+		faqs: [
+			"What kind of candidates are we looking for?",
+			"What can I expect for the coffee chat?",
+		],
+	},
+	{
+		key: "design",
+		label: "Design",
+		text: <DesignText />,
+		imageSrc: DesignGroupPic,
+		faqs: [
+			"What kind of candidates are we looking for?",
+			"What can I expect for the coffee chat?",
+		],
+	},
+	{
+		key: "technology",
+		label: "Technology",
+		text: <TechnologyText />,
+		imageSrc: TechnologyGroupPic,
+		faqs: [
+			"What kind of candidates are we looking for?",
+			"What can I expect for the coffee chat?",
+		],
+	},
+];
+
+export default function Committees() {
+	const [activeKey, setActiveKey] = useState(COMMITTEES[0].key);
+	const active = COMMITTEES.find((c) => c.key === activeKey) ?? COMMITTEES[0];
+
 	return (
-		<div className="p-4 sm:p-6 md:p-8 lg:p-12">
-			<Box className="pt-18 pb-24">
-				<h3 className="text-subtitle mb-8">{headingText}</h3>
-				{textComponent}
-			</Box>
-			{showApplyButton && (
-				<div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-					<PrimaryButton className="px-[10rem]" variant="apply">
-						Apply
-					</PrimaryButton>
+		<section className="px-6 md:px-10 py-12">
+			<motion.div
+				initial={{
+					opacity: 0,
+					y: 18,
+				}}
+				whileInView={{
+					opacity: 1,
+					y: 0,
+				}}
+				viewport={{
+					once: true,
+					amount: 0.2,
+				}}
+				transition={{
+					duration: 0.45,
+					ease: "easeOut",
+				}}
+				className="mx-auto w-full max-w-5xl rounded-[40px] hack-white-gradient p-6 sm:p-8 md:p-10 flex flex-col gap-6 md:gap-10"
+			>
+				<h2 className="gunmetal-text-gradient text-4xl font-extrabold leading-none md:text-5xl text-center">
+					Learn About Our Committees
+				</h2>
+
+				<div className="rounded-[40px] glass-shadow bg-[#F2F2F233] p-6 md:p-10 flex flex-col gap-6">
+					<div className="flex flex-col sm:flex-row items-stretch sm:items-center sm:justify-between md:px-16 gap-2 sm:gap-3 md:gap-4">
+						{" "}
+						{COMMITTEES.map((c) => {
+							const isActive = c.key === activeKey;
+
+							return (
+								<button
+									key={c.key}
+									type="button"
+									onClick={() => setActiveKey(c.key)}
+									className={`rounded-full px-4 py-2 text-sm md:text-xl font-semibold transition-all duration-200 cursor-pointer ${
+										isActive
+											? "bg-[#B5EDC9] text-black"
+											: "text-black/70 hover:text-black hover:bg-white/20"
+									}`}
+								>
+									{c.label}
+								</button>
+							);
+						})}
+					</div>
+
+					<div className="rounded-2xl overflow-hidden bg-[#cccccc] aspect-square md:aspect-[2.4/1] glass-shadow">
+						<img
+							src={active.imageSrc}
+							alt={`${active.label}`}
+							className="w-full h-full object-cover object-[center_33%]"
+						/>
+					</div>
+
+					<div className="text-black text-sm md:text-lg leading-normal">
+						{active.text}
+					</div>
 				</div>
-			)}
-		</div>
-	);
-}
-
-export default function Committees({
-	showApplyButton,
-}: {
-	showApplyButton: boolean;
-}) {
-	const committeeTabs: CommitteeTabInterface[] = [
-		{
-			buttonText: "Corporate",
-			tabComponent: (
-				<RecruitmentTab
-					showApplyButton={showApplyButton}
-					headingText="Corporate"
-					textComponent={<CorporateText />}
-				/>
-			),
-		},
-		{
-			buttonText: "Logistics",
-			tabComponent: (
-				<RecruitmentTab
-					showApplyButton={showApplyButton}
-					headingText="Logistics"
-					textComponent={<LogisticsText />}
-				/>
-			),
-		},
-		{
-			buttonText: "Marketing",
-			tabComponent: (
-				<RecruitmentTab
-					showApplyButton={showApplyButton}
-					headingText="Marketing"
-					textComponent={<MarketingText />}
-				/>
-			),
-		},
-		{
-			buttonText: "Design",
-			tabComponent: (
-				<RecruitmentTab
-					showApplyButton={showApplyButton}
-					headingText="Design"
-					textComponent={<DesignText />}
-				/>
-			),
-		},
-		{
-			buttonText: "Technology",
-			tabComponent: (
-				<RecruitmentTab
-					showApplyButton={showApplyButton}
-					headingText="Technology"
-					textComponent={<TechnologyText />}
-				/>
-			),
-		},
-	];
-	return (
-		<section className="py-30">
-			<div id="committees" />
-			<Tabs tabs={committeeTabs} title="Our Committees" />
+			</motion.div>
 		</section>
 	);
 }

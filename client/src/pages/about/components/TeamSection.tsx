@@ -1,5 +1,6 @@
 import TeamCard from "./TeamCard";
 import { teamMembers } from "@/data/team.ts";
+import { motion } from "framer-motion";
 
 interface TeamMember {
 	name: string;
@@ -8,33 +9,52 @@ interface TeamMember {
 	linkedInUrl?: string;
 }
 
+const teamGridVariants = {
+	hidden: {},
+	visible: {
+		transition: {
+			staggerChildren: 0.18,
+		},
+	},
+};
+
 export default function TeamSection() {
 	return (
-		<section className="flex justify-center items-center px-10 py-30 md:px-36 lg:px-56">
-			<div className="container">
-				<div className="flex flex-col gap-16">
-					<div>
-						<h1 className="text-4xl md:text-5xl font-bold mb-4">
-							Meet the Team
+		<section className="flex justify-center items-center text-[#2D2D3E] px-6 md:px-10 pb-30 lg:px-46">
+			<motion.div
+				initial={{ opacity: 0, y: 18 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true, amount: 0.05 }}
+				transition={{
+					duration: 0.1,
+					ease: "easeOut",
+				}}
+				className="container z-40"
+			>
+				<div className="flex flex-col gap-16 rounded-4xl px-4 md:px-10 py-16 hack-white-gradient">
+					<div className="flex justify-center">
+						<h1 className="text-heading font-bold md:mb-4 gunmetal-text-gradient">
+							Our Team
 						</h1>
-						<p className="text-lg md:text-2xl">
-							We strive to provide students with a platform to learn, grow, and
-							develop technology of the future. With every event Hack at UCI
-							puts on, there is an outstanding team behind it composed of five
-							hardworking departments: Corporate, Marketing, Logistics, Design, and
-							Tech.
-						</p>
 					</div>
+
 					{Object.entries(teamMembers).map(
 						([teamName, members]: [string, TeamMember[]]) => (
-							<section key={teamName} className="w-full">
-								<div className="flex items-center gap-2 mb-6">
-									<h2 className="text-2xl md:text-3xl font-bold text-white">
-										{teamName}
-									</h2>
+							<section
+								key={teamName}
+								className="w-full p-4 md:p-10 rounded-4xl border border-white/10 glass-shadow"
+							>
+								<div className="flex items-center justify-center gap-2 mb-6">
+									<h2 className="text-2xl md:text-3xl font-bold">{teamName}</h2>
 								</div>
 
-								<div className="grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-5 md:place-items-start">
+								<motion.div
+									variants={teamGridVariants}
+									initial="hidden"
+									whileInView="visible"
+									viewport={{ once: true, amount: 0.2 }}
+									className="grid grid-cols-2 place-items-center md:grid-cols-3 lg:grid-cols-5 md:place-items-start"
+								>
 									{members.map((member) => (
 										<TeamCard
 											key={member.name}
@@ -44,12 +64,12 @@ export default function TeamSection() {
 											linkedInUrl={member.linkedInUrl}
 										/>
 									))}
-								</div>
+								</motion.div>
 							</section>
 						)
 					)}
 				</div>
-			</div>
+			</motion.div>
 		</section>
 	);
 }

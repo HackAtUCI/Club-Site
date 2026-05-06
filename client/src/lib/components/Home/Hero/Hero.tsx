@@ -1,34 +1,93 @@
-import React from "react";
-import HackLogo from "@/assets/logos/hack.svg";
-import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
+import React, { forwardRef } from "react";
+import { motion, type Variants } from "framer-motion";
 
-interface HeroProps {
-	[x: string]: unknown;
-}
+interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-const Hero: React.FC<HeroProps> = ({ onClick, ...props }) => {
-	return (
-		<div
-			className="flex h-screen w-full flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:gap-24"
-			{...props}
-		>
-			<div className="flex items-center justify-center">
-				<img
-					src={HackLogo}
-					alt="Hack at UCI Logo"
-					width={300}
-					height={300}
-					className="w-[30%] lg:w-[300px]"
-				/>
-			</div>
-			<div className="flex flex-col items-center justify-center gap-8">
-				<h1 className="text-heading text-center">Hack at UCI</h1>
-				<PrimaryButton className="md:px-32" onClick={onClick}>
-					Get Involved
-				</PrimaryButton>
-			</div>
-		</div>
-	);
+const containerVariants: Variants = {
+	hidden: {
+		opacity: 0,
+	},
+	show: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.22,
+			delayChildren: 0.25,
+		},
+	},
 };
+
+const itemVariants: Variants = {
+	hidden: {
+		opacity: 0,
+		y: 32,
+		scale: 0.96,
+	},
+	show: {
+		opacity: 1,
+		y: 0,
+		scale: 1,
+		transition: {
+			duration: 1.25,
+			ease: "easeOut",
+		},
+	},
+};
+
+const Hero = forwardRef<HTMLDivElement, HeroProps>(
+	({ className = "", ...props }, ref) => {
+		return (
+			<div
+				ref={ref}
+				className={`relative isolate flex min-h-[calc(100svh+12rem)] w-full flex-col items-center justify-center overflow-hidden px-6 pb-30 md:px-12 ${className}`}
+				{...props}
+			>
+				<motion.div
+					variants={containerVariants}
+					initial="hidden"
+					animate="show"
+					className="relative z-10 flex max-w-4xl flex-col items-center gap-6 text-center md:gap-8"
+				>
+					<motion.p
+						variants={itemVariants}
+						className="glass-shadow rounded-full border text-primary px-6 py-2 text-2xl font-normal"
+					>
+						Est. 2013
+					</motion.p>
+
+					<motion.h1
+						variants={itemVariants}
+						className="text-6xl max-w-[18ch] gunmetal-text-gradient font-extrabold"
+					>
+						Hack At UCI
+					</motion.h1>
+
+					<motion.p
+						variants={itemVariants}
+						className="max-w-2xl text-lg font-medium text-black md:text-xl"
+					>
+						a student-run organization established to provide students with a
+						platform to learn, grow, and develop technology of the future.
+					</motion.p>
+
+					<motion.a
+						variants={itemVariants}
+						whileHover={{
+							scale: 1.08,
+						}}
+						whileTap={{
+							scale: 0.96,
+						}}
+						href="/recruitment"
+						className="glass-shadow mt-2 rounded-full gunmetal-gradient px-12 py-2.5 text-2xl font-bold cursor-pointer"
+					>
+						Learn More
+					</motion.a>
+				</motion.div>
+			</div>
+		);
+	},
+);
+
+Hero.displayName = "Hero";
 
 export default Hero;

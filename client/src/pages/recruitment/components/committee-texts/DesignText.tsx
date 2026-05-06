@@ -1,35 +1,46 @@
-export default function GraphicsText() {
+export default function DesignText() {
 	return (
 		<>
 			<p className="mb-8">
-				As a designer, you will be responsible for designing our website pages,
-				logos, assets, and social media graphics to represent our organization
-				and events. Designers also shape the theme and aesthetic for ZotHacks
-				and IrvineHacks. Each design will follow general guidelines and have to
-				be submitted for review before the given deadlines. You must be
-				detail-oriented and have proficient knowledge of design principles,
-				color theory, and typography. You will also be working closely with the
-				web development team, so experience with HTML and CSS is a plus, but not
-				required. Strong collaboration skills are also essential, as you will
-				work with other members to contribute to club events.
+				Design is what makes or breaks a project&apos;s impact. Hack at UCI has
+				delivered visuals seen by <strong>1500+ hackers, sponsors, and industry
+				professionals</strong>. As a Design organizer, you&apos;ll help define
+				the visual identity of our hackathons across digital, print, merch, and
+				venue spaces.
 			</p>
-			<p>
-				<strong>Key Qualifications</strong>
-			</p>
-			<ul className="list-disc list-inside mb-8">
-				<li>Proficiency in design and design principles</li>
+
+			<p className="font-bold mb-1">Key Responsibilities</p>
+
+			<ul className="list-disc pl-6 mb-8">
+				<li>
+					Create flyers and promotional material that represent our organization
+					and events across platforms like Facebook and Instagram
+				</li>
+				<li>
+					Shape the theme and aesthetic for ZotHacks and IrvineHacks with{" "}
+					<strong>Figma</strong>
+				</li>
+				<li>
+					Work closely with the web development team. Experience with HTML and
+					CSS is a plus, but not required
+				</li>
+			</ul>
+
+			<p className="font-bold mb-1">Key Qualifications</p>
+
+			<ul className="list-disc pl-6">
+				<li>Proficient knowledge of visual design, color theory, and typography</li>
 				<li>Creative and critical thinking abilities</li>
 				<li>
-					Experience using a raster graphics editor (ex. Adobe Photoshop,
-					Procreate, etc.)
+					Experience using a vector graphics editor, such as Adobe Illustrator,
+					Figma, or Inkscape
 				</li>
 				<li>
-					Experience using a vector graphics editor (ex. Adobe Illustrator,
-					Figma, Affinity Designer, etc.)
+					Experience using a raster graphics editor, such as Adobe Photoshop or
+					FireAlpaca
 				</li>
 				<li>
-					Willing to dedicate ~4 hours per week to Hack (meeting, content
-					creation, etc.)
+					Willing to dedicate <strong>~5 hours</strong> per week to Hack
 				</li>
 			</ul>
 		</>

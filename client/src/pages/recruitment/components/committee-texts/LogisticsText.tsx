@@ -2,36 +2,42 @@ export default function LogisticsText() {
 	return (
 		<>
 			<p className="mb-8">
-				The logistics team organizes all hackathon operations, as well as other
-				events during the year such as workshops and socials. We are a
-				detail-oriented and impact-driven team, uniting diverse backgrounds and
-				skill sets to ensure that events run smoothly and benefit all parties
-				involved.
+				Build the backbone of the hackathon for{" "}
+				<strong>400+ participants</strong>. As a Logistics organizer, you will
+				be responsible for organizing all hackathon operations. Learn
+				organizational skills such as managing applications, coordinating food,
+				and leading volunteer and mentor orientations.
 			</p>
-			<p>
-				<strong>Key Qualifications</strong>
-			</p>
-			<ul className="list-disc list-inside mb-8">
+
+			<p className="font-bold mb-1">Key Responsibilities</p>
+
+			<ul className="list-disc pl-6 mb-8">
+				<li>
+					Organizes all hackathon operations, including applications, food, and
+					volunteer/mentor orientation
+				</li>
+				<li>
+					Detail-oriented and impact-driven team, uniting diverse backgrounds
+					and skill sets to ensure that events run smoothly
+				</li>
+				<li>Lead subcommittee teams of 2-4</li>
+			</ul>
+
+			<p className="font-bold mb-1">Key Qualifications</p>
+
+			<ul className="list-disc pl-6">
 				<li>Excellent time management skills</li>
 				<li>Great planning and organization skills</li>
+				<li>Most importantly, willingness to adapt and learn new things</li>
 				<li>Attention to detail</li>
 				<li>
 					Strong written and verbal communication skills, especially in a timely
-					and efficient manner for issues (within 1 business day)
+					and efficient manner for issues within 1 business day
 				</li>
-				<li>Drive to work in a fast paced environment</li>
-				<li>Work in a team based environment in order to meet goals</li>
-				<li>Handle a large budget in order to organize events efficiently</li>
+				<li>Drive to work in a fast-paced environment</li>
 				<li>
-					Proficient in managing information through folders (Google Drive),
-					spreadsheets (Google Sheets), and documents (Google Docs)
+					Willing to dedicate <strong>~5 hours</strong> per week to Hack
 				</li>
-				<li>
-					Willing to dedicate ~5 hours per week to Hack (meeting, content
-					creation, etc.)
-				</li>
-				<li>Able to lead small teams of 3-4 organizers</li>
-				<li>Most importantly, willingness to adapt and learn new things</li>
 			</ul>
 		</>
 	);

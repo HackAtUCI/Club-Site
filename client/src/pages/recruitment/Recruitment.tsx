@@ -1,13 +1,18 @@
-// import Committees from "./components/Committees";
 import Hero from "./components/Hero";
-
-const IS_RECRUITMENT_OPEN = true;
+import Committees from "./components/Committees";
+import FAQs from "./components/FAQs";
+import Background from "./components/Background";
 
 export default function Recruitment() {
 	return (
-		<>
-			<Hero showApplyButton={IS_RECRUITMENT_OPEN} />
-			{/* <Committees showApplyButton={IS_RECRUITMENT_OPEN} /> */}
-		</>
+		<main className="relative min-h-screen overflow-hidden bg-dark-blue">
+			<Background />
+
+			<div className="relative z-20">
+				<Hero showApplyButton={false} />
+				<Committees />
+				<FAQs />
+			</div>
+		</main>
 	);
 }
