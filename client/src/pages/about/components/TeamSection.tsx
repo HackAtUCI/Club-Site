@@ -9,34 +9,35 @@ interface TeamMember {
 	linkedInUrl?: string;
 }
 
+const teamGridVariants = {
+	hidden: {},
+	visible: {
+		transition: {
+			staggerChildren: 0.18,
+		},
+	},
+};
+
 export default function TeamSection() {
 	return (
-		<motion.section
-			initial={{
-				opacity: 0,
-				y: 80,
-			}}
-			whileInView={{
-				opacity: 1,
-				y: 0,
-			}}
-			viewport={{
-				amount: 0.1,
-				once: true,
-			}}
-			transition={{
-				duration: 0.6,
-				ease: "easeOut",
-			}}
-			className="flex justify-center items-center text-[#2D2D3E] px-6 md:px-10 pb-30 lg:px-46"
-		>
-			<div className="container z-40">
+		<section className="flex justify-center items-center text-[#2D2D3E] px-6 md:px-10 pb-30 lg:px-46">
+			<motion.div
+				initial={{ opacity: 0, y: 18 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true, amount: 0.05 }}
+				transition={{
+					duration: 0.1,
+					ease: "easeOut",
+				}}
+				className="container z-40"
+			>
 				<div className="flex flex-col gap-16 rounded-4xl px-4 md:px-10 py-16 hack-white-gradient">
 					<div className="flex justify-center">
 						<h1 className="text-heading font-bold md:mb-4 gunmetal-text-gradient">
 							Our Team
 						</h1>
 					</div>
+
 					{Object.entries(teamMembers).map(
 						([teamName, members]: [string, TeamMember[]]) => (
 							<section
@@ -47,7 +48,13 @@ export default function TeamSection() {
 									<h2 className="text-2xl md:text-3xl font-bold">{teamName}</h2>
 								</div>
 
-								<div className="grid grid-cols-2 place-items-center md:grid-cols-3 lg:grid-cols-5 md:place-items-start">
+								<motion.div
+									variants={teamGridVariants}
+									initial="hidden"
+									whileInView="visible"
+									viewport={{ once: true, amount: 0.2 }}
+									className="grid grid-cols-2 place-items-center md:grid-cols-3 lg:grid-cols-5 md:place-items-start"
+								>
 									{members.map((member) => (
 										<TeamCard
 											key={member.name}
@@ -57,12 +64,12 @@ export default function TeamSection() {
 											linkedInUrl={member.linkedInUrl}
 										/>
 									))}
-								</div>
+								</motion.div>
 							</section>
 						)
 					)}
 				</div>
-			</div>
-		</motion.section>
+			</motion.div>
+		</section>
 	);
 }

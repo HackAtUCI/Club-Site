@@ -24,7 +24,7 @@ const StatColumn: React.FC<StatColumnProps> = ({
 
 	const motionValue = useMotionValue(0);
 	const springValue = useSpring(motionValue, {
-		duration: 2200,
+		duration: 1600,
 		bounce: 0,
 	});
 

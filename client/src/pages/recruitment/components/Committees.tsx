@@ -81,9 +81,18 @@ export default function Committees() {
 	return (
 		<section className="px-6 md:px-10 py-12">
 			<motion.div
-				initial={{ opacity: 0, y: 18 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				viewport={{ once: true, amount: 0.2 }}
+				initial={{
+					opacity: 0,
+					y: 18,
+				}}
+				whileInView={{
+					opacity: 1,
+					y: 0,
+				}}
+				viewport={{
+					once: true,
+					amount: 0.2,
+				}}
 				transition={{
 					duration: 0.45,
 					ease: "easeOut",
@@ -121,7 +130,7 @@ export default function Committees() {
 						<img
 							src={active.imageSrc}
 							alt={`${active.label}`}
-							className="w-full h-full object-cover"
+							className="w-full h-full object-cover object-[center_33%]"
 						/>
 					</div>
 

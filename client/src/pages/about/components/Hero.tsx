@@ -19,7 +19,7 @@ export default function Hero() {
 				duration: 0.6,
 				ease: "easeOut",
 			}}
-			className="flex flex-col md:flex-row justify-center items-center pt-36 pb-24 px-4 md:p-36 lg:p-56"
+			className="flex flex-col md:flex-row justify-center items-center pt-36 pb-24 px-4 md:p-48"
 		>
 			<div className="container z-40">
 				<div className="flex rounded-4xl p-10 hack-white-gradient">
