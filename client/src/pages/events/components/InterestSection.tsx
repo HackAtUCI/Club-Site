@@ -54,7 +54,7 @@ export default function InterestSection() {
 
 					<div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-24">
 						<a
-							href="https://discord.gg/HhPNuAj"
+							href="https://discord.gg/xhU5MA5Q"
 							target="_blank"
 							rel="noreferrer"
 							className="flex items-center gap-3 hover:opacity-80 transition-opacity"
@@ -79,7 +79,7 @@ export default function InterestSection() {
 					</div>
 
 					<div className="mt-8 flex w-full max-w-[430px] flex-col gap-4">
-						<PrimaryFormButton href="#">
+						<PrimaryFormButton href="https://docs.google.com/forms/d/e/1FAIpQLScRh7rVG4abACgz2WHSM7sY9YK51BXDnlkiy8BoAOoPbt6wQg/viewform">
 							Interest form for ZotHacks Mentors
 						</PrimaryFormButton>
 
