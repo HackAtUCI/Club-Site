@@ -72,7 +72,7 @@ export default function InterestSection() {
 							className="flex items-center gap-3 hover:opacity-80 transition-opacity"
 						>
 							<FaInstagram className="h-14 w-14 sm:h-16 sm:w-16"/>
-							<span className="text-black text-sm sm:text-base font-bold">
+							<span className="text-black text-sm sm:text-base font-bold underline">
 								@HackatUCI
 							</span>
 						</a>

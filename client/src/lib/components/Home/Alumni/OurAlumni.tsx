@@ -19,7 +19,7 @@ const AlumniCard: React.FC<AlumniCardProps> = ({
 	company,
 }) => {
 	return (
-		<div className="glass-shadow relative flex flex-col h-full rounded-[36px] bg-white/20 p-7 md:p-8">
+		<div className="glass-shadow relative flex flex-col h-full rounded-[36px] bg-white/20 p-7">
 			<div className="absolute left-7 top-6 select-none text-[44px] font-black leading-none text-black/70 md:left-8 md:top-7 md:text-[52px]">
 				“
 			</div>
