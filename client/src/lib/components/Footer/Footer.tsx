@@ -44,7 +44,7 @@ export default function Footer() {
 						/>
 						<ContactIcon
 							title="LinkedIn"
-							link="https://www.linkedin.com/company/hack-at-uci/"
+							link="https://www.linkedin.com/company/hackuci/"
 							image={FaLinkedin}
 							className="h-7 w-7 md:h-9 md:w-9"
 						/>
