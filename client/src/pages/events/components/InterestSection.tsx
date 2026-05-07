@@ -83,7 +83,7 @@ export default function InterestSection() {
 							Interest form for ZotHacks Mentors
 						</PrimaryFormButton>
 
-						<PrimaryFormButton href="#">
+						<PrimaryFormButton href="https://docs.google.com/forms/d/e/1FAIpQLSeNMEMm1cEB7SD2RJ0t4GDshP57WrOxB5E7utgIxPhD_3BdUQ/viewform">
 							Interest form for ZotHacks Judging
 						</PrimaryFormButton>
 					</div>
