@@ -28,6 +28,7 @@ export default function SponsorHero() {
 					<p className="text-body text-dark-blue">
 						Our sponsors are what make our hackathons possible!
 					</p>
+					<p className="text-md text-dark-blue"> Here are some of our current and past sponsors!</p>
 				</div>
 			</div>
 		</motion.section>
