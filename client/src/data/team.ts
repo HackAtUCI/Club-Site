@@ -16,7 +16,7 @@ export const teamMembers = {
 			name: "Anya Gupta",
 			position: "Corporate Organizer",
 			image: "/team/anya.webp",
-			linkedInUrl: "",
+			linkedInUrl: "https://www.linkedin.com/in/anya-gupta-777a8526b/",
 		},
 		{
 			name: "Felicia Leung",
@@ -91,7 +91,7 @@ export const teamMembers = {
 			name: "Elysia Trocio",
 			position: "Logistics Organizer",
 			image: "/team/elysia.webp",
-			linkedInUrl: "https://www.linkedin.com/in/jolene-chou/",
+			linkedInUrl: "https://www.linkedin.com/in/elysiatrocio/",
 		},
 		{
 			name: "Jolene Chou",
@@ -109,7 +109,7 @@ export const teamMembers = {
 			name: "Nora Roberts",
 			position: "Logistics Organizer",
 			image: "/team/nora.webp",
-			linkedInUrl: "",
+			linkedInUrl: "https://www.linkedin.com/in/nora-roberts-400482400/",
 		},
 		{
 			name: "Piyush Vaishnava",
