@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
-import Hero from "@/lib/components/Home/Hero/Hero";
-import Events from "@/lib/components/Home/Events/Events";
-import Stats from "@/lib/components/Home/Stats/Stats";
-import OurAlumni from "@/lib/components/Home/Alumni/OurAlumni";
-import Organization from "@/lib/components/Home/Organization/Organization";
+import Hero from "@/pages/home/components/Hero";
+import Events from "@/pages/home/components/Events";
+import Stats from "@/pages/home/components/Stats";
+import OurAlumni from "@/pages/home/components/OurAlumni";
+import Organization from "@/pages/home/components/Organization";
 
 import HomeDecor from "./components/HomeDecor";
 import EventsDecor from "./components/EventsDecor";

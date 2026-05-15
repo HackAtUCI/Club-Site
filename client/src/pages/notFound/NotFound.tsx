@@ -1,23 +1,26 @@
-import Box from "@/lib/components/Box/Box";
-import PrimaryButton from "@/lib/components/PrimaryButton/PrimaryButton";
+import "./NotFound.css"
 
 export default function NotFound() {
 	return (
-		<main className="flex h-screen w-full items-center justify-center">
-			<Box className="w-full h-[65%] relative flex flex-col items-center justify-center overflow-hidden text-center">
-				<p className="absolute select-none text-[16rem] font-black -translate-y-32 text-white/40 blur-sm">
-					404
+		<main className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-dark-blue px-4 text-center">
+			<p className="pointer-events-none absolute select-none text-[16rem] font-black leading-none text-white/10 blur-sm">
+				404
+			</p>
+
+			<div className="z-10 flex flex-col items-center">
+				<h1 className="mt-16 text-6xl font-bold text-white">Uh oh!</h1>
+
+				<p className="mt-2 text-white/75">
+					Looks like the page you were looking for no longer exists.
 				</p>
-				<div className="z-10 flex flex-col items-center">
-					<h1 className="text-6xl font-bold mt-16">Uh oh!</h1>
-					<p className="mt-2">
-						Looks like the page you were looking for no longer exists.
-					</p>
-					<PrimaryButton href="/" className="mt-6 px-32">
-						Back to Home
-					</PrimaryButton>
-				</div>
-			</Box>
+
+				<a
+					href="/"
+					className="primary-gradient-btn mt-6 rounded-full px-32 py-3 text-center text-md shadow-none outline-none border-none sm:text-button"
+				>
+					Back to Home
+				</a>
+			</div>
 		</main>
 	);
 }

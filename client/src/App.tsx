@@ -25,23 +25,6 @@ function App() {
 						<Route exact path="/events" component={Events} />
 						<Route exact path="/sponsors" component={Sponsors} />
 						<Route exact path="/recruitment" component={Recruitment} />
-						{/* <Route
-							exact
-							path="/mentor"
-							component={() => {
-								window.location.href =
-									"https://hack.ics.uci.edu/contact/#mentors";
-							}}
-						/> */}
-						<Route
-							exact
-							path="/sponsorship-deck"
-							component={() => {
-								window.location.href =
-									"Hack%20at%20UCI%20Sponsorship%20Deck%202021-2022.pdf";
-								return null;
-							}}
-						/>
 						<Route component={NotFound} />
 					</Switch>
 					<Footer />

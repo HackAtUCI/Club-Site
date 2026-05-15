@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import IrvineHacksClosingImg from "@/assets/images/home/IH26-closing.png";
 import IrvineHacksOpeningImg from "@/assets/images/home/IH26-opening.png";
 import ZotHacksImg from "@/assets/images/home/ZH25-hacking.png";
-import Pill from "@/lib/components/Pill/Pill";
+import Pill from "@/pages/home/components/Pill";
 
 interface EventCardProps {
 	src: string;

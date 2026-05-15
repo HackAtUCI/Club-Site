@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import ContactIcon from "../ContactIcon/ContactIcon";
+import ContactIcon from "./components/ContactIcon/ContactIcon";
 
 import HackLogo from "@/assets/logos/HackLogo.svg";
 

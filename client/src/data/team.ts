@@ -153,7 +153,7 @@ export const teamMembers = {
 		{
 			name: "Sejal Pawar",
 			position: "Marketing Organizer",
-			image: "/team/blank.webp",
+			image: "/team/sejal.webp",
 			linkedInUrl: "https://www.linkedin.com/in/sejal-pawar-3abb7a280/",
 		},
 	],
