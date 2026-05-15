@@ -34,7 +34,7 @@ This project was bootstrapped with Vite, so it's structured mostly from Vite's s
 ### Global Styles
 
 Theme colors, fonts, and sizes are found in `index.css`.
-Because of the way Tailwind works, these variables can be used as classes like `bg-main` to use the main color for the background.
+Because of the way Tailwind works, these variables can be used as classes like `text-heading` to use the main color for the background.
 
 ### Routes and Components Used in Every Page
 
@@ -46,7 +46,7 @@ The actual components for pages are found in the `pages` folder.
 
 ### Shared Components and Utilities
 
-Shared components like `PrimaryButton` and utilities like the `useScrollFromTop` hook are found in the `lib` folder.
+Shared components like `BackToTop` and utilities like the `useScrollDirection` hook are found in the `lib` folder.
 
 ### Images
 
