@@ -206,12 +206,6 @@ export const teamMembers = {
 			linkedInUrl: "https://www.linkedin.com/in/nathan-ong17/",
 		},
 		{
-			name: "Cyril Joby",
-			position: "Tech Organizer",
-			image: "/team/cyril.webp",
-			linkedInUrl: "https://www.linkedin.com/in/cyril-joby/",
-		},
-		{
 			name: "Joshua Sullivan",
 			position: "Tech Organizer",
 			image: "/team/josh.webp",
@@ -222,18 +216,6 @@ export const teamMembers = {
 			position: "Tech Organizer",
 			image: "/team/julianna.webp",
 			linkedInUrl: "https://www.linkedin.com/in/julianna-alderete-133964330/",
-		},
-		{
-			name: "Noah Kim",
-			position: "Tech Organizer",
-			image: "/team/noah.webp",
-			linkedInUrl: "https://www.linkedin.com/in/noahkim004/",
-		},
-		{
-			name: "Rishi Murumkar",
-			position: "Tech Organizer",
-			image: "/team/rishim.webp",
-			linkedInUrl: "https://www.linkedin.com/in/rishi-murumkar/",
 		},
 		{
 			name: "Victoria Lee",
