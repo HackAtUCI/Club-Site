@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import Committees from "./components/Committees";
 import FAQs from "./components/FAQs";
 import Background from "./components/Background";
+import BackToTop from "../../lib/components/BackToTop/BackToTop";
 
 export default function Recruitment() {
 	return (
@@ -12,6 +13,7 @@ export default function Recruitment() {
 				<Hero showApplyButton={false} />
 				<Committees />
 				<FAQs />
+				<BackToTop />
 			</div>
 		</main>
 	);
