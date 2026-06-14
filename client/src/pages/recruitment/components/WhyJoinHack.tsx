@@ -6,7 +6,7 @@ import RetreatPic from "@/assets/images/recruitment/RetreatPic.jpg";
 import SeasidePic from "@/assets/images/recruitment/SeaSidePic.jpg";
 import BonfirePic from "@/assets/images/recruitment/BonfirePic.jpg";
 import LogDinnerPic from "@/assets/images/recruitment/LogDinnerPic.jpg";
-import FourAMHikePic from "@/assets/images/recruitment/4AMHikePic.jpg";
+import FourAMHikePic from "@/assets/images/recruitment/4AmHikePic.jpg";
 import RetreatPic2 from "@/assets/images/recruitment/RetreatPic2.jpg";
 import SeasidePic2 from "@/assets/images/recruitment/SeasidePic2.jpg";
 import BanquetPic from "@/assets/images/recruitment/BanquetPic.jpg";
