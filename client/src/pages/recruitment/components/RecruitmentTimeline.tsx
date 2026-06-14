@@ -167,26 +167,27 @@ export default function RecruitmentTimeline() {
 
 	const [startIndex, setStartIndex] = useState(0);
 	const [direction, setDirection] = useState(1);
+	const safeStartIndex = Math.min(startIndex, maxStartIndex);
 
 	const mobileScrollRef = useRef<HTMLDivElement | null>(null);
 	const mobileCardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-	useEffect(() => {
-		setStartIndex((current) => Math.min(current, maxStartIndex));
-	}, [maxStartIndex]);
-
 	const visibleEvents = useMemo(
-		() => TIMELINE_EVENTS.slice(startIndex, startIndex + visibleEventCount),
-		[startIndex, visibleEventCount],
+		() =>
+			TIMELINE_EVENTS.slice(
+				safeStartIndex,
+				safeStartIndex + visibleEventCount,
+			),
+		[safeStartIndex, visibleEventCount],
 	);
 
-	const isAtStart = startIndex === 0;
-	const isAtEnd = startIndex === maxStartIndex;
+	const isAtStart = safeStartIndex === 0;
+	const isAtEnd = safeStartIndex === maxStartIndex;
 
 	const goToIndex = (index: number) => {
 		const nextIndex = Math.max(0, Math.min(maxStartIndex, index));
 
-		setDirection(nextIndex > startIndex ? 1 : -1);
+		setDirection(nextIndex > safeStartIndex ? 1 : -1);
 		setStartIndex(nextIndex);
 
 		if (isMobile) {
@@ -202,12 +203,12 @@ export default function RecruitmentTimeline() {
 
 	const goPrevious = () => {
 		if (isAtStart) return;
-		goToIndex(startIndex - 1);
+		goToIndex(safeStartIndex - 1);
 	};
 
 	const goNext = () => {
 		if (isAtEnd) return;
-		goToIndex(startIndex + 1);
+		goToIndex(safeStartIndex + 1);
 	};
 
 	const handleMobileScroll = () => {
@@ -266,7 +267,7 @@ export default function RecruitmentTimeline() {
 							>
 								<div className="flex gap-3 md:gap-4">
 									{TIMELINE_EVENTS.map((event, index) => {
-										const isActive = index === startIndex;
+										const isActive = index === safeStartIndex;
 
 										return (
 											<div
@@ -325,7 +326,7 @@ export default function RecruitmentTimeline() {
 										custom={direction}
 									>
 										<motion.div
-											key={`${startIndex}-${visibleEventCount}`}
+											key={`${safeStartIndex}-${visibleEventCount}`}
 											custom={direction}
 											initial={{ opacity: 0, x: direction * 12 }}
 											animate={{ opacity: 1, x: 0 }}
@@ -375,7 +376,7 @@ export default function RecruitmentTimeline() {
 									} through ${endEventNumber}`}
 									onClick={() => goToIndex(index)}
 									className={`h-2 rounded-full transition-all duration-200 cursor-pointer ${
-										index === startIndex
+										index === safeStartIndex
 											? "w-6 bg-[#4d4d70]"
 											: "w-2 bg-[#4d4d70]/25 hover:bg-[#4d4d70]/45"
 									}`}
