@@ -1,7 +1,10 @@
 import Hero from "./components/Hero";
 import Committees from "./components/Committees";
+import RecruitmentTimeline from "./components/RecruitmentTimeline";
+import WhyJoinHack from "./components/WhyJoinHack";
 import FAQs from "./components/FAQs";
 import Background from "./components/Background";
+import BackToTop from "../../lib/components/BackToTop/BackToTop";
 
 export default function Recruitment() {
 	return (
@@ -11,7 +14,10 @@ export default function Recruitment() {
 			<div className="relative z-20">
 				<Hero showApplyButton={false} />
 				<Committees />
+				<RecruitmentTimeline />
+				<WhyJoinHack />
 				<FAQs />
+				<BackToTop />
 			</div>
 		</main>
 	);
