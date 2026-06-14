@@ -72,7 +72,7 @@ const TIMELINE_EVENTS: TimelineEvent[] = [
 			"An invite only event. A short social for us to get to know you and see how you work with others!",
 	},
 	{
-		date: "10/26 - 10/30",
+		date: "10/27 - 10/30",
 		step: "Step 8",
 		title: "Coffee Chats",
 		location: "TBD",

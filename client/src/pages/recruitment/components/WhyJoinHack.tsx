@@ -101,7 +101,7 @@ export default function WhyJoinHack() {
 								<h2 className="gunmetal-text-gradient text-4xl font-extrabold leading-none md:text-5xl">
 									Why Join Hack?
 								</h2>
-								<p className="mt-5 text-lg tracking-[0.14em] text-[#2d2d3e]/60 md:text-xl">
+								<p className="mt-5 text-lg tracking-[0.1rem] text-[#2d2d3e]/60 md:text-xl">
 									Three Pillars
 								</p>
 							</div>
@@ -116,7 +116,7 @@ export default function WhyJoinHack() {
 											<span>({pillar.context})</span>
 										</p>
 
-										<div className="mt-3 flex gap-3 pl-6 text-base leading-relaxed md:text-lg">
+										<div className="mt-3 flex gap-3 pl-6 text-base md:text-lg">
 											<TriangleBullet />
 											<p>{pillar.description}</p>
 										</div>
@@ -129,23 +129,23 @@ export default function WhyJoinHack() {
 					<div className="my-8 h-px w-full bg-[#2d2d3e]/10 md:my-10" />
 
 					<div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
-						<div className="text-[#2d2d3e]/75">
-							<h3 className="text-3xl font-extrabold leading-tight text-[#2d2d3e]">
+						<div className="text-[#2d2d3e]">
+							<h3 className="text-3xl font-extrabold leading-tight gunmetal-text-gradient">
 								What makes us Hack?
 							</h3>
 
-							<p className="mt-6 text-lg font-extrabold uppercase tracking-[0.12em] text-[#2d2d3e]/80">
+							<p className="mt-6 text-lg font-extrabold uppercase tracking-[0.12em] gunmetal-text-gradient">
 								Community First!
 							</p>
 
-							<p className="mt-4 text-base leading-relaxed md:text-lg">
+							<p className="mt-4 text-base md:text-lg">
 								We don't just host hackathons. We build the community that makes
 								it possible. We <strong>LOVE</strong> our community and put one
 								another <strong>FIRST!</strong> We are what holds each other
 								together and makes hackathons possible!
 							</p>
 
-							<div className="mt-5 flex flex-col gap-4 text-base leading-relaxed md:text-lg">
+							<div className="mt-5 flex flex-col gap-4 text-base md:text-lg">
 								{COMMUNITY_POINTS.map((point) => (
 									<div key={point} className="flex gap-3">
 										<TriangleBullet />
@@ -155,7 +155,7 @@ export default function WhyJoinHack() {
 														href={HACKATHONS_LINK}
 														target="_blank"
 														rel="noreferrer"
-														className="font-bold underline underline-offset-4 transition-opacity hover:opacity-75"
+														className="font-bold underline underline-offset-3 transition-opacity hover:opacity-75"
 													>
 														{point}
 													</a>
