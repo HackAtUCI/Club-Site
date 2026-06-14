@@ -311,7 +311,9 @@ export default function RecruitmentTimeline() {
 									onClick={goPrevious}
 									disabled={isAtStart}
 									whileTap={{ scale: 0.92 }}
-									className="hidden h-12 w-12 items-center justify-center rounded-full bg-[#4d4d70]/80 text-white glass-shadow transition-colors enabled:cursor-pointer disabled:bg-[#777991]/70 md:flex"
+									className={`hidden h-12 w-12 items-center justify-center rounded-full text-white glass-shadow transition-colors enabled:cursor-pointer md:flex ${
+										isAtStart ? "gunmetal-gradient opacity-60" : "gunmetal-gradient"
+									}`}
 								>
 									<IoChevronForward className="h-7 w-7 rotate-180" />
 								</motion.button>
@@ -347,7 +349,9 @@ export default function RecruitmentTimeline() {
 									onClick={goNext}
 									disabled={isAtEnd}
 									whileTap={{ scale: 0.92 }}
-									className="hidden h-12 w-12 items-center justify-center rounded-full bg-[#4d4d70]/80 text-white glass-shadow transition-colors enabled:cursor-pointer disabled:bg-[#777991]/70 md:flex"
+									className={`hidden h-12 w-12 items-center justify-center rounded-full text-white glass-shadow transition-colors enabled:cursor-pointer md:flex ${
+										isAtEnd ? "gunmetal-gradient opacity-60" : "gunmetal-gradient"
+									}`}
 								>
 									<IoChevronForward className="h-7 w-7" />
 								</motion.button>
