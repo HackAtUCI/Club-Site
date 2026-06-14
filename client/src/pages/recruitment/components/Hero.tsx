@@ -5,9 +5,7 @@ import RecruitmentGroupPic from "@/assets/images/recruitment/RecruitmentGroupPic
 function HeaderPill() {
 	return (
 		<div className="rounded-[40px] glass-shadow bg-[#F2F2F233] px-6 py-6 flex items-center justify-center text-heading">
-			<h1 className="gunmetal-text-gradient text-heading">
-				Recruitment
-			</h1>
+			<h1 className="gunmetal-text-gradient text-heading">Recruitment</h1>
 		</div>
 	);
 }
