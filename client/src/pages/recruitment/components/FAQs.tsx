@@ -11,7 +11,7 @@ interface FAQItem {
 
 const FAQ_ITEMS: FAQItem[] = [
 	{
-		question: "What is a Hackathon?",
+		question: "What even is a Hackathon?",
 		answer: (
 			<a
 				href="https://www.notion.so/hackatuci/FAQs-311393c84e5d808fae83fbe9d0f33c4b?source=copy_link#311393c84e5d80c09316d08d5de57e2c"
