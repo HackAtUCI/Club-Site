@@ -27,7 +27,7 @@ const TIMELINE_EVENTS: TimelineEvent[] = [
 		date: "9/23",
 		step: "Step 2",
 		title: "Meet Hack at AIF",
-		location: "Anteater Involvement Fair",
+		location: "Aldrich Park",
 		description:
 			"Come meet our organizers to learn more about organization and how to get involved!",
 	},
@@ -43,7 +43,7 @@ const TIMELINE_EVENTS: TimelineEvent[] = [
 		date: "9/25",
 		step: "Step 4",
 		title: "ICS Bonfire",
-		location: "ICS Bonfire Area",
+		location: "TBD",
 		description:
 			"Visit us at ICS Bonfire to talk about our experiences and bond over marshmallows and pizza!",
 	},
