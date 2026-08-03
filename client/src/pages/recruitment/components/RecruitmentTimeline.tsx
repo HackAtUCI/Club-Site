@@ -24,7 +24,7 @@ const TIMELINE_EVENTS: TimelineEvent[] = [
 		highlight: true,
 	},
 	{
-		date: "9/23",
+		date: "9/22",
 		step: "Step 2",
 		title: "Meet Hack at AIF",
 		location: "Aldrich Park",
