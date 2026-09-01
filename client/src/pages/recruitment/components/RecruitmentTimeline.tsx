@@ -40,10 +40,10 @@ const TIMELINE_EVENTS: TimelineEvent[] = [
 			"Join us for our first meeting where we'll be talking about what our club is about and share details about the intern experience through our first intern panel!",
 	},
 	{
-		date: "9/25",
+		date: "9/25 - 5-8 PM",
 		step: "Step 4",
 		title: "ICS Bonfire",
-		location: "TBD",
+		location: "Corona Del Mar Beach",
 		description:
 			"Visit us at ICS Bonfire to talk about our experiences and bond over marshmallows and pizza!",
 	},
