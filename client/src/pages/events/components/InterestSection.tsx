@@ -79,12 +79,12 @@ export default function InterestSection() {
 					</div>
 
 					<div className="mt-8 flex w-full max-w-[430px] flex-col gap-4">
-						<PrimaryFormButton href="https://docs.google.com/forms/d/e/1FAIpQLScRh7rVG4abACgz2WHSM7sY9YK51BXDnlkiy8BoAOoPbt6wQg/viewform">
-							Interest form for ZotHacks Mentors
+						<PrimaryFormButton href="https://forms.gle/9fSvj1xJbLjbQUeR7">
+							Interest form for IrvineHacks Mentors
 						</PrimaryFormButton>
 
 						<PrimaryFormButton href="https://docs.google.com/forms/d/e/1FAIpQLSeNMEMm1cEB7SD2RJ0t4GDshP57WrOxB5E7utgIxPhD_3BdUQ/viewform">
-							Interest form for ZotHacks Judging
+							Interest form for IrvineHacks Judging
 						</PrimaryFormButton>
 					</div>
 				</div>

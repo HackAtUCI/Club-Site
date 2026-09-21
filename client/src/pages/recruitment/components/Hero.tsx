@@ -35,12 +35,12 @@ function JoinUsCard({ showApplyButton }: { showApplyButton: boolean }) {
 
 			{showApplyButton ? (
 				<a
-					href="https://www.notion.so/hackatuci/Hack-at-UCI-Spring-2026-Organizer-Recruitment-311393c84e5d80fabf9eea424ddee5c7?source=copy_link"
+					href="https://docs.google.com/forms/d/e/1FAIpQLSdhZgjSZ2Id86Zjxfq51BHRP76TB93tABiKeQdew3mZ8cqFQg/viewform"
 					target="_blank"
 					rel="noreferrer"
 					className="self-start rounded-full gunmetal-gradient px-6 py-2.5 text-white text-body font-bold transition-transform duration-200 hover:scale-105"
 				>
-					Apply to be an Organizer
+					Recruitment is open!
 				</a>
 			) : (
 				<div className="self-start rounded-3xl lg:rounded-full glass-shadow bg-[#F2F2F233] px-6 py-2.5 text-body font-bold text-[#1f1e2d]">
