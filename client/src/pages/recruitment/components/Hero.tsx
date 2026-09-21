@@ -40,7 +40,7 @@ function JoinUsCard({ showApplyButton }: { showApplyButton: boolean }) {
 					rel="noreferrer"
 					className="self-start rounded-full gunmetal-gradient px-6 py-2.5 text-white text-body font-bold transition-transform duration-200 hover:scale-105"
 				>
-					Recruitment is open!
+					Apply Here!
 				</a>
 			) : (
 				<div className="self-start rounded-3xl lg:rounded-full glass-shadow bg-[#F2F2F233] px-6 py-2.5 text-body font-bold text-[#1f1e2d]">
