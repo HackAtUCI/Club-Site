@@ -64,10 +64,10 @@ const TIMELINE_EVENTS: TimelineEvent[] = [
 		highlight: true,
 	},
 	{
-		date: "Week 5 - Date TBD",
+		date: "10/26 - 6-8PM",
 		step: "Step 7",
 		title: "Intern Social",
-		location: "TBD",
+		location: "DBH 4011",
 		description:
 			"An invite only event. A short social for us to get to know you and see how you work with others!",
 	},
