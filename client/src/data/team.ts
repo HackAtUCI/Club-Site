@@ -127,14 +127,8 @@ export const teamMembers = {
 
 	Marketing: [
 		{
-			name: "Tracy Newberry",
-			position: "Marketing Director",
-			image: "/team/tracy.webp",
-			linkedInUrl: "https://www.linkedin.com/in/tracy-ann-newberry-5a348632a/",
-		},
-		{
 			name: "Avinav Shreshta",
-			position: "Marketing Organizer",
+			position: "Marketing Director",
 			image: "/team/avinav.webp",
 			linkedInUrl: "https://www.linkedin.com/in/avinav-shrestha-236b7623a/",
 		},
@@ -155,6 +149,12 @@ export const teamMembers = {
 			position: "Marketing Organizer",
 			image: "/team/sejal.webp",
 			linkedInUrl: "https://www.linkedin.com/in/sejal-pawar-3abb7a280/",
+		},
+		{
+			name: "Tracy Newberry",
+			position: "Marketing Organizer",
+			image: "/team/tracy.webp",
+			linkedInUrl: "https://www.linkedin.com/in/tracy-ann-newberry-5a348632a/",
 		},
 	],
 
