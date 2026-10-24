@@ -56,28 +56,26 @@ const TIMELINE_EVENTS: TimelineEvent[] = [
 			"Join us at DBH 6011 to learn more about what it means to be an intern and get a more in-depth look at our committees!",
 	},
 	{
-		date: "10/21 - 11:59 PM",
+		date: "10/23 - 11:59 PM",
 		step: "Step 6",
 		title: "Applications Close",
 		description:
-			"Our applications will close at 11:59PM but we will offer a one hour grace period for any issues with submissions!",
+			"Our applications will close at 11:59PM but we will offer a three hour grace period for any issues with submissions!",
 		highlight: true,
 	},
 	{
-		date: "Invite Only",
+		date: "10/27 - 10/30",
 		step: "Step 7",
-		title: "Intern Social",
-		location: "Shared by email",
+		title: "Coffee Chats",
 		description:
-			"An invite only event. A short social for us to get to know you and see how you work with others!",
+			"An invite only event. A short chat to get to know you better and see if Hack fits you and if you are a good fit for us!",
 	},
 	{
-		date: "10/27 - 10/30",
+		date: "Fall Quarter Week 6",
 		step: "Step 8",
-		title: "Coffee Chats",
-		location: "Shared by email",
-		description:
-			"An invite only event. A short chat to get to know you better and see if Hack fits you and if you fit us!",
+		title: "Decisions Released!",
+		description: "Check your email to find out your decisions!",
+		highlight: true,
 	},
 ];
 
@@ -174,10 +172,7 @@ export default function RecruitmentTimeline() {
 
 	const visibleEvents = useMemo(
 		() =>
-			TIMELINE_EVENTS.slice(
-				safeStartIndex,
-				safeStartIndex + visibleEventCount,
-			),
+			TIMELINE_EVENTS.slice(safeStartIndex, safeStartIndex + visibleEventCount),
 		[safeStartIndex, visibleEventCount],
 	);
 
@@ -313,7 +308,9 @@ export default function RecruitmentTimeline() {
 									disabled={isAtStart}
 									whileTap={{ scale: 0.92 }}
 									className={`hidden h-12 w-12 items-center justify-center rounded-full text-white glass-shadow transition-colors enabled:cursor-pointer md:flex ${
-										isAtStart ? "gunmetal-gradient opacity-60" : "gunmetal-gradient"
+										isAtStart
+											? "gunmetal-gradient opacity-60"
+											: "gunmetal-gradient"
 									}`}
 								>
 									<IoChevronForward className="h-7 w-7 rotate-180" />
@@ -351,7 +348,9 @@ export default function RecruitmentTimeline() {
 									disabled={isAtEnd}
 									whileTap={{ scale: 0.92 }}
 									className={`hidden h-12 w-12 items-center justify-center rounded-full text-white glass-shadow transition-colors enabled:cursor-pointer md:flex ${
-										isAtEnd ? "gunmetal-gradient opacity-60" : "gunmetal-gradient"
+										isAtEnd
+											? "gunmetal-gradient opacity-60"
+											: "gunmetal-gradient"
 									}`}
 								>
 									<IoChevronForward className="h-7 w-7" />

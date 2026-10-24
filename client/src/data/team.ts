@@ -13,18 +13,6 @@ export const teamMembers = {
 			linkedInUrl: "https://www.linkedin.com/in/rishi-potipireddi/",
 		},
 		{
-			name: "Anya Gupta",
-			position: "Corporate Organizer",
-			image: "/team/anya.webp",
-			linkedInUrl: "https://www.linkedin.com/in/anya-gupta-777a8526b/",
-		},
-		{
-			name: "Felicia Leung",
-			position: "Corporate Organizer",
-			image: "/team/felicia.webp",
-			linkedInUrl: "https://www.linkedin.com/in/felicia-leung-81205426b/",
-		},
-		{
 			name: "Kierann Chong",
 			position: "Corporate Organizer",
 			image: "/team/kierann.webp",
@@ -53,12 +41,6 @@ export const teamMembers = {
 			position: "Corporate Organizer",
 			image: "/team/reneem.webp",
 			linkedInUrl: "https://www.linkedin.com/in/reneem-saadeh/",
-		},
-		{
-			name: "Travis Lee",
-			position: "Corporate Organizer",
-			image: "/team/travis.webp",
-			linkedInUrl: "https://www.linkedin.com/in/travis-lee73/",
 		},
 	],
 
@@ -144,18 +126,6 @@ export const teamMembers = {
 			image: "/team/oli.webp",
 			linkedInUrl: "https://www.linkedin.com/in/oli-yuxuan-li-bb584a341/",
 		},
-		{
-			name: "Sejal Pawar",
-			position: "Marketing Organizer",
-			image: "/team/sejal.webp",
-			linkedInUrl: "https://www.linkedin.com/in/sejal-pawar-3abb7a280/",
-		},
-		{
-			name: "Tracy Newberry",
-			position: "Marketing Organizer",
-			image: "/team/tracy.webp",
-			linkedInUrl: "https://www.linkedin.com/in/tracy-ann-newberry-5a348632a/",
-		},
 	],
 
 	Design: [
@@ -199,12 +169,6 @@ export const teamMembers = {
 	],
 
 	Tech: [
-		{
-			name: "Nathan Ong",
-			position: "Tech Director",
-			image: "/team/nathan.webp",
-			linkedInUrl: "https://www.linkedin.com/in/nathan-ong17/",
-		},
 		{
 			name: "Joshua Sullivan",
 			position: "Tech Organizer",

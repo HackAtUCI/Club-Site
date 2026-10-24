@@ -12,7 +12,7 @@ export default function Recruitment() {
 			<Background />
 
 			<div className="relative z-20">
-				<Hero showApplyButton={true} />
+				<Hero showApplyButton={false} />
 				<Committees />
 				<RecruitmentTimeline />
 				<WhyJoinHack />

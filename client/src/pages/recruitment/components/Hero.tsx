@@ -44,7 +44,7 @@ function JoinUsCard({ showApplyButton }: { showApplyButton: boolean }) {
 				</a>
 			) : (
 				<div className="self-start rounded-3xl lg:rounded-full glass-shadow bg-[#F2F2F233] px-6 py-2.5 text-body font-bold text-[#1f1e2d]">
-					Recruitment currently closed!
+					Reopens in Spring 2027
 				</div>
 			)}
 		</div>
