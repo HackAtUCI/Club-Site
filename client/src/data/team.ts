@@ -171,7 +171,7 @@ export const teamMembers = {
 	Tech: [
 		{
 			name: "Joshua Sullivan",
-			position: "Tech Organizer",
+			position: "Tech Director",
 			image: "/team/josh.webp",
 			linkedInUrl: "https://www.linkedin.com/in/joshua-micah-sullivan/",
 		},
