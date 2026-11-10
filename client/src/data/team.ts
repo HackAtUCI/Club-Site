@@ -42,18 +42,6 @@ export const teamMembers = {
 			image: "/team/reneem.webp",
 			linkedInUrl: "https://www.linkedin.com/in/reneem-saadeh/",
 		},
-		{
-			name: "Bryan Fong",
-			position: "Corporate Intern",
-			image: "/team/bryan.webp",
-			linkedInUrl: "http://www.linkedin.com/in/bryanfong07/",
-		},
-                {       
-                        name: "Prakruthi Praveen",
-                        position: "Corporate Intern",
-                        image: "/team/prakruthi.webp",
-                        linkedInUrl: "http://www.linkedin.com/in/prakruthi-praveen/",
-                },
                 {       
                         name: "Abhinav Varahala",
                         position: "Corporate Intern",
@@ -65,6 +53,18 @@ export const teamMembers = {
                         position: "Corporate Intern",
                         image: "/team/amrit.webp",
                         linkedInUrl: "http://www.linkedin.com/in/amritilindra/",
+                },
+		{
+			name: "Bryan Fong",
+			position: "Corporate Intern",
+			image: "/team/bryan.webp",
+			linkedInUrl: "http://www.linkedin.com/in/bryanfong07/",
+		},
+                {       
+                        name: "Prakruthi Praveen",
+                        position: "Corporate Intern",
+                        image: "/team/prakruthi.webp",
+                        linkedInUrl: "http://www.linkedin.com/in/prakruthi-praveen/",
                 },
 	],
 
