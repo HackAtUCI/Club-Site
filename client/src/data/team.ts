@@ -42,30 +42,30 @@ export const teamMembers = {
 			image: "/team/reneem.webp",
 			linkedInUrl: "https://www.linkedin.com/in/reneem-saadeh/",
 		},
-                {       
-                        name: "Abhinav Varahala",
-                        position: "Corporate Intern",
-                        image: "/team/abhinav.webp",
-                        linkedInUrl: "http://www.linkedin.com/in/abhinav-varahala/",
-                },
-                {       
-                        name: "Amrit Ilindra",
-                        position: "Corporate Intern",
-                        image: "/team/amrit.webp",
-                        linkedInUrl: "http://www.linkedin.com/in/amritilindra/",
-                },
+		{       
+			name: "Abhinav Varahala",
+			position: "Corporate Intern",
+			image: "/team/abhinav.webp",
+			linkedInUrl: "http://www.linkedin.com/in/abhinav-varahala/",
+		},
+		{       
+			name: "Amrit Ilindra",
+			position: "Corporate Intern",
+			image: "/team/amrit.webp",
+			linkedInUrl: "http://www.linkedin.com/in/amritilindra/",
+		},
 		{
 			name: "Bryan Fong",
 			position: "Corporate Intern",
 			image: "/team/bryan.webp",
 			linkedInUrl: "http://www.linkedin.com/in/bryanfong07/",
 		},
-                {       
-                        name: "Prakruthi Praveen",
-                        position: "Corporate Intern",
-                        image: "/team/prakruthi.webp",
-                        linkedInUrl: "http://www.linkedin.com/in/prakruthi-praveen/",
-                },
+		{       
+			name: "Prakruthi Praveen",
+			position: "Corporate Intern",
+			image: "/team/prakruthi.webp",
+			linkedInUrl: "http://www.linkedin.com/in/prakruthi-praveen/",
+		},
 	],
 
 	Logistics: [
