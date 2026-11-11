@@ -126,6 +126,25 @@ export const teamMembers = {
 			image: "/team/oli.webp",
 			linkedInUrl: "https://www.linkedin.com/in/oli-yuxuan-li-bb584a341/",
 		},
+		{
+			name: "Kathryn Liang",
+			position: "Marketing Intern",
+			image: "/team/kathryn.webp",
+			linkedInUrl: "http://www.linkedin.com/in/kathryn-liang",
+		},
+		{
+			name: "Natania Jim Rakesh",
+			position: "Marketing Intern",
+			image: "/team/natania.webp",
+			linkedInUrl: "http://www.linkedin.com/in/natania-jim-rakesh-7b3656418",
+		},
+		{
+			name: "Shruti Gubbala",
+			position: "Marketing Intern",
+			image: "/team/shruthi.webp",
+			linkedInUrl: "https://www.linkedin.com/in/shrugubbala/",
+		},
+
 	],
 
 	Design: [
