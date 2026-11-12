@@ -105,6 +105,30 @@ export const teamMembers = {
 			image: "/team/william.webp",
 			linkedInUrl: "https://www.linkedin.com/in/williamlchan/",
 		},
+		{
+			name: "Anish Sajja",
+			position: "Logistics Intern",
+			image: "/team/anish.webp",
+			linkedInUrl: "https://www.linkedin.com/in/anish-sajja-a472392aa/",
+		},
+		{
+			name: "Brandon Lam",
+			position: "Logistics Intern",
+			image: "/team/brandon.webp",
+			linkedInUrl: "https://www.linkedin.com/in/brandon-lam-61260436a/",
+		},
+		{
+			name: "Daniel Canon",
+			position: "Logistics Intern",
+			image: "/team/daniel.webp",
+			linkedInUrl: "https://www.linkedin.com/in/danielfcanon/",
+		},
+		{
+			name: "Vy Nguyen",
+			position: "Logistics Intern",
+			image: "/team/vy.webp",
+			linkedInUrl: "https://www.linkedin.com/in/vy-nguyen-ba2406319/",
+		},
 	],
 
 	Marketing: [
