@@ -217,5 +217,29 @@ export const teamMembers = {
 			image: "/team/vishok.webp",
 			linkedInUrl: "https://www.linkedin.com/in/vishokl/",
 		},
+		{
+			name: "Aryan Jain",
+			position: "Tech Intern",
+			image: "/team/aryan.webp",
+			linkedInUrl: "https://www.linkedin.com/in/aryan-ja1n",
+		},
+		{
+			name: "Diya Rajesh Nair",
+			position: "Tech Intern",
+			image: "/team/diya.webp",
+			linkedInUrl: "https://www.linkedin.com/in/diya-r-609958303/",
+		},
+		{
+			name: "Meredith Lo",
+			position: "Tech Intern",
+			image: "/team/meredith.webp",
+			linkedInUrl: "https://www.linkedin.com/in/meredith-lo-916946342",
+		},
+		{
+			name: "Sergio Alcazar",
+			position: "Tech Intern",
+			image: "/team/sergio.webp",
+			linkedInUrl: "https://www.linkedin.com/in/sergioalcazar-",
+		},
 	],
 };
