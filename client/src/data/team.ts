@@ -190,6 +190,18 @@ export const teamMembers = {
 			image: "/team/vanessa.webp",
 			linkedInUrl: "https://www.linkedin.com/in/vanessaxli/",
 		},
+		{
+			name: "Anca Chan",
+			position: "Design Intern",
+			image: "/team/anca.webp",
+			linkedInUrl: "https://www.linkedin.com/in/ancavchan/",
+		},
+		{
+			name: "Stephanie Jing",
+			position: "Design Intern",
+			image: "/team/stephanie.webp",
+			linkedInUrl: "https://www.linkedin.com/in/stephanie-jing-b131b5250/",
+		},
 	],
 
 	Tech: [
